@@ -1,0 +1,439 @@
+\chapter{Appendices}
+
+\section{Additional Materials on Limits} \label{applim}
+
+\setcounter{dfn}{0}
+\setcounter{prb}{0}
+\setcounter{axm}{0}
+\setcounter{expl}{0}
+\setcounter{lem}{0}
+\setcounter{thm}{0}
+
+Our definition of limits in this book is an intuitive one.  The statement that ``$f(x)$ gets close to $f(a)$ as  $x$ gets close to $a$" is not mathematically precise because of the word `close.' What does `close' mean?  Is $.5$ close to zero?  Is $.001$ close to zero? Mathematicians spent hundreds of years defining what `close' meant and the following definition was the result of the work of Newton and Leibnitz, among others.  This definition gave rise to precise definitions for continuity, derivatives, and integrals, which had theretofore been defined only intuitively. This definition made precise the entire field of analysis which is one of the most applied fields in all of mathematics.  If the notion seems non-trivial or the definition challenging, then you are in the company of great men. If you find success in understanding the next few problems then you are in the company of a very few and should exploit your understanding of such deep concepts with a major or minor in the subject.
+
+\begin{dfn}
+If $L$ and $a$ are numbers then we say that {\bf the limit of $f$ at $a$ is $L$} if for any two horizontal lines $y=H$ and y=K with the line $y=L$ between them, there are two vertical lines, $x=h$ and $x=k$ with $x=a$ between them, so that if $t$ is any number between $h$ and $k$ (other than $a$), then $f(t)$ is between $H$ and $K$.
+\end{dfn}
+
+Here is a sketch of how we might use this definition to {\it prove} the statement: $\lim_{x \rightarrow 2} x^2 + 3 = 7.$  First, we do some preliminary analysis.  That is, even though to prove this statement, we must show that the definition holds for {\it any} choice of $H$ and $K$, we will start out with a specific choice of $H$ and $K$.
+
+\begin{prb}
+Let $f(x) = x^2 + 3,$ $H=6$, and $K=8$.  Find values $h$ and $k$ so that for all numbers $t$ between $h$ and $k$ we have $f(t)$ between $H$ and $K$. Be sure to {\it prove} that if $h < t < k$ then $H < f(t) < K$.
+\end{prb}
+
+Does this {\it prove} the theorem?  No.  We must show that we can solve the previous problem for {\it any} choice of $H$ and $K$.
+
+\begin{prb}
+Let $f(x) = x^2 + 3.$ Let $y=H$ and $y=K$ be two horizontal lines with $y=7$ between them. Find vertical lines $x=h$ and $x=k$ satisfying the definition of the limit.
+\end{prb}
+
+\begin{prb}
+Prove: $\lim_{x \rightarrow 2} x^2 + 3 = 7$ by showing that if $t$ satisfies $h < t < k$ then $H < f(t) < K.$
+\end{prb}
+
+This definition can be used to prove some of the theorems about limits that we used. Here are a few that you might enjoy working on.
+
+\begin{prb}
+Prove that if $a \in \re$ then $\lim_{x \rightarrow a} x = a.$
+\end{prb}
+
+\begin{prb}
+Prove that if $a \in \re$ then $\lim_{x \rightarrow a} x^2 + 3 = a^2 + 3.$
+\end{prb}
+
+\begin{prb}
+Prove that if f and g are functions and $\lim_{x \rightarrow a} f(x) = f(a)$ and $\lim_{x \rightarrow a} g(x) = g(a)$ then and $\lim_{x \rightarrow a} \left( f(x) + g(x) \right)  = f(a) + g(a).$
+\end{prb}
+
+\section{The Extended Reals} \label{appreal}
+
+\setcounter{dfn}{0}
+\setcounter{prb}{0}
+\setcounter{axm}{0}
+\setcounter{expl}{0}
+\setcounter{lem}{0}
+\setcounter{thm}{0}
+
+Have you ever wondered exactly what {\it infinity} really {\it is}? Is it a number?  Can you multiply by it?  Can you divide by it?  Does $\dsp \frac{\infty}{\infty} = 1$?  Well if you have wondered, then this appendix is for you!
+
+In this text, we try to define precisely most of the words and symbols that we use.  Yet we did not define the real numbers, and to develop them from scratch is a non-trivial task.  Thus, the real numbers are an ``undefined" term in this text.  One philosophy that separates mathematics from other less scientific fields is our constant attempt to make clear the distinction between that which we are assuming (axioms or undefined terms) and that which we have proved (theorems, lemmas, or corollaries). We will see examples in this course of each.  We will not define what a ``real number" is, but we will now define the ``extended reals" assuming that the reals exist.  We will give only an intuitive notion of the definition of a ``limit" but we will define ``derivatives" precisely based on our intuitive understanding of limits.
+
+Where does this leave us, if we build the subject on undefined terms and intuitive definitions?    It leaves us in better shape than most subjects!  While we have not defined everything, we know what we have defined and what we have proved based on those definitions.  Should you find mathematics worthy of further exploration, you can take courses where the real numbers are developed (based on even more elementary axioms and assumptions) and where limits are studied in rigorous detail. Can we go all the way back to the beginning? I will if you will define the word ``beginning".  Enough mathematical philosophy, let's get back to the extended reals.
+
+\begin{dfn}
+Assuming the existence of the real numbers, we define the {\bf extended reals} to be the set of all real numbers along with two new numbers which we will call ${\bf +\infty}$ and ${\bf -\infty}.$
+\end{dfn}
+
+We already know many properties of the real numbers.  We know how to add, subtract, multiply, and divide.  But which of these properties follow for the real numbers?  Here are a few:
+
+\begin{axm}
+$\infty + a = \infty$ for all real numbers, a.
+\end{axm}
+
+\begin{axm}
+$\infty + \infty = \infty.$
+\end{axm}
+
+\begin{axm}
+\label{ax}
+$\infty \cdot \pm a = \pm \infty$ for all positive real numbers,
+a.
+\end{axm}
+
+\begin{axm}
+$\infty \cdot  \infty = \infty.$
+\end{axm}
+
+\begin{axm}
+$\infty / \pm a = \pm \infty$ for all positive real numbers, a.
+\end{axm}
+
+\begin{axm}
+$a / \infty  = 0$ for all real numbers, a.
+\end{axm}
+
+Our interest with the numbers $\pm \infty$ stems from limits.  For example, what is $$\dsp \lim_{x \rightarrow \infty} 3x?$$   Some would say that the limit does not exist since there is no {\it real} number that $f(x) = 3x$ approaches as $x$ approaches $\infty.$  Others would say that the function $f$ increases without bound as $x$ increases without bound.  The latter is our personal favorite, but in the interest of notational efficiency, and having defined the extended reals, we will write, $$\lim_{x \rightarrow \infty} 3x = \infty.$$  Note that this follows from Axiom \ref{ax} above.
+
+Knowing what is {\bf not} true is at least as important as knowing what {\bf is} true.  Here are some cases called {\bf indeterminate} forms where the rules you might expect to be true do not necessarily hold.    Consider $f(x) = x-5$ and $g(x) = x.$ Clearly,  $$\dsp \lim_{x \rightarrow \infty} f(x) = \infty \;\;\; \mbox{     and     } \;\;\; \lim_{x \rightarrow \infty} g(x) = \infty.$$ But what about $\dsp \lim_{x \rightarrow \infty} \left( f(x) - g(x) \right) ?$
+$$\lim_{x \rightarrow \infty} \left( f(x) - g(x) \right)  = \lim_{x \rightarrow \infty} \left( x-5 - x \right) = \lim_{x \rightarrow \infty} -5 = -5.$$ Yet, if we consider $h(x) = x-5$ and $k(x) = x^2$ then $$\dsp \lim_{x \rightarrow \infty} h(x) = \infty \;\;\; \mbox{     and     } \;\;\; \lim_{x \rightarrow \infty} k(x) = \infty.$$  But what about $\dsp \lim_{x \rightarrow \infty} \left( h(x) - k(x) \right)?$ $$\lim_{x \rightarrow \infty} \left( h(x) - k(x) \right) = \lim_{x \rightarrow \infty} \left( x-5 - x^2 \right) = \lim_{x \rightarrow \infty} \left( -x^2 + x - 5 \right) = -\infty.$$ Thus we say that $\infty - \infty$ is an {\bf indeterminate} form because when we consider two functions both of whose limits tend to $\infty$, the limit of their differences is not determined.
+
+\begin{prb}
+Show that $\dsp \frac{\infty}{\infty}$ is an indeterminate form by finding functions $f, g, h$ and $k$ so that
+$$\dsp \lim_{x \rightarrow \infty} f(x) = \lim_{x \rightarrow \infty} g(x) =\lim_{x \rightarrow \infty} h(x) =\lim_{x \rightarrow \infty} k(x)=\infty,$$
+but
+$$\dsp \lim_{x \rightarrow \infty} \frac{f(x)}{g(x)} \neq  \lim_{x \rightarrow \infty} \frac{h(x)}{k(x)}.$$
+\end{prb}
+
+\begin{prb}
+Show that each of  $\dsp \infty^0$, $\dsp 0^\infty$, and $\dsp 0 \cdot \infty$ is an indeterminate form.
+\end{prb}
+
+\section{Exponential and Logarithmic Functions} \label{appexp}
+
+\setcounter{dfn}{0}
+\setcounter{prb}{0}
+\setcounter{axm}{0}
+\setcounter{expl}{0}
+\setcounter{lem}{0}
+\setcounter{thm}{0}
+
+The goal of this appendix is to review exponential and logarithmic functions. Even though you should definitely have seen these functions before you made it to Calculus, it is my experience that many students benefit from a review of the basics.  Use this as a review and ask if you have any troubles.
+
+\begin{prb}
+Use a limit table to convince yourself that the $\lim_{n \rightarrow \infty} (1 + \frac{1}{n})^n$ exists by
+substituting in $n=10, n=100,$ and $n=1000.$
+\end{prb}
+
+\begin{dfn}
+We define the real number {\bf $e$} by $e = \lim_{n \rightarrow \infty} (1 + \frac{1}{n})^n.$
+\end{dfn}
+
+\begin{dfn}
+Any function of the form $f(x) = b^x$ where $b$ is any positive real number other than $1$ is called an {\bf exponential} function.
+\end{dfn}
+
+\begin{prb}
+Graph $r(x) = 2^x, s(x) = 3^x, u(t) = 2^{-t},$ and $v(t) = 3^{-t}$ all on the same pair of coordinate axes by either plotting points (preferable) or by using your favorite technological weapon.  Pay special attention to the domain and range, x- and y-intercepts, and any vertical or horizontal asymptotes.
+\end{prb}
+
+\begin{dfn}
+The function $f(x) = e^x$ is called the {\bf natural exponential} function.
+\end{dfn}
+
+\begin{prb}
+Graph each of the following variants of the exponential function, listing domain, range, intercepts, and asymptotes.
+\begin{enumerate}
+\item $f(x) = e^x$
+\item $g(x) = e^{-x}$
+\item $h(x) = e^{x-2}$
+\item $i(x) = e^x-3$
+\end{enumerate}
+\end{prb}
+
+\begin{dfn}
+We define the inverse of $f(x) = e^x$ by $g(x) = \ln(x)$ and refer to this as the {\bf natural logarithm} function.
+\end{dfn}
+
+\begin{dfn}
+We define the inverse of $f(x) = b^x$ by $g(x) = \log_b(x)$ and refer to this as the {\bf logarithm to the base b}.
+\end{dfn}
+
+By definition of inverses, we have these Inverse Properties.
+\begin{enumerate}
+\item $\ln(e^x) = x$ for all $x \in \re$ and
+\item $e^{\ln(x)}=x$ for all $x > 0.$
+\end{enumerate}
+
+The following theorem relates the natural logarithm function to all other base logarithm functions which means that if you really understand the natural logarithm function then you can always convert the other logarithms to the natural logarithm function.
+
+\begin{thm}
+For any $b \in {\nat}$,  $\dsp \log_b(x) = \frac{\ln(x)}{\ln(b)}.$
+\end{thm}
+
+\begin{thm} Exponential Laws
+\begin{enumerate}
+\item $e^xe^y = e^{x+y}$
+\item $e^x/e^y = e^{x-y}$
+\item $(e^x)^y = e^{xy}$
+\end{enumerate}
+\end{thm}
+
+Each of these laws leads to a corresponding statement about logarithms.
+
+\begin{thm} Logarithmic Laws
+\begin{enumerate}
+\item $\ln(xy) = \ln(x) + \ln(y)$
+\item $\ln(x/y) = \ln(x) - \ln(y)$
+\item $\ln(x^y) = y\ln(x)$
+\end{enumerate}
+\end{thm}
+
+\begin{prb}
+Prove the Logarithmic Laws using the Exponential Laws and the Inverse Properties.
+\end{prb}
+
+\begin{prb} \label{e1}
+Evaluate each of the following without using a calculator.
+
+    \begin{enumerate}
+    \item If $e^4 = 54.59815 . . .$  then   $\ln(54.59815 . . .) = $ \hrulefill\ .
+    \item If $\ln(24) = 3 .1780538 . . .$   then  $e^{3 .1780538}  =$ \hrulefill\ .
+    \item $e^{\ln(4)} = $ \hrulefill\ .
+    \item $\ln(e^{x}) = $ \hrulefill\ .
+    \end{enumerate}
+\end{prb}
+
+\begin{prb} \label{e2}
+Evaluate each of the following using a calculator.
+    \begin{enumerate}
+    \item $\ln(3.41) = $ \hrulefill\ .
+    \item $e^{4\ln(2)} = $ \hrulefill\ .
+    \end{enumerate}
+\end{prb}
+
+
+\begin{prb} \label{e3}
+Write each of the following as a single logarithm.
+    \begin{enumerate}
+    \item $3\ln(2x) - 2\ln(x) + \ln(y) - \ln(z)$
+    \item $2\ln(x+y) + \ln(\frac{1}{x-y})$
+    \item $\ln(x) + 3 \hspace{.25in} Hint: 3 = \ln(what)?$
+    \item Which of the following is correct?  Why? 
+        \begin{enumerate}
+           \item $\dsp \ln(x) - \ln(y) + \ln(z) = \ln(\frac{x}{yz})$ or \\
+           \item $\dsp \ln(x) - \ln(y) + \ln(z) = \ln(\frac{xz}{y})$
+        \end{enumerate}
+    \end{enumerate}
+\end{prb}
+
+\begin{prb} \label{e4}
+Expand each of the following into a sum, difference, or multiple of the logarithms.
+
+    \begin{enumerate}
+    \item $\ln(9x^2y)$
+    \item $\ln(4x^{-1}y^2)$
+    \item $\dsp \ln(\frac{xy^2}{z^3})$
+    \item $\dsp \ln\big( \frac{ (x+y)^2 }{ (x-y)^2 } \big)$
+    \end{enumerate}
+
+\end{prb}
+
+\begin{prb} \label{e5}
+Solve each of the following for x; give both exact and approximate answers.
+    \begin{enumerate}
+    \item $\ln(3x) = 2$
+    \item $\ln(6) + \ln(2x) = 3$
+    \item $\ln(x^2-x-5)=0$
+    \item $\ln(x+3) + \ln(x-2)=2$
+    \item $\ln ^2x-\ln x^5 + 4 = 0$ \hspace{.25in} Notation: $\ln ^2x$  means $\ln(x) )^2$ and $\ln x^5$ means $\ln(x^5)$
+    \item $\ln ^2x+\ln x^2-3=0$
+    \end{enumerate}
+\end{prb}
+
+\begin{prb} \label{e6}
+Solve for x; give both exact and approximate answers.
+    \begin{enumerate}
+    \item $e^x = 19$
+    \item $4^x = \frac{2}{3}$
+    \item $4^{x+1} = e$
+    \item $(\frac{1}{2})^x = 3$
+    \item $x^2 e^x - 9 e^x = 0$ \hspace{.25in} Hint: Factor, factor, factor!
+    \item $e^x - 8e^{-x} = 2$
+    \item $5^x = 4^{x+1}$
+    \item $3^{2x+1} = 2^{x-1}$
+    \end{enumerate}
+\end{prb}
+
+\noindent
+\textbf{Solutions to Exponential and Logarithmic Exercises}
+
+\begin{sol}
+These are the solutions to Problem \ref{e1}.
+    \begin{enumerate}
+    \item $4$
+    \item $24$
+    \item $4$
+    \item $x$
+    \end{enumerate}
+\end{sol}
+
+\begin{sol}
+These are the solutions to Problem \ref{e2}.
+    \begin{enumerate}
+    \item $1.2267123$
+    \item $16$
+    \end{enumerate}
+\end{sol}
+
+\begin{sol}
+These are the solutions to Problem \ref{e3}.
+    \begin{enumerate}
+    \item $\dsp \ln(\frac{8xy}{z})$
+    \item $\dsp \ln(\frac{(x+y)^2}{(x-y)})$
+    \item $\ln(xe^3)$
+    \item Only the second statement is true.
+    \end{enumerate}
+\end{sol}
+
+\begin{sol}
+These are the solutions to Problem \ref{e4}.
+    \begin{enumerate}
+    \item $\ln(9) + 2\ln(x) + \ln(y)$
+    \item $\ln(4) + 2\ln(y) - \ln(x)$
+    \item $\ln(x) + 2\ln(y) - 3\ln(z)$
+    \item $2\ln(x+y) - 2\ln(x-y)$
+    \end{enumerate}
+\end{sol}
+
+\begin{sol}
+These are the solutions to Problem \ref{e5}.
+    \begin{enumerate}
+    \item $e^2/3$
+    \item $e^3/12$
+    \item $-2,3$
+    \item $\dsp \frac{-1+\sqrt{25+4e^2}}{2}$
+    \item $e, e^4$
+    \item $\frac{1}{e^3},e$
+    \end{enumerate}
+\end{sol}
+
+\begin{sol}
+These are the solutions to Problem \ref{e6}.
+    \begin{enumerate}
+    \item $ln19$
+    \item $\dsp \frac{\ln(\frac{2}{3})}{ln4}$
+    \item $\dsp \frac{1}{ln4}-1$
+    \item $\dsp \frac{ln3}{ln\frac{1}{2}}$
+    \item $-3,3$
+    \item $ln4$
+    \item $\dsp \frac{ln4}{\ln(\frac{5}{4})}$
+    \item $\dsp \frac{ln\frac{1}{6}}{ln\frac{9}{2}}$
+    \end{enumerate}
+\end{sol}
+
+
+\section{Trigonometry} \label{apptrig}
+
+\setcounter{dfn}{0}
+\setcounter{prb}{0}
+\setcounter{axm}{0}
+\setcounter{expl}{0}
+\setcounter{lem}{0}
+\setcounter{thm}{0}
+
+We state here only the very minimal definitions and identities from trigonometry that we expect you to know.  By ``know" I mean memorize and be prepared to use on a test.
+
+\begin{dfn}
+The \textbf{unit circle} is the circle of radius one, centered at the origin.
+\end{dfn}
+
+\begin{dfn} \label{sincos}
+If $P=(x,y)$ is a point on the unit circle and $L$ is the line through the origin and $P$, and $\theta$ is the angle between the $x-$axis and $L$, then we define \textbf{cos}$(\theta)$ to be $x$ and \textbf{sin}$(\theta)$ to be $y$.
+\end{dfn}
+
+\begin{dfn} These are the definitions of the remaining four trigonometric functions:
+$$\tan(\theta )=\frac{\sin(\theta )}{\cos(\theta )}, \ \ \ \cot(\theta )=\frac{\cos(\theta )}{\sin(\theta )}, \ \ \ \csc(\theta )=\frac{1}{\sin(\theta )}, \ \ \ \mbox{ and }\ \ \ \sec(\theta )=\frac{1}{\cos(\theta)}$$
+\end{dfn}
+
+\begin{prb}
+Graph each of $\dsp \sin(-\theta )$, $\dsp -\sin(\theta )$, $\dsp \cos(-\theta )$ and $\dsp \cos(\theta )$ to convince yourself of the following theorem.
+\end{prb}
+
+\begin{thm} \textbf{Even/Odd Identities.}
+\begin{enumerate}
+\item $\dsp \sin(-\theta )=-\sin(\theta )$
+\item  $\dsp \cos(-\theta )=\cos(\theta )$
+\end{enumerate}
+\end{thm}
+
+The Pythagorean Identity follows immediately from Definition \ref{sincos}.
+
+\begin{thm} \textbf{The Pythagorean Identity.}
+$\dsp \sin^{2}(\theta )+\cos^{2}(\theta )=1$
+\end{thm}
+
+\begin{axm}
+It's easier to memorize one identity than three.
+\end{axm}
+
+\begin{prb}
+ Divide both sides of the Pythagorean Identity by $\sin^2(\theta)$ to show that $\dsp 1+\tan^{2}(\theta )=\sec^{2}(\theta )$.  Divide by $\cos^2(\theta)$ to show that $\dsp 1+\cot^{2}(\theta )=\csc^{2}(\theta )$.
+\end{prb}
+
+These next ones are a bit tricky to derive, but easy to remember if you memorize the Double Angle Identities.
+
+\begin{thm} \textbf{Sum/Difference Identities.}
+\begin{enumerate}
+\item $\sin(x \pm y) = \sin(x)\cos(y) \pm \cos(x)\sin(y)$
+\item $\cos(x \pm y) = \cos(x)\cos(y) \mp \sin(x)\sin(y)$
+\end{enumerate}
+\end{thm}
+
+\begin{thm} \textbf{Double Angle Identities.}
+\begin{enumerate}
+\item $\sin(2x) = 2\sin(x)\cos(x)$
+\item $\cos(2x) = \cos^2(x) - \sin^2(x)$
+\end{enumerate}
+\end{thm}
+
+\begin{prb}
+Use the first Sum/Difference Identity to prove the first Double Angle Identity.
+\end{prb}
+
+\begin{prb}
+Use the second Sum/Difference Identity to prove the second Double Angle Identity.
+\end{prb}
+
+\begin{thm} \textbf{Half Angle Identities.}
+\begin{enumerate}
+\item $\dsp \sin^2(x/2) = \frac{1-\cos(x)}{2}$
+\item $\dsp \cos^2(x/2) = \frac{1+\cos(x)}{2}$
+\end{enumerate}
+\end{thm}
+
+\begin{thm} \textbf{Product Identities.}
+\begin{enumerate}
+\item $\sin(mx) \sin(nx)={1 \over 2}[ \cos(m-n)x- \cos(m+n)x]$
+\item $\sin(mx) \cos(nx)={1 \over 2}[\sin(m-n)x+ \sin(m+n)x]$
+\item $\cos(mx) \cos(nx)={1 \over 2}[\cos(m-n)x+ \cos(m+n)x]$
+\end{enumerate}
+\end{thm}
+
+\section{Summation Formulas} \label{appsum}
+
+\setcounter{dfn}{0}
+\setcounter{prb}{0}
+\setcounter{axm}{0}
+\setcounter{expl}{0}
+\setcounter{lem}{0}
+\setcounter{thm}{0}
+
+These formulas are useful for computing Riemann Sums.
+\begin{enumerate}
+\item $\dsp \Sigma_{i=1}^{n} c = nc$ where $c$ is any real number
+\item $\dsp \Sigma_{i=1}^{n} i = \frac{n(n+1)}{2}$
+\item $\dsp \Sigma_{i=1}^{n} i^{3} = [\frac{n(n+1)}{2}]^{2}$
+\item $\dsp \Sigma_{i=1}^{n} i^{2} = \frac{n(n+1)(2n+1)}{6}$
+\item $\dsp \Sigma_{i=1}^{n} i^{4} = \frac{n(n+1)(2n+1)(3n^{2}+3n+1)}{30}$
+\end{enumerate}
+
