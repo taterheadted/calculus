@@ -1,0 +1,246 @@
+
+
+<section xml:id="chap8probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Vectors</em>
+    <ol>
+      <li>
+        <p>
+          Let <m>\oa{x} = (-1, 3)</m> and <m>\oa y = (4,1)</m> and
+          graph <m>\oa x, \oa y, \oa {xy},</m> and <m>\oa{x-y}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the norm of each vector in the previous problem.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>\oa{(1,-2,1)}</m> and <m>\oa{(-2,4,3)}</m> and find the angle
+          between them.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Lines</em>
+    <ol>
+      <li>
+        <p>
+          Sketch the vectors  <m>x=(1,3,5)</m> and <m>y = (2,4,-3)</m>  and the
+          line through these points.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find a parametric equation,
+          <m>\oa{l},</m> for the line in the previous problem so that
+          <m>\oa{l}(0)= x</m> and <m>\oa{l}(1) = y.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Plot <m>\oa l(t) = (2,
+          -1, 4) + (1,0,0)t.</m>  Assuming this represents the position of an
+          object, compute the speed of the object.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find an equation
+          for the position of the object that has: the same speed as the
+          object in the previous problem, the same position at time 0, and
+          is travelling in the opposite direction.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Functions</em>
+    <ol>
+      <li>
+        <p>
+          Sketch a graph of <m>f(x,y) = 2x^2 + 3y^2.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the intersection of <m>f</m> from the previous problem with the
+          plane, <m>z=4.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the function <m>g(x,y) = x^3 + y^2.</m>  Be sure and label a few
+          points.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute the composition <m>g \circ \oa{l}</m> where <m>g</m> is from the
+          previous problem and <m>\oa l(t) =  (2, -1) + (1,0)t.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>(g \circ l)'(3)</m> and indicate its meaning.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch <m>l(t) = (0,1) + (1,0)t</m> for <m>t \ge 0.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch <m>c(t) = \big( 3\cos(t) , 3\sin(t) \big)</m> for <m>0 \le t \le 2\pi.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch <m>e(t) = \big( 4\cos(t) , 2\sin(t) \big)</m> for <m>0 \le t \le 2\pi.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>\oa r(t) = ( \cos(t), 2t, \sin(t) )</m> for <m>t \in
+          [0, 6\pi];</m> if <m>\oa r(t)</m> is the position of an object at time
+          <m>t</m> then show that the speed of the object is constant.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 8 Solutions</em>
+  </p>
+
+  <p>
+    <em>Vectors</em>
+    <ol>
+      <li>
+        <p>
+          a parallellogram with diagonals
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\| x \| = \sqrt{10}</m> and <m>\|y\|=\sqrt{17}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          approximately 122 degrees
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Lines</em>
+    <ol>
+      <li>
+        <p>
+          <m>\oa l (t) = (1,3,5) + (1,1, -8)t</m> (<m>\infty</m> possible solns)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\| \oa l'(t) \| = 1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\oa p (t) = (2,-1,4)-(1,0,0)t</m> (<m>\infty</m> possible solns)
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Functions</em>
+    <ol>
+      <li>
+        <p>
+          a squished paraboloid
+        </p>
+      </li>
+
+      <li>
+        <p>
+          an ellipse
+        </p>
+      </li>
+
+      <li>
+        <p>
+          a water slide
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(t+2)^3 + 1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          75, the slope of the line (in three-space) that lies above the
+          line <m>\oa l</m> and is tangent to the graph of <m>g</m> at the point <m>(5,-1,126)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>l</m> = line
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>c</m> = circle, radius = 3
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e</m> = ellipse
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>s</m> = spiral; a spring wrapped around the y-axis in three-space;
+          speed is <m>\sqrt{5}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

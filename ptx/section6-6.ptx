@@ -1,0 +1,85 @@
+
+
+<section>
+  <title>The Hyperbolic Functions</title>
+  <p>
+    Similar to the trigonometric functions in Euclidean trigonometry, the following functions are important in {{hyperbolic trigonometry}}. These occur in engineering problems because they appear as solutions to differential equations modeling electrical circuits and they can be used to represent the curve that results when hanging a wire between two poles (think telephone lines).
+    EXTRA<fn>I often assign this section as homework.  It is not clear to me that it is worth time to do it in class.</fn></p>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>hyperbolic sine and hyperbolic cosine</term> functions are denoted by <term>sinh</term> and <term>cosh</term> and defined by:
+        <me>
+          \sinh(x) = \frac{e^x - e^{-x}}{2} \mbox{ and }  \cosh(x) = \frac{e^x +e^{-x}}{2}.
+        </me>
+      </p>
+
+      <p>
+        The <term>hyperbolic tangent, hyperbolic cotangent, hyperbolic secant, and hyperbolic cosecant</term> functions are denoted by <term>tanh</term>, <term>coth</term>, <term>sech</term>, <term>csch</term> and defined by:
+        <me>
+          \dsp \tanh(x) = \frac{\sinh(x)}{\cosh(x)}, \;\; \coth(x) = \frac{\cosh(x)}{\sinh(x)}, \;\; \dsp \sech(x) = \frac{1}{\cosh(x)}, \;\; \mbox{ and }  \;\; \dsp \csch(x) = \frac{1}{\sinh(x)}.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Assume that <m>x</m> is a number and show that <m>\cosh^2(x) - \sinh^2(x) = 1</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Assume that <m>x</m> is a number and show that each of the following is true.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \frac{d}{dx} \sinh(x) = \cosh(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \frac{d}{dx} \tanh(x) = \sech^2(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    While many inverse functions (such as <m>invtan</m>) cannot be written out explicitly as a function of <m>x</m> only, all of the inverse hyperbolic trigonometric functions can be.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Rewrite <m>\invcosh</m> as a function of <m>x</m> and without using any hyperbolic functions by solving <m>\dsp y = \frac{e^x+e^{-x}}{2}</m>
+        for <m>x.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Show that <m>\dsp \frac{d}{dx} \invsinh (x)=\frac{1}{\sqrt{x^2 +1}}</m> by letting <m>y = \invsinh(x),</m> applying implicit differentiation to <m>\sinh(y) = x,</m> and using the identity <m>\cosh^2(x) - \sinh^2 (x) = 1</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Show that <m>\dsp \frac{d}{dx} \invsech (x)= -\frac{1}{x \sqrt{1-x^2}}</m>   for   <m>0 \lt  x \leq 1.</m>
+      </p>
+    </statement>
+  </problem>
+</section>
+

@@ -1,0 +1,271 @@
+
+
+<section>
+  <title>Logarithmic and Implicit Differentiation</title>
+  <p>
+    We know how to take the derivative of <m>f(x) = x^2</m> and <m>g(x) = 2^x.</m> But what about functions like <m>h(x) = x^{x}</m> where the variable occurs in both the base and the exponent? Fortunately, the technique you used in <xref ref="logdiff">Problem</xref>, called <em>logarithmic differentiation</em>, and can be applied to this function as well.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Compute the derivative of <m>f(x) = x^{2x}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Define <m>f</m>.
+    <me>
+      f(x)=x^{2x}
+    </me>
+  </p>
+
+  <p>
+    Apply the natural logarithm to both sides.
+    <me>
+      \ln(f(x))=\ln(x^{2x})
+    </me>
+  </p>
+
+  <p>
+    Apply a property of logarithms to the right-hand side.
+    <me>
+      \ln(f(x))=2x\ln(x)
+    </me>
+  </p>
+
+  <p>
+    Take the derivative of both sides.
+    <me>
+      \frac{f'(x)}{f(x)}=2\ln(x)+(2x)\frac{1}{x} = 2\ln(x) + 2
+    </me>
+  </p>
+
+  <p>
+    Multiply through by <m>f(x).</m>
+    <me>
+      f'(x)=f(x)\left( 2\ln(x)+2 \right)
+    </me>
+  </p>
+
+  <p>
+    Substitute <m>f(x) = x^{2x}</m> and simplify.
+    <me>
+      f'(x)=x^{2x}\left( 2\ln(x)+2 \right) = 2x^{2x} \left( \ln(x) + 1 \right)
+    </me>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the derivative of <m>y(x) = (3x)^{x+1}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute <m>\dsp H'(x)</m> for <m>\dsp H(x) = \left(\sin(x) \right)^{\cos(2x)}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Computing derivatives of relations that are not functions.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    <em>Implicit Differentiation.</em> Thus far we have only taken the derivatives of functions, and the derivatives of these functions were also functions. Implicit differentiation will allow us to find an equation that tells us the slopes of the lines tangent to an equation that does not represent a function, for example, a circle. For a single value of <m>x</m>, a circle may have two values for <m>y</m> and thus two tangent lines. Therefore, our <q>derivative</q> will not be a function because for a single value of <m>x</m> there may be two lines tangent to the circle.
+  </p>
+
+  <p>
+    Let's look at an example. The circle <m>x^2 + y^2 = 9</m> is a relation (a set of ordered pairs), but <em>not</em> a function since <m>(1, 2\sqrt{2})</m> and <m>(1,-2\sqrt{2})</m> are points that satisfy the equation but have the same <m>x</m>-coordinate and distinct <m>y</m>-coordinates. How can we determine the slope of any tangent line to this equation, recalling that the derivative was, thus far, defined only for functions? For this problem, we can do it in two ways, straight differentiation and implicit differentiation.
+  </p>
+
+  <p>
+    <em>Straight Differentiation.</em> First, rewrite the equation,
+    <me>
+      x^2 + y^2 = 9,
+    </me>
+    as,
+    <me>
+      y = \pm \sqrt{9-x^2}.
+    </me>
+  </p>
+
+  <p>
+    This may be written in what <em>looks</em> like functional notation as,
+    <me>
+      f(x) = \pm \sqrt{9-x^2},
+    </me>
+    but <m>f</m> is <em>not</em> a function since for each value of <m>x \in (-3,3),</m> we have two values for <m>f(x).</m> Still, taking the derivative of either
+    <me>
+      f(x) = + \sqrt{9-x^2} \;\;\;\; \mbox{or}   \;\;\;\; f(x) = - \sqrt{9-x^2}
+    </me>
+    is exactly the same except for the sign, so we do both simultaneously:
+    <me>
+      f'(x) = \pm \frac{1}{2} (9-x^2)^{-\frac{1}{2}} \cdot -2x = \pm \frac{x}{\sqrt{9-x^2}}.
+    </me>
+  </p>
+
+  <p>
+    Implicit differentiation is an alternative way to differentiate such equations by first taking the derivative of both sides of the equation and then solving the resulting equation for the derivative instead of solving for <m>y</m> and then
+    taking the derivative.
+  </p>
+
+  <p>
+    <em>Implicit Differentiation.</em> We again start with
+    <me>
+      x^2 + y^2 = 9.
+    </me>
+  </p>
+
+  <p>
+    Replacing <m>y</m> with <m>f(x)</m> as we did in our first example yields,
+    <me>
+      x^2 + \left( f(x) \right)^2 = 9.
+    </me>
+  </p>
+
+  <p>
+    Differentiating both sides using the Power, Chain, and Constant rules yields,
+    <me>
+      2x + 2f(x)f'(x) = 0.
+    </me>
+  </p>
+
+  <p>
+    Solving for <m>f'(x)</m> we have,
+    <me>
+      f'(x) = \frac{-2x}{2f(x)} = \frac{-x}{f(x)}.
+    </me>
+  </p>
+
+  <p>
+    This
+    does not look the same as the answer we computed using straight differentiation, but if we again solve
+    <me>
+      x^2 + \left( f(x) \right)^2 = 9
+    </me>
+    for <m>f(x)</m> to get
+    <me>
+      f(x) = \pm \sqrt{9-x^2},
+    </me>
+    and substitute this into our answer
+    <me>
+      f'(x) = \frac{-x}{f(x)}
+    </me>
+    then we have
+    <me>
+      f'(x) =  \frac{-x}{\pm \sqrt{9-x^2}} = \pm \frac{x}{\sqrt{9-x^2}}.
+    </me>
+  </p>
+
+  <p>
+    This agrees with the result we obtained using straight differentiation.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find <m>y'</m> where <m>x^3 + y^3  = 1</m> in two ways. First, solve for <m>y</m> and differentiate. Second, differentiate and then solve for <m>y'.</m> Show that both answers are the same. Graph the set of points that satisfy <m>x^3 + y^3  = 1.</m> Is this a function?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find <m>y'</m> for <m>x^3  + y^3 = 3xy</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    This problem is based on a true story. Only the type of invertebrate and the name of the snack food have been changed in order to protect their identities.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        You sketch an x-y-coordinate plane on your notebook and then note an ant walking around the page nibbling on your Cheeto crumbs. The ant's position changes with time, so you define a function <m>p</m> so that the position of the ant at time <m>t</m> is given by the function <m>p(t)=(x(t),y(t))</m>. After considerable observation, you observe that the position function satisfies <m>2(x(t))^2 + 3(y(t))^2 = 100</m>, the speed at <m>t=5</m> in the <m>x</m>-direction is 2 (i.e. <m>x'(5)=2</m>), and the <m>x</m>-position at time <m>t=5</m> is 6 (i.e. <m>x(5)=6</m>). Compute the ant's <m>y</m> position at time <m>t=5</m> (i.e. <m>y(5)</m>) and the ant's speed in the <m>y</m> direction at time <m>t=5</m> (i.e. <m>y'(5)</m>).
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Given the curve <m>x^2 - 4x  + y^2  - 2y = 4,</m> find:
+        <ol>
+          <li>
+            <p>
+              the two points on the curve where there are horizontal tangent lines, and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the points on the curve where the tangent lines are vertical.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        If you feel lucky, try solving this problem without Calculus by completing the square.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the equations for the two lines that pass through the origin and are tangent to the curve defined by <m>x = y^2  + 1.</m> Illustrate with a graph of the curve and tangent lines.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We proved the Power Rule only for functions of the form <m>f(x) = x^n</m> where <m>n</m> is an integer. However, we have been using it where <m>n</m> was any number, for example <m>n=1/2</m> in the case where <m>f(x) = \sqrt{x}</m>. We will now use the Chain Rule, Implicit and Logarithmic Differentiation to prove that the Power Rule is valid for <em>rational</em> exponents.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Use implicit differentiation to find <m>y'</m> if <m>y = x^{4/3}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>\frac{p}{q}</m> is a rational number. Show that the derivative of the function <m>f(x) = x^{p/q}</m> is <m>f'(x) = \frac{p}{q}x^{\frac{p}{q}-1}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the second derivative, <m>y''</m>, for the curve <m>x^3 + y^3 = 1.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use implicit differentiation to find the equation of the line tangent to the curve <m>x^{2/3} - y^{2/3} - y  = 4</m> at the point <m>(8,0).</m>
+      </p>
+    </statement>
+  </problem>
+</section>
+

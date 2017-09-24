@@ -1,0 +1,310 @@
+
+
+<section xml:id="chap11probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Critical Points</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      For each of the following functions, find the critical points
+      and determine if they are maxima, minima, or saddle points.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>f(x,y)=1-x^{2}-y^{2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g(x,y)=e^{-x} \sin y</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>F(x,y)=2x^{2}+2xy+y^{2}-2x-2y+5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g(x,y)=x^{2}+xy+y^{2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>z=8x^{3}-24xy+y^{3}</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      For each of the following functions, find the absolute extrema
+      of the function on the given closed and bounded set <m>R</m> in <m>\re ^2</m>.
+      <ol>
+        <li>
+          <p>
+            <m>f(x,y)=2x^{2}-y^{2}</m>; <m>R = \{(x, y): x^{2}+y^{2}\leq 1 \}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>g(x,y)=x^{2}+3y^{2}-4x+2y-3</m>; <m>R = \{(x, y): 0 \le x \le 3</m>,
+            <m>-3 \le y \le 0 \}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Find the direction at which the maximum rate of change of
+      <m>g(x,y)= \ln(xy)-3x+2y</m> at <m>p=(3,2)</m> will occur and find the
+      maximum rate of change.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Find the direction in which the function <m>f(x,y)=x^3-y^5</m>
+      increases the fastest at the point <m>(2, 4)</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following four problems, find all critical
+      points of <m>f</m> and classify these critical points as relative maxima,
+      relative minima, or saddle points using the second derivative test
+      whenever possible.
+      <ol>
+        <li>
+          <p>
+            <m>f(x,y)=xy^2-6x^2-3y^2</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x,y)=\frac{9x}{x^{2}+y^{2}+1}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp g(x,y)=x^{2}+y^{3}+\frac{768}{x+y}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Optimization and Lagrange Multipliers</em>
+    <ol>
+      <li>
+        <p>
+          Find all extrema of <m>f(x,y)=1-x^{2}-y^{2}</m> subject to
+          <m>x+y=1</m>, <m>x\geq 0</m>, and <m>y\geq 0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find all extrema of <m>f(x,y)=1-x^{2}-y^{2}</m> subject to
+          <m>x+y \leq 1</m>, <m>x\geq 0</m>, and <m>y\geq 0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the absolute extrema of the function <m>g(x,y)=2 \sin(x)+5 \cos(y)</m>
+          on the rectangular region <m>R = \{(x, y): 0 \le x \le 2, 0 \le y \le 5 \}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the minimum value of <m>z=x^{2}+y^{2}</m> subject to <m>x+y=24</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the extreme values of <m>f(x, y) = 2x^2 +y^2-y</m> subject
+          to <m>x^2+y^2=4</m> using Lagrange multipliers.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find three positive numbers whose sum is 123 such that their product is as large as possible.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A container in <m>\re^{3}</m> has the shape of a cube with each
+          edge length 1. A (triangular) plate is placed in the container so
+          that it intersects the cube in the plane <m>x+y+z=1</m>. If the
+          container is heated so that the temperature at each point is given
+          by <m>T(x,y,z)=4-2x^{2}-y^{2}-z^{2}</m> in hundreds of degrees, what are
+          the hottest and coldest points on the plate?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A company has three production plants, each manufacturing the
+          same product. If plant A produces <m>x</m> units at the cost of
+          <m>\dollar(x^2+2,000)</m>, plant B produces <m>y</m> units at the cost of
+          <m>\dollar(2y^2+3,000)</m>, and plant C produces <m>z</m> units at the cost of
+          <m>\dollar(z^2+4,000)</m>. If there is an order for 11,000 units to be filled,
+          determine how the production should be arranged among these three
+          plants so that the total production cost can be minimized.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 11 Solutions</em>
+  </p>
+
+  <p>
+    <em>Critical Points</em>
+  </p>
+  <ol>
+  <li>
+    <ol>
+      <li>
+        <p>
+          <m>(0,0,1)</m> is a max
+        </p>
+      </li>
+
+      <li>
+        <p>
+          none, why?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(0,1, 4)</m> is a min
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(0,0,0)</m> is a min
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <ol>
+      <li>
+        <p>
+          <m>(\pm 1,0,2)</m> are local minima and <m>(0,\pm 1, -1)</m> are local
+          maxima
+        </p>
+      </li>
+
+      <li>
+        <p>
+          all points to consider should be:  <m>(2,-1/3)</m>, <m>(0,0</m>), <m>(3,0)</m>, <m>(3,-3)</m>, <m>(0,-3)</m>, <m>(2,0)</m>, <m>(0,-1/3)</m>, <m>(3,-1/3)</m>, and <m>(2,-3)</m>; <m>(2,-1/3,-22/3)</m> is a min; <m>(0,-3,18)</m> is a max
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      <m>(-8/3, 5/2)</m> and <m>\sqrt{481}/6</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>(3,-320)</m>
+      <ol>
+        <li>
+          <p>
+            <m>(3,\pm6,-54)</m> are saddles and <m>(0,0,0)</m> are all maxima
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(0,1,9/2)</m>  (D is long <mdash /> use software!)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            icky algebra <mdash /> use software!
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Optimization and Lagrange Multipliers</em>
+    <ol>
+      <li>
+        <p>
+          <m>(1/2,1/2,1/2)</m> is the max, each of <m>(1,0,0)</m> and <m>(0,1,0)</m> is a min
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(0,0,1)</m> is the max, each of <m>(1,0,0)</m> and <m>(0,1,0)</m> is a min
+        </p>
+      </li>
+
+      <li>
+        <p>
+          there is one saddle on the interior, but no extrema on the interior; the
+          extrema occur on the boundaries at
+          <m>(0,0),</m> <m>(\pi/2,5),</m> <m>(2,0),</m> and <m>(\pi/2,0)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(12,12,288)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(0, \pm 2)</m> and <m>\dsp (\pm\frac{\sqrt{15}}{2},1/2)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>x=41, y = 41, z= 41</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

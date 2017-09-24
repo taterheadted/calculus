@@ -1,0 +1,136 @@
+
+
+<section>
+  <title>Change of Variable Method</title>
+  <p>
+    The integrand can often be rewritten so that it is easier to see how one of our derivative theorems can be applied to find the antiderivative of the integrand. This method is called either a <em>change of variable</em> or <em>substitution</em> because you replace some part of the integrand with a new function.
+    EXTRA<fn>Before calculators could compute 90<percent /> of integrals, techniques of integration were important as ways to quickly solve problems for engineers.  Now, I tend to focus more on understanding the notation and, when possible, the derivation of the techniques.  For example, I like students to see that u-substitution often <q>hides</q> the chain rule.  Therefore, I work out the following example in class and then do the same problem using u-substitution.  Some students will have seen u-substitution and I'm certainly happy to allow them to use a method they know.  Others will prefer the change of variable where the chain rule is fully displayed.  Showing the problems as a change of variable allows the deep-thinking student to see what is hiding behind the notation of u-substitution.  When I first taught this, I was quite surprised at the number of bright students who shunned u-substitution for the more difficult demonstration of the chain rule.  More detail on my perspective on how to do this carefully and correctly is outlined in the paper, <q>Calculus: The importance of precise notation, </q> co-authored with W. S. Mahavier. PRIMUS, Volume 18, Issue 4 July 2008 , pages 349 - 360. An even better article that I discovered later is <q>Teaching Integration by Substitution,</q> David Gale, American Mathematical Monthly, Vol. 101, No. 6 (Jun. - Jul., 1994, pp. 520-526).</fn></p>
+
+  <example>
+    <statement>
+      <p>
+        Consider <m>\dsp \int \frac{x}{\sqrt{x+5}} \; dx.</m> If we let <m>u(x) = \sqrt{x+5}</m>, then <m>\dsp u'(x) = \frac{1}{2\sqrt{x+5}}</m> so
+        <me>
+          \int \frac{x}{\sqrt{x+5}} \; dx = 2\int (u^2(x)-5)u'(x) \; dx =  2\int u^2(x)u'(x) - 5u'(x) \; dx = \frac{2}{3} u^3(x) - 10u(x) = \dots.
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate the indefinite integral, <m>\dsp \int x^2(2x^3 + 10)^{15} \; dx,</m> using the following steps.
+        <ol>
+          <li>
+            <p>
+              Let <m>u(x)=2x^3+10</m> and compute <m>u'.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>\dsp \int x^2(2x^3 + 10)^{15} \; dx =  \frac{1}{6} \int ( u(x) )^{15} u'(x) \; dx</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate this indefinite integral and  then replace <m>u(x)</m> with <m>2x^3+10</m> in your answer to eliminate the function <m>u</m> from your answer.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Verify your answer by taking the derivative.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="rational">
+    <statement>
+      <p>
+        Evaluate each of the following integrals.
+      </p>
+      <ol>
+      <li>
+        <p>
+          <m>\dsp \int (2x+7) \root 3 \of {x^2 + 7x +3} \; dx</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Three parts to this one!
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \sqrt{2 - x} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int x \sqrt{2 -x} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int x^2 \sqrt{2 - x} \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int \frac{{(\ln x)}^4}{x} \; dx</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int {5x^2}{4^{x^3}} \; dx</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int_0 ^\frac{\pi}{8} \sin^5(2x) \cos(2x) \; dx</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Three parts to this one!
+          <ol>
+            <li>
+              <p>
+                <m>\dsp \int\frac{x}{(x^2+2)^2} \; dx</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \int\frac{x}{\sqrt[4]{x^2+2}} \; dx</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \int \frac{x}{x^2+2} \; dx</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+      </ol>
+    </statement>
+  </problem>
+</section>
+

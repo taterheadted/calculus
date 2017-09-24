@@ -1,0 +1,204 @@
+
+
+<section xml:id="apptrig">
+  <title>Trigonometry</title>
+  <p>
+    We state here only the very minimal definitions and identities from trigonometry that we expect you to know. By <q>know</q> I mean memorize and be prepared to use on a test.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>unit circle</term> is the circle of radius one, centered at the origin.
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="sincos">
+    <statement>
+      <p>
+        If <m>P=(x,y)</m> is a point on the unit circle and <m>L</m> is the line through the origin and <m>P</m>, and <m>\theta</m> is the angle between the <m>x-</m>axis and <m>L</m>, then we define <term>cos</term><m>(\theta)</m> to be <m>x</m> and <term>sin</term><m>(\theta)</m> to be <m>y</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        These are the definitions of the remaining four trigonometric functions:
+        <me>
+          \tan(\theta )=\frac{\sin(\theta )}{\cos(\theta )}, \ \ \ \cot(\theta )=\frac{\cos(\theta )}{\sin(\theta )}, \ \ \ \csc(\theta )=\frac{1}{\sin(\theta )}, \ \ \ \mbox{ and } \ \ \ \sec(\theta )=\frac{1}{\cos(\theta)}
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Graph each of <m>\dsp \sin(-\theta )</m>, <m>\dsp -\sin(\theta )</m>, <m>\dsp \cos(-\theta )</m> and <m>\dsp \cos(\theta )</m> to convince yourself of the following theorem.
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Even/Odd Identities.</em>
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \sin(-\theta )=-\sin(\theta )</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \cos(-\theta )=\cos(\theta )</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    The Pythagorean Identity follows immediately from <xref ref="sincos">Definition</xref>.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>The Pythagorean Identity.</em>
+        <m>\dsp \sin^{2}(\theta )+\cos^{2}(\theta )=1</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <axiom>
+    <statement>
+      <p>
+        It's easier to memorize one identity than three.
+      </p>
+    </statement>
+  </axiom>
+
+  <problem>
+    <statement>
+      <p>
+        Divide both sides of the Pythagorean Identity by <m>\sin^2(\theta)</m> to show that <m>\dsp 1+\tan^{2}(\theta )=\sec^{2}(\theta )</m>. Divide by <m>\cos^2(\theta)</m> to show that <m>\dsp 1+\cot^{2}(\theta )=\csc^{2}(\theta )</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    These next ones are a bit tricky to derive, but easy to remember if you memorize the Double Angle Identities.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Sum/Difference Identities.</em>
+        <ol>
+          <li>
+            <p>
+              <m>\sin(x \pm y) = \sin(x)\cos(y) \pm \cos(x)\sin(y)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\cos(x \pm y) = \cos(x)\cos(y) \mp \sin(x)\sin(y)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Double Angle Identities.</em>
+        <ol>
+          <li>
+            <p>
+              <m>\sin(2x) = 2\sin(x)\cos(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\cos(2x) = \cos^2(x) - \sin^2(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the first Sum/Difference Identity to prove the first Double Angle Identity.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the second Sum/Difference Identity to prove the second Double Angle Identity.
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Half Angle Identities.</em>
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \sin^2(x/2) = \frac{1-\cos(x)}{2}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \cos^2(x/2) = \frac{1+\cos(x)}{2}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Product Identities.</em>
+        <ol>
+          <li>
+            <p>
+              <m>\sin(mx) \sin(nx)={1 \over 2}[ \cos(m-n)x- \cos(m+n)x]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\sin(mx) \cos(nx)={1 \over 2}[\sin(m-n)x+ \sin(m+n)x]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\cos(mx) \cos(nx)={1 \over 2}[\cos(m-n)x+ \cos(m+n)x]</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+</section>
+

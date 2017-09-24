@@ -1,0 +1,430 @@
+
+
+<section>
+  <title>The Theorems of Calculus</title>
+  <p>
+    In this section we will study several important theorems: the Intermediate Value Theorem, the Extreme Value Theorem, Rolle's Theorem and the Mean Value Theorem. When a statement is of the form <q>if P then Q</q>, P is called the hypothesis of the theorem and Q is called the conclusion.
+    EXTRA<fn>I often will sketch pictures and illustrate what these theorems mean.  I hold the students responsible for being able to identify the hypothesis and conclusion of each theorem, for being able to determine if a function satisfies the hypothesis of each theorem, and for applications of each theorem.  Again, those who express a deeper interest in understanding these are the ones I recruit to take our transitions and analysis courses.</fn></p>
+
+  <definition>
+    <statement>
+      <p>
+        <m>C_{[a,b]}</m> denotes the set of all functions that are continuous at every point in <m>[a,b]</m> and <m>C^1_{[a,b]}</m> denotes the set of all functions that are differentiable at every point in <m>[a,b].</m> Thus, when we write <m>f \in C^1_{[a,b]}</m> we mean that <m>f</m> is an element of <m>C^1_{[a,b]}</m>, so <m>f</m> is a function and <m>f</m> is differentiable at every point in <m>[a,b]</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Intermediate Value Theorem.</em>
+        If <m>f \in C_{[a,b]}</m> and <m>f(a) \lt  f(b)</m> and <m>y</m> is a number between <m>f(a)</m> and <m>f(b)</m>, then there is a number <m>x \in [a,b]</m> such that <m>f(x) =  y.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Does <m>\dsp f(x) = \frac{x^2-1}{x-1}</m> satisfy the hypothesis Intermediate Value Theorem on the interval <m>[-1,3]</m>? Does <m>f</m> satisfy the conclusion?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the Intermediate Value Theorem with <m>f(x)= x^3+3x-2</m> to show that <m>x^3+3x-2=0</m> has a solution on the interval <m>[0,1]</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Does <m>t^3 \cos(t) + 6\sin^5(t) - 3 = 2</m> have a solution on the interval <m>[0,2\pi]?</m>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Extreme Value Theorem.</em>
+        If <m>f \in C_{[a,b]}</m>, then there are numbers <m>c</m> and <m>d</m> in <m>[a,b]</m> so that <m>f(c) \leq f(x)</m> for every <m>x</m> in<m>[a,b]</m> and <m>f(d) \geq f(x)</m> for every <m>x</m> in <m>[a,b]</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    The Extreme Value Theorem and the Intermediate Value Theorem together give us the important result that if <m>f \in C_{[a,b]}</m> then <m>f([a,b]) = [m,M]</m> where <m>m</m> and <m>M</m> are the absolute minimum and maximum of <m>f</m>, respectively.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find the maximum and minimum of each function on the indicated interval.
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = x^2 -9</m> on <m>[2,3]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = e^x</m> on <m>[2,5]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = x^3 - x</m> on <m>[-1,5]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp f(x) = \frac{4\sqrt{x}}{x^2+3}</m> on <m>[0,4]</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Rolle's Theorem.</em> If <m>f \in C^1_{[a,b]}</m> and <m>f(a)=f(b)</m>, then there is a point <m>c</m> in the interval <m>(a,b)</m> such that <m>f'(c)=0</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <em>Sort-of-Proof.</em> We have seen that <m>f</m> has an absolute minimum and an absolute maximum on the closed interval <m>[a,b]</m>. Suppose an absolute minimum of <m>f</m> occurs at <m>x_{m}</m> and an absolute maximum of <m>f</m> occurs at <m>x_{M}</m>; then <m>f(x_{m}) \leq f(x) \leq f(x_{M})</m> for each <m>x</m> in <m>[a,b]</m>. If <m>x_{m}</m> is neither <m>a</m> nor <m>b</m>, then <m>f'(x_{m})=0</m> since it is an absolute minimum. Similarly, if <m>x_{M}</m> is neither <m>a</m> nor <m>b</m>, <m>f'(x_{M})=0</m> since it is an absolute maximum. Otherwise, we assume that <m>x_{m}=a</m> and <m>x_{M}=b</m>. Then we have <m>f(x_{m})\leq f(x)\leq f(x_{M})</m> for every <m>x</m> in <m>[a,b]</m> which implies that <m>f(x_{m})=f(x)=f(x_{M})</m> for every <m>x</m> in <m>[a,b]</m>. Therefore, <m>f'(x)=0</m> for all <m>x</m> in <m>[a,b]</m>. The same argument applies if <m>x_{m}=b</m> and <m>x_{M}=a</m>. <em>q.e.d.</em>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        In each case, determine if the function and the given interval <m>[a,b]</m> satisfy the hypothesis of Rolle's Theorem. If so, find all points <m>c</m> in <m>(a,b)</m> such that <m>f'(c)=0</m>.
+        <ol>
+          <li>
+            <p>
+              <m>f(x)=3x^2-3</m> on <m>[-3,3]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>F(t)=6t^{2}-t-1</m> on <m>[-4,5]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>g(\theta )=\cos(\theta )</m> on <m>[-\pi ,3\pi ]</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Mean Value Theorem.</em> If <m>f \in C^1_{[a,b]}</m>, and then there is a point <m>c</m> in the interval <m>(a,b)</m> such that <m>\dsp f'(c)=\frac{f(b)-f(a)}{b-a}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        In each case, determine if the function and the given interval <m>[a,b]</m> satisfy the hypothesis of the Mean Value Theorem. If so, find all points <m>c</m> in <m>(a,b)</m> such that <m>\dsp f'(c)=\frac{f(b)-f(a)}{b-a}</m>.
+        <ol>
+          <li>
+            <p>
+              <m>f(x)=3x^2-3</m> on <m>[-1,3]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>F(t)=6t^{2}-t-1</m> on <m>[-4,5]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp h(\beta )=\sin(2\beta )</m> on <m>[-\frac{\pi}{4} ,\pi ]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp H(y)=5y^{\frac{2}{3}}</m> on <m>[-2,2]</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We have already discussed this theorem in an applied context. If we average 80 miles per hour between Houston and St. Louis, then at some point we must have had a velocity of 80 miles per hour. In our applied problem, <m>f</m> represented the distance traveled, <m>a</m> the starting time, <m>b</m> the ending time, <m>f'</m> the velocity, and <m>c</m> the time that must exist when we were traveling at 80 miles per hour.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>f(t)</m> is the distance in feet that Ted has traveled down a road at time t in seconds. Suppose <m>f(10)=0</m> and <m>f(20)= 880</m>. Show that Ted traveled at 60 miles per hour at some time during the 10 second period.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A car is stopped at a toll booth. 18 minutes later it is clocked 18 miles away traveling at 60 miles per hour. Sketch a graph that might represent the car's speed from time <m>t=0</m> to <m>t=18</m> minutes. Then use the Mean Value Theorem to prove that the car exceeded 60 miles per hour.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The next problem is a very slight modification of a problem that I shamelessly stole from my friend and colleague, Brian Loft!
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        The first two toll stations on the Hardy Toll Road are 8 miles apart. Dr. Mahavier's EasyPass says it took 6 minutes to get from one to the other on a Sunday drive last week. A few days later, a ticket came in the mail for exceeding the 75 mph speed limit. Can he fight this ticket? Does Dr. Mahavier leave his GPS on in his phone while driving? Have you read <q>1984?</q>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        <em>L'H&#xf4;pital's Rule.</em> Consider these three simple limits and discuss the implications.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to\infty} \frac{x^2}{x} = DNE(\infty)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to\infty} \frac{3x}{x} = 3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to\infty} \frac{x}{x^2} = 0</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Therefore if the top and the bottom of a rational function both tend to infinity, then the limit can be <m>0</m>, <m>\infty</m>, or any real number! We call such limits <em>indeterminate forms</em> and these were three examples of the indeterminate form <m>\dsp \frac{\infty}{\infty}</m> since both the numerator and the denominator tended to infinity. Here is the formal definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>f</m> and <m>g</m> are two functions such that <m>\displaystyle{\lim_{x \to c}} f(x) = \infty</m> and <m>\displaystyle{\lim_{x \to c}} g(x) = DNE(\infty)</m>, then the function <m>\dsp \frac{f}{g}</m> is said to have the <term>indeterminate form</term> <m>\dsp \frac{\infty}{\infty}</m> at <m>c</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    There are formal definitions for other indeterminate forms, but I don't think we need them to
+    proceed. The list of indeterminate forms is:
+    <me>
+      \frac{0}{0}, \\\\\\ \frac{\infty}{\infty}, \\\\\\ 0 \cdot \infty, \\\\\\ 0^0, \\\\\\ 0^\infty, \\\\\\ \infty^0, \\\\\\ 1^\infty \mbox{ and }  \infty - \infty.
+    </me>
+  </p>
+
+  <p>
+    One tool that is helpful in evaluating indeterminate forms follows.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>L'H&#xf4;pital's<nbsp />Rule.</em>
+        Suppose <m>f</m> and <m>g</m> are differentiable functions on some interval <m>(a,b)</m> and <m>c</m> is a number in that interval. If <m>\displaystyle{\lim_{x \to c} f(x) = 0}</m> and <m>\displaystyle{\lim_{x \to c} g(x) = 0}</m> and <m>g'(x) \ne 0</m> for <m>x \ne c</m> and <m>\displaystyle{\lim_{x \to c} \frac{f'(x)}{g'(x)}}</m> exists, then <m>\displaystyle{\lim_{x \to c} \frac{f(x)}{g(x)} = \lim_{x \to c} \frac{f'(x)}{g'(x)}}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    L'H&#xf4;pital's Rule also applies for the indeterminate form: <m>\dsp \frac{\infty}{\infty}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following limits using L'H&#xf4;pital's rule. For each problem, is there another way you know how to do it?
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to 1} \frac{x^{2}-2x+1}{x^{2}-1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to 0 } \frac{\sin(x)}{x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to 0 } \frac{6^{x}-1}{x^{2}+2x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to -3 } \frac{3x-\frac{2}{x}}{x^{2}-x-20}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following limits if they exist. If they do not exist, why not?
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to \infty} \frac{2x}{5x+3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to \infty } x^{2}+5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{t\to \infty } \frac{4t+\cos(t)}{t}</m>
+              (Try it with, and without, L'H&#xf4;pital's rule. Read L'H&#xf4;pital's rule carefully.)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to \infty } \frac{1-4x+3x^{2}+x^{5}}{x^{2}+x-2}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \to 0^+} \frac{x}{\ln(x)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp {\lim_{x \to 0^+} \invsin (3x) \cdot \csc(2x)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to \infty} (\sqrt{x^{2}+1}-x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use common denominators and L'H&#xf4;pital's Rules to compute <m>\dsp \lim_{x\to 0} (\frac{1}{x}-\frac{1}{\sin(x)})</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We can use properties of the natural log to resolve limits of the forms, <m>0^0</m>, <m>\infty^0</m> and <m>1^\infty</m>.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Compute <m>\lim_{x \to \infty} x^\frac{1}{x}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <ol>
+    <li>
+      <p>
+        Suppose the answer is <m>L</m>:   <nbsp /><m>\dsp L = \lim_{x \to \infty} x^{\frac{1}{x}}</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Apply the natural log to both sides:  <nbsp /><m>\dsp \ln(L) = \ln( \lim_{x \to \infty} x^{\frac{1}{x}})</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Swap the limit and the ln:<nbsp /> <m>\dsp \ln(L) = \lim_{x \to \infty} \ln( x^{\frac{1}{x}})</m>.   Why is this legal?
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Do some algebra and compute the limit:  <nbsp /><m>\dsp \ln(L) = \lim_{x \to \infty} \frac{1}{x} \ln x =  \lim_{x \to \infty} \frac{\ln(x)}{x} = \lim_{x \to \infty} \frac{1}{x}  = 0</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Solve for <m>L</m>:  <nbsp /><m>\ln(L) = 0</m> so <m>L = e^0 = 1</m>.
+      </p>
+    </li>
+  </ol>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate these using the clever trick just described.
+        <ol>
+          <li>
+            <p>
+              <m>\lim_{x\to 0^{+}} x^{x^{2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lim_{x\to \infty} (1+\frac{1}{x})^{x}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

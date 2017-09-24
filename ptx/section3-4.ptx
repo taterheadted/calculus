@@ -1,0 +1,283 @@
+
+
+<section>
+  <title>Derivatives of the Inverse Trigonometric Functions</title>
+  <definition>
+    <statement>
+      <p>
+        Given a function <m>f</m> with domain D and range R, if there exists a function <m>g</m> with domain R and range D so that for all <m>x \in D</m> and all <m>y \in R</m> we have
+        <me>
+          g(f(x))=x \mbox{   and   }   f(g(y))=y,
+        </me>
+        then we call <m>g</m> the <term>inverse</term> of <m>f</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Discuss inverse functions and compute the inverse of <m>\dsp f(x) = \frac{1}{x-3}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        Find the inverse of each of the following functions.
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = \frac{2}{3}x+4</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>g(x) = x^3 - 1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>h(x) = \sqrt[3]{x-4}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>i(x) = 4 - x^5</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Does <m>n(x) = x^2</m> have an inverse?  If so what is it?  If not, why not?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Does <m>y(x) = \sqrt{x}</m> have an inverse?  If so what is it?  If not, why not?
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </problem>
+
+  <p>
+    Notice in the next definition that we restrict the domain of sine to talk about the inverse sine. This is because if we simply reversed all the coordinates of sine, the resulting graph would not be a function. There are many ways we could have restricted the domain, so one simply must memorize the domain and range of all the inverse trigonometric functions.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>inverse sine</term> function, denoted by <term><m>\invsin</m></term> or <term><m>\arcsin</m></term> is the inverse of the function <m>f(x)=\sin(x)</m> with the domain <m>[-\pi/2,\pi/2].</m>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The domain of the inverse sine function is the range of the sine function and the range of the inverse sine function is the restricted domain, <m>[-\pi/2,\pi/2]</m>, of our sine function. We define all six inverse trigonometric functions in a similar manner and <xref ref="t9">Table</xref> lists these functions along with their respective domains and ranges.
+  </p>
+
+  <table xml:id="t9" >
+    <caption>Inverse Trigonometric Functions</caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Inverse Function</cell>
+        <cell>Domain</cell>
+        <cell>Range</cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>\invsin</m></cell>
+        <cell><m>[-1,1]</m></cell>
+        <cell><m>[-\pi/2,\pi/2]</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>\invcos</m></cell>
+        <cell><m>[-1,1]</m></cell>
+        <cell><m>[0,\pi]</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>\invtan</m></cell>
+        <cell><m>\re</m></cell>
+        <cell><m>[-\pi/2,\pi/2]</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>\invcsc</m></cell>
+        <cell><m>|x|\geq 1</m></cell>
+        <cell><m>(0,\pi/2] \cup (\pi,3\pi/2]</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>\invsec</m></cell>
+        <cell><m>|x|\geq 1</m></cell>
+        <cell><m>[0,\pi/2) \cup [\pi,3\pi/2)</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>\invcot</m></cell>
+        <cell><m>\re</m></cell>
+        <cell><m>[0,\pi]</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Inverse Sine Derivative Theorem.</em>
+        EXTRA<fn>By this section, I have already reviewed the inverse trigonometric functions and promised that there will be a problem on the next test addressing the domain, range and graph of one of them.  While one could make this section discovery-based, the total content that I must cover requires a few concessions.  You'll have noted by now that we proved the power rule only for integers.  Now we walk them through the derivative of the inverse sine function.   One reason I choose to lecture here is that the total number of important ideas that are embedded in this problem is considerable.  Of course, it reinforces the  definition of the inverse trig functions and the chain rule.  It foreshadows implicit differentiation, the idea of taking the derivative of both sides of an equation.  The triangles that we create are important for the trigonometric substitutions coming in the next semester as well.  Thus, as I go over this, I take lots of time to talk about all of the important aspects and explain that this is why they will be held responsible for the derivations of all of the inverse trigonometric functions.</fn></p>
+
+      <p>
+        If <m>f(x) = \invsin(x)</m>, then <m>\dsp f'(x) = \frac{1}{\sqrt{1-x^2}}.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <em>Proof.</em> Computing the derivative of the inverse sine function is an application of the Pythagorean Theorem and the Chain Rule. Let
+    <me>
+      f(x) = \invsin(x).
+    </me>
+  </p>
+
+  <p>
+    Since
+    <me>
+      \sin(f(x)) = \sin(\invsin(x)) = x,
+    </me>
+    we have,
+    <me>
+      \sin(f(x))=x.
+    </me>
+  </p>
+
+  <p>
+    Taking the derivative of both sides yields,
+    <me>
+      \cos(f(x)) f'(x) = 1,
+    </me>
+    and solving for <m>f'(x)</m> yields
+    <me>
+      f'(x) = \frac{1}{\cos(f(x))}.
+    </me>
+  </p>
+
+  <p>
+    Because we don't want <m>f'</m> in terms of <m>f,</m> we apply the Pythagorean Theorem. Draw a right triangle with one angle, <m>f(x).</m> Since
+    <me>
+      \sin(f(x))=x = \frac{x}{1}
+    </me>
+    place <m>x</m> on the side opposite the angle <m>f(x)</m> and <m>1</m> on the hypotenuse. Note that
+    <me>
+      \dsp \cos(f(x)) = \frac{\sqrt{1-x^2}}{1} = \sqrt{1-x^2}.
+    </me>
+  </p>
+
+  <p>
+    Thus
+    <me>
+      \dsp f'(x) = \frac{1}{\sqrt{1-x^2}}.
+    </me>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the derivatives of the remaining five inverse trigonometric functions and memorize them.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the derivative of each of the following functions.
+        <ol>
+          <li>
+            <p>
+              <m>y(x) =\invsin(2x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H(t) = (t-\invcos(t))^{3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>F(x)=\invcsc(x)\invtan(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp G(z) = \frac{z^{2}-7z+5}{\invcot(z)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>h(x) = \invtan(\invsin(x))</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

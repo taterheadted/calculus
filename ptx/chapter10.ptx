@@ -1,0 +1,271 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Cross Product and Planes</title>
+  <introduction>
+    <p>
+      <q>Happiness lies in the joy of achievement and the thrill of creative effort.</q> - Franklin D. Roosevelt
+    </p>
+
+    <p>
+      In <xref ref="cross">Problem</xref>, you were given two vectors and asked to find a vector that was perpendicular to both. Because there are infinitely many vectors perpendicular to any two given vectors, we added another condition (<m>x_1+x_2+x_3=1</m>) so that the answer would be unique. This problem was a warm-up for the definition of the <em>cross product</em>.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>cross product</term> of two vectors is the vector that is perpendicular to both of them and has length that is the area of the parallelogram defined by the two vectors.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      If <m>\oa u = (u_1,u_2,u_3)</m> and <m>\oa v = (v_1,v_2,v_3)</m>, then the cross product of <m>\oa u</m> and <m>\oa v</m> may be computed by
+      one of two methods:
+    </p>
+
+    <p>
+      <em>Method One.</em>
+      <m>\oa u \times \oa v = (u_{2}v_{3}-u_{3}v_{2},\ u_{3}v_{1}-u_{1}v_{3},\  u_{1}v_{2}-u_{2}v_{1})</m>
+    </p>
+
+    <p>
+      For the second method, you need a tool from linear algebra, determinants. If I have not done so already, ask me during class to show you how to compute the determinant of 2 by 2 and 3 by 3 matrices.
+    </p>
+
+    <p>
+      <em>Method Two.</em> If we define <m>\oa i = \oa{(1,0,0)}, \oa j = \oa{(0,1,0)},</m> and <m>\oa k = \oa{(0,0,1)}</m>, then we may compute the cross product as:
+      <me>
+        \oa u \times \oa v = det
+            \begin{pmatrix}\oa i \amp  \oa j \amp  \oa k \\
+                u_1 \amp  u_2 \amp  u_3 \\
+                v_1 \amp  v_2 \amp  v_3
+        \end{pmatrix} .
+      </me>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Prove or give a counter example for each statement, assuming <m>\oa u = (u_1,u_2,u_3), \oa v = (v_1,v_2,v_3), \oa w = (w_1, w_2, w_3)</m> and <m>k \in \re.</m>
+          <ol>
+            <li>
+              <p>
+                <m>k(\oa{u}\times \oa{v})=(k\oa{u})\times \oa{v} = \oa{u}\times (k\oa{v})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u}\times \oa{v} = - \big( \oa{v}\times \oa{u} \big)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u}\times \oa{u} = \oa{u}\times \oa 0 = \oa 0\times \oa{u} = \oa{0}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(\oa{u}\times \oa{v})\cdot \oa{w} = \oa{u}\cdot (\oa{v}\times \oa{w})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>k + ( \oa u \times \oa v) = (k + \oa u) \times (k + \oa v)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u}\times (\oa{v}+\oa{w}) = (\oa{u}\times \oa{v})+(\oa{u}\times \oa{w})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u}\times (\oa{v} \cdot \oa{w}) = (\oa{u}\times \oa{v})\cdot(\oa{u}\times \oa{w})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u}\times (\oa{v}\times \oa{w}) = (\oa{u}\cdot \oa{w})\oa{v}-(\oa{u}\cdot \oa{v})\oa{w}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      One might think of planes in <m>{\re}^3</m> as analogous to lines in <m>{\re}^2</m>. This is because a line is a one-dimensional object in <m>\re^2</m> <mdash /> that is it has dimension one less than the dimension of the space. In <m>\re^3</m> a plane is two-dimensional <mdash /> it has dimension one less than the dimension of the space.
+      EXTRA<fn>We give both algebraic and geometric developments for planes.
+
+
+      Algebraic: We launch from lines, noting that the slope-intercept form, <m>y = mx + b</m> doesn't give us all lines, while <m>ax +by = c</m> does.  We graph one simple line <m>2x - 3y = 9</m> and graph the <m>x-</m> and <m>y-</m>intercepts.  Moving to three dimensions, we note that <m>z = ax + by + c</m> won't give us all planes, but <m>ax + by + cz = d</m> will. And we need only plot three simple points, the <m>x-</m>, <m>y-</m>, and <m>z-</m> intercepts to sketch most planes.
+
+
+      Geometric:  The slope of a line gives us the orientation of the line and a point on the line uniquely determines the line among all lines with that slope. With planes, the perpendicular to a plane gives us its orientation in three-space but we still need a point to nail down which plane we are discussing, just as we did with lines.  We typically work one example, finding a plane orthogonal to (-2,-2,2) and containing (2,3,5) by sketching the orthogonal, the point, and the plane.  We observe that any point <m>(x,y,z)</m> on the plane must satisfy <m>((x,y,z)-(2,3,5)) \cdot (-2,-2,2) = 0</m> and we simplify this expression to place the equation in standard form, observing that this yields the algebraic form we discussed earlier.  I'll query them as to what they observe about the coefficients and see if they notice that the coefficients are indeed a scalar multiple of the orthogonal to the plane.  If not, we'll discover it soon enough. From this example, we see what it means for a vector to be perpendicular to a plane. We say a vector is perpendicular to a plane when it is perpendicular to every vector that lays in the plane.</fn></p>
+
+    <definition>
+      <statement>
+        <p>
+          Given <m>a,b, c \in \re</m> where <m>a</m> and <m>b</m> are not both zero, the <term>line</term> determined by <m>a,b,</m> and <m>c</m> is the collection of all points <m>(x,y) \in \re^2</m> satisfying <m>ax+by=c.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Given this definition we can define a <em>plane</em> in the same manner.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          Given <m>a,b, c, d \in \re</m> where <m>a,b</m> and <m>c</m> are not all zero, the <term>plane</term> determined by <m>a,b,c</m> and <m>d</m> is the collection of all points <m>(x,y,z) \in \re^3</m> satisfying <m>ax+by +cz=d.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      If <em>algebraically</em> we think of a plane as all <m>(x,y,z)\in {\re}^3</m> satisfying <m>ax+by+cz=d</m> where not all of <m>a,b</m> and <m>c</m> are zero, then <em>geometrically</em> we can think of a plane as uniquely determined by a vector and a point where the plane is perpendicular to the vector and contains the point. We need both because there are infinitely many planes perpendicular to a given vector, but knowing one point in the plane uniquely determines the plane.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Show that <m>(3,-2,5)</m> is perpendicular to the plane <m>3x -2y +5z = 7</m> by choosing two points, <m>x=(x_1,x_2,x_3)</m> and <m>y=(y_1,y_2,y_3),</m> in the plane and showing that <m>(3, -2, 5) \cdot \oa{x-y} = 0.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Show that <m>(a,b,c)\in {\re}^3</m> is orthogonal to the plane <m>ax+by+cz=d</m> by showing that if <m>x=(x_1,x_2,x_3)</m> and <m>y=(y_1,y_2,y_3)</m> are two points on the plane, then <m>(a, b, c) \cdot \oa{x-y} = 0.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Determine whether these two planes are parallel.
+          <ol>
+            <li>
+              <p>
+                <m>2x-3y+\frac{5}{2}z=9</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>x-\frac{3}{2}y+\frac{5}{4}z=12</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Write in standard form (ax+by+cz=d) the equation of a plane <m>\perp</m> to the first plane from previous problem and containing the point <m>(9,2,3)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find all the planes parallel to the plane <m>x+y-z=4</m> and at a distance of one unit away from the plane. When does the <q>distance between two planes</q> make sense?
+          EXTRA<fn>Just as occurs with the formula for computing the cross product of two vectors, often a student will use a formula from a book for the distance between two planes. If this occurs, I praise the student for getting this formula for us to use and agree that we can use it from now on.  Again, I emphasize that it might be wrong (perhaps Wikipedia has a typo?) and that until we prove it, we won't know if it is valid.  Then we'll address how we might find the distance without a formula and that by doing it this way, we can take a step toward deriving the formula.  There are a few nice ways to do this. I like to create a parametric line that is orthogonal to both planes and passes through a point in one plane at time <m>t=0</m>. Then we can determine the time at which the line intersects the other plane and use the formula for the distance between two points to find the distance.  This method easily generalizes to derive the formula.  Of course, one can use projections and  trigonometry as well.</fn></p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find both angles between these two planes:
+          <ol>
+            <li>
+              <p>
+                <m>2x-3y+4z=10</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>4x+3y-6z=-4</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equation of the plane containing <m>(2,3,4)</m>, <m>(1,2,3)</m> and <m>(6,-2,5)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      For the next two problems, there is a formula on the web or in some book, but it's probably wrong because of a typographical
+      error. Find a vector <m>\perp</m> to both planes, determine the equation of a parametric line, <m>\oa l</m>, passing through both planes. Find the points where <m>\oa l</m> intersects each plane. Find the distance between these points.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Find the distance between the two planes, <m>x+y+z=1</m> and <m>x+y+z=2</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the distance between the two planes, <m>3x-4y+5z=9</m> and <m>3x-4y+5z=4</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find an equation for the distance between two planes, <m>ax + by + cz = e</m> and <m>ax + by + cz = f.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equation of the plane containing the line <m>\oa l(t)=(1+2t,\ -1+3t,\ 4+t)</m> and the point <m>(1,-1,5)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The next problem asks for the intersection of two planes. What are all the possibilities for the intersection of any two planes? One possibility is a line. To find the equation of the line, there are a couple of ways we could think about this. First, we could find two points in the intersection and then find the equation of that line. Or we could observe that the intersection of two planes must be contained in each plane and thus is parallel to both planes. How can we find a vector that is parallel to both planes?
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Find the intersection of the two planes <m>3x-2y+6z=1</m> and <m>3x-4y+5z=1.</m>
+        </p>
+      </statement>
+    </problem>
+  </introduction>
+  <xi:include  href="chap9probs.ptx" />
+</chapter>
+

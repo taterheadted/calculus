@@ -1,0 +1,44 @@
+
+
+<section xml:id="appsum">
+  <title>Summation Formulas</title>
+  <p>
+    These formulas are useful for computing Riemann Sums.
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \Sigma_{i=1}^{n} c = nc</m> where <m>c</m> is any real number
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \Sigma_{i=1}^{n} i = \frac{n(n+1)}{2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \Sigma_{i=1}^{n} i^{3} = [\frac{n(n+1)}{2}]^{2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \Sigma_{i=1}^{n} i^{2} = \frac{n(n+1)(2n+1)}{6}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \Sigma_{i=1}^{n} i^{4} = \frac{n(n+1)(2n+1)(3n^{2}+3n+1)}{30}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    EXTRA
+  </p>
+</section>
+

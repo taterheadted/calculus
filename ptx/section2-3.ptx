@@ -1,0 +1,429 @@
+
+
+<section>
+  <title>Instantaneous Velocity and Growth Rate</title>
+  <p>
+    If you have been struggling, relax. This is where it all comes together.
+    EXTRA<fn>Having encouraged them to be patient and that the big picture will emerge soon, this section is where the idea of instantaneous rates of change begins to gel as they see the commonality between the problems associated with computing velocity, plant growth rate, population growth rate and later slope.</fn></p>
+
+  <problem xml:id="Robbie">
+    <statement>
+      <p>
+        Recall from <xref ref="l3">Problem</xref>, that Robbie's position function is <m>R(t) = t^3 + 2.</m>
+        <ol>
+          <li>
+            <p>
+              What is Robbie's average velocity from time <m>t=3</m> till time <m>t=4</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is Robbie's average velocity from time <m>t=3</m> till time <m>t=3.5</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is Robbie's average velocity from time <m>t=3</m> till time <m>t=3.1</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is Robbie's <em>instantaneous</em> velocity at time t=3?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l5">
+    <statement>
+      <p>
+        Fill in <xref ref="t7">Table</xref> of average velocities for Robbie. Write down an equation for a function with input time and output the average velocity of Robbie over the time interval [3,t].
+      </p>
+    </statement>
+  </problem>
+
+  <table xml:id="t7" >
+    <caption>Robbie's Average Velocity Table</caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Time</cell>
+        <cell>Time Interval</cell>
+        <cell>Average Velocity</cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>4</m></cell>
+        <cell><m>[3,4]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3.5</m></cell>
+        <cell><m>[3,3.5]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3.1</m></cell>
+        <cell><m>[3,3.1]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3.01</m></cell>
+        <cell><m>[3,3.01]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <problem xml:id="l4">
+    <statement>
+      <p>
+        A population P of robots (relatives of Robbie) is growing according to <xref ref="t4">Table</xref>, where time is measured in days and population is measured in number of robots. Determine a population function P that represents the number of robots as a function of time and graph this function.
+      </p>
+    </statement>
+  </problem>
+
+  <table xml:id="t4" >
+    <caption>Population Table</caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Time</cell>
+        <cell>Population</cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>0</m></cell>
+        <cell><m>2</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>1</m></cell>
+        <cell><m>4</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>2</m></cell>
+        <cell><m>12</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3</m></cell>
+        <cell><m>32</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>4</m></cell>
+        <cell><m>70</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>5</m></cell>
+        <cell><m>132</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <problem>
+    <statement>
+      <p>
+        Using the function P from the previous problem:
+        <ol>
+          <li>
+            <p>
+              Assume that c is a positive number and compute <m>P(3)</m> and <m>P(c)</m>. What do these numbers represent about the  robots?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Determine the value of <m>P(5) - P(3)</m>. What does this number say about the robot population?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Assume that <m>u</m> and <m>v</m> are positive numbers with <m>u > v</m>. Compute the value of <m>P(u) - P(v)</m> and explain what this expression says about the robot population.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Using the function, P, from the previous problem:
+        <ol>
+          <li>
+            <p>
+              Compute the value of <m>\dsp \frac{P(5)-P(3)}{5-3}</m> and explain the physical meaning of this number.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Assume that <m>u</m> and <m>v</m> represent times. Simplify and explain the meaning of <m>\dsp \frac{P(u)-P(v)}{u-v}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is the population of robots when time is equal to 5?  At time equal to 5.5?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              At what time is there a population of 106 robots?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A Maple leaf grows from a length of 5.62 cm to a length of 8.12 cm. in 1 year and 3 months. How fast did the leaf grow? Does your answer represent an instantaneous rate of growth or an average rate of growth?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Experimental data indicates that on January 1, the leaf is 8.37 centimeters long and it grows at the rate of 0.18 centimeters per month for 3.5 months. From that time on, the leaf grows at a rate of 0.12 centimeters per month until it reaches a length of 9.6 centimeters. Determine the average growth rate for the whole time period. At what time did the leaf grow at this rate?
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l6">
+    <statement>
+      <p>
+        Use the robot population function you found in <xref ref="l4">Problem</xref> to fill in <xref ref="t5">Table</xref> and determine how fast the robot population is growing at time t=4. This is called the instantaneous growth rate and is measured in robots per day.
+      </p>
+    </statement>
+  </problem>
+
+  <table xml:id="t5" >
+    <caption>Population Growth Rate Table</caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Time</cell>
+        <cell>Time
+        Interval</cell>
+        <cell>Average Growth Rate</cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>5</m></cell>
+        <cell><m>[4,5]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>4.5</m></cell>
+        <cell><m>[4,4.5]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>4.1</m></cell>
+        <cell><m>[4,4.1]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>4.01</m></cell>
+        <cell><m>[4,4.01]</m></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <problem>
+    <statement>
+      <p>
+        Write a function with input time and output the average growth rate of the population over the time interval [4,t].
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l8">
+    <statement>
+      <p>
+        State the limit that would produce the limit table from <xref ref="l5">Problem</xref> and hence establish the instantaneous velocity of Robbie at time t=3.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        State the limit that would produce the limit table from <xref ref="l6">Problem</xref> and hence establish the instantaneous growth rate of the population at time t=4.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    At this point, you know how to compute average velocity, average growth rate, instantaneous velocity, and instantaneous growth rate. You don't want to create a limit table every time you want the instantaneous velocity, so we want a function for Robbie's velocity. That is, we want a function that takes <em>time</em> as input and produces Robbie's <em>velocity</em> as output. Similarly, we want a function that takes <em>time</em> as input and produces the <em>robot population growth rate</em> as output.
+  </p>
+
+  <problem xml:id="l10">
+    <statement>
+      <p>
+        Write a function for the instantaneous velocity of Robbie.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Write a function for the instantaneous growth rate of the robot population.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Roberta the Robot</em> (Robbie's potential girlfriend) is walking along the same road as Robbie. Roberta's
+    distance from the same pothole after <m>t</m> seconds is given by <m>f(t)= 2t^2 - 16</m> feet. Recall from <xref ref="l10">Problem</xref>, we know that if we have a position function then we can find the corresponding velocity function by taking a certain limit.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find the velocity function for Roberta.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l11">
+    <statement>
+      <p>
+        Determine Roberta's velocity at 10 seconds. At what time(s) is Roberta <m>2</m> feet from the pothole?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        At what time(s) is Roberta stopped? At what time is Roberta
+        traveling at a velocity of <m>-4</m> feet per second? Do Robbie and Roberta
+        ever meet? If so, when and where?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>A colony of androids</em> is threatening our robot population.
+    On day <m>t</m>, there are <m>N(t) = 2t^2  +4t + 6</m> androids.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find the growth rate function for the android population. What are
+        the units? At what time(s) is the android population equal to 200?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        When is the android population increasing at a rate of 10 androids per day?
+        How fast is the androids population growing on day 10?
+      </p>
+    </statement>
+  </problem>
+</section>
+

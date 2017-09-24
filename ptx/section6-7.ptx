@@ -1,0 +1,184 @@
+
+
+<section>
+  <title>Improper Integrals</title>
+  <p>
+    In our definition of the definite integral <m>\dsp \int_a ^b f(x) \; dx</m>, it was assumed that <m>f</m> was defined on all of <m>[a, b]</m> where <m>a</m> and <m>b</m> were numbers. We wish to extend our definition to consider the possibilities where <m>a</m> and <m>b</m> are <m>\pm \infty</m> and where <m>f</m> might not be defined at every point in <m>[a,b].</m> When any of these possibilities occur, the integral is called an <em>improper integral</em>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp f(x) = \frac{1}{x^2}.</m>
+        <ol>
+          <li>
+            <p>
+              Sketch a graph of <m>f.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_1^{10} f(x) \; dx, \int_1^{50} f(x) \; dx,</m> and <m>\dsp \int_1^{100} f(x) \; dx.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \lim_{N \to \infty} \int_1^{N} f(x) \ dx.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>a</m> is a number and <m>f</m> is continuous for all <m>x \ge a</m>, then we define the <term>improper integral</term> <m>\dsp \int_a^{\infty} f(x) \; dx</m> to be <m>lim_{N \to \infty} \int_a^{N} f(x) \ dx.</m> If this limit exists, we say the integral <term>converges</term> and if it does not exists, we say the integral <term>diverges</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Write down definitions for <m>\dsp \int_{-\infty}^a f(x) \; dx</m> and <m>\dsp \int_{-\infty}^{\infty} f(x) \; dx.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp f(x) = \frac{4}{(x-1)^2}.</m>
+        <ol>
+          <li>
+            <p>
+              Sketch the graph of <m>f.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp \int_2^{100} f(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp \int_2^{100,000} f(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp \int_2^{\infty} f(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp \int_a^{\infty} f(x) \; dx</m> where <m>a > 1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch <m>\dsp f(x) = \frac{1}{x-1}</m> and evaluate <m>\dsp \int_2^{\infty} f(x) \; dx</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch <m>\dsp f(x) = \frac{1}{4+x^2}</m> and evaluate <m>\dsp \int_{-\infty}^{\infty} f(x) \; dx.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int_{-\infty}^{-2} \frac{5}{x \sqrt{x^2-1}} \; dx</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>f</m> is continuous on the interval <m>[a, b)</m>, <m>\displaystyle{\lim_{x \to b^-} |f(x)| =  \infty}</m>, then we define
+        <m>\dsp \int_a^{b} f(x) \ dx = {\lim_{c \to b^-} \int_a ^c f(x) \; dx}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Definitions.
+        <ol>
+          <li>
+            <p>
+              Suppose <m>f</m> is continuous on the interval <m>(a, b]</m> and <m>\displaystyle{\lim_{x \to a^+} |f(x)| =  \infty}</m>.  Write a definition for <m>\dsp \int_a^{b} f(x) dx</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Suppose <m>f</m> is continuous on the interval <m>[a, b]</m> except at <m>c</m> where <m>a \lt  c \lt  b.</m>  Suppose <m>\dsp \lim_{x \to c-} = \dsp \lim_{x \to c+} f(x) =  \pm \infty</m>. Write a definition for <m>\dsp \int_a^{b} f(x) dx</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following improper integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int_0^2 \frac{1}{(x-2)^2} \ dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_3^5 \frac{x}{4-x} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_0^\frac{\pi}{2} \cot x \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_0^e \frac{\ln x}{x} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_1^{\infty} \frac{\; dx}{-2x \sqrt{x^2-1}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

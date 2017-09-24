@@ -1,0 +1,790 @@
+
+
+<section>
+  <title>To the Instructor</title>
+  <introduction>
+    <p>
+      <q>A good lecture is usually systematic, complete, precise <mdash /> and dull; it is a bad teaching instrument.</q> - Paul Halmos
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>About these Notes</title>
+    <p>
+      These notes constitute a self-contained sequence for teaching, using an inquiry-based pedagogy, most of the traditional topics of Calculus I, II, and III in classes of up to 40 students. The goal of the course is to have students constantly working on the problems and presenting their attempts in class every day, supplemented by appropriate guidance and input from the instructor. For lack of a better word, I'll call such input <em>mini-lectures</em>. When the presentations in class and the questions that arise become the focus, a team-effort to understand and then explain becomes the soul of the course. The instructor will likely need to provide input that fills in gaps in pre-calculus knowledge, ties central concepts together, foreshadows skills that will be needed in forthcoming material, and discusses some real-life applications of the techniques that are learned. The key to success is that mini-lectures are given when the need arises and after students have worked hard. At these times, students' minds are primed to take in the new knowledge just when they need it. Sometimes, when the problems are hard and the students are struggling, the instructor may need to serve as a motivational speaker, reminding students that solving and explaining problems constitute the two skills most requested by industry. Businesses want graduates who can understand a problem, solve it, and communicate the solution to their peers. That is what we do, in a friendly environment, every day in class. At the same time, we get to discover the amazing mathematics that is calculus in much the same way as you discover new mathematics <mdash /> by trying new things and seeing if they work!
+    </p>
+
+    <p>
+      Even though the vast majority of students come to like the method over time, I spend a non-trivial amount of time in the beginning explaining my motivation in teaching this way and encouraging students both in my office and in the classroom. I explain that teaching this way is much harder for me, but that the benefit I see in students' future course performances justifies my extra workload. And I draw parallels, asking a student what she is good at. Perhaps she says basketball. Since I don't play basketball, I'll ask her, <q>If I come to your dorm or house this evening and you lecture to me about basketball and I watch you play basketball, how many hours do you think will be required before I can play well?</q> She understands, but I still reiterate, that I can't learn to play basketball simply by watching it. I can learn a few rules and I can talk about it, but I can't <em>do</em> it. To learn to play basketball, I'll need to pick up the ball and shoot and miss and shoot again. And I'll need to do a lot of that to improve. Mathematics is no different. Sometimes a student will say, <q>But I learn better when I see examples.</q> I'll ask if that is what happened in his pre-calculus class and he'll say <q>Yes.</q> Then I'll point out that the first problems in this course, the very ones he is struggling with, are material from pre-calculus and the fact that he is struggling shows clearly that he did not learn. His pre-calculus teacher did not do him any favors. As soon as a problem is just barely outside of the rote training he saw in class and regurgitated on tests, he is unable to work the problems. This brings home the fact that rote training has not been kind to him and that, as hard as it is on me, I am going to do what I think is best for him. This blunt, but kind honesty with my students earns their trust and sets the stage for a successful course.
+    </p>
+
+    <p>
+      I've taught calculus almost every long semester since 1988. When I first taught calculus, I lectured. A very few years later when I taught calculus, I sent my students to the board one day each week. Using each of these methods, I saw students who demonstrated a real talent for mathematics by asking good questions and striving to understand concepts deeply. Some of these students did poorly on rote tests. Others did well. But I was only able to entice a small number of either group to consider a major in mathematics. Today when I teach Calculus, students present every day and mathematical inquiry is a major part of what occurs in the classroom. And the minors and majors flow forward from the courses because they see the excitement that we as mathematicians know so well from actually doing mathematics. Many are engineers who choose to earn a double major or a second degree. Others simply change their major to mathematics. The key to this sea change is that the course I now teach is taught just as I teach sailing. I simply let them sail and offer words of encouragement along with tidbits of wisdom, tricks of the trade and the skills that come from a half-life of doing mathematics. And <q>just sailing</q> is fun, but a lecture on how to sail is not, at least not until you have done enough of it to absorb information from the lecture.
+    </p>
+
+    <p>
+      When teaching calculus, no two teachers will share exactly the same goals. More than anything else, I want to excite them about mathematics by enabling them to succeed at doing mathematics and explaining to others what they have done. In addition to this primary goal, I want to train the students to read mathematics carefully and critically. I want to teach them to work on problems on their own rather than seeking out other materials and I emphasize this, even as I allow them to go to other sources because of the size of the classes. I want them to see that there are really only a few basic concepts in calculus, the limiting processes that recur in continuity, differentiability, integration, arc-length, and Gauss' theorem. I want them to note that calculus in multiple dimensions really is a parallel to calculus in one dimension. For these reasons, I try to write tersely without trying to give lengthy <q>intuitive</q> introductions, and I write without graphics. I believe it is better to define annulus carefully and make the students interpret the English than to draw a picture and say <q>This is an annulus.</q> The latter is more efficient but does not train critical reading skills. I want to see them communicate clearly to one another in front of the class, both in their questions and in their responses. I want them to write correct mathematics on the board. The amount of pedagogical trickery that I use to support these goals is too long to list here, but it all rests firmly on always emphasizing that they will succeed and responding to everything, even negative comments, in a positive light. If a student raises a concern about the teaching method, I explain how much more work it is to me and how much easier it would be to lecture and give monkey-see, monkey-do homework and that I sacrifice my own time and energy for their benefit. If a student makes mistakes at the board, then as I correct it, I always say something like, <q>These corrections don't count against a presentation grade because this was a good effort, yet we want to make sure that we see what types of mistakes I might count off for on an exam.</q>
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Grading</title>
+    <p>
+      Over the years I have used many grading systems for the course. The simplest was:
+      <ol>
+        <li>
+          <p>
+            50<percent /> <mdash /> average of three tests and a comprehensive final
+          </p>
+        </li>
+
+        <li>
+          <p>
+            50<percent /> <mdash /> presentation grade
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      The most recent was:
+      <ol>
+        <li>
+          <p>
+            40<percent /> <mdash /> average of three tests and a comprehensive final
+          </p>
+        </li>
+
+        <li>
+          <p>
+            50<percent /> <mdash /> presentation grade
+          </p>
+        </li>
+
+        <li>
+          <p>
+            10<percent /> <mdash /> weekly graded homework
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      The weekly graded homework was to be one problem of their choice to be written up perfectly with every step explained. Early in the semester, they could use problems that had been presented. Later I required that the turned-in material be problems that had not been presented.
+    </p>
+
+    <p>
+      Another was:
+      <ol>
+        <li>
+          <p>
+            40<percent /> <mdash /> average of 2 tests and a comprehensive final
+          </p>
+        </li>
+
+        <li>
+          <p>
+            45<percent /> <mdash /> presentation grade
+          </p>
+        </li>
+
+        <li>
+          <p>
+            15<percent /> <mdash /> weekly quizzes
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Regardless of what grading scheme I used, I always emphasized after each test that I reserved the right to give a better grade than the average based on consistently improving performance, an impressive comprehensive final, or significant contributions to the class. Contributions to the class could entail consistently good questions about problems at the board, problems worked in unusual or original ways, or organizing help sessions for students. Once a student filmed my lectures along with student presentations, and placed them on our Facebook group to help the class.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Some Guidance</title>
+    <p>
+      Years ago I read a paper, which I can no longer locate, claiming that most students judge the teacher within the first fifteen minutes of the first day of class. This supports my long-held belief that the first day may well be the most important of the semester, especially in a student-centered course. The main goal is to place the class at ease and send a few students to the board in a relaxed environment. For that reason, we don't start with my syllabus, grading, or other mundane details. After all, this class isn't about a syllabus or grades, it's about mathematics. Thus, after assuring that students are in the right room and telling the students where they can download the course notes and the syllabus, I learn a few names and ask a few casual questions about how many have had calculus and how many are first-semester students. Typically I give a twelve-minute, elementary quiz over college algebra (no trigonometry, no pre-calculus) that I tell them won't count for or against them. This is graded and returned the next day. I tell them that 100<percent /> of the people who earned less than 50<percent /> on this quiz last semester and stayed in the course failed the course. This seems harsh, but it enables me to help put students who can't graph a line or factor a quadratic into the right course before it is too late. While they are taking the quiz, I sketch the graph of a few functions, the graph of a non-function, and then write the equation for a few functions on the board. Sometimes I put questions beneath the graphs or instructions such as <q>Is this a function?</q> or <q>Graph this.</q> All of these are very elementary and intended to get the students talking. After the quiz is collected, I'll ask a student if she solved one of the problems on the quiz or on the board. If she says yes, I ask her to write the solution on the board. I ask someone else if he can graph one of the equations. And in this relaxed way, perhaps four to eight students present at the board on the first day. Then we discuss their solutions. When reviewing these solutions, I compliment every problem (even if only the penmanship) and simultaneously feed them definitions and examples for function, relation, open interval and closed interval. At the end of class, I pass out the first few pages of the notes along with a link to where they may find the syllabus and notes. And I tell them their homework is to read the introduction and try to work as many of Problems 1-10 as they can, as I will ask for volunteers at the beginning of the next class meeting.
+    </p>
+
+    <p>
+      The next day, I ask for volunteers to present and by end of the first week, someone will usually ask if we just present problems every day and discuss them. I'll ask if they like it and if they have learned anything from it so far. When they say yes, I'll say, <q>Well, then that seems a good enough justification to continue in this manner.</q> I don't know what I'll say if they ever say no. At some point I'll talk about grading and the syllabus, but hopefully even this will be in response to a question as I really don't like to talk about anything they are not interested in. I really want the majority of the first few days concentrating on three things: putting my students at ease, creating an enjoyable environment, and focusing on mathematics. For the next week or two, I'll likely never lecture except in response to questions or problems that were presented.
+    </p>
+
+    <p>
+      You are reading the <em>Instructor's Version</em> of these notes, so you will find endnotes<fn>This is an example of an endnote.</fn>where I have recorded information about the problems, guidance for you, and discussions about the mini-lectures that I gave during the most recent iteration. Such discussions vary based on student questions, but these are representative of what I cover and include both the discussion and the examples that I use to introduce topics. There is no way to include all the discussions that result from student questions, as this is where the majority of class interaction occurs. What I've offered here are only the major presentations that I gave during the past iteration. Additionally, I have been unable to refrain from shedding light on my own motivation and perspective in creating the course in this fashion, so you'll see discussions on how I attempt to attract majors, to motivate students to take other courses, to connect the material to other courses, and even to tie the course to my own experiences in industry.
+    </p>
+
+    <p>
+      While the mini-lectures, endnotes and examples appear in the notes at the approximate places where I presented them this semester, that may not be the optimal timing for presentation of this material in a different semester. Such lectures are presented in response to questions from students, at a time when students are stalled, or just-in-time to prepare students for success on upcoming problems. The number and length of these lectures depend on the strength and progress of the class. If no student has a problem to present or very few have a problem, then I will present. If we are about to embark on another section that I feel needs an introduction, then I will present. I have taught such strong students that I almost never introduced upcoming material and only offered additional information in response to students' questions. I have also taught classes where I carefully timed when to introduce new material in order to assure sufficient progress.
+    </p>
+
+    <p>
+      The reader will note that the lectures are shorter and less frequent at the beginning of the course than at the end. There are two reasons for this. First, I want the students to buy in to taking responsibility for presenting the material at the beginning. If I present very much, they will seek to maximize my lectures in order to minimize their work and optimize their grades. Second, the material steadily progresses in level of difficulty and I doubt anyone's ability to create notes that enable students to <q>discover</q> the concepts of Lagrange Multipliers, Green's Theorem, Gauss' Theorem, and Stoke's Theorem in the time allotted. By the third semester, you'll note that there are no sub-sections and the material for each chapter is co-mingled in one large problem set. This is intentional. The level of difficulty of the material and the burden on the student to learn independently increases through each of the three semesters.
+    </p>
+
+    <p>
+      In the first semester, I will typically cover all of Chapters 1 - 5.1. In the second semester, I'll repeat Section 5.1 and cover Chapters 5 - 7.3, although I often assign 5.6 as homework to be done out of class and not for presentation. The third semester will consist of all of Chapters 8 - 13. The last section in each chapter contains practice problems along with solutions. At some point during the chapter, I tell them to start work on those problems.
+    </p>
+
+    <p>
+      The vast majority of class time goes to students putting up problems. As discussed, on the first day I always pose problems at the board and students present them. From that day forward, I begin each class by first asking if there are questions on anything that has already been presented or any of the practice problems. It not, I call out problem numbers and choose from the class the students with the least number of presentations. I break ties by test grades or by my estimate of the tied students' abilities, allowing apparently weaker students preference. For the first few class periods, I give students who have not taken a course from me preference over those who have. I allow multiple problems to go on the board at once, between five and fifteen on any given day by fully utilizing large white boards at the front and rear of the classroom. As problems are being written on the board, I circulate and answer questions at the desks. Classes average around fifteen problems per week, but that is a bit misleading as many problems have multiple parts and others lead to discussions and additional examples. Once all students have completed writing their solutions, I encourage them to explain their solutions to the class. If they are uncomfortable doing so, I will go over the problem, asking them questions about their work. Most problems in the notes are there to illustrate an important point, so after each problem, I may spend a few minutes discussing the purpose of this particular problem and foreshadowing important concepts with additional examples, pictures, or ideas. If time is short after the problems are all written on the board (perhaps I talked a bit too much or perhaps I underestimated how long it would take to put these problems up), I may go over the problems myself. This is a very difficult judgement to make because there are times when I struggle to make sense of the student's work and s/he will sit me down and explain his/her own solutions more eloquently than I! On the other hand, there are also times when a student's explanation is so lacking (or approach so obscure) that I feel the need to work a clarifying example in order to bring the class along and ensure future success. There is no guarantee that I will make the right call!
+    </p>
+
+    <p>
+      Another difficult judgement call that I make regularly is how much to foreshadow via mini-lectures and when to give them. If no student has a presentation, then clearly it is time for me to present. It is also common that only the best students may have something to present. If after a quick survey, only a few top students have problems, then I may choose to lecture rather than let the class turn into a lecture class where the lectures are given by only a few students. This is a delicate decision. On the one hand, other students with less presentation will have these problems the next day, so these talented students have been <q>cheated</q> out of a presentation. On the other hand, I record in my grade book that they had these problems and am typically already recruiting such students as majors so they know I think they are doing good work in the class and that they have not lost any points. On occasion, I tell the class that I'm not sure if they need a lecture or if student presentations are the best choice and let them vote. Surprisingly, the vote may go either way, but is almost always near unanimous for one of the two choices: mini-lecture or presentations. The students seem to know exactly what they need on a given day, even when I do not!
+    </p>
+
+    <p>
+      A slightly challenging symptom of having some students who have had calculus and of allowing students to look at other resources is that sometimes students will use tools that we have not yet developed. For example they might apply the power rule or chain rule before we have derived them. When this happens, I first thank the student for showing us a quick and correct solution using a formula and note that this receives full credit. Then I use this as an opportunity to reinforce the axiomatic nature of mathematics and point out that we have not yet developed the tools that were used. I might provide guidance and ask the student to solve it using the techniques we have, for example the definition of the derivative vs. the power rule. Or I might give an on-the-spot mini-lecture where I rework the problem from first principles and state that I'm glad we now know these formulas, but we must derive them before we can trust them. I'll tell them that, were we simply engineers, we would accept anything that was fed to us, but as mathematicians we must validate such formulae before we use them. I do this somewhat tongue-in-cheek, but they understand that I am coming at this with the perspective of a mathematician who wants to deeply understand all that I use. I'll also tell them which problems are aimed at deriving the theorems and give guidance on how we might do so. In an optimal situation, the student who looked up the formula will dig in and derive the formula. If not, another student will. I'll always praise both students because now we <em>have</em> the formula and we <em>know</em> that it is valid. Turning such potentially negative situations into positives is one of the keys to creating a class that the students respect and enjoy. They must <em>know</em> that whatever they do at the board, I will respond to it positively in an effort to teach them more and will give them some credit every time they present.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>History of the Course</title>
+    <p>
+      The problems from these notes come from several sources. Professors Carol Browning of Drury University, Charles Allen of Drury University, Dale Daniel of Lamar University and Shing So of the University of Central Missouri all contributed material in Chapters 1 - 7. Material also comes from the multitude of calculus books I have taught from over the years, a list too extensive and outdated to include here. All of these materials have been massaged and modified extensively as I taught this course over the past fifteen years. They still won't meet your needs exactly, so I encourage you to take these notes and modify them to meet the needs of your students. Then these notes will be titled <em>Your Name <m>\lt</m> My Name <m>\lt</m> Other Names</em>. Hopefully the authorship will grow as others adapt these notes to their students' needs.
+    </p>
+
+    <p>
+      Each of <em>Calculus I, II,</em> and <em>III</em> has been taught at Lamar University six or seven times over a period of twelve or thirteen years with an average class size of perhaps thirty-five students who meet for four fifty-minute periods each week for fifteen weeks, although recently the department has moved to five fifty-five minute periods over fourteen weeks for each of <em>Calculus I</em> and <em>II</em>. The large class size and full syllabus keep me from running a pure Moore Method approach where students present problems one at a time and work through a fully self-contained set of notes. Therefore, to maximize the odds for success and to significantly increase the rate of coverage, I make three concessions that cause me to label this course a problem-based course or active-learning course rather than a Moore Method course.
+      <ol>
+        <li>
+          <p>
+            I allow students to use other resources (web, books, tutoring lab) to help them understand the concepts.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            I provide practice problems with answers in <xref ref="practiceproblems">Chapter</xref> and students are expected to work these after we have covered a given topic.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If needed to assure coverage, I supplement the notes with mini-lectures, on average once a week, typically about twenty-five minutes in length.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      I have conducted the class without allowing students to look at any other sources. While the top performing
+      students do no worse, too many students struggled. I believe that this could easily be overcome if the class size were smaller, the syllabus not quite so full, or with an extra meeting per week to help weaker students. When classes met four days a week, I would often offer a problem session on the fifth day and we would address problems from the practice problems.
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Student Feedback</title>
+    <p>
+      A recent survey found that 90<percent /> of drivers believe that they are better-than-average drivers. While this is not mathematically impossible, it seems improbable. My guess is that 90<percent /> of faculty believe they are above average teachers as well. I am not a great teacher. I am a teacher who has found a way to create an environment in which students become great students and great teachers of one another. Over the years I have been exposed to countless teachers who simply amazed me with their dedication to their students, their knowledge of their subject and their ability to connect with students. On the other hand, even though it is the students who carry my classes, they seem to offer me some of the credit and I'll share with you every student comment from the last semester I taught <em>Calculus I</em> so that you might think about whether you would like your students to say such things about your course. To assure you that I did not hand pick a semester (or make all these up!), I offer to have our departmental administrative assistant, who types all these up from the handwritten forms, send you all comments from any semester of any of my <em>Calculus I, II</em> or <em>III</em> courses. I've given these evaluations, and modified my courses based on them, for more than twelve years. I take no credit for these comments <mdash /> all credit is due to my students, my father, my advisor and the great teachers I had over the years from whom I have borrowed or taken ideas. Here is what the students said, exactly as they wrote it, and exactly as my secretary typed them.
+    </p>
+    <ol>
+    <li>
+      <p>
+        I believe the most effective part of this course was:
+      </p>
+      <ol>
+        <li>
+          <p>
+            learning my mistakes at the board.  However, I would have had less mistakes if the professor spent more time explaining problems before I had to do them.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the presentation and student driven part of the course.  It has really helped.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The use of boardwork and homework in learning
+          </p>
+        </li>
+
+        <li>
+          <p>
+            everything!  He was a very fair and realistic professor.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            You did a brilliant job explaining limits.  After 4 calculus teachers, you are the only one to adequately explain them,
+          </p>
+        </li>
+
+        <li>
+          <p>
+            putting homework problems on the board
+          </p>
+        </li>
+
+        <li>
+          <p>
+            interaction with the students, professors and graduate students.  You felt the bond and understanding when you had a problem.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the highly interactive socratic method used in the presentations and lectures
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the ability to be able to go to the board and get hands on learning
+          </p>
+        </li>
+
+        <li>
+          <p>
+            I don't know
+          </p>
+        </li>
+
+        <li>
+          <p>
+            that he had everyone go up to the board to demonstrate whether or not they understood what they did
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Proving almost every formula before actually applying them.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Doing problems on the board.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the most effective part was derivatives
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the presentations
+          </p>
+        </li>
+
+        <li>
+          <p>
+            having to figure everything out on our own but still being able to ask questions and have others work them out if needed.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the days you lectured on a difficult concept
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the combination of lecture and practice of the concepts in class
+          </p>
+        </li>
+
+        <li>
+          <p>
+            learning how to solve problems different ways
+          </p>
+        </li>
+
+        <li>
+          <p>
+            presentations on the board.  Really helped me to understand the problems
+          </p>
+        </li>
+
+        <li>
+          <p>
+            having to figure out the homework for ourselves
+          </p>
+        </li>
+
+        <li>
+          <p>
+            lecture days
+          </p>
+        </li>
+
+        <li>
+          <p>
+            giving the freedom he does to students.  I've never been in a class like this, and even though I have a very hard time presentation in front of people, let alone presenting on a subject I feel I am not good at, I feel it was incredibly effective to be allowed to teach to the class.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the way the homework is set up so that the class makes the pace
+          </p>
+        </li>
+      </ol>
+    </li>
+
+    <li>
+      <p>
+        To improve this course in future semesters, the professor should:
+        <ol>
+          <li>
+            <p>
+              spend more time explaining concepts, and especially creating formulas for problems like related rates.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              maybe lecture a little more.  I actually liked his industry based examples.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              not change a thing
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I wouldn't change a thing
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Keep the students informed of what problems need to be completed.  Also, if students are getting to study, make an appearance to help answer questions
+            </p>
+          </li>
+
+          <li>
+            <p>
+              keep it the same
+            </p>
+          </li>
+
+          <li>
+            <p>
+              make lectures before going into a new subject.  It's a little frightening jumping into a material that you had no idea of.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              keep improving in the direction it seems he's going in his teaching method
+            </p>
+          </li>
+
+          <li>
+            <p>
+              try to focus a couple more times a week doing a lecture and introducing new material
+            </p>
+          </li>
+
+          <li>
+            <p>
+              have the students explain their problems more
+            </p>
+          </li>
+
+          <li>
+            <p>
+              randomly call students to go up to the board that way everyone remains on edge
+            </p>
+          </li>
+
+          <li>
+            <p>
+              lecture more
+            </p>
+          </li>
+
+          <li>
+            <p>
+              do more practice problems on the board.  Have a day that you ask on how to do homework problems
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I couldn't even think of a way because he's already perfect
+            </p>
+          </li>
+
+          <li>
+            <p>
+              maybe lecture a little more
+            </p>
+          </li>
+
+          <li>
+            <p>
+              maybe spend a little more time lecturing when people don't bring in problems for the board
+            </p>
+          </li>
+
+          <li>
+            <p>
+              possibly designate a day (like Mondays, after a weekend full of forgetting) to lecture on what's going on, if only for the start of class.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              try to better balance the lecture and presentation
+            </p>
+          </li>
+
+          <li>
+            <p>
+              it's fine just like it is
+            </p>
+          </li>
+
+          <li>
+            <p>
+              not very much.  Maybe more quizzes?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              make more detailed notes
+            </p>
+          </li>
+
+          <li>
+            <p>
+              spend more days lecturing, but I like the board problems too
+            </p>
+          </li>
+
+          <li>
+            <p>
+              do nothing.  Ted was/is (also Wes and Jeff) awesome.  One of my favorite professors.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              stay the same
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Talking to another student thinking about taking this instructor's class, I would say:
+        <ol>
+          <li>
+            <p>
+              take it if you want a challenge, or if you want to really learn the material
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I would recommend it because I like the teaching method.  It is an effective way to learn
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Definitely take it if at all possible
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I recommend Mr. Mahavier for Calculus!  Specifically because I've taken calculus the previous semester and I did not understand a thing.  In Mr. Mahavier's class I've gained my love back for math, whether I am right or wrong.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              This class is wonderful if you want to learn the material well!
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He has good teaching skills
+            </p>
+          </li>
+
+          <li>
+            <p>
+              you would have to stay on top of your game.  It's all about teaching yourself as Ted is just there to guide you through or when you're confused.  Good luck!
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Take it if you believe an interactive learning environment would be conducive to your education.  Take if you have interest in a degree in mathematics.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              that having a self paced class is the most beneficial thing in a math course
+            </p>
+          </li>
+
+          <li>
+            <p>
+              that the teaching style is rather different and difficult to get used to, but effective.  I would tell students that learn by listening not to take this class, but students who learn by doing to definitely take it.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              It is a very fun class that helps you understand just how much you think you know.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              stay on top of your work.  Don't let yourself lag too far behind if possible, always try to stay ahead
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Yes you should take Ted, he is a great teacher and you learn a lot by doing board work
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He's the most cool teacher
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Most definitely, take this course
+            </p>
+          </li>
+
+          <li>
+            <p>
+              definitely take him, but be prepared to work.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              take this class to learn calculus, but only if you're willing to work
+            </p>
+          </li>
+
+          <li>
+            <p>
+              that you will learn the concepts but you have to practice after class
+            </p>
+          </li>
+
+          <li>
+            <p>
+              this class if very interesting and if you give your absolutely best you should be fine
+            </p>
+          </li>
+
+          <li>
+            <p>
+              take it!
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the class was eye opening
+            </p>
+          </li>
+
+          <li>
+            <p>
+              do it!  I have told people to take Ted
+            </p>
+          </li>
+
+          <li>
+            <p>
+              very exposing in a good way, humbling
+            </p>
+          </li>
+
+          <li>
+            <p>
+              take it
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        I would like the professor to know that:
+        <ol>
+          <li>
+            <p>
+              He is awesome
+            </p>
+          </li>
+
+          <li>
+            <p>
+              before this class I have always struggled with math.  I feel like I might be more interested in taking higher math now instead of being afraid of it
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He's the best professor I've had
+            </p>
+          </li>
+
+          <li>
+            <p>
+              You are a wonderful professor
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I love that most of the grade is in class work.  Bad test grades freak me out when I know I've studied in class
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I would hope to have him in the future
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He is a great teacher, easy to communicate with and very friendly.  I'll be glad to have him again if these math courses were in my major!
+            </p>
+          </li>
+
+          <li>
+            <p>
+              His method has worked well for me
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I definitely learned calculus this semester
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He's great
+            </p>
+          </li>
+
+          <li>
+            <p>
+              It was definitely an interesting course
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I will be taking him for Cal 2 and likely Cal 3
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I am very thankful that he was my calculus teacher.  I had never had a math teacher that made me understand the material that well.  Thank you.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He really did help me and worked with me during the semester and I appreciate it.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He is an amazing professor
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I actually enjoyed this class
+            </p>
+          </li>
+
+          <li>
+            <p>
+              this class has uncovered an unknown skill and passion of mine, mathematics, that I want to pursue as a definite career
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I enjoyed the class
+            </p>
+          </li>
+
+          <li>
+            <p>
+              That I've tried and gave my all and if I fall short, I still appreciate all the methods and problems I did learn
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I really enjoyed the class, the method of teaching works extremely well for me.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              yes
+            </p>
+          </li>
+
+          <li>
+            <p>
+              I'll see him next semester
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He is phenomenal.  He's mathematical!
+            </p>
+          </li>
+
+          <li>
+            <p>
+              He was very inspirational and kept me from giving up.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+    </ol>
+  </subsection>
+</section>
+

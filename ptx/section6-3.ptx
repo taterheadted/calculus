@@ -1,0 +1,210 @@
+
+
+<section>
+  <title>Integration by Parts</title>
+  <p>
+    Integration by parts is an application of the product rule <mdash /> essentially the product rule in reverse! It is typically used when the integrand is the product of two functions, one which you can easily anti-differentiate and one which becomes simpler (or at least no more complicated) when you differentiate.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find two functions <m>f</m> and <m>g</m> so that <m>\dsp \int f(x) \cdot g(x) \; dx \neq \int f(x) \; dx \cdot \int g(x) \; dx</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Evaluate the integral <m>\dsp \int x \ln (x) \; dx</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We begin by guessing a function which has <m>x \ln(x)</m> as a part of its derivative when we use the product rule. From the product rule for derivatives we have,
+    <me>
+      (x^{2} \ln x)'  = 2x \ln x + x^{2} (\frac{1}{x}).
+    </me>
+  </p>
+
+  <p>
+    Integrating both sides yields,
+    <me>
+      \dsp \int (x^{2} \ln x)'  \; dx = \int 2 x \ln x \; dx  + \int x  \; dx.
+    </me>
+  </p>
+
+  <p>
+    Now we have,
+    <me>
+      \dsp  x^2 \ln x  + k_1= 2 \int x \ln x \; dx + \frac{1}{2} x^2 + k_2
+    </me>
+  </p>
+
+  <p>
+    Where <m>k_1</m> and <m>k_2</m> are constants. Solving for the integral we wanted yields,
+    <me>
+      \dsp \int x \ln x  \; dx = \frac{1}{2} x^2 \ln x - \frac{1}{4} x^2 + \frac{1}{2}(k_1-k_2).
+    </me>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Use the idea from the example to compute the following anti-derivatives.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int x^{45} \ln x \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int x e^x \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int x \cos(x) \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="ibt">
+    <statement>
+      <p>
+        Let <m>f</m> and <m>g</m> be differentiable functions. Starting with the product rule for derivatives, show that
+        EXTRA<fn>Given that the indefinite integral was defined to be some anti-derivative of the integrand, this is a lie <mdash /> they are not necessarily equal, but rather differ by at most a constant.</fn><me>
+          \int f(x)g'(x) \; dx = f(x) \cdot g(x) -  \int g(x) f'(x) \; dx.
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each indefinite integral.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int x^{2} e^x \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int x^{2} \sin(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int e^x \cos x \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int (\ln x)^2 \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \sec^3 x \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the derivatives of each.
+        <ol>
+          <li>
+            <p>
+              <m>s(x) = \invsin(x)</m> by differentiating the equation <m>\sin(s(x))=x</m> and solving for <m>s'(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>c(x) = \invsec(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>t(x) = \invtan(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Now we address the integrals of the inverse trigonometric functions. Use integration by parts since you know the derivatives of each function.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the following indefinite integrals via integration by parts.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \invsin(x) \; dx</m> using <m>\invsin(x) = \invsin(x) \cdot 1.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \invtan(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \invsec(x) \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Integration by Parts.</em> If each of <m>f</m> and <m>g</m> are functions that are differentiable on the interval <m>[a,b]</m>, then
+        EXTRA<fn>Again, given that the indefinite integral was defined to be some anti-derivative of the integrand, this is a lie <mdash /> they are not necessarily equal, but rather differ by at most a constant.</fn><me>
+          \int f(x)g'(x) \; dx = f(x) \cdot g(x) -  \int g(x) f'(x) \; dx
+        </me>
+        and
+        <me>
+          \int_a^b f(x)g'(x) \; dx = f(x) \cdot g(x) |_a^b -  \int_a^b g(x) f'(x) \; dx
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Writing <m>f(x)</m> as <m>u</m> and <m>g(x)</m> as <m>v</m> and using Leibnitz notation, this formula is often written as:
+    <me>
+      \int u \ dv= uv - \int v \ du.
+    </me>
+  </p>
+</section>
+

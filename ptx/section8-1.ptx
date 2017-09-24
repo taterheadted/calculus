@@ -1,0 +1,278 @@
+
+
+<section>
+  <title>Conic Sections</title>
+  <p>
+    In your mathematical life, you have no doubt seen circles, ellipses, parabolas, and possibly even hyperbolas. Here we make precise the geometric and algebraic definitions of these objects.
+    EXTRA<fn>My goal for the material on conic sections is to make them aware of and provide a taste of the link between the algebraic definitions and the geometric definitions.</fn></p>
+
+  <definition>
+    <statement>
+      <p>
+        Consider two identical, infinitely tall, right circular cones placed vertex to vertex so that they share the same axis of symmetry (two infinite ice cream cones placed point-to-point). A <term>conic section</term> is the intersection of this three dimensional surface with any plane that does not pass through the vertex where the two cones meet.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    These intersections are called circles (when the plane is perpendicular to the axis of symmetry), parabolas (when the plane is parallel to one side of one cone), hyperbolas (when the plane is parallel to the axis of symmetry), and ellipses (when the plane does not meet any of the three previous criteria). This is a geometric interpretation of the conic sections, but each conic sections may also be represented by a quadratic equation in two variables.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <em>Algebraically.</em> Graph the set of all points <m>(x,y)</m> in the plane satisfying <m>Ax^2+Bxy+Cy^2+Dx+Ey+F=0</m> where:
+        <ol>
+          <li>
+            <p>
+              <m>A=B=C=0</m> ,<m>D = 1</m>, <m>E = 2</m> and <m>F = 3</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>A=1/16</m>, <m>C=1/9</m>, <m>B=D=E=0</m> and <m>F=-1</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>A=B=C=D=E=0</m> and <m>F = 1</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>A=B=C=D=E=F=0</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Every conic section may be obtained by making appropriate choices for <m>A</m>, <m>B</m>, <m>C</m>, <m>D</m>, <m>E</m>, and <m>F</m>. Now let's return to the definition you might have seen in high school for a circle.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Given a plane, a point <m>(h,k)</m> in the plane, and a positive number <m>r,</m> the {{circle}} with <term>center</term> <m>(h,k)</m> and <term>radius</term> <m>r</m> is the set of all points in the plane at a distance <m>r</m> from <m>(h,k)</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Determine values for <m>A, B, \dots,E</m> and <m>F</m> so that <m>Ax^2+Bxy+Cy^2+Dx+Ey+F=0</m> represents a circle. A single point. A parabola.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the method of completing the square to rewrite the equation <m>4x^2+4y^2+6x-8y-1=0</m> in the form <m>(x-h)^2 + (y-k)^2 = r^2</m> for some numbers <m>h</m>, <m>k</m>, and <m>r</m>. Generalize your work to rewrite the equation <m>x^2+y^2+Dx+Ey+F=0</m> in the same form.
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>distance between a point <m>P</m> and a line <m>L</m></term> (denoted by d(P,L)) is defined to be the length of the line segment perpendicular to <m>L</m> that has one end on <m>L</m> and the other end on <m>P</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        Given a point <m>P</m> and a line <m>L</m> in the same plane, the <term>parabola</term> defined by <m>P</m> and <m>L</m> is the set of all points in
+        the plane <m>Q</m> so that <m>d(P,Q) = d(Q,L).</m> The point <m>P</m> is called the <term>focus</term> of the parabola and the line <m>L</m> is called the {{directrix}} of the parabola.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Parabolas.
+        <ol>
+          <li>
+            <p>
+              Let <m>p</m> be a positive number and graph the parabola that has focus <m>(0, p)</m> and directrix <m>y=-p</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>(x, y)</m> be an arbitrary point of the parabola with focus <m>(0, p)</m> and directrix <m>y=-p</m>. Show that <m>(x,y)</m> satisfies <m>x^2=4py</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>(x, y)</m> be an arbitrary point of the parabola with focus <m>(p, 0)</m> and directrix <m>x=-p</m>. Show that <m>(x,y)</m> satisfies <m>y^2=4px</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Graph the parabola, focus, and directrix for the parabola <m>y=-(x-2)^2+3</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the vertex, focus, and directrix of each of the parabolas defined by the following equations.
+        <ol>
+          <li>
+            <p>
+              <m>y=3x^2-12x+27</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>y=x^2+cx+d</m> (Assume that <m>c</m> and <m>d</m> are numbers.)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        Given two points, <m>F_1</m> and <m>F_2</m> in the plane and a positive number <m>d,</m> the {{ellipse}} determined by <m>F_1, F_2</m> and <m>d</m> is the set of all points <m>Q</m> in the plane so that <m>d(F_1,Q) + d(F_2,Q) = d.</m> <m>F_1</m> and <m>F_2</m> are called the {{foci}} of the ellipse. The <term>major axis</term> of the ellipse is the line passing through the foci. The <term>vertices</term> of the ellipse are the points where the ellipse intersects the major axis. The <term>minor axis</term> is the line perpendicular to the major axis and passing through the midpoint of the foci.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>F_1=(c,0), F_2=(-c,0),</m> and <m>d=2a.</m> Show that if <m>(x,y)</m> is a point of the ellipse determined by <m>F_1, F_2</m> and <m>d</m>, then <m>(x,y)</m> satisfies the equation <m>\dsp \frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> where <m>c^2 = a^2 - b^2.</m> What are the restrictions on <m>a, b,</m> and <m>c</m>?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Ellipses.
+        <ol>
+          <li>
+            <p>
+              Graph the ellipses defined by <m>\dsp \frac{x^2}{25}+\frac{y^2}{9}=1</m> and <m>\dsp \frac{(x+1)^2}{25}+\frac{(y-2)^2}{9}=1</m>.  List the foci for each, the vertices for each, and the major axis for each. Compare the two graphs and find the similarities and differences between the two graphs.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              For the ellipses defined by <m>\dsp \frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> and <m>\dsp \frac{(x-h)^2}{a^2}+\frac{(y-k)^2}{b^2}=1</m>, list the foci for each, the vertices for each, and the major axis for each.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        Given two points, <m>F_1</m> and <m>F_2</m> in the plane and a positive number <m>d,</m> the <term>hyperbola</term> determined by <m>F_1, F_2</m> and <m>d</m> is the set of all points <m>Q</m> in the plane so that <m>| d(F_1,Q) - d(F_2,Q) | = d.</m> <m>F_1</m> and <m>F_2</m> are called the {{foci}} of the hyperbola.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>F_1=(c,0), F_2=(-c,0),</m> and <m>d=2a.</m> Show that the equation of the hyperbola determined by <m>F_1, F_2</m> and <m>d</m> is given by <m>\dsp \frac{x^2}{a^2}-\frac{y^2}{b^2}=1</m> where <m>c^2 = a^2 +  b^2.</m> What are the restrictions on <m>a, b,</m> and <m>c?</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Graph two hyperbolas (just pick choices for <m>a</m> and <m>b</m>). Solve the equation
+        <me>
+          \dsp \frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+        </me>
+        for <m>y</m>. Show that as <m>x \to \infty</m> the hyperbola approaches the lines <m>L(x) = \pm \frac{b}{a} x;</m> i.e., show that the asymptotic behavior of a hyperbola is linear.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Hyperbolas.
+        <ol>
+          <li>
+            <p>
+              Graph <m>\dsp \frac{x^2}{25}-\frac{y^2}{9}=1</m> and <m>\dsp \frac{(x+1)^2}{25}-\frac{(y-2)^2}{9}=1</m>. Compare the two graphs and find the similarities and differences between the two hyperbolas. Find the foci and the equations of the asymptotes of these hyperbolas.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find the vertices and the asymptotes of <m>\dsp \frac{x^2}{a^2}-\frac{y^2}{b^2}=1</m> and <m>\dsp \frac{(x-h)^2}{a^2}-\frac{(y-k)^2}{b^2}=1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the method of completing the square to identify whether the set of points represents a circle, a parabola, an ellipse, or a hyperbola. Sketch the conic section and list the relevant data for that conic section from this list: center, radius, vertex (vertices), focus (foci), directrix, and asymptotes.
+        <ol>
+          <li>
+            <p>
+              <m>x^2-4y^2-6x-32y-59=0</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>9x^2+4y^2+18x-16y=11</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x^2+y^2+10 = 6y -4 +4x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x^2+y^2 +6x-14y=6</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>3x^2-2x+y=5</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

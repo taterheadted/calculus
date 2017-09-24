@@ -1,0 +1,351 @@
+
+
+<section>
+  <title>Riemann Sums and Definite Integrals</title>
+  <p>
+    You know how to compute the areas of certain shapes (rectangles, triangles, etc.) using formulas, but what about unusual shapes like the area trapped under a curve and above the x-axis or the area trapped between two curves? If we have a function that is always above the <m>x</m>-axis on the interval <m>[a,b]</m>, then Riemann sums give us a way to compute the area that is between the vertical lines <m>x=a</m> and <m>x=b</m>, above the <m>x</m>-axis, and under the curve.
+  </p>
+
+  <example xml:id="intxsquared">
+    <statement>
+      <p>
+        Determine the area under the curve <m>f(x) = x^2+1,</m> above the x-axis, and between the vertical lines <m>x=0</m> and <m>x=2.</m>
+        EXTRA<fn>As stated in the introduction, I do not provide graphics to my students.  It is my contention that forcing them to read and interpret the English is a valuable skill and that drawing a picture for them robs them of the opportunity to read carefully and determine the appropriate picture.</fn></p>
+    </statement>
+  </example>
+
+  <p>
+    Graph <m>f</m> and subdivide <m>[0,2]</m> into 4 intervals each of width <m>\frac{1}{2}</m> and with bases,
+    <me>
+      [0,\frac{1}{2}], [\frac{1}{2},1], [1,\frac{3}{2}], \mbox{ and }  [\frac{3}{2},2].
+    </me>
+  </p>
+
+  <p>
+    Each has width <m>\frac{1}{2}.</m> These intervals are the bases of 4 rectangles. Make the height of each rectangle the value of <m>f</m> at the right end point of the base of that rectangle. Let's call the sum of the areas of these four rectangles <m>U_4.</m> (If you are unfamiliar with summation notation, <m>\sum</m>, see <xref ref="appsum">Appendix</xref> for a review.)
+  </p>
+
+  <p>
+    The sum of these rectangles is given by:
+    <md>
+      <mrow>U_4 \amp  = \amp  \frac{1}{2} \left( (\frac{1}{2})^2 + 1 \right) +
+      \frac{1}{2} \left( (\frac{2}{2})^2 + 1 \right) + \frac{1}{2}
+      \left( (\frac{3}{2})^2 + 1 \right) + \frac{1}{2} \left(
+      (\frac{4}{2})^2 + 1 \right)</mrow>
+      <mrow>\amp  = \amp  \frac{1}{2} \left[ \left(
+      (\frac{1}{2})^2 + 1 \right) + \left( (\frac{2}{2})^2 + 1 \right) +
+      \left( (\frac{3}{2})^2 + 1 \right) + \left( (\frac{4}{2})^2 + 1
+      \right) \right]</mrow>
+      <mrow>\amp  = \amp  \frac{1}{2} \sum_{i=1}^4 \left(
+      (\frac{i}{2})^2 + 1 \right)  = \frac{23}{4} = 5.75</mrow>
+    </md>
+  </p>
+
+  <p>
+    This estimate is too large because each rectangle we chose had area larger than the portion of the curve it approximated. Therefore, we make an estimate that is too small and average the two! An estimate that would be too small would have four rectangles each with the same bases, but with height the value of <m>f</m> at the <em>left</em> endpoint of its base. Let's call the sum of the areas of these four rectangles <m>L_4.</m>
+    <md>
+      <mrow>L_4 \amp  = \amp  \frac{1}{2} \left( (\frac{0}{2})^2 + 1 \right) +
+      \frac{1}{2} \left( (\frac{1}{2})^2 + 1 \right) + \frac{1}{2}
+      \left( (\frac{2}{2})^2 + 1 \right) + \frac{1}{2} \left(
+      (\frac{3}{2})^2 + 1 \right)</mrow>
+      <mrow>\amp  = \amp  \frac{1}{2} \left[ \left(
+      (\frac{0}{2})^2 + 1 \right) + \left( (\frac{1}{2})^2 + 1 \right) +
+      \left( (\frac{2}{2})^2 + 1 \right) + \left( (\frac{3}{2})^2 + 1
+      \right) \right]</mrow>
+      <mrow>\amp  = \amp  \frac{1}{2} \sum_{i=0}^3 \left(
+      (\frac{i}{2})^2 + 1 \right) = \frac{15}{4} = 3.75</mrow>
+    </md>
+  </p>
+
+  <p>
+    What you have just computed are referred to as <em>upper</em> and <em>lower Riemann sums</em>, respectively. Our estimate based on averaging the two would yield
+    <me>
+      \frac{U_4+L_4}{2} = 4.75.
+    </me>
+  </p>
+
+  <problem xml:id="defint">
+    <statement>
+      <p>
+        Let <m>f(x) = x^2 + 1.</m> Divide the interval <m>[0,2]</m> into eight equal divisions,
+        <me>
+          \{0,\frac{1}{4}, \frac{1}{2}, \frac{3}{4}, 1,  \dots , \frac{7}{4}, 2 \}
+        </me>
+        and compute the upper and lower Riemann sums of <m>f.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Subdividing an interval in this way is called <em>partitioning</em> the interval and the sub-intervals created via a partition may be of differing widths as indicated in the next definition.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>partition of the interval [a,b]</term> is a collection of points, <m>\{ x_0, x_1, \dots, x_n \}</m> satisfying, <m>a = x_0 \lt  x_1 \lt  x_2 \lt  \dots \lt  x_{n-1} \lt  x_n = b.</m>
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>f</m> is a function defined on the interval <m>[a,b]</m> and <m>P=\{x_0, x_1, \dots, x_n \}</m> is a partition of <m>[a,b],</m> then a <term>Riemann sum of f over [a,b]</term> is defined by
+        <md>
+          <mrow>R(P,f) = \sum_{i=1}^n (x_i - x_{i-1}) \cdot f(\hat{x_i})</mrow>
+        </md>
+        where <m>\hat{x_i} \in [x_{i-1},x_i].</m>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    In the definition of Riemann sum, <m>\hat{x}_i</m> can be <em>any</em> value in the interval <m>[x_{i-1}, x_i].</m> But look back at our example. When we computed <m>U_4</m> we always chose <m>\hat{x}_i</m> so that <m>f(\hat{x}_i)</m> was the <em>maximum</em> for <m>f</m> on this interval to assure that our approximation was more than the desired area. When <m>\hat{x}</m> is chosen in this manner, we call our sum an <em>upper Riemann sum</em>. When we computed <m>L_4</m> we always chose <m>\hat{x}_i \in [x_{i-1}, x_i]</m> so that <m>f(\hat{x}_i)</m> was the <em>minimum</em> for <m>f</m> on that interval to assure that our approximation was less than the desired area. When <m>\hat{x}</m> is chosen in this manner, we call our sum a <em>lower Riemann sum</em>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Compute upper and lower Riemann sums for <m>g(x) = x^2 + 3x</m> on <m>[0,1]</m> using the partition, <m>P = \{0,\frac{1}{3}, \frac{2}{3}, 1\}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute upper and lower Riemann sums for <m>g(x) = -3x^3 + 3x</m> over <m>[0,1]</m> using the partition, <m>P = \{0,\frac{1}{4}, \frac{1}{2}, \frac{3}{4}, 1 \}.</m> The heights of our rectangles do not always occur at the endpoints of the sub-intervals of our partition.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Returning to <m>f(x) = x^2+1</m> on <m>[0,2]</m>, continue to subdivide our interval into <m>n</m> subdivisions of equal length, letting <m>n = 10, n=100, n=1000, \dots</m> and labeling our partitions as <m>P_{10}, P_{100}, P_{1,000}, \dots.</m> If we label our lower sums corresponding to these partitions as <m>L_{10}, L_{100}, L_{1,000}, \dots</m> and label our upper sums as <m>U_{10}, U_{100}, U_{1,000}, \dots</m>, then we would have
+    <me>
+      L_4 \lt  L_{10} \lt  L_{100} \lt  L_{1,000} \lt  \dots \lt  U_{1,000} \lt  U_{100} \lt  U_{10} \lt   U_4.
+    </me>
+  </p>
+
+  <p>
+    Furthermore, <m>L_{1,000}</m> and <m>U_{1,000}</m> should be very close together and very close the area we desire to compute.
+  </p>
+
+  <p>
+    By increasing the number of rectangles and taking the limit as the number of rectangles tends to infinity, we will determine the <em>exact</em> area. Our notation for this area is:
+    <me>
+      \dsp \mbox{ Area }  =\int_0^2 x^2+1 \ dx = \lim_{n \to \infty} U_n = \lim_{n \to \infty} L_n.
+    </me>
+  </p>
+
+  <p>
+    For our function, these two limits are equal, but there are functions where these limits are not equal. When they are equal, we say <m>f</m> is <em>integrable</em> over the interval. If they are not equal, we say that <m>f</m> is not integrable. We refer to <m>\int_0^2 x^2+1 \ dx</m> as <q><em>the definite integral from 0 to 2 of <m>x^2+1</m>.</em></q>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Give an example of a function and an interval where the function will not be integrable over that interval.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We now the consider the upper Riemann sum for <m>f(x) = x^2 + 1,</m> above the x-axis, and between the vertical lines <m>x=0</m> and <m>x=2</m> assuming <m>n</m> equal divisions of the interval <m>[0,2].</m> Our partition of <m>n</m> divisions is now,
+    <me>
+      P = \big\{ 0 , \frac{2}{n}, \frac{4}{n}, \dots , \frac{2(n-1)}{n}, 2 \big\},
+    </me>
+    and our upper Riemann sum <m>U_n</m> that approximates the area is given by:
+    <md>
+      <mrow>U_n \amp =\amp  \frac{2}{n} \sum_{i=1}^n \left( (\frac{2i}{n})^2 + 1 \right)</mrow>
+      <mrow>\amp =\amp  \frac{2}{n} \left[ \sum_{i=1}^n \frac{4i^2}{n^2} +\sum_{i=1}^n 1  \right]</mrow>
+      <mrow>\amp =\amp  \frac{2}{n} \sum_{i=1}^n
+      \frac{4i^2}{n^2} + \frac{2}{n} \sum_{i=1}^n 1</mrow>
+      <mrow>\amp =\amp \frac{8}{n^3} \sum_{i=1}^n i^2 + \frac{2}{n} \cdot n \mbox{
+      by a formula from <xref ref="appsum">Appendix</xref> }</mrow>
+      <mrow>\amp =\amp  \frac{8}{n^3}\frac{n(n+1)(2n+1)}{6} + 2</mrow>
+      <mrow>\amp =\amp  \frac{4n(n+1)(2n+1)}{3n^3} + 2</mrow>
+      <mrow>\amp =\amp  \frac{8n^3 + 12n^2 + 4n}{3n^3} + 2</mrow>
+      <mrow>\amp =\amp \frac{8n^3}{3n^3} + \frac{12n^2}{3n^3} + \frac{4n}{3n^3} + 2</mrow>
+      <mrow>\amp =\amp  \frac{8}{3} + \frac{12}{3n} + \frac{4}{3n^2} + 2</mrow>
+    </md>
+  </p>
+
+  <p>
+    Now take the limit of the Riemann sums as the number of divisions tends to infinity to get the <em>exact</em> area under the curve.
+    <md>
+      <mrow>\mbox{ Area }  \amp  = \amp 
+      \int_0^2 x^2+1 \ dx</mrow>
+      <mrow>\amp  = \amp 
+      \lim_{n \rightarrow \infty} U_n</mrow>
+      <mrow>\amp  = \amp 
+      \lim_{n \rightarrow \infty} \frac{8}{3} + \frac{12}{3n} +
+      \frac{4}{3n^2} + 2</mrow>
+      <mrow>\amp  = \amp  \lim_{n \rightarrow \infty}
+      \frac{8}{3} +
+             \lim_{n \rightarrow \infty}\frac{12}{3n} +
+              \lim_{n \rightarrow \infty} \frac{4}{3n^2} +
+              \lim_{n \rightarrow \infty} 2</mrow>
+      <mrow>\amp  = \amp  \frac{8}{3}  +  2</mrow>
+      <mrow>\amp  = \amp  4 \frac{2}{3}</mrow>
+    </md>
+  </p>
+
+  <p>
+    Look back at your answers from <xref ref="defint">Problem</xref> (<m>U_8</m> and <m>L_8</m>) and the solutions from our Example (<m>U_4</m> and <m>L_4</m>). Just as we expect,
+    <me>
+      L_4 \lt  L_8  \lt  4 \frac{2}{3} \lt  U_8 \lt  U_4.
+    </me>
+  </p>
+
+  <p>
+    We denote the number <m>4 \frac{2}{3}</m> by <em><m>\dsp \int_0^2 x^2 + 1 \; dx</m> </em> and call this <em>the definite integral of <m>x^2 + 1</m> from <m>x=0</m> to <m>x=2.</m></em> What we have just done motivates the following definition of the definite integral.
+  </p>
+
+  <definition xml:id="defint3">
+    <statement>
+      <p>
+        If <m>f</m> is a function defined on <m>[a,b]</m> so that <m>lim_{n \rightarrow \infty} L_n</m> and <m>lim_{n \rightarrow \infty} U_n</m> both exist and are equal, then we say <m>f</m> is <term>integrable on [a,b]</term> and we define <term>the definite integral</term> by <m>\int_a^b f(x) \; dx = \lim_{n \rightarrow \infty} L_n.</m> We refer to <m>a</m> as the <term>lower limit of integration</term> and <m>b</m> as the <term>upper limit of integration.</term>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For each of the next few problems, you will require some of the summation formulas from <xref ref="appsum">Appendix</xref>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Repeat this procedure, but compute the area using <em>lower</em> Riemann sums. That is, compute and simplify <m>L_n</m> (the lower Riemann sum of <m>f(x) = x^2+1</m> on the interval <m>[0,2]</m> assuming <m>n</m> equal divisions) and then compute <m>lim_{n \rightarrow \infty} L_n.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="defint2">
+    <statement>
+      <p>
+        Compute each integral using <xref ref="defint3">Definition</xref> (Riemann sums).
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int_0^1 2x \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_0^1 x^3 \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_0^2 2x^2 - 3 \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the area trapped between the curves <m>y=x</m> and <m>y=x^2</m> using <xref ref="defint3">Definition</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Which functions are integrable? That is a question better-suited for a course called <em>Advanced Calculus</em> or <em>Real Analysis</em>, but let's give the quick-and-dirty answer without proof. By <xref ref="defint3">Definition</xref> a function is integrable if a certain limit exists, but this can be difficult to compute. It can be shown that every differentiable function is continuous and every continuous function is integrable. Thus,
+    <me>
+      f \mbox{ is differentiable }  \Rightarrow f \mbox{ is continuous }  \Rightarrow f \mbox{ is integrable} .
+    </me>
+  </p>
+
+  <p>
+    The next two theorems state this formally.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>A Differentiability Theorem.</em> If <m>f</m> is differentiable on <m>[a,b],</m> then <m>f</m> is continuous on <m>[a,b].</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>An Integrability Theorem.</em> If <m>f</m> is continuous on <m>[a,b],</m> then <m>f</m> is integrable on <m>[a,b].</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We defined integrals in terms of Riemann sums and Riemann sums in terms of partitions of the interval. Therefore the integral <m>\int_a^b f(x) \ dx</m> (see <xref ref="defint3">Definition</xref>) is only defined when <m>a \lt  b.</m> The following definitions define definite integrals where the lower limit of integration is larger than the upper limit of integration or the two endpoints of integration are equal.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>a</m> and <m>b</m> are numbers with <m>a\lt b</m> and <m>f</m> is integrable on <m>[a,b]</m> then:
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int_b^a f(x) \; dx = - \int_a^b f(x) \; dx</m> and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_a^a f(x) \; dx = 0.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The next theorem we discuss can be proved via Riemann sums, but we will leave that for your first course in <em>Real Analysis</em> as well. That's where the real fun begins.
+  </p>
+
+  <theorem xml:id="intsumrule">
+    <statement>
+      <p>
+        <em>Sum Rule for Definite Integrals.</em> If <m>c \in [a,b]</m>, then <m>\dsp \int_a^b  f(x) \; dx = \int_a^c f(x) \; dx + \int_c^b f(x) \; dx</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute each of the following integrals using <xref ref="defint3">Definition</xref> (Riemann Sums). This illustrates <xref ref="intsumrule">Theorem</xref>, the Sum Rule for definite integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int_0^1 x^2 \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_1^2 x^2 \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_0^2 x^2 \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

@@ -1,0 +1,189 @@
+
+
+<section>
+  <title>Anti-differentiation and the Indefinite Integral</title>
+  <p>
+    We might denote the derivative of the function <m>f(x) = x^2</m> as any of:
+    <me>
+      f', \; \; \frac{df}{dx}, \; \;  (x^2)', \; \; \mbox{or}  \; \; \frac{d}{dx} (x^2).
+    </me>
+  </p>
+
+  <p>
+    If <m>f</m> is a function, then any function with derivative <m>f</m> is called an <em>anti-derivative</em> of <m>f.</m> For the <em>anti-derivative</em> of <m>f</m> we may write any of:
+    <me>
+      \int f, \; \; \int f(x) \; dx, \; \; \mbox{or}  \; \; \int x^2 \; dx.
+    </me>
+  </p>
+
+  <p>
+    Any function which has one anti-derivative has infinitely many anti-derivatives. To indicate all anti-derivatives of <m>f(x) = x^2</m> we will write:
+    <me>
+      \int f(x)  \; dx  = \int x^2 \; dx = \frac{1}{3} x^3 + c, \ \ \ c \in \re.
+    </me>
+  </p>
+
+  <p>
+    We would read this notation as <q><em>the indefinite integral (or anti-derivative) of <m>x^2</m> with respect to <m>x</m> is <m>\frac{1}{3}x^3+c</m> where <m>c</m> represents an arbitrary constant</em>.</q> It is misleading that mathematicians speak of <q>the indefinite integral</q> when in fact it is not a single function, but a class of functions. You may interpret <m>\int</m> and <q><em>dx</em></q> as representing the beginning and end of the function we wish to find the anti-derivative of. We call this process <em>integrating</em> the function. The function to be integrated is called the <em>integrand</em>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate the indicated indefinite integrals and then state the Sum Rule for Indefinite Integrals based on your results.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int 3x^4 + 5\; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int 3x^4 \; dx  + \int 5 \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate the indicated indefinite integrals and then state the Constant Multiple Rule for Indefinite Integrals based on your
+        results.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \int 5 \sin(x) \; dx }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ 5 \int \sin(x) \; dx }</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate the following indefinite integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int (s^3+s)^3\; ds</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int t(t^{1/2}+8)\; dt</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{x+x^3}{x^5} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int 3\cos(x)-2\sin(4x) + e^{4x} \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Like differentiation, anti-differentiation becomes more challenging when the <em>Chain Rule</em> appears in the problem.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int x^2(x^3+10)^9\; dx.</m>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Our first guess will be <m>g(x) = (x^3 + 10)^{10}.</m> Then <m>g'(x) = 10(x^3+10)^9 \cdot 3x^2 = 30x^2(x^3+10)^9.</m> Our answer is correct <em>except</em> for the 30 in front. We take care of this by modifying our first guess to <m>g(x) = \frac{1}{30}(x^3 + 10)^{10}.</m> Now <m>g'(x) = \frac{1}{30}\cdot 10(x^3 + 10)^{10} \cdot 3x^2 = x^2(x^3+10)^9</m> and so our second guess is one anti-derivative of the integrand. Adding <q>+ c</q> to the end yields all possible anti-derivatives.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate the following indefinite integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int(x+2)(3x^2 + 12x - 5)^{121} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int(x+2)\sqrt[4]{3x^2+12x-5} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int p^2 \sqrt[3]{p^3+1} \; dp</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{3\cos(\sqrt{t})}{\sqrt{t}} \; dt</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{x}{(3x^2+4)^5} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{x}{3x^2+4} \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        These look quite similar. Try both. What's the difference?
+        EXTRA<fn>This problem is intended to train them to <q>see</q> the chain rule.  The first part is clearly integrable because the derivative of cosine appears, while the second is not integrable, because the derivative of <m>\cos(t^2)</m> does not appear.  If there is time available, I ask how they might modify the second one to make it integrable, hoping that they will see that replacing the numerator with <m>t\sin(t^2)</m> would make it an easy problem.</fn>
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \frac{\sin(t)}{\cos^2(t)} \; dt</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{\sin(t)}{\cos(t^2)} \; dt</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

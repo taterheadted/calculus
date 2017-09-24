@@ -1,0 +1,201 @@
+
+
+<section>
+  <title>Derivatives of the Trigonometric Functions</title>
+  <p>
+    When a mathematician says something is <q>true,</q> s/he means that s/he can prove it from a set of axioms and definitions. This is called <em>deductive</em> reasoning. We used deductive reasoning on <xref ref="productrule">Problem</xref> (product rule) and on <xref ref="quotientrule">Problem</xref> (quotient rule) by proving (deducing) them from the definition of the derivative. When a scientist says something is true, s/he means s/he believes it to be true based on data. This is called <em>inductive</em>
+    reasoning because s/he <em>induces</em> the truth from observations. We are going to determine the derivative of <m>s(x) = \sin(x)</m> in two different ways, inductively and deductively.
+    EXTRA<fn>Experience shows that many of my students have a precarious grasp of the trigonometric functions and by this point in the course I have usually given a fifteen-minute lecture on the unit circle and the definitions, domains and ranges of the various trigonometric functions.  If I have not, I certainly do so now and use the unit circle to plot a few trigonometric functions, perhaps cosine and cotangent.</fn></p>
+
+  <problem>
+    <statement>
+      <p>
+        <em>Inductive:</em> Use the unit circle to fill in the second row of <xref ref="sinetable">Table</xref> and make a very accurate graph of the sine function using this data, labeling each of these points on the graph. Sketch the tangent line to the graph of sine at each of these points.
+      </p>
+    </statement>
+  </problem>
+
+  <table xml:id="sinetable" >
+    <caption>The Derivative of <m>s(x) = \sin(x)</m></caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>x</m></cell>
+        <cell>0</cell>
+        <cell><m>\pi/4</m></cell>
+        <cell><m>\pi/2</m></cell>
+        <cell><m>3\pi/4</m></cell>
+        <cell><m>\pi</m></cell>
+        <cell><m>5\pi/4</m></cell>
+        <cell><m>3\pi/2</m></cell>
+        <cell><m>7\pi/4</m></cell>
+        <cell><m>2\pi</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>s(x)</m></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>s'(x)</m></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <problem>
+    <statement>
+      <p>
+        Approximate the slope of each tangent line you graphed in the last problem and fill in the third row of <xref ref="sinetable">Table</xref> with this data. Sketch this new function, the derivative of sine, by plotting the points <m>(x,s'(x))</m> from the table. Does the graph of <m>s'</m> look familiar?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Based on the last two problems, we have a guess for the derivative of sine. Now, we'll see if our guess is correct.
+  </p>
+
+  <p>
+    <em>Trigonometry Reminder <mdash /> The Sum and Difference Identities.</em> <xref ref="apptrig">Appendix</xref> has most of the common trigonometric identities, in case you need them later.
+    <ol>
+      <li>
+        <p>
+          <m>\sin(x \pm y) = \sin(x)\cos(y) \pm \cos(x)\sin(y)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\cos(x \pm y) = \cos(x)\cos(y) \mp \sin(x)\sin(y)</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        <em>Deductive:</em> Compute the derivative of the sine function using <xref ref="derivdfn">Definition</xref> and the Trigonometry Reminder above.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the derivative of <m>f(x) = \cos(x).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the derivatives of the tangent, cotangent, secant, and cosecant functions by using the derivatives of sine and cosine along with the quotient rule.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="anti2">
+    <statement>
+      <p>
+        Find a function f with derivative <m>f'(x) = 3\cos(x) - 2\sin(x) + x + 2.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        If <m>\dsp y = \frac{\cos(x)}{x+3}</m>, compute <m>y'</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        If <m>y = \sin(x)\cos(x),</m> compute <m>y'</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose that <m>L</m> is a line tangent to <m>y=\cos(x)</m> at the point, <m>(c,f(c))</m> and <m>L</m> passes through the point <m>(0,0).</m> Show that <m>c</m> satisfies the equation <m>t = -\cot(t).</m> That is show that <m>c = -\cot(c)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the equation of the line tangent to the curve <m>y = \tan(x) + \pi</m> at the point on the curve where <m>x = \pi.</m> Repeat this exercise for <m>x = \pi/4</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

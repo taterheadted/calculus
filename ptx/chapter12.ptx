@@ -1,0 +1,443 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Optimization and Lagrange Multipliers</title>
+  <introduction>
+    <p>
+      <q>The wise man doesn't give the right answers, he poses the right questions.</q> - Claude Levi-Strauss
+    </p>
+
+    <p>
+      Probably the most applied concept in all of calculus is finding the maxima and minima of functions. In industry, these can be problems from engineering, such as trying to design an airplane wing that yields the maximum lift and stability while at the same time minimizing the drag coefficient. This way, we build a plane that flies easily while using less fuel. Since planes measure fuel consumption in gallons per second, a small change in wing design can result in considerable profit for the company (and a big raise for you). Have you noticed the addition of the upward turned tips at the ends of the airplane wings in recent years?
+    </p>
+
+    <p>
+      In the financial markets, mutual funds are sets of stocks. People may buy shares of the fund instead of buying shares of individual stocks. Mutual fund managers (and their clients) want to choose groups of stocks that will increase in value and make them (and their clients) rich. Thus, a fund manager wants to design a mutual fund that will maximize profits for the investors, but because investors fear volatility (large fluctuations in the value of their portfolios), the manager also wants to minimize the volatility of the mutual fund. This is an example of an optimization problem with what is called a <em>constraint</em> because you want to maximize profit but are constrained by the customers' concerns about volatility.
+    </p>
+
+    <p>
+      Mathematicians have spent a considerable amount of time in industry working on both of these interesting problems that are representative of <q>real-world</q> applications. In mathematics, the difference between being able to understand or apply a formula to such a problem and the ability to derive or create your own formulas for the problems is the difference between working as an engineer, mutual fund manager, or biologist on a team (a wonderful job in it's own right) and working in a think tank such as Bell Labs or Los Alamos or MSRI (the Mathematical Sciences Research Institute) where you are tackling the problems that no one can solve and creating the mathematics that will be implemented by the teams in industry.
+    </p>
+
+    <p>
+      In Calculus I you solved <em>optimization</em> or <em>max-min</em> problems by setting the derivative of a function to zero to tell you where the rate of change (or slope) of the function was zero. In Calculus III we do exactly the same thing. Except that instead of solving <m>f'=0</m> we are solving <m>\nabla f=0</m> and we are seeking a horizontal tangent <em>plane</em> instead of a horizontal tangent <em>line</em>. The procedures are very similar and both find the point in the domain of the functions where potential maxima and minima are attained.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>critical point</term> of <m>f:{\re}^2 \to \re</m> is any point <m>x \in \re^2</m> where <m>\nabla f(x)</m> is zero or undefined.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Since <m>\nabla f = 0</m> translates to <m>\nabla f(x,y) = (f_x (x,y), f_y (x,y)) = (0,0)</m> we are seeking points <m>(x,y)</m> in the plane where both <m>f_x(x,y) =0</m> and <m>f_y(x,y) = 0</m>, or where at least one is undefined. Review the definitions for <q>local minimum, local maximum, and inflection point</q> for functions from <m>\re</m> to <m>\re</m> (i.e. from Calculus I). You may look these up in a book or on the web.
+    </p>
+
+    <p>
+      Recall from <xref ref="nhood">Definition</xref> that an <m>\epsilon</m> - <em>neighborhood </em> of the point <m>(s,t)</m> in <m>\re^2</m> is the set of all points in <m>\re^2</m> that are a distance of less than <m>\epsilon</m> away from <m>(s,t).</m>
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>f:\re^2 \to \re</m> and <m>x</m> is in the domain of <m>f</m>, then we say <m>(x,f(x))</m> is a <term>local minimum</term> if <m>f(x)\lt f(y)</m> for every <m>x</m> in some <m>\epsilon</m>-neighborhood of <m>x</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Local maximum is defined similarly. A function may have infinitely many local minima and maxima.
+    </p>
+
+    <problem xml:id="minimum">
+      <statement>
+        <p>
+          Find the minimum of <m>f(x,y)=x^2-2x+y^2-4y+5</m> in two different ways.
+          <ol>
+            <li>
+              <p>
+                First, set <m>\nabla f(x,y)=0</m> and solve for <m>(x,y)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Second, complete the square to write <m>f</m> as <m>f(x,y) = (x-a)^2 + (y-b)^2</m> and graph.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y)=8y^3+12x^2-24xy</m>.
+          <ol>
+            <li>
+              <p>
+                Find all critical points of <m>f.</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Sketch <m>f</m> using any software to verify your answers.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Use any software to solve the whole problem.  In other words, use software to compute your partial derivatives and solve for the roots of these partial derivatives.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Recall in Calculus I that if <m>x</m> were a critical point for <m>f</m> then <m>(x,f(x))</m> could have been a minimum, maximum, or an inflection point for <m>f.</m> Inflection points were critical points where the function <m>f</m> switched concavity (i.e. where the first derivative is zero and the second derivative switches signs). In Calculus III the analogous points are critical points that are neither maxima nor minima and we call these <em>saddle points</em>.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>f:\re \to {\re}^2</m> is differentiable at <m>x</m>, then we say <m>(x,f(x))</m> is a <term>saddle point</term> if <m>\nabla f(x)=0</m> and no matter how small an <m>\epsilon >0</m> we choose, there are points <m>y</m> and <m>z</m> in the <m>\epsilon</m>-neighborhood of <m>x</m> so that <m>f(x)\lt f(y)</m> and <m>f(x)>f(z)</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      This definition of a <em>saddle point</em> says that if we are at a saddle point and we decide to walk away from it, then
+      there are paths away from the critical point along which <m>f</m> increases and paths away from the point along which <m>f</m> decreases. Given a critical point, how do we determine if it was a maximum, minimum, or saddle point? That is, how do we <em>classify</em> the critical points of <m>f</m>? How did we do it in Calculus I? We restate the <em>Second Derivative Test</em> which is a slick way to classify the the critical points of the single-variable, real-valued functions from Calculus I. Notice how nicely it parallels the next theorem for classifying the multi-variable, real-valued functions of Calculus III.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Second Derivative Test I.</em> If <m>f: \re \to \re</m> is differentiable and <m>f'(x)=0</m> then,
+          <ol>
+            <li>
+              <p>
+                If <m>f''(x) > 0</m>, then <m>(x,f(x))</m> is a minimum.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                If <m>f''(x) \lt  0</m>, then <m>(x,f(x))</m> is a maximum.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                If <m>f''</m> switches signs at <m>x</m>, then <m>(x,f(x))</m> is an inflection point.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Here is a sweet theorem for classifying critical points of functions of two variables.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Second Derivative Test II.</em>
+          If <m>f:{\re}^2 \to \re</m> and <m>\nabla f(u)=0</m> and <m>D=f_{xx}(u)f_{yy}(u)-(f_{xy}(u))^2</m>, then
+          <ol>
+            <li>
+              <p>
+                <m>(u,f(u))</m> is a local min if <m>D>0</m> and <m>f_{xx}(u)>0</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(u,f(u))</m> is a local max if <m>D>0</m> and <m>f_{xx}(u)\lt 0</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(u,f(u))</m> is a saddle point if <m>D\lt 0</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                No information if D=0.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Classify all critical points of a function <m>f</m> with gradient <m>\nabla f(x,y) = (xy-2x-3y+6, yx-y+4x-4).</m>
+          EXTRA<fn>As a class exercise, we attempt to compute and classify all critical points of a function <m>f</m> with gradient <m>\nabla f(x,y) = (xy-2x-3y+6, yx-y+4x-4).</m>  The problem is intentionally misleading. We quickly solve for the critical points, but when we attempt to classify them by computing the determinant of the Hessian, <m>\begin{pmatrix}f_{xx} \amp  f_{xy} \cr f_{yx} \amp  f_{yy}
+          \end{pmatrix}</m> we find that <m>f_{xy} \neq f_{yx}</m>.  We ask, <q>How could this happen?  Don't we have a theorem that says that <m>f_{xy} = f_{yx}</m>?</q> After some thought, someone will suggest that perhaps there is not a function with that gradient and we integrate the first component of our gradient with respect to <m>x</m> and the second component of the gradient with respect to <m>y</m> to demonstrate that in fact, there is no function having this gradient.  This provides an example for solving two equations in two variables and foreshadows the proof technique needed later to show that a vector field <m>f = (P,Q)</m> is conservative if <m>P_y = Q_x</m>.</fn></p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          Compute the critical points of <m>f(x,y)=xy^2-6x^2-3y^2</m> and classify these critical points as local maxima, local minima, or
+          saddle points.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute and classify the critical points of <m>f(x,y)=xy+\dsp{\frac{2}{x}+\frac{4}{y}}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute and classify the critical points of <m>\dsp f(x,y)=e^{-(x^2+y^2-4y)}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The next problem reminds you of an important aspect of max/min problems from Calculus I. If you wanted the local maxima and minima of a function like <m>f(x) = x^2</m> on <m>[-1,3]</m>, then you checked not only the places where <m>f'=0</m> but also the values of <m>f</m> at the endpoints (boundary) of the interval. The same must be done for functions of several variables. When you applied this technique, you were applying the Extreme Value Theorem.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Extreme Value Theorem for Functions of One Variable.</em> If <m>f: [a,b] \to \re</m> is a differentiable function, then <m>f</m> has a maximum and a minimum on this interval.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      The corresponding theorem for real-valued functions of two variables requires at least an intuitive idea of the notions of what it means for a set to be <em>closed</em> and <em>bounded.</em> A set <m>S</m> is <em>bounded</em> if there is a number <m>M</m> so that <m>| x | \le M</m> for all <m>x \in S.</m> A set <m>S</m> is <em>closed</em> if it contains its boundary points. Think of the open and closed intervals. An open interval does not contain its end points, the points on the boundary of the set. A closed interval does contain its boundary points. The set of all points <m>(x,y)</m> satisfying <m>x^2 + y^2 \leq 9</m> is closed, while the set of all points <m>(x,y)</m> satisfying <m>x^2 + y^2 \lt  9</m> is not closed.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          A set <m>S</m> in <m>\re^2</m> is <term>closed</term> if it contains all its boundary points.
+        </p>
+      </statement>
+    </definition>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Extreme Value Theorem for Functions of Two Variables.</em>
+          If <m>M</m> is a closed and bounded set and <m>f: M \to \re</m> is a differentiable function, then <m>f</m> has a maximum and a minimum on <m>M</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Optimize <m>f(x,y) = 2x^2 + y^2 + 1</m> subject to <m>g=0</m> where <m>g(x,y) = x^2 + y^2 - 1</m> in four ways!
+          EXTRA<fn>Somewhere before or after this problem is attempted, I deliver this seminal lecture which reinforces then notions of composition of functions, graphing and differentiation while introducing Lagrange multipliers.  Our goal is to optimize <m>f(x,y) = 2x^2 + y^2 + 1</m> subject to <m>g=0</m> where <m>g(x,y) = x^2 + y^2 - 1</m> and we solve the problem in four distinct ways:
+          <ol>
+            <li>
+              <p>
+                We solve <m>g=0</m> for <m>y</m>, substitute the result into <m>f</m> and optimize the resulting function of one variable.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We parameterize <m>g=0</m> as <m>c(t) = (\cos(t), \sin(t))</m> and optimize the composition <m>f \circ c</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We graph <m>f</m> and locate the extrema visually.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                We apply Lagrange Multipliers, saving the theory of why it works for later.
+              </p>
+            </li>
+          </ol>
+          Because we solve for <m>y</m>, Method 1 finds only two of the critical points unless we go back and solve <m>g=0</m> for <m>x</m> and repeat the process.  I don't tell them this.  We simply move on to solve it another way, confident that our two extrema are correct.  Method 2 then surprises us when we find four critical points. At this point, we may revisit Method 1, asking how we can find the other two.  Whether we go back or not depends on the students' questions. Method 3, graphing, then verifies that there are exactly four solutions since the graph of <m>f</m> constrained by <m>g</m> looks like a Pringle potato chip with two maxima and two minima.  At this point, someone usually realizes that we would have found all critical points using Method 1 if we had solved for <m>x</m> as well but all these methods seem onerous even for such a simple problem.
+
+          Method 2 foreshadows the proof that the method of Lagrange Multipliers works. Consider functions <m>f:\re^2 \to \re</m> and <m>g: \re^2 \to \re</m>, both differentiable everywhere.  If we parameterize <m>g=0</m> as <m>r(t) = (x(t),y(t))</m>, then our critical points will occur at any point <m>t</m> in the domain of <m>r</m> where <m>(f \circ r)'=0</m> or where <m>\nabla f (r(t)) \cdot r'(t)=0</m>.   Since <m>r</m> is a parametrization of <m>g=0</m>, we know that <m>g(r(t))=0</m> and thus <m>\nabla g (r(t)) \cdot r'(t) =0</m>.  Thus, both <m>\nabla f (r(t))</m>and <m>\nabla g (r(t))</m> are orthogonal to the same vector <m>r'(t)</m> and therefore they must be scalar multiples of one another.  Hence we have Lagrange's Theorem, that solving the system, <m>\nabla f = \lambda \nabla g</m> and <m>g=0</m> is sufficient to find all critical points.</fn></p>
+      </statement>
+    </example>
+
+    <problem xml:id="temp">
+      <statement>
+        <p>
+          Let <m>T(x,y)=2x^2+y^2-y</m> be the temperature at the point <m>(x,y)</m> on the circular disk of radius 1 centered at <m>(0,0).</m>
+          <ol>
+            <li>
+              <p>
+                Find the critical points of T.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find the minimum and maximum of T over the circle (perimeter), <m>x^2+y^2=1</m> by parameterizing the circle.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find the minimum and maximum of T over the disk, <m>x^2+y^2 \leq 1.</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      For the next problem, you will need to parameterize each of the four line segments that form the line and check the maximum and minimum of the function over not only the interior of the square, but also over each of the four lines.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Find the maximum and minimum of <m>f(x,y) = 2x^2 - 3y^2 + 10</m> over the square disk, <m>S = \{ (x,y) | 0 \leq x \leq 3, 2 \le y \le 4 \}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find all maxima and minima of <m>f(x,y)=x^2-y^2+4y</m> over the rectangle <m>R = \{ (x,y) | -1 \leq x \leq 1, -3 \le y \le 3 \}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find all maxima and minima of <m>f(x,y)=2x^2 + 3y^2 +2</m> over all points on or inside the triangle with vertices, <m>(-2,0)</m>, <m>(0,2)</m>, and <m>(2,0)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      In Calculus I an <m>n^{th}</m> degree polynomial will have at most <m>n-1</m> critical points. What about in Calculus III? Here is a <m>6^{th}</m> degree polynomial which has far more than 5 critical points. All of these may be found by hand and easily seen when graphed.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Find all thirteen critical points of <m>f(x,y) = x^3y^3 - x^3y -3xy^3 + 3xy +1.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y) = x^3 - y^3</m> and <m>p = (2,4).</m> Find the direction in which <m>f</m> increases the most rapidly.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Ted is riding his mountain bike and is at altitude (in feet) of <m>A(x,y) = 5000e^{-(3x^2+y^2)/100}.</m> What is my slope of descent or ascent if I am riding in the direction <m>\oa {(-1,1)}</m> starting at the point, <m>(10,10, 5000e^{-4})?</m> In what direction should I travel to ascend the most rapidly? To descend the most rapidly?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\dsp T(x,y,z)  = \frac{10}{x^2 + y^2 + z^2}</m> and <m>\dsp \oa r(t) = (t \cos(\pi t) , t \sin(\pi t) , t ).</m> If <m>T(x,y,z)</m> represents the temperature in space at the point <m>(x,y,z)</m> and <m>\oa r(t)</m> represents Ted's position at time t, then compute <m>(T \circ \oa r)'(3)</m> and explain what this number represents in a complete sentence. To check your answer, compute it in two ways. First compose the functions and take the derivative. Second, use the chain rule.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      We have tackled optimization problems before when we found maxima and minima of functions like <m>f(x,y)=x^2+x^2y+y^2+4</m>
+      from <xref ref="minimum">Problem</xref>. We have also sought maxima and minima of curves (or paths) on surfaces when we found the maxima and minima of <m>T(x,y)=2x^2+y^2-y</m> over the circle <m>x^2+y^2+1</m> as in <xref ref="temp">Problem</xref>. <xref ref="temp">Problem</xref> is called a <em>constrained</em> optimization problem because we want a maxima or a minima of <m>T</m> subject to the constraint that it is above the unit circle. The method of Lagrange multipliers is a slick way to tackle constrained optimization problems.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Lagrange Multipliers.</em>
+          Suppose that <m>f, g: \re^2 \to \re.</m> To maximize (or minimize) the function <m>f</m> subject to the constraint <m>g=0</m> we solve the two equations,
+          <ol>
+            <li>
+              <p>
+                <m>\nabla f(x)=\lambda \nabla g(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>g(x)=0</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+
+        <p>
+          for <m>x</m> and for <m>\lambda.</m> The variable <m>\lambda</m> is called the Lagrange multiplier, and <m>x</m> is the point at which <m>f</m> is maximized (or minimized).
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Minimize the function <m>f(x,y) = y^2-x^2</m> over the region <m>g(x,y)\leq 0</m> where <m>g(x,y) = \frac{x^2}{4}+y^2 -1.</m>
+          EXTRA<fn>Experience says that we have not seen enough examples of Lagrange Multipliers, so this is a stock example, I show.</fn></p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          Find any possible maxima or minima of <m>f(x,y)=x^2+y^2</m> subject to <m>xy=3</m> in three ways. First use Lagrange multipliers by putting <m>g(x,y) = xy-3</m> so that the constraint is <m>g(x,y) = 0.</m> Second, substitute <m>y=3/x</m> into the equation and solve. Third, sketch <m>f</m> and identify the portion of <m>f</m> that is above the equation, <m>xy=3.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find any minima and maxima of <m>f(x,y)=4x^2+y^2-4xy</m> subject to <m>x^2+y^2=1</m>. It may be helpful to eliminate <m>\lambda</m> first.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the minimum of <m>f(x,y,z)=3x+2y+z</m> subject to <m>9x^2+4y^2-z=0</m> via Lagrange multipliers.
+        </p>
+      </statement>
+    </problem>
+  </introduction>
+  <xi:include  href="chap11probs.ptx" />
+</chapter>
+

@@ -1,0 +1,622 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Vectors and Lines</title>
+  <introduction>
+    <p>
+      <q>The only way of discovering the limits of the possible is to venture a little way past them into the impossible.</q> - Arthur C. Clarke
+    </p>
+
+    <p>
+      Welcome to calculus in three dimensions. The beauty of this material is how closely it parallels your first semester of calculus. After a brief introduction to the coordinate plane, you learned how to graph lines and parabolas. After a brief introduction to three-space, we will be graphing planes and paraboloids. Just as we defined continuity in terms of limits in Calculus I, we will define continuity of functions of several variables in terms of limits in this course. Lines were important as they allowed you to define tangent lines to functions and the derivative. Tangent planes to functions and surfaces will aid our definition of derivative. Once you understood the derivative, you used it to find maxima and minima of real valued functions and we will use the derivative of functions in three-space to find maxima and minima in our applications as well. Two of the most central ideas of your first calculus course were the chain rule and the fundamental theorem of calculus. We will extend your notion of the chain rule and the fundamental theorem in this course. Only near the end of the course will the work we do not have a parallel to your first course. At the end, we'll cover Green's and Gauss' Theorems, which are necessary tools in physics and engineering, but which had no parallel in Calculus I.
+      EXTRA<fn>On the first day of Calculus III, we define vector addition, scalar multiplication, points in <m>\re^3</m> and vectors in <m>\re^3</m>, just as they are defined below. We then give a parametric equation for a circle and discuss how we might write <m>y=x^2</m> (or any other function) as a parametric curve in one or more ways. Then we give two points in the plane, ask the students to create a parametric equation for the line between two points and have one or more students place their (hopefully different) solutions on the board.  We discuss whether they are correct and how different equations may produce the same set of points.  Once this is done, I have them convert the parameterized lines to slope-intercept form.  This takes the entire first period and gets several students to the board in a relaxed setting, which is my primary goal for the first day.  I send them home to read the notes and start working the problems for presentation on the next day, promising that I'll post a syllabus soon.  Because we use a web site for all communication with the class, that is where I'll post the course notes, syllabus, and other details.</fn></p>
+
+    <definition>
+      <statement>
+        <p>
+          <m>\nat</m> is the set of all <term>Natural Numbers</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          <m>\re</m> is the set of all <term>Real Numbers</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      We will also use the notation, <q><m>\in</m>,</q> to mean <q>is an element of.</q> Thus, <q><m>x \in \re</m></q> means <q><m>x</m> is an element of <m>\re,</m></q> or <q>x is a real number.</q> Similarly, <m>x,y \in \re</m> means <q>x and y are real numbers.</q> In Calculus I and II, you lived in two-space, or <m>\re^2 = \{ (x,y) : x,y \in \re \}.</m> Now you have graduated to 3-space!
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          Three dimensional space (Euclidean 3-space or <m>{\re} ^3</m>), is the set of all ordered sequences of 3 real numbers. That is
+          <me>
+            {\re}^3\ =\ \{(x_{1}, x_{2}, x_{3}):x_{1}, x_{2}, x_{3} \in {\re}\}.
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Of course, there is no reason to stop with the number 3. More generally, <m>n</m>-space or <m>\re^n</m> is the set of all ordered
+      sequences of <m>n</m> real numbers, but we will spend most of our time concerned with only <m>\re, \re^2, \re^3,</m> and occasionally, <m>\re^4.</m> Euclidean 4-space is handy since one might want to consider an object or shape in 3-space that is moving with respect to time, thus adding a <m>4^{th}</m> dimension.
+    </p>
+
+    <p>
+      We will write elements in <m>\re^3</m> just as letters; hence, by <m>x \in \re^3</m> we mean the element, <m>x = (x_1, x_2, x_3)</m> where <m>x_1,x_2,x_3 \in \re.</m> The <em>origin</em> is the element, <m>o = (0,0,0).</m>
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>x, y \in {\re}^3</m>, then <m>\oa{xy}</m> is the directed line segment from <m>x</m> to <m>y.</m> We abbreviate <m>\oa {ox}</m> by <m>\oa x.</m> Directed line segments are referred to as <term>vectors</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Physicists and mathematicians often speak of a vector's <em>magnitude</em> and <em>direction</em>. Given a vector, <m>\oa x,</m> by <em>magnitude (or norm)</em> we mean the distance between the point, <m>x,</m> and the origin, <m>o</m>. By <em>direction</em> we mean the direction determined by the directed line segment <m>\oa x</m> that has base at <m>o</m> and tip at the point, <m>x.</m> When we say to <q>sketch the vector <m>\oa x</m></q> we mean to draw the directed line segment from the origin to the point, <m>x.</m>
+    </p>
+
+    <p>
+      We are making a distinction between <em>points</em> and <em>vectors</em>. Points are the actual elements of 3-space and vectors are directed line segments. The word <em>scalar</em> will be used to refer to real numbers (and later in your mathematical career as complex numbers or elements of any field). The word, <em>point</em> may be used to mean a real number, an element of <m>\re^2</m>, an element of <m>\re^3,</m> etc.
+    </p>
+
+    <p>
+      Having carefully made clear the distinction between <em>point</em> and <em>vector</em> you will have to work hard to keep me honest; I tend to use the two more or less interchangeably.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>x, y \in \re^3,</m> with <m>x =(x_{1}, x_{2}, x_{3})</m> and <m>y=(y_{1}, y_{2}, y_{3})</m>, and <m>\alpha \in {\re}</m> then:
+          <ul>
+            <li>
+              <p>
+                <m>x+y=(x_{1}+y_{1},\  x_{2}+y_{2},\  x_{3}+y_{3})</m>  <q>Addition in <m>\re^3</m></q>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\alpha x= (\alpha x_{1},\ \alpha x_{2},\  \alpha x_{3})</m>  <q>Scalar Multiplication in <m>\re^3</m></q>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Now, to be precise, we should also define <em>vector addition</em> and <em>scalar multiplication for vectors</em>. Since the definition is identical (except for placing arrows above the <m>x</m> and <m>y</m>) we omit this. As you can see, always making a distinction between a <em>point</em> and a <em>vector</em> can be cumbersome.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\oa{x}=\oa{(1,2)}</m> and <m>\oa{y}=\oa{(5,2)}</m> and sketch <m>\oa{x},\ \oa{y},\  -\oa{x},\  2\oa{y}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Consider the two vectors, <m>\oa {xy}</m> and <m>\oa y - \oa x.</m> Both vectors have the same direction and the same magnitude.
+      They are different because the vector <m>\oa y - \oa x</m> has its base at the origin and its tip at the point <m>y-x</m> while
+      <m>\oa {xy}</m> has its base at <m>x</m> and its tip at <m>y.</m>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch <m>\oa{x}+\oa{y}, \oa{x}-\oa{y}</m> and <m>\oa{xy}</m> where <m>\oa{x}=\oa{(2,3)}</m> and <m>\oa{y}=\oa{(4,2)}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>n \in {\nat}.</m> A function from <m>{\re}</m> to <m>{\re}^n</m> is called a <term>parametric</term> curve.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      We will be concerned primarily with vector valued functions where the range is <m>\re^2</m> or <m>\re^3.</m> If <m>n=2</m>, then such functions are also called <em>planar curves</em> and if <m>n=3</m> they are called <em>space curves</em>. We'll put a vector symbol, <m>\oa{}</m>, over such functions to remind us that the range is not a real number but a point in <m>{\re}^n.</m>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\oa l(t)=(2t,\ 3t)</m>. Sketch <m>\oa l</m> for all <m>t \in \re.</m> If <m>t</m> represents time and <m>\oa l(t)</m> represents the position of a llama at time <m>t</m>, then how fast is the llama traveling?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\oa l(t)= (1,2)+(4,5)t</m>. Sketch <m>\oa l</m> for all <m>t \in \re</m> and give the speed of a lemur whose position in the plane at time <m>t</m> seconds is given by <m>\oa l(t).</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          What is the distance between the point <m>(1,2,3)</m> and the origin? What is the distance between <m>(1,2,3)</m> and <m>(4,5,6)</m>?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch <m>\oa r(t)=t(1,2,3)+(1-t)(3,4,-5)</m> for all <m>t \in \re</m>. Compute <m>\oa r(0)</m> and <m>\oa r(1).</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          What is the distance between <m>{x}=(x_{1}, x_{2}, x_{3})</m> and <m>{y}=(y_{1}, y_{2}, y_{3})</m>?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>x = (2,5,-1)</m> and <m>y = (1,2,4).</m>
+          <ol>
+            <li>
+              <p>
+                Write an equation, <m>\oa l,</m> for the line in <m>{\re}^3</m> passing through <m>x</m> and <m>y</m> with <m>\oa l(0) = x</m> and
+                <m>\oa l(1) = y.</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write an equation, <m>\oa m,</m> for the line in <m>{\re}^3</m> passing through <m>x</m> and <m>y</m> so that
+                <m>\oa m(0) = x</m> and the speed of an object with position determined by the line is twice the speed of an object with
+                position determined by the line in part 1 of this problem.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find infinitely many parametric equations for the line passing through <m>(a,b,c)</m> in the direction <m>\oa{(x,y,z)}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Plot some points in order to graph <m>\oa f(t) = (\sin(t),\cos(t),t)</m> for <m>t \in [0,6\pi].</m> How would you write the set representing the range of <m>\oa f?</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      In Calculus I and II you studied functions from <m>\re</m> to <m>\re,</m> for example <m>f(x)=x^3,</m> and functions from <m>\re</m> to <m>{\re}^2,</m> for example <m>\oa r(t)=(\cos(t),\sin(t))</m>. Now we have added functions from <m>{\re}</m> to <m>{\re}^3</m> such as the examples in the previous few problems. We wish to add functions from <m>\re^2</m> to <m>\re</m> to our list next. Such functions are called <em>real-valued functions of several variables.</em>
+      EXTRA<fn>Here we discuss the domains and ranges of various <q>types</q> of functions including examples of all the types of function we have seen such as functions from <m>\re \rightarrow \re</m>, from <m>\re^2 \rightarrow \re</m>, from <m>\re \rightarrow \re^2</m>.  We discuss the coordinate planes, <m>x=0</m>, <m>y=0</m>, and <m>z=0</m> along with translations of these planes such as <m>x=1</m>, <m>z=3</m>, and <m>y=-4</m>. Then we graph <m>f(x,y) = 2x + y^2</m> by graphing the slices <m>x=-2</m>, <m>x=0</m>, <m>x=2</m>, and <m>y=0</m>. We'll note that this might be written as <m>z - 2x - y^2 = 0</m> which really means the set, <m>\dsp \{ (x,y,z) \in \re^3 : z - 2x - y^2 = 0 \}</m>.  I try to be very precise when I lecture, demonstrating the independent variables and writing things out completely. We compose this function with <m>l(t) = (0,0) + (1,1)t</m> and discuss that at any time <m>t</m>, a bug standing at position <m>l(t)</m> might see her friend directly above (or below) her at height, <m>f(l(t))</m> and position <m>(t,f(l(t)))</m>.  Such discussions are my attempt at giving a conceptual intuition to the many types of functions and surfaces that will arise throughout the course. Because most of my students are engineers who will see ample applications, we don't spend lots of time assigning <q>real-world</q> applications.  We do spend  time discussing the types of real-world problems to which the mathematics we do can be applied.</fn></p>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>real valued function of several variables</term> is a function <m>f</m> from <m>{\re}^n \to {\re}</m>. We will primarily consider <m>n=2</m> and <m>n=3</m> in this course.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          Functions we will encounter and their names.
+        </p>
+      </statement>
+    </example>
+
+    <ol>
+    <li>
+      <p>
+        real valued functions defined on <m>\re</m>
+
+        <m>f: \re \to \re</m>,  <m>f(t) = t^2 + e^t</m>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        parametric curves (also called vector valued functions) defined on <m>\re</m>
+        <ol>
+          <li>
+            <p>
+              planar curves
+
+                  <m>\oa f : \re \to \re^2</m>, <m>\oa f(t) = (e^{2t+1}, 3t+1)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              space curves
+
+                  <m>\oa f : \re \to \re^3</m>, <m>\oa f(t) = (2t+1, (3t+1)^3, 4t+1)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+
+    <li>
+      <p>
+        real-valued functions of several variables, or <em>multivariate</em> functions
+        <ol>
+          <li>
+            <p>
+              real valued functions of two variables
+
+                  <m>f: \re^2 \to \re</m>, <m>f(x,y) = x^2 + \sqrt{y}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              vector valued functions of three variables
+
+                  <m>f: \re^3 \to \re^2</m>, <m>f(x,y,z) = (2xy, 3x + 4y^2)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              vector valued functions of several variables
+
+                  <m>f: \re^n \to \re^m</m> where <m>m,n \ge 2</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </li>
+    </ol>
+
+    <problem>
+      <statement>
+        <p>
+          Graph the set of all points <m>(x,y,z)</m> in <m>{\re}^3</m> that satisfy <m>x+y+z=1.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Graph the set of all points <m>(x,y,z)</m> in <m>{\re}^3</m> that satisfy <m>z=4.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>\oa{x}</m> is a vector in <m>{\re}^3</m>, then <m>\mid \oa{x}\mid = \dsp{\sqrt{x_{1}^2+x_{2}^2+x_{3}^2}}</m>. This is called the <term>magnitude</term>, <term>length</term>, or <term>norm</term> of <m>\oa x.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      We defined the norm on vectors, but the same definition is valid for <em>points</em> in <m>\re^3.</m>
+      EXTRA<fn>We define the dot product of two vectors and discuss the difference between the words that we will inevitably use interchangeably, orthogonal and perpendicular.  We give the simple example that if <m>x=(-1,1)</m> and <m>y=(1,1)</m> then they have zero dot product, hence are orthogonal.  Of course, a graph of <m>x</m> and <m>y</m> as vectors along with simple trigonometry shows that they are also perpendicular. More discussion on the relationship between dot products and projections will be forthcoming.  In the problems, students are asked to prove that two orthogonal vectors are in fact perpendicular.</fn></p>
+
+    <theorem xml:id="cos">
+      <statement>
+        <p>
+          <em>Law of Cosines.</em> Given any triangle with sides of lengths <m>a,b,</m> and <m>c,</m> and having an angle of measure <m>\alpha</m> opposite the side of length <m>a,</m> the following equation holds: <m>a^2=b^2 + c^2-2 \ b \ c \ \cos(\alpha)</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch in <m>{\re}^2</m> the vectors <m>\oa{(1,2)}</m> and <m>\oa{(3,5)}</m>, and find the angle between these vectors by using the law of cosines.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch in <m>{\re}^3</m> the vectors <m>\oa{(1,2,3)}</m> and <m>\oa{(-2,1,0)}</m>, and find the angle between these vectors by using the law of cosines.
+        </p>
+      </statement>
+    </problem>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>\oa{x}=\oa{(x_{1}, x_{2}, x_{3})}</m> and <m>\oa{y}=\oa{(y_{1}, y_{2}, y_{3})}</m>, then the <term>dot product</term> of <m>\oa{x}</m> and <m>\oa{y}</m> is defined by <m>\oa{x}\cdot \oa{y}=x_{1}y_{1}+x_{2}y_{2}+x_{3}y_{3}</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Again, we defined the dot product on vectors, but the same definition is valid for <em>points</em> in <m>\re^3.</m>
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          We say the vectors <m>\oa{x}</m> and <m>\oa{y}</m> are <term>orthogonal</term> if <m>\oa{x}\cdot \oa{y}=0</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <problem xml:id="normxminusy">
+      <statement>
+        <p>
+          Show that if <m>\oa x</m> and <m>\oa y</m> are vectors in <m>\re^3</m> then
+          <me>
+            \mid \oa x-\oa y\mid^2\ =\ \mid \oa x\mid ^2-2 \oa x \cdot \oa y + \mid \oa y \mid ^2.
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find two vectors orthogonal to <m>\oa{(1,2)}</m>. How many are there?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find three vectors orthogonal to <m>\oa{(1,2,3)}</m>. How many are there?
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="uvcos">
+      <statement>
+        <p>
+          Use <xref ref="cos">Theorem</xref> and <xref ref="normxminusy">Problem</xref> to show that if <m>\oa{x}, \oa{y} \in {\re}^3</m> and <m>\theta</m> is the angle between <m>\oa{x}</m> and <m>\oa{y}</m>, then <m>\oa{x}\cdot \oa{y}\ =\ \mid \oa{x}\mid\ \mid \oa{y}\mid \cos \ \theta</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find two vectors orthogonal to both <m>\oa{(1,4,3)}</m> and <m>\oa{(2,-3,4)}</m>. Sketch all four vectors. EXTRA<fn>Because we allow students to look at other materials, it is common for a student to find a vector orthogonal to two vectors by using the cross product which we have not developed yet. Typically, they compute the determinant of the <q>matrix</q> with rows <m>(\oa{i}, \oa{j}, \oa{k})</m>, <m>\oa{u}</m>, and <m>\oa{v}</m>. When this happens, we use the problem as an opportunity to show  the class how to compute determinants of 2x2 and 3x3 matrices.  Some of my students have had linear algebra, but many have not.  Next we set up the equations one would need to solve in order to demonstrate how the previous problem could be worked  by brute force.  And I say that while we can use this trick, we won't know (as mathematicians) that it is valid until we resolve <xref ref="cross">Problem</xref> that shows how to find a vector perpendicular to two vectors.  The key point is that in defining the cross product to be the vector orthogonal to <m>\oa u</m> and orthogonal to <m>\oa v</m> with length the area of the  parallelogram with sides <m>\oa u</m> and <m>\oa v</m> is more or less an arbitrary choice to force a unique solution. We could have chosen any reasonable third condition (rather than the area of the parallelogram) to guarantee a unique solution.  I'm  attempting to tie together the fundamental ideas of linear algebra with the problem of finding a vector orthogonal to <m>\oa{u}</m> and <m>\oa{v}</m>.
+
+
+          Around this point in the course, we expand on the meaning of the dot product by showing that if <m>\oa x</m> and <m>\oa y</m> are vectors and <m>\oa y</m> has unit length, then <m>\oa x \cdot \oa y</m> is the length of the projection of <m>\oa x</m> onto <m>\oa y</m> by using <m>\oa x \cdot \oa y = |\oa x| |\oa y| \cos{\theta}</m> and <m>\cos{\theta} = opp/hyp</m>. We do the same computation where <m>\oa y</m> is not a unit vector.  The point is that the dot product has an important meaning associated with projections.  We will use this very important fact in demonstrating how a vector line integral is used to compute the work in moving a particle through a vector field as well as with Green's Theorem and Gauss' Divergence Theorem.  I attempt to make every fact that we study early in the course a recurring theme throughout the course and we attempt to relate it to other subjects.  Of course projections, cross products, and determinants in this setting are powerful motivations for a deep understanding of linear algebra.  If they have taken linear, then it is an argument for taking the second semester; if not, it is a basis for understanding the first semester.</fn></p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Show that if two non-zero vectors <m>\oa{x}</m> and <m>\oa{y}</m> are orthogonal then the angle between them is <m>90^{\circ}</m>. Hence any two orthogonal vectors are perpendicular vectors.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Given the vectors <m>\oa{u},\oa{v} \in \re^3,</m> find the area of the parallelogram with sides <m>\oa{u}</m> and <m>\oa{v}</m> and diagonals <m>\oa{u+v}</m> and <m>\oa {uv}</m>. The vertices of this parallelogram are the points: the origin, u, v, and u+v.
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="cross">
+      <statement>
+        <p>
+          Assume <m>\oa{u},\ \oa{v}\in {\re}^3</m>. Find a vector <m>\oa{x}=(x,y,z)</m> so that <m>\oa{x} \perp \oa{u}</m> and <m>\oa{x}\ \perp \oa{v}</m> and <m>x+y+z=1</m>.
+          EXTRA<fn>This is a bit of nasty algebra, but foreshadows the cross product.  Since the last equation is arbitrary, we will get a multiple of the cross product, not the cross product itself.</fn></p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Prove or give a counter example to each of the following where <m>\oa u, \oa v \in \re^3</m> and <m>c \in \re</m>:
+          <ol>
+            <li>
+              <p>
+                <m>\oa{u}\cdot \oa{v} \ =\  \oa{v}\cdot \oa{u}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u} (\oa{w} \cdot \oa{v})\ =\  (\oa{u} \cdot \oa{w}) (\oa{u} \cdot \oa{v})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>c(\oa{u}\cdot \oa{v})\ =\ (c\oa{u})\cdot \oa{v}\ =\ \oa{u}\cdot (c\oa{v})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u} + (\oa{v} \cdot \oa{w})\ =\  (\oa{u} + \oa v) \cdot (\oa{u} + \oa{w})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{u}\cdot \oa{u}\ =\  \mid \oa u\mid^2</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="sketch">
+      <statement>
+        <p>
+          Let <m>f(x,y)=x^2+y^2</m>. Sketch the intersection of the graph of <m>f</m> with the planes: <m>z=0;\  z=4;\  z=9;\  y=0;\  y=-1;\  y=1;\ x=0;\</m> <m>x=-1;\  x=1</m>. Now sketch all of these together in one 3-D graph.
+          EXTRA<fn>Here a discussion arose about the difference between a surface and a function. I told them that a surface is a two dimensional topological manifold; unfortunately, three out of four of those words are beyond the scope of the course <mdash />  take topology! I told them to think of a surface as a set of points in three-space where at every point one could place a tangent plane; think smooth and differentiable. We are most interested in being sure we understand when a given set of  points in three-space is a function.  Backing up to two-space, we discussed the example of a circle in the plane as an <em>equation</em> that is not a <em>function</em>, re-emphasizing that <m>x^2 + y^2 = 4</m> means <m>\dsp \{ (x,y) \in \re^2 : x^2 + y^2 = 4 \}</m>.  We observe that if we have an equation in three variables, <m>x</m>,<m>y</m>, and <m>z</m> such as <m>x^2 + y^2 + z^2 = 9</m> then solving for <m>z</m> may or may not result in a function, just as solving the circle <m>x^2+y^2=9</m> for <m>y</m> does not yield a function.  Of course, we know of (and sketch) other examples of surfaces by considering <m>x^2+y^2=9</m> and <m>2x-3y=5</m> in three-space as cylinders and planes that are not functions.</fn></p>
+      </statement>
+    </problem>
+
+    <p>
+      In the previous problem, the intersection of the graph with <m>z=0, z=4, \mbox{ and }  z=9</m> are called <em>level curves</em> because each represents the path you would take if you walked around the graph always remaining at a certain height or level. Recall the Chain Rule from Calculus I.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Chain Rule.</em> If <m>f: \re \to \re</m> and <m>g: \re \to \re</m> are differentiable functions, then <m>(f \circ g)(t) = f(g(t))</m> and <m>(f \circ g)'(t) = f'(g(t))g'(t)</m>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem xml:id="comp1">
+      <statement>
+        <p>
+          Let <m>g(x,y)=x^2+y^3</m> and <m>\oa l(t)=(0,1)t</m>. Compute <m>g\circ \oa l</m>. Graph <m>g,</m> <m>\oa l,</m> and <m>g\circ \oa l</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="comp2">
+      <statement>
+        <p>
+          Compute <m>(g\circ \oa l)'(t)</m> and <m>(g\circ \oa l)'(2)</m>. What is the significance of this number with respect to your graphs from the previous problem?
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Here is a reminder from Calculus II of the definition of arc length.
+    </p>
+
+    <definition xml:id="arclengthdfn">
+      <statement>
+        <p>
+          If <m>f:\ \re \to \re</m> is a function which is differentiable on <m>[a,\ b]</m>, then the <term>arc length of f on \bm<m>[a,\ b]</m></term> is <m>\dsp{\int_{a}^{b}{\sqrt{1+(f'(x))^2}\ dx}}.</m> If <m>\oa c:{\re}\to{\re}^2</m> is a vector valued function which is differentiable on <m>[a,\ b]</m> so that <m>\oa c(t) = (x(t),y(t))</m>, then the <term>arc length of <m>\oa c</m> on <m>[a,\ b]</m></term> is <m>\dsp{\int_a^b{\sqrt{(x'(t))^2+(y'(t))^2}\ dt}}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          A man walks along a path on the surface <m>f(x,y)=4-2x^2-3y^2</m> from one point on the x-axis to a second point on the x-axis, always remaining directly above the x-axis. Graph the path and write an integral expression for the distance he walked and compute the distance he walked.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          A lady walks along the surface from the previous problem staying exactly 3 units above the <m>xy</m>-plane. Write an integral expression for the distance she walks if she starts and stops at <m>(0, \frac{1}{\sqrt{3}},3)</m> and never retraces her steps?
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="comp3">
+      <statement>
+        <p>
+          Redo <xref ref="comp1">Problem</xref> and <xref ref="comp2">Problem</xref> with <m>\oa l(t)=(-1,1)t</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="comp4">
+      <statement>
+        <p>
+          Find the slope of the line tangent to <m>f(x,y)=x^3+3y^2</m> at <m>(1,2,13)</m> that lies above the line <m>\oa l(t)=(1,2)+(1,1)t</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Given <m>\oa a=\oa{(4,3)}</m>, <m>\oa b=\oa{(1,-1)}</m>, and <m>\oa c=\oa{(6,-4)}</m>, determine the angle between <m>\oa{ba}</m> and <m>\oa{bc}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      In the next problem the notation, <m>| \cdot |,</m> is used for both the absolute value (on the left side of the equation) and the norm (on the right side of the equation). Is this bad notation? Consider the definition for the norm, that
+      <me>
+        | (x_1, x_2) | = \sqrt{ x_1^2 + x_2^2}.
+      </me>
+    </p>
+
+    <p>
+      Suppose we take the norm of a vector in <m>\re^1</m>, such as <m>(x_1).</m> Then,
+      <me>
+        | (x_1) | = \sqrt{ x_1^2 } = \mbox{ the absolute value of the number }  \  x_1.
+      </me>
+    </p>
+
+    <p>
+      Thus, the absolute value of <m>x</m> <em>is</em> the norm of <m>x</m> so you have been studying norms since high school (elementary school?) without knowing it!
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Show that if <m>\oa{u}</m> and <m>\oa{v}</m> are vectors in <m>\re^2</m> then <m>\mid \oa{u}\cdot \oa{v}\mid \ \leq \mid \oa{u} \mid \mid \oa{v}\mid</m>. Two approaches follow:
+          <ol>
+            <li>
+              <p>
+                Let <m>\oa{u} = (u_1,u_2)</m> and <m>\oa{v} = (v_1,v_2)</m>.  Substitute into both sides and simplify.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Observe that for any constant <m>k</m>, <m>(\oa{u} - k \oa{v})\cdot(\oa{u} - k \oa{v}) \geq 0</m>.  Simplify this expression and use the quadratic formula.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The next result is known as the <em>Triangle Inequality</em> and it states essentially that the shortest distance between two points is the straight line. Look at a graph of <m>\oa u, \oa v, \oa{u+v},</m> and <m>\oa{u(u+v)}.</m> If you travel from the origin, along the vector <m>\oa u</m> and then along the vector <m>\oa{u(u+v)}</m>, then you have traveled further than if you traveled along the vector <m>\oa{u+v}.</m>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          <em>Triangle Inequality.</em> Show that if each of <m>\oa{u}</m> and <m>\oa{v}</m> are vectors in <m>\re^2</m>
+        </p>
+
+        <p>
+          then <m>\mid \oa{u}+ \oa{v}\mid \ \leq \mid \oa{u}\mid +\mid\oa{v}\mid</m>.
+        </p>
+      </statement>
+    </problem>
+  </introduction>
+  <xi:include  href="chap8probs.ptx" />
+</chapter>
+

@@ -1,0 +1,25 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Applications of Derivatives</title>
+  <introduction>
+    <p>
+      <q>I am always doing that which I can not do, in order that I may learn how to do it.</q> - Pablo Picasso
+    </p>
+
+    <p>
+      Now that we have a solid understanding of what derivatives are and how to compute them for common functions, let's look at some applications. Our applications will be both mathematical (using derivatives to compute limits and graph functions) and industrial (using derivatives to minimize cost or maximize fuel economy).
+    </p>
+
+    <p>
+      EXTRA<fn>I often skip the first section in this chapter.  The student who understands Taylor polynomials as I introduce them, by having the students derive the best linear and quadratic approximations, should be able to approximate functions.  Still, engineers may see these techniques, so when time permits I cover it.</fn></p>
+  </introduction>
+  <xi:include  href="section4-1.ptx" />
+  <xi:include  href="section4-2.ptx" />
+  <xi:include  href="section4-3.ptx" />
+  <xi:include  href="section4-4.ptx" />
+  <xi:include  href="section4-5.ptx" />
+  <xi:include  href="section4-6.ptx" />
+  <xi:include  href="chap3probs.ptx" />
+</chapter>
+

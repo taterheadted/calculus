@@ -1,0 +1,1043 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Integration</title>
+  <introduction>
+    <p>
+      <q>You cannot teach a man anything; you can only help him find it within himself.</q> - Galileo Galilei
+    </p>
+
+    <p>
+      Calculus III continues to parallel Calculus I and here we are at integration. Let's review integration in one variable
+      before we tackle integration in several variables. By now you have been using anti-derivatives (and hence the Fundamental Theorem of Calculus) to compute integrals for so long that it is worth remembering the original definition for the definite integral. If <m>f:\re \to \re</m> is a function, then we define <m>\dsp \int_a^b f(x) \  dx</m> as the limit of Riemann sums. If <m>f</m> is positive, then this is the limit of sums of areas of rectangles. Now we will define our integrals once again as limits of sums, but this time we will take limits of sums of volumes.
+    </p>
+
+    <p>
+      First, let's formally restate the definition of the definite integral from Calculus I.
+      EXTRA<fn>To introduce multi-variable integration, we launch from the roots of Calculus I by reviewing the definition of a the definite integral as the limit of sums of rectangles, and computing <m>\int_0^2 x^2 \; dx</m> using summation notation and proving that the limit of the sums of the areas of the rectangles is <m>\frac{8}{3}</m>.  Now that we truly <em>know</em> what the area is, we recompute it in several ways using the Fundamental Theorem by showing that
+      <me>
+        \int_0^2 x^2 \; dx = \int_0^2 \int_0^{x^2} 1 \; dy \; dx =  \int_0^4 \int_{\sqrt{y}}^4 1 \; dx \; dy.
+      </me>
+      To explain the integrand of <q>1</q>, we sketch in three-space the solid of height one above the region bounded by <m>y=x^2</m>, <m>y=0</m>, and <m>x=4</m>.  The volume of this solid equals the area we first computed. We intentionally leave out integrating with respect to <m>y</m> because this is a forthcoming problem. Finally, we define the double integral as it appears in the notes below as a limit of sums of volumes of right cylinders with square bases.</fn></p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>[a,b]</m> is a closed interval, then a partition P of <m>[a,b]</m> is an ordered sequence <m>a=x_{0}\lt x_{1}\lt x_{2}\lt  \ldots \lt x_{n-1}\lt x_{n}=b</m>. The <term>norm</term> or <term>mesh</term> of P is <m>max\{x_{i}-x_{i-1}:i=1,2,\ldots , n\}</m> and is denoted <m>\| P \|</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>integral of f over <m>[a,b]</m></term>, denoted by <m>\dsp{\int_{a}^b f}</m> is defined (assuming the limit exists) as
+          <me>
+            \dsp{\int_{a}^b f}=\dsp{\lim_{\| P \| \to 0} \ \sum_{i=1}^{n} f(\hat{x_i})\cdot (x_{i}-x_{i-1})}
+          </me>
+          where <m>\hat{x_i}\in [x_{i-1}, x_{i}]</m> and <m>n</m> is the number of divisions of the partition <m>P</m>. If the limit does not exist, we say that <m>f</m> is <term>not</term> integrable.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Of course, this is the limit of the sum of the areas of a collection of rectangles where the width of the rectangles tends
+      toward zero as the mesh of the partition tends toward zero. In Calculus III, we do the same except that we must partition both the x and y-axes and we are summing volumes over rectangles rather than summing areas over intervals.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          Given any two sets, <m>A</m> and <m>B</m>, the <term>Cartesian Product</term> of <m>A</m> and <m>B</m> is the set
+          <me>
+            A \times B = \{ (a,b) : a \in A \mbox{ and }  b \in B \}.
+          </me>
+        </p>
+
+        <p>
+          In the case where <m>A</m> and <m>B</m> are closed intervals these are simply rectangles in the plane,
+          <me>
+            [a,b] \times [c,d] = \{(x,y) \mid x\in [a,b], y\in [c,d]\  \}
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          If R is the rectangle <m>R=[a,b]\times [c,d]</m>, then a <term>partition, U, of R</term> is a partition of <m>[a,b]</m>, <m>P=\{a=x_{0}\lt x_{1}\lt  \ldots \lt x_{n}=b\}</m> along with a partition of <m>[c,d], Q =\{c=y_{0}\lt y_{1}\lt y_{2}\lt  \ldots \lt y_{m}=d\}</m>. The <term>norm</term> or <term>mesh</term> of U is the largest width of any of the rectangles, <m>[x_{i-1},x_i] \times [y_{j-1},y_j]</m> where <m>i = 1,2,\dots n</m> and <m>j=1,2,\dots m</m>. The norm of <m>U</m> is denoted by <m>\|U\|</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>f \in C_{R}</m> (i.e. f is continuous on the rectangle R), then
+          <me>
+            \int _{R} f \  dA = \dsp{\lim_{\| U \|  \to 0} \
+            \sum_{i=1}^n \sum_{j=1}^m f(\hat{x_i}, \hat{y_j}) (x_{i}-x_{i-1})(y_{j}-y_{j-1})}
+          </me>
+          where
+          <me>
+            (\hat{x_i}, \hat{y_j}) \in [x_{i-1}, x_{i}] \times [y_{j-1}, y_{j}].
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Thankfully, in Calculus III we won't have to compute any such limits because there is a theorem that states:
+      <me>
+        \dsp{\int_{R} f \  dA = \int _{c}^d \int_{a}^b f(x,y)\ dx\ dy}
+      </me>
+      which gives us a straightforward way to compute integrals using anti-derivatives by using the Fundamental Theorem of Calculus from Calculus I:
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Fundamental Theorem of Calculus I.</em> If <m>f</m> is continuous on <m>[a,b]</m> and <m>F</m> is any anti-derivative of <m>f</m>, then <m>\dsp{\int_{a}^b f=F(b)-F(a)}</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      The next problem reminds us that in Calculus I we can integrate with respect to either <m>x</m> or <m>y</m> and obtain the same result. These techniques are especially handy in Calculus III.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Compute the area bounded by <m>y=x^2</m>, the x-axis, and <m>x=2</m> two ways. First, use an integral with respect to x, <m>\dsp{\int_{\_}^{\_} \_\_\_ \  dx}</m>, then use an integral with respect to y, <m>\dsp{\int_{\_}^{\_} \_\_\_ \  dy}</m>. Sketch a picture to help explain your endpoints of integration.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Most of the theorems that you proved in Calculus I have an analog in Calculus III. The following theorem provides a list of properties for double integrals that won't surprise you. We won't state them again, but they also hold for any integrable function <m>f: \re^n \to \re</m> where <m>n > 2.</m>
+    </p>
+
+    <p>
+      When we are integrating over a two dimensional region R, we will write <m>\int_R f \ dA</m>, where the <m>A</m> reminds us that we are integrating over a region with <em>area</em>. This will be a double integral. When we are integrating over a three dimensional region, we will write <m>\int_R f \ dV</m>, where the <m>V</m> reminds us that we are integrating over a region with <em>volume</em>. This will be a triple integral.
+      EXTRA<fn>In order to expedite multiple integrals, we discuss the notations <m>dA</m> and <m>dV</m>.  We also work through several examples of integrals although they are unlikely to all occur in one lecture.
+      <ol>
+        <li>
+          <p>
+            We use the fundamental theorem to demonstrate Fubini's theorem by integrating <m>\dsp \int_0^2 \int_1^3 x^2 + y^2 \; dx \; dy</m>  and  <m>\dsp \int_1^3 \int_0^2 x^2 + y^2 \; dy \; dx</m> and illustrate graphically the volume that these integrals represent.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We graph and find the volume under <m>4x+3y+6z=12</m> and above <m>xy</m>-plane.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We compute <m>\dsp \int_R x^2 + y^2 \; dA</m> over <m>R= [0,1] \times [1,2]</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We compute <m>\dsp \int_R x^2 y \; dA</m> over the region <m>R</m> bounded by <m>y=x^2, x=0</m> and <m>y=4.</m>
+          </p>
+        </li>
+      </ol>
+      </fn></p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Properties of the Integral.</em> Suppose <m>f</m> is integrable on a closed and bounded rectangular region <m>R</m>. Then
+          <ol>
+            <li>
+              <p>
+                <m>\dsp \int_{R}[f(x,y)+g(x,y)] \ dA=\int_{R} f(x,y) \ dA+\int_{R} g(x,y) \ dA</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \int_{R}c[f(x,y)] \ dA=c\int_{R}f(x,y) \ dA</m> where <m>c</m> is a real number
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \int_{R}f(x,y) \ dA \geq \int_{R}g(x,y) \ dA</m> if <m>f(x,y)\geq g(x,y)</m> for all <m>(x,y)\in R</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \int_{R}f(x,y) \ dA=\int_{R_{1}}f(x,y) \ dA+\int_{R_{2}}f(x,y) \ dA</m>,    where <m>R_{1}</m> and <m>R_{2}</m> are rectangular regions such that <m>R_1</m> and <m>R_2</m> have no points in common except for points on parts of their boundaries and <m>R=R_{1}\cup R_{2}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_{1}^2 \int_{0}^3 2x+3y \  dy\ dx}</m> and <m>\dsp{\int_{0}^3 \int_{1}^2 2x+3y \  dx\ dy}</m>. This is called <q>reversing the order of integration.</q> Sketch the solid that you found the volume of.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute and compare these three integrals:
+          <ol>
+            <li>
+              <p>
+                <m>\dsp{\int_{1}^2 \int_{x-2}^{0} 2x+3y \  dy\ dx}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp{\int_{x-2}^{0} \int_{1}^2 2x+3y \  dx\ dy}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp{\int_{-1}^{0} \int_{1}^{y+2} 2x+3y \  dx\ dy}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      As you can see from the previous two problems, when the limits of integration contain variables care must be taken in reversing the order of integration. When the limits of integration are numbers, we can reverse the order of the integrals and obtain the same result. This is known as Fubini's Theorem.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Fubini's Theorem.</em> Suppose <m>f</m> is a continuous function of two variables, <m>x</m> and <m>y</m>, defined on the rectangle
+          <m>R=[a,b] \times [c,d]</m>. Then
+          <me>
+            \int_{R}f(x,y)dA=\int_{a}^{b} \Bigg[\int_{c}^{d} f(x,y) dy \Bigg]dx =\int_{c}^{d} \Bigg[\int_{a}^{b} f(x,y) dx \Bigg]dy.
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Evaluate <m>\dsp \int_{B} 4x \ln(y)z \; dV</m> over the box <m>B= [0, 2] \times [1, 4] \times [-2, 5]</m>. Now change the order of integration and verify the result. How many choices are there for orders of integration?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y)=4-x^2-y^2</m> over the region <m>R=[0,1] \times [0,1].</m> Compute <m>\dsp \int_0^1 \int_0^1 f(x,y) \ dy \ dx.</m> Sketch
+          the solid that this integral represents the volume of.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y)=4-x^2-y^2.</m> Write an integral for the volume of the solid that that is bounded by <m>f</m> and by the planes
+          <m>z=0, x=0, x=2, y=0,</m> and <m>y=2.</m> Compute this integral.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_{0}^1 \int_{0}^1 \frac{y}{(xy+1)^2}\ \ dx\ dy}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_{0}^{\ln(3)} \int_{0}^1 xye^{xy^2}\ \ dy\ dx}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_{R}\sin(x+y)\ \ dA}</m> where <m>R=\left[0,\dsp{\frac{\pi}{2}}\right]\times \left[0,\dsp{\frac{\pi}{2}}\right].</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_{R} xy\sqrt{1+x^2}\ \ dA}</m> where <m>R=[0,\sqrt{3}]\times [1,2].</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Thus far we have integrated primarily over domains that were rectangles, but we can also integrate over more general domains.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y) = 4x + 2y.</m>
+          <ol>
+            <li>
+              <p>
+                Sketch the region in the <m>xy</m>-plane bounded by by <m>x=2</m>, <m>x=4</m>, <m>y=-x</m>, <m>y=x^2</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute the volume of the solid below <m>f</m> and above this region.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Evaluate <m>\dsp{\int_{S} xy\ \ dA}</m> where S is the region bounded by <m>y=x^2</m> and <m>y=1</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Evaluate <m>\dsp{\int_{S} \frac{2}{1+x^2}\ \ dA}</m> over the region S determined by the triangle with vertices <m>(0,0)</m>, <m>(2,2)</m>, and <m>(0,2)</m> in the x-y plane. Sketch the solid that you found the volume of.
+        </p>
+      </statement>
+    </problem>
+
+    <example>
+      <statement>
+        <p>
+          Find an integral expression for the volume of one-eighth of the sphere of radius 2 in three ways:
+          <me>
+            \int_{\_}^{\_} \int_{\_}^{\_} \_\_\_\_ \ dx dy  = \int_{\_}^{\_} \int_{\_}^{\_} \_\_\_\_ \ dy dz  =
+            \int_{\_}^{\_} \int_{\_}^{\_} \int_{\_}^{\_} 1 \ dx dy dz
+          </me>
+        </p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          Fill in the blanks in order to change the order of integration.
+          <me>
+            \dsp{\int_0^1{\int_0^\frac{1-x}{2} \int_0^{1-x-2y}{f(x,y,z)\ dz\ dy\ dx}}}= \int_\_^\_{\int_\_^\_{\int_\_^\_   f(x,y,z)  {dx\ dz\ dy}}}
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch and compute the volume of the solid bounded by <m>x^2=4y</m>, <m>z=0</m>, and <m>5y+9z-45=0</m>. Write the integral both as <m>\dsp{\int_{\_}^{\_} \int_{\_}^{\_} \_\_\_\ dx\ dy}</m> and <m>\dsp{\int_{\_}^{\_} \int_{\_}^{\_} \_\_\_\ dy\ dx}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Fill in the blanks:
+          <me>
+            \dsp{\int_{0}^1 \int_{-y}^y f(x,y)\ dx\ dy}=\dsp{\int_{\_}^{\_} \int_{\_}^{\_} f(x,y)\ dy\ dx}
+          </me>
+          <me>
+            \dsp{\int_{0}^2 \int_{y^2}^{2y} f(x,y)\ dx\ dy}=\dsp{\int_{\_}^{\_} \int_{\_}^{\_} f(x,y)\ dy\ dx}
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_{0}^1 \int _{-x}^x e^{x+y}\ dy\ dx}</m> directly and by reversing the order of integration.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Coordinate Transformations</em>
+    </p>
+
+    <p>
+      Loosely speaking, a <em>coordinate transformation</em> is a transformation from one coordinate system to another coordinate system and is also called <em>change of variables</em>. A cleverly chosen coordinate transformation can make a difficult integral easy.
+      There are infinitely many, but the three most common are: the conversion from rectangular coordinates to polar coordinates
+      (used in double integrals), from rectangular coordinates to spherical coordinates (used in triple integrals), and from rectangular coordinates to cylindrical coordinates (used in triple integrals).
+    </p>
+
+    <p>
+      In Calculus I when you did a trigonometric substitution, you did a change of variable. Written as a theorem, it would look like this.
+    </p>
+
+    <theorem xml:id="cov9">
+      <statement>
+        <p>
+          <em>Change of Variable Theorem.</em> If <m>f</m> is an integrable function over <m>[a,b]</m> and <m>u: [a,b] \to [c,d]</m> is a differentiable function, then
+          <me>
+            \dsp \int_a^b f(x) \  dx = \int_c^d f\big(u(t)\big) u'(t) \  dt
+          </me>
+          where we are making the substitution <m>x=u(t)</m> and <m>u(c)=a</m> and <m>u(d)=b.</m>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Work the following problem, using the given substitution, but keeping all the independent variables in tact, i.e. don't toss out the <q>t</q> when you replace <m>x</m> by <m>u(t).</m>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Apply <xref ref="cov9">Theorem</xref> to compute:
+          <ol>
+            <li>
+              <p>
+                <m>\dsp \int_3^4 \frac{1}{x^2 + 9} \  dx</m> using the substitution <m>u(t) = 3\tan(t)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \int_3^4 \frac{1}{\sqrt{x^2 + 9}} \  dx</m> using the substitution <m>u(t) = 3\tan(t)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      For transformation of two variables the theorem is similar.
+      EXTRA<fn>To demonstrate change of variables in two dimensions, we rewrite (but don't compute) <m>\dsp \int_0^1 \int_{x-3}^{x+3} \sqrt{x+2y}(y-x)^2  \ dy \ dx</m> using <m>u=x+2y</m> and <m>v=y-x</m>. We first solve the two equations for <m>x</m> and <m>y</m> before computing <m>J(u,v)</m>.  Then we note that <m>\dsp J(u,v) = \frac{1}{J(x,y)}</m>.</fn></p>
+
+    <theorem xml:id="cov">
+      <statement>
+        <p>
+          <em>Change of Variable Theorem.</em> If <m>f</m> is an integrable function over the domain <m>B</m> and <m>x</m> and <m>y</m> are differentiable functions transforming the region <m>B</m> to the region <m>B'</m>, then
+          <me>
+            \dsp{\int_B \int f(x,y)\ dx\ dy=\int_{B'} \int f\big(x(u,v),y(u,v)\big) J(u,v)  \ du\ dv}
+          </me>
+          where we are making the substitution <m>x=x(u,v)</m> and <m>y=y(u,v)</m> and
+          <me>
+            J(u,v)= det \begin{pmatrix}x_{u}(u,v)\amp x_{v}(u,v)\\
+            y_{u}(u,v)\amp y_{v}(u,v)
+            \end{pmatrix}  = x_{u}(u,v)y_{v}(u,v)-y_{u}(u,v)x_{v}(u,v)
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Integrate <m>\dsp \int_0^4 \int_{\frac{y}{2}}^{\frac{y}{2}+1} \frac{2x-y}{2} \; dx \; dy</m>. Now make the change of variable, <m>\dsp u = \frac{2x-y}{2}</m> and <m>\dsp v=\frac{y}{2}</m> and integrate the result.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Polar Coordinates Refresher</em>
+      EXTRA<fn>We spent little time on polar coordinates during the last semester, so we filled in gaps here. First we discussed a few graphs, <m>r = a</m> (circles); <m>\theta = b</m> (lines); <m>r = \pm \sin(n\theta)</m>  and <m>r = \pm \cos(n\theta)</m> (roses); <m>r = a \pm b \sin(n\theta)</m> and <m>r = a \pm b \cos(n\theta)</m> (limacons and cardiods). We graph one, perhaps <m>r = 4\sin(2\theta)</m>, carefully labeling every point. Then we move on to calculus, finding four integral expressions for the area below <m>x^2 + y^2 = 9</m> and above the <m>x-axis</m>.  For fun, I ask them how many ways they think I can compute the area of this half circle?  We know that the answer is <m>9\pi/2</m> (that's one) so writing the integrals is an exercise to reinforce their understanding of the integral expressions.
+      <ol>
+        <li>
+          <p>
+            Single Rectangular (two more):  <m>\dsp \int_{-3}^3 \sqrt{9-x^2} \  dx = \int_{0}^3 \sqrt{9-y^2} - - \sqrt{9-y^2} \  dy</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Double Rectangular (two more): <m>\dsp \int_{-3}^3 \int_0^{\sqrt{9-x^2}} 1 \ dx \ dy = \int_{0}^3 \int_{-\sqrt{9-y^2}}^{\sqrt{9-y^2}} 1 \ dy \ dx</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Double Polar (one more): <m>\dsp \int_{0}^\pi \int_0^3  1 \cdot J(r,\theta)  \ dr \ d\theta =\int_{0}^\pi \int_0^3  r  \ dr \ d\theta</m>
+          </p>
+        </li>
+      </ol>
+      What about single variable polar integration for this area? Since <m>r=3</m> is the equation of the circle, we might try <m>\int_0^\pi 3 \ d\theta</m> but this yields <m>3\pi</m> which is incorrect. What's wrong? We return to Riemann Sums and illustrate the problem by dividing <m>r = f(\theta)</m> into sectors of circles that
+      <me>
+        \mbox{Area }  = \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{2} r_i^2 (\theta_{i+1} - \theta_i) =  \int_{\alpha}^{\beta} \frac{1}{2} r^2 \ d\theta = \int_{\alpha}^{\beta} \frac{1}{2} (f(\theta))^2 \ d\theta
+      </me>
+      Thus,
+      <ol>
+        <li>
+          <title>4.</title>
+          <p>
+            Single Polar (one more): <m>\dsp \frac{1}{2} \int_0^{\pi} (3)^2 \ d\theta</m>
+          </p>
+        </li>
+      </ol>
+      </fn></p>
+
+    <p>
+      In polar coordinates, the point in the plane <m>P = (x,y)</m> may be denoted by <m>(r,\theta)</m> where <m>r</m> is the signed distance from <m>(0,0)</m> to <m>P</m>, and <m>\theta</m> is the angle between the vector <m>\oa{P}</m> and the positive x-axis. We restrict <m>\theta</m> to the interval <m>[0, 2\pi]</m>. We say <m>r</m> is the signed distance to allow equations such as <m>r = 4\sin(\theta)</m> where if <m>\dsp \theta = \frac{11\pi}{6}</m> then <m>r = -2</m>. The corresponding point would be <m>(\dsp -2, \frac{11\pi}{6})</m> which is the same point as <m>\dsp (2, \frac{5\pi}{6})</m>. It follows that <m>x, y, r,</m> and <m>\theta</m> are related by the equations:
+      <ol>
+        <li>
+          <p>
+            <m>x=rcos\theta,</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>y=rsin\theta,</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>r=\sqrt{x^2+y^2},</m> and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\theta= arctan\left(\dsp{\frac{y}{x}}\right)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch each of the following pairs of polar functions on the same graphs.
+          <ol>
+            <li>
+              <p>
+                <m>r=5\cos(\theta)</m> and <m>\theta = 2\pi/3</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>r=2\sin(\theta)</m> and <m>r=2\cos(\theta)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>r=2 + 2\cos(\theta)</m> and <m>r=1</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="jacob1">
+      <statement>
+        <p>
+          To make a change of variables from rectangular to polar coordinates, we let <m>x</m> and <m>y</m> be the functions,
+          <m>x(r,\theta)=rcos\theta</m> and <m>y(r,\theta)=rsin\theta.</m> Show that <m>J(r,\theta) = r</m> using <xref ref="cov">Theorem</xref> by filling in the missing computation:
+          <me>
+            J(r,\theta)=
+            det
+                \begin{pmatrix}x_r \amp  x_{\theta} \\
+                    y_r \amp  y_{\theta}
+            \end{pmatrix}  =  \dots = r.
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="jacob2">
+      <statement>
+        <p>
+          To make a change of variables from polar to rectangular coordinates, we let <m>r</m> and <m>\theta</m> be the functions, <m>r(x,y)=\sqrt{x^2+y^2}</m> and <m>\theta(x,y)=arctan(y/x).</m> Compute and simplify <m>J(x,y)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\dsp{\int_0^{\frac{\pi}{2}}\int_0^{\cos(\theta)}r^2\sin(\theta)\ dr\ d\theta}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Convert the previous integral to rectangular coordinates and recompute to verify your answer.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Using the previous problem and <xref ref="cov">Theorem</xref>, we now see that when making a change of variable from rectangular to polar coordinates we have,
+      <me>
+        \dsp{\int_{B} f(x,y)\ dx\ dy=\int_{B'} f(r\cos(\theta),r\sin(\theta))\
+        r\ dr\ d\theta}
+      </me>
+      where <m>B'</m> is the region <m>B</m> represented in polar coordinates. The next problem demonstrates an intuitive geometric argument supporting this result.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Recall that the area of the sector of a circle with radius <m>r</m> spanning <m>\theta</m> radians is <m>A=\frac{1}{2} r^2\theta</m>. Let <m>0 \lt  r_1 \lt  r_2</m> and <m>0 \lt  \theta_1 \lt  \theta_2 \lt  \frac{\pi}{2}.</m> Sketch the region in the first quadrant bounded by the two circles <m>r=r_1,</m> <m>r=r_2,</m> and the two lines <m>\theta = \theta_1,</m> and <m>\theta = \theta_2.</m> Show that the area of the bounded region is <m>\dsp{\left(\frac{r_{1}+r_{2}}{2}\right)} (r_{2}-r_{1})(\theta_{2}-\theta_{1})</m>.
+          EXTRA<fn>This problem is a springboard to the next example/lecture.  Our goal is to demonstrate why if we are computing the volume under a function above a polar region then we must insert the Jacobian, <m>\int \int f \ r \ dr d\theta</m>.</fn></p>
+      </statement>
+    </problem>
+
+    <example>
+      <statement>
+        <p>
+          Write an integral with respect to <m>\theta</m> that represents the area inside the graph of <m>r=\sin(2\theta)</m> using limits and demonstrate why <m>\dsp{\left(\frac{r_{i}+r_{i+1}}{2}\right)} (r_{i+1}-r_{i})(\theta_{i+1}-\theta_{i})</m> appears in the sum. Now write the same area as a double integral with respect to <m>r</m> and <m>\theta</m>. Compute the volume of the cylinder of height 4 above <m>r=\cos(2\theta).</m> Hopefully, the theme of looking at the areas or volumes of small pieces comes through.
+        </p>
+      </statement>
+    </example>
+
+    <definition>
+      <statement>
+        <p>
+          Two circles are <term>concentric</term> if they share a common center, yet have distinct radii.
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          An <term>annulus</term> is a region in the plane trapped between two concentric circles.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>r_1</m> and <m>r_2</m> be real numbers with <m>0 \lt  r_1 \lt  r_2.</m> Let <m>R</m> be the portion of the annulus centered at the origin, between the two circles of radii <m>r_1</m> and <m>r_2</m>, and above the x-axis. Convert <m>\dsp{\int_R{e^{x^2+y^2}\ dA}}</m> over the region <m>R</m> to polar coordinates and compute. Write down the endpoints of integration in rectangular coordinates.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Convert to polar and compute <m>\dsp{\int_0^1\int_0^{\sqrt{1-y^2}}\sin(x^2+y^2)\ dx\ dy}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch the region bounded by <m>r=2</m> and <m>r=2(1+\cos(\theta))</m> from <m>\theta=0</m> to <m>\theta = \pi</m>. Compute <m>\dsp{\int_R{y\ dA}}</m> via polar coordinates.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch <m>\dsp{\theta=\frac{\pi}{6}}</m> and <m>r=4\sin\theta</m>. Compute the area of the smaller of the two regions bounded by the curves in two ways:
+          <ol>
+            <li>
+              <p>
+                First compute <m>\dsp{\int_R\int{r\ dr\ d\theta}}</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Check your answer by using the formula for the area inside a polar graph, <m>\frac{1}{2}\int_\alpha^\beta (f(\theta))^2 \ d\theta</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Convert to polar and compute <m>\dsp{\int_1^2\int_0^{\sqrt{2x-x^2}}(x^2+y^2)^{-\frac{1}{2}}\ dy\ dx}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the volume of the solid under <m>z=3xy,</m> above <m>z=0,</m> and within <m>x^2+y^2=2x</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the volume of the solid in the <m>1^{st}</m> octant (i.e. where <m>x>0, y>0, z>0</m>) under <m>z=x^2+y^2</m> and inside the surface <m>x^2+y^2=9</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Cylindrical and Spherical Coordinates</em>
+    </p>
+
+    <p>
+      You already know how to represent points in the plane in two different ways, rectangular and polar coordinate systems. We wish to represent points in three-space in two new ways referred to as <em>cylindrical</em> and <em>spherical</em> coordinates.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>Cylindrical Coordinate Representation</term> for a point <m>P = (x,y,z)</m> is denoted by <m>(r,\ \theta,\ z)</m> where <m>(r,\ \theta)</m> are the polar coordinates of the point <m>(x,y)</m> in the x-y-plane and <m>z</m> remains unchanged (i.e. <m>z</m> is the height of the point above or below the x-y-plane).
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+      <p>
+        The <term>Spherical Coordinate Representation</term> for a point <m>P = (x,y,z)</m> is denoted by <m>(\rho,\ \phi,\ \theta)</m> where <m>\rho</m> is the distance from the point to the origin, <m>\phi</m> is the angle between <m>\oa P</m> and positive z-axis, and <m>\theta</m> is the angle between the x-axis and the projection of <m>\oa P</m> onto the x-y-plane. To avoid multiple representations of a single point in space we restrict <m>\rho \geq 0</m>, <m>0 \leq \phi \leq \pi</m>, and <m>0 \leq \rho \leq 2\pi</m>.
+        EXTRA<fn>We briefly discuss cylindrical coordinates, as it is a sufficiently obvious extension of polar coordinates.  To introduce spherical coordinates, we discuss and sketch a few surfaces and solids such as <m>\rho \leq 6</m>, <m>\theta = \pi/4</m> or the region above <m>\phi = 3\pi/4</m> and below the <m>x-y</m> plane.   Then we derive the relationship between rectangular and spherical, <m>x = \rho \sin(\phi) \cos(\theta)</m>, <m>y = \rho \sin(\phi) \sin(\theta)</m> and <m>z = \rho \cos(\phi)</m>.  Finally we do the following example.</fn></p>
+
+      <example>
+        <statement>
+          <p>
+            Write an integral using spherical coordinates that represents the volume of an ice cream cone <mdash /> that is, the volume inside the cone <m>\phi = \pi/6</m> and inside the sphere <m>\rho=6</m>. Of course, we must insert the Jacobian <m>\rho^2 \sin(\phi)</m>.
+          </p>
+        </statement>
+      </example>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch and write a sentence describing each of the following regions in spherical coordinates.
+          <ol>
+            <li>
+              <p>
+                the region between <m>\rho = 2</m> and <m>\rho = 3</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                the region between <m>\phi = \pi/2</m> and <m>\pi/4</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                the region below <m>\rho = 10</m> and above <m>\phi = \pi/3</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <example>
+      <statement>
+        <p>
+          Convert
+          <me>
+            \int_0^2 \int_0^{\sqrt{4-x^2}} \int_0^{\sqrt{4-x^2-y^2}} \sqrt{4-x^2-y^2} \ dz \ dy \ dx
+          </me>
+          to both spherical and cylindrical coordinates.
+          EXTRA<fn>First we sketch the region defined by <m>x \in [0,2]</m>, <m>y \in [0, \sqrt{4-x^2}]</m>, and <m>z \in [0,\sqrt{4-x^2-y^2}]</m>. The obvious choice seems to be a conversion to spherical coordinates, so we do that first to obtain
+          <me>
+            \int_0^{\frac{\pi}{2}} \int_0^{\frac{\pi}{2}} \int_0^2 \rho^3 \cos\phi \sin^2\phi\sqrt{4-\rho^2\sin^2\phi} \ d\rho \ d\phi \ d\theta
+          </me>
+          which we can't easily integrate! In cylindrical it becomes
+          <me>
+            \int_0^{\frac{\pi}{2}}  \int_0^2 \int_0^{\sqrt{4-r^2}} \sqrt{4-r^2} \ r \ dz \ dr \ d\theta
+          </me>
+          which is easily integrated.</fn></p>
+      </statement>
+    </example>
+
+    <p>
+      From <xref ref="jacob2">Problem</xref>, we know that the Jacobian for polar coordinates is
+      <me>
+        J(r,\theta) = det \begin{pmatrix}\cos(\theta) \amp  -r \ \sin(\theta) \cr \sin(\theta) \amp  r \ \cos(\theta)
+        \end{pmatrix} =r.
+      </me>
+    </p>
+
+    <p>
+      Two of the next three problems generate the Jacobian for cylindrical and spherical coordinate systems. <em>Warning.</em> If you haven't had linear algebra yet, the next two problems require computing the determinant of <m>3 \times 3</m> matrices. You might skip them, ask me how to compute the determinant of a <m>3 \times 3</m> matrix, or Google how to do it.
+    </p>
+
+    <problem xml:id="jacob3">
+      <statement>
+        <p>
+          To make a change of variables from rectangular to cylindrical coordinates, we let <m>x=x(r,\theta)=r\ \cos\theta</m>, <m>y=y(r,\theta)=r\ \sin\theta</m>, and <m>z=z</m>. Show that <m>J(r,\theta,z) = r</m> using <xref ref="cov">Theorem</xref> by filling in the missing computation:
+          <me>
+            J(r,\theta,z)=
+            det \begin{pmatrix}x_r \amp  x_{\theta} \amp  x_z\cr
+                    y_r \amp  y_{\theta} \amp  y_z\cr
+                    z_r \amp  z_{\theta} \amp  z_z
+            \end{pmatrix}  =  \dots = r.
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Consider the solid trapped inside the cylinder <m>x^2+y^2=9</m>, above the function <m>f(x,y) = 4-x^2-y^2</m> and below the plane <m>z=10</m>.
+          <ol>
+            <li>
+              <p>
+                Write a triple integral in rectangular coordinates for the volume, but don't compute.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write a triple integral in cylindrical coordinates for the volume and compute it.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write the volume as the volume of the cylinder minus the volume under the upside down paraboloid.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="jacob4">
+      <statement>
+        <p>
+          To make a change of variables from rectangular to spherical coordinates, we let <m>x(\rho,\phi,\theta)=\rho\ \sin\phi\ \cos\theta</m>,
+          <m>y(\rho,\phi,\theta)=\rho\ \sin\phi\ \sin\theta</m>, and <m>z(\rho,\phi,\theta)=\rho\ \cos\phi.</m> Show that <m>J(\rho, \phi, \theta) = \rho^2\sin(\phi)</m> using <xref ref="cov">Theorem</xref> by filling in the missing computation:
+          <me>
+            J(\rho, \phi, \theta) = det \begin{pmatrix}x_{\rho} \amp  x_{\phi} \amp  x_{\theta} \cr
+            y_{\rho} \amp  y_{\phi} \amp  y_{\theta} \cr
+            z_{\rho} \amp  z_{\phi} \amp  z_{\theta}
+            \end{pmatrix}  = \dots = \rho^2\sin(\phi).
+          </me>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Summarizing, when integrating with respect to polar, cylindrical, or spherical coordinates, we will always use the appropriate Jacobian as illustrated below.
+      <ol>
+        <li>
+          <p>
+            Polar:
+            <me>
+              \dsp{\int\int\ldots\ r\ dr\ d\theta}, \ \ \mbox{where}  \ \ x=r \ \cos(\theta), y = r \ \sin(\theta)
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Cylindrical:
+            <me>
+              \dsp{\int\int\int\ldots\ r\ dr\ d\theta\ dz},  \ \ \mbox{where}   \ \  x=r\cos(\theta), y = r\sin(\theta), \mbox{\\amp }  \; z = z
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Spherical:
+            <me>
+              \dsp{\int\int\int\ldots\ \rho^2\sin(\phi)\ d\rho\ d\phi\ d\theta},  \ \  \mbox{where}   \ \  x=\rho\ \sin\phi\ \cos\theta, y=\rho\ \sin\phi\ \sin\theta, \mbox{\\amp }  \; z=\rho\ \cos\phi
+            </me>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      The order of integration could change and you will find times when the choice of the order of integration transforms an apparently hard problem into an easy one.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Compute the volume of the region bounded by the two spheres <m>\rho=4</m> and <m>\rho=6</m> using spherical coordinates. Verify using
+          the formula for the volume of a sphere, <m>\dsp V = \frac{4\pi}{3}r^3.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch and find the volume of the solid outside the cone <m>\dsp{\phi=\frac{\pi}{3}}</m>, inside the sphere <m>\rho=6</m>, and above the plane <m>z=0.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Convert to spherical coordinates then evaluate:
+          <m>\dsp {\int_{-3}^{3}
+                          {\int_{-\sqrt{9-x^{2}}}^{\sqrt{9-x^{2}}}
+                          {\int_{-\sqrt{9-x^{2}-z^{2}}}^{\sqrt{9-x^{2}-z^{2}}}
+                          \ \ {(x^2+y^2+z^2)^{\frac{3}{2}}\ dy\ dz\ dx}}}}</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Convert to spherical coordinates and compute: <m>\dsp \int_R e^{ (x^2+y^2+z^2)^\frac{3}{2} } \ dV</m> where <m>R</m> is the region <m>x^2+y^2+z^2 \leq 1.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the volume of the given ellipsoids by first writing a triple integral for the volume in rectangular coordinates and then using the recommended change of variables to convert the triple integral into the new coordinate system. If all goes well, the converted integral will be easier to compute because you are transforming the ellipsoid into a sphere.
+          <ol>
+            <li>
+              <p>
+                <m>\dsp{\frac{x^2}{4}+\frac{y^2}{9}+\frac{z^2}{36}\leq1}</m>  via the change of variables  <m>x=2a</m>, <m>y=3b</m>, <m>z=6c</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp{\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\leq1}</m> via the change of variables  <m>x=ua</m>, <m>y=vb</m>, <m>z=wc</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>An Integration Application</em>
+      EXTRA<fn>We imagine the x-axis as an infinite, massless beam and suppose that we have two masses: <m>m_1</m> at <m>(x_1,0)</m> and <m>m_2</m> at <m>(x_2,0)</m>. At what point <m>(x,0)</m> would we place a fulcrum in order to balance the beam (axis)? To determine this we need to solve <m>(x - x_1)*m_1 = (x_2 - x)*m_2</m> for <m>x</m> which yields <m>\dsp x = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}</m>. We call <m>M_y = \sum m_i x_i</m> the moment with respect to <m>y</m>. If we do the same thing with <m>n</m> weights in the plane at <m>(x_1,y_1),...(x_n,y_n)</m>, then we have:
+      <ol>
+        <li>
+          <p>
+            the moment with respect to <m>y</m>, <m>M_y = \sum_{i=1}^n m_i x_i</m>,
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the moment with respect to <m>x</m>, <m>M_x = \sum_{i=1}^n m_i y_i</m>, and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the center of mass is <m>(M_y/m, M_x/m)</m> where <m>m = \sum m_i</m>.
+          </p>
+        </li>
+      </ol>
+      We often skip the rather interesting case where we wish to find the center of mass (centroid) of an area bounded by a function <m>f</m> on <m>[a,b]</m> which turns out to be
+      <md>
+        <mrow>M_y  \amp  = \amp   \sum area*density*(distance from \ y-axis)</mrow>
+        <mrow>\amp  = \amp  \sum (x_{i+1} - x_i)f(x_i)\rho(x_i) x_i \rightarrow \int_a^b x \rho(x) f(x) \ dx</mrow>
+        <mrow>M_x \amp =\amp  \sum area*density*(distance from  \ x-axis)</mrow>
+        <mrow>\amp =\amp  \sum (x_{i+1} - x_i)f(x_i)\rho(x_i) \frac{1}{2}f(x_i) \rightarrow \frac{1}{2} \int_a^b \rho(x) (f(x))^2 \ dx = \int \rho y \ dy.</mrow>
+      </md>
+      Instead of doing this, we move on to the formula's for center of mass in three dimensions, figuring that the simple finite case is enough of a transition.  The goal is, once again, to emphasize the transition from finite sums to integrals.</fn></p>
+
+    <p>
+      The <em>mass</em> of an object can be found by integrating the density function, <m>\delta,</m> over the entire object. If <m>\delta</m> is the density function, then the <em>center of mass</em> is given by <m>(\oa{x},\ \oa{y},\ \oa{z}) = \dsp{\left(\frac{M_{yz}}{m},\ \frac{M_{xz}}{m},\ \frac{M_{xy}}{m} \right)}</m> where
+      <ol>
+        <li>
+          <p>
+            <m>m = mass = \int \delta(x,y,z) \  dx \  dy \  dz,</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>M_{xy}=\int{\int{\int{z\ \delta(x,y,z)}}}\  dx \  dy \  dz,</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>M_{xz}=\int{\int{\int{y\ \delta(x,y,z)}}}\   dx \  dy \  dz,</m> and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>M_{yz}=\int{\int{\int{x\ \delta(x,y,z)}}}\  dx \  dy \  dz.</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      The numbers, <m>M_{xy}, M_{xz},</m> and <m>M_{yz}</m> are called the <em>moments</em> of the object with respect to <m>z</m>, <m>y</m>, and <m>x</m> respectively.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Find the center of the mass of the solid inside <m>x^2+y^2=4</m>, outside <m>x^2+y^2=1</m>, below <m>z=12-x^2-y^2</m>, and above <m>z=0</m>, assuming the constant density function <m>\rho(x,y,z) = k</m>. Graph the solid and mark the center of mass to see if your answer makes sense!
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the mass of the solid bounded by <m>\dsp z=2-\frac{1}{2}x^{2},\ z=0,\ y=x</m> and <m>y=0,</m> assuming the density is <m>\delta(x,y,z)=kz</m> where <m>k>0.</m> Challenge: Write this integral with the various orders of integration, <m>dz \ dy \ dx</m>, <m>dy \ dx \ dz</m>, <m>dz \ dx \ dy</m>, and <m>dx \ dz \ dy</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the center of the mass of the solid from the previous problem.
+        </p>
+      </statement>
+    </problem>
+  </introduction>
+  <xi:include  href="chap12probs.ptx" />
+</chapter>
+

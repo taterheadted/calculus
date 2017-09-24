@@ -1,0 +1,260 @@
+
+
+<section>
+  <title>The Fundamental Theorem of Calculus</title>
+  <p>
+    The <em>Fundamental Theorem of Calculus</em> (FTC) is one of the most applied theorems in all of calculus as it enables us to compute an integral <em>without</em> using Riemann sums.
+  </p>
+
+  <p>
+    To prove the FTC it will be helpful for us to understand the <em>Mean Value Theorem for Integrals</em>. This theorem holds for any continuous function <m>f</m> even though we state it here only for positive functions, that is, functions whose graphs are above the <m>x</m>-axis. This theorem says that if <m>f</m> is a positive function defined on the closed interval <m>[a,b],</m> then there is a rectangle with base the closed interval <m>[a,b]</m> and height <m>f(c)</m> for some <m>c</m> in <m>[a,b]</m> so that the area of this rectangle <m>f(c)(b-a)</m> is equal to the area under the curve. The height of this rectangle, <m>f(c)</m>, is called the average value of the function over the interval. This is one of those theorems that is <q>obvious</q> once you draw a careful picture and follows from two powerful theorems that we did not prove, namely the Extreme Value Theorem and the Intermediate Value Theorem.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>The Mean Value Theorem for Integrals.</em> If <m>f \in C_{[a,b]}</m>, then there exists a number <m>c \in [a, b]</m> such that <m>\dsp \int_a ^b f(x) \; dx = f(c)(b-a)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f \in C_{[a,b]}</m> with maximum M and minimum m. Use a graph to show that <m>m(b-a) \le \int_a ^b f(x)\; dx \le M(b-a).</m> Now apply the Intermediate Value Theorem to the function <m>g(x) = f(x)(b-a)</m> to prove the Mean Value Theorem for Integrals.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = 2x^2 - 3</m> on the interval <m>[0,2].</m> Compute the value of <m>c</m> from the Mean Value Theorem for Integrals. You computed <m>\int_0^2 f(x) \; dx</m> in <xref ref="defint2">Problem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>f \in C_{[a,b]}</m>, then the <term>average value</term> of <m>f</m> over <m>[a, b]</m> is the number <m>\dsp { \frac{1}{b-a} \int_a ^b f(x) \; dx }</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Find the average value of the function over the given interval.
+        <ol>
+          <li>
+            <p>
+              <m>g(x)=x^2-3x</m> over <m>[0,4]</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = |x -2| + 3</m> over <m>[0, 3]</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>The<nbsp />Fundamental<nbsp />Theorem<nbsp />of<nbsp />Calculus.</em>
+        EXTRA<fn>I love the proofs of calculus and especially the proof of the Fundamental Theorem.  Throughout calculus, I encourage those who express interest to consider taking Real Analysis to see the beauty that lives behind this course and many of my engineering students add mathematics as a double major or even as a full second degree in order to take this course. However, I make many concessions due to the full syllabus that we have here at Lamar and some semesters I rarely lecture over this proof simply due to time constraints.</fn>
+        <ol>
+          <li>
+            <p>
+              Let <m>f \in C_{[a,b]}</m> and let <m>x</m> be any number in <m>[a, b]</m>. If <m>F</m> is the function defined by
+              <me>
+                \dsp F(x) = \int_a ^x f(t) \; dt,
+              </me>
+              then
+              <me>
+                F'(x) = f(x).
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>f \in C_{[a,b]}</m>. If <m>F</m> is any function such that <m>F'(x) = f(x)</m> for all <m>x</m> in <m>[a, b],</m> then
+              <me>
+                \dsp \int_a ^b f(x) \; dx = F(b) - F(a).
+              </me>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <em>Proof of Part 1.</em> Let <m>f \in C_{[a,b]}</m> and define the function <m>F</m> so that <m>F(x)</m> is the definite integral of <m>f</m> from <m>a</m> to <m>x.</m> That is,
+    <me>
+      F(x) =  \int_a^x f(t) \; dt \; \mbox{for every}  \; x \in [a,b].
+    </me>
+  </p>
+
+  <p>
+    If <m>F'</m> exists, then
+    <md>
+      <mrow>F'(x) = \lim_{h \rightarrow 0} \frac{ F(x+h) - F(x) }{ h }
+      \amp  = \amp  \lim_{h \rightarrow 0} \frac{ F(x+h) - F(x) }{ h }</mrow>
+      <mrow>\amp  = \amp  \lim_{h \rightarrow 0} \frac{1}{h} \left[ F(x+h) - F(x) \right]</mrow>
+      <mrow>\amp  = \amp  \lim_{h \rightarrow 0} \frac{1}{h} \left[ \int_a^{x+h} f(t) \; dt - \int_a^{x} f(t) \; dt \right]</mrow>
+      <mrow>\amp  = \amp  \lim_{h \rightarrow 0} \frac{1}{h}  \int_x^{x+h} f(t) \; dt.</mrow>
+    </md>
+  </p>
+
+  <p>
+    Applying the <em>Mean Value Theorem for Integrals</em> at this point, we have
+    <me>
+      \frac{1}{h}  \int_x^{x+h} f(t) \; dt  =\frac{1}{h} ( x+h \; - \; x) \cdot f(c)
+    </me>
+    for some value <m>c</m> that is in the interval <m>[x, x+h]</m>. Since this the interval depends on the value of <m>h,</m> we replace <m>c</m> by <m>c_h</m> to indicate that <m>c</m> depends on <m>h.</m> As <m>h \rightarrow 0^+</m>, we see that <m>x+h \rightarrow x</m> so this interval will shrink to the point <m>x</m>. Since <m>x \lt  c_h \lt  x+h</m> and <m>h \rightarrow 0^+</m>, we have that <m>c_h \rightarrow x</m> by <xref ref="squeeze">Theorem</xref> (The Squeeze Theorem). This observation allows us to finish the proof.
+    <md>
+      <mrow>F'(x) \amp  = \amp  \lim_{h \rightarrow 0} \frac{1}{h}  \int_x^{x+h} f(t) \; dt</mrow>
+      <mrow>\amp  = \amp  \lim_{h \rightarrow 0} \frac{1}{h} ( x+h \; - \; x) \cdot f(c_h)  \; \mbox{where} 
+      \;  c_h \in [x,x+h]</mrow>
+      <mrow>\amp  = \amp  \lim_{h \rightarrow 0} \frac{1}{h} \cdot  h  \cdot f(c_h)  \;</mrow>
+      <mrow>\amp  = \amp  \lim_{h \rightarrow 0} f(c_h)  \;</mrow>
+      <mrow>\amp  = \amp  f(x)  \; \mbox{ because}  \; c_h \rightarrow x \mbox{ and}   \;f  \;\mbox{is continuous.}</mrow>
+    </md>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <p>
+    <em>Sketch of Proof of Part 2.</em> Let <m>f \in C_{[a,b]}</m>. Let
+    <me>
+      F(x)  =  \int_a^x f(t) \; dt \; \mbox{for every}  \; x \in [a,b].
+    </me>
+  </p>
+
+  <p>
+    By the previous proof, <m>F</m> is an anti-derivative of <m>f</m>.
+    <me>
+      F(b) - F(a) = \int_a^b f(t) \ dt - \int_a^a f(t) \ dt = \int_a^b f(t) \ dt - 0 = \int_a^b f(t) \ dt.
+    </me>
+  </p>
+
+  <p>
+    It might appear that we are done, but we have not shown that the theorem is true for <em>any</em> anti-derivative of <m>f</m>, rather we have only shown that it was true for anti-derivatives of the form <m>F(x) = \int_a^x f(t) \ dt.</m> Suppose we have some other anti-derivative, <m>G.</m> Then <m>G' = f = F'</m>, so <m>G'=F'</m>. If two functions have the same derivative then they must have the same shape. Therefore, either they are the same function or one function is just the other function slid up or down along the y-axis. It can be shown using the Mean Value Theorem if <m>F'=G',</m> then <m>G(x) = F(x) + k</m>. Therefore, for any anti-derivative <m>G</m> we have,
+    <me>
+      G(b) - G(a) = \big(F(b) + k\big) - \big(F(a) + k\big) = F(b) - F(a) = \int_a^b f(t) \ dt.
+    </me>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Use the second part of the fundamental theorem.
+        <ol>
+          <li>
+            <p>
+              Compute <m>\dsp \int_{1}^{3} (3x-1) \; dx</m>.  Verify your result using simple formulas for area.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_{0}^{2\pi} \cos^5(x) \sin(x) \; dx.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_{2}^{3} x (10-x^{2})^3  \; dx.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_{0}^{3} (x^2+2) e^{x^3+6x} \; dx.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the first part of the fundamental theorem.
+        <ol>
+          <li>
+            <p>
+              Compute <m>F'</m> where <m>\dsp F(x) = \int_{1} ^{x} t^2-3t \; dt</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>F'</m> where <m>\dsp F(x) = \int_{5}^{x} \frac{4}{t^4+ 1}\; dt</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>F'</m> where <m>\dsp F(x) = \int_{3}^{x^2} t (t^2-4)^2 \; dt</m>  by applying the chain rule to <m>F = f \circ g</m> where <m>\dsp f(x) = \int_{3}^{x} t (t^2-4)^2 \; dt</m> and <m>g(x) = x^2</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(t)= |t^2 - t|</m> and let <m>F</m> be a function defined by <m>\dsp F(x)= \int_{- 4}^x f(t) \; dt</m> where <m>x \in [-4, 4]</m>. Answer the following questions.
+        <ol>
+          <li>
+            <p>
+              What is the derivative of <m>F</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              On what intervals is <m>F</m> increasing?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              On what intervals is <m>F</m> decreasing?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              On what intervals is <m>F</m> concave upward?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              On what intervals is <m>F</m> concave downward?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

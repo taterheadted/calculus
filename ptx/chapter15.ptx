@@ -1,0 +1,11 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Appendices</title>
+  <xi:include  href="applim.ptx" />
+  <xi:include  href="appreal.ptx" />
+  <xi:include  href="appexp.ptx" />
+  <xi:include  href="apptrig.ptx" />
+  <xi:include  href="appsum.ptx" />
+</chapter>
+

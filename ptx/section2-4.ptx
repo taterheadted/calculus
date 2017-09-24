@@ -1,0 +1,95 @@
+
+
+<section>
+  <title>Tangent Lines</title>
+  <p>
+    We are going to define <em>tangent line</em> from a physical point-of-view rather than
+    give a rigorous mathematical definition. Sketch any function, <m>f</m>, and pick a point on it. Label
+    your point <m>(a,f(a)).</m> Place your pencil on the graph at a point to the left of <m>(a,f(a)).</m> Imagine that
+    your pencil is a car, the graph is a road, and you are driving toward the point <m>(a,f(a))</m> from the left.
+    Suppose that there is a perfectly frictionless patch of ice at the point <m>(a,f(a))</m> and keep
+    drawing in the direction the car would travel as it slides off the road. Now do the same from the right.
+    If the two lines you drew form a line, then you have drawn the
+    <em>tangent line to <m>f</m> at the point <m>(a,f(a))</m></em>. If they don't form a line,
+    then <m>f</m> does not have a tangent line at this point.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>secant line</term> for the graph <m>f</m> is a line passing through two points on the graph of <m>f.</m>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = x^2+1</m> and graph <m>f.</m> Graph and compute the slope of the secant lines passing through:
+        <ol>
+          <li>
+            <p>
+              <m>(2,f(2))</m> and <m>(4,f(4))</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(2,f(2))</m> and <m>(3,f(3))</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(2,f(2))</m> and <m>(2.5,f(2.5))</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(2,f(2))</m> and <m>(2.1,f(2.1))</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p>
+        What is the slope of the line tangent to <m>f</m> at the point <m>(2,5)</m>?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Write down a limit that represents the work you did in the last problem.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l13">
+    <statement>
+      <p>
+        Find the slope of the tangent line to the curve <m>f(x)= x^3 + 2</m> at the point <m>(3, 29)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the equation of the tangent line in <xref ref="l13">Problem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l14">
+    <statement>
+      <p>
+        Assume <m>a \in \re.</m> Find the equation of the line
+        tangent to the graph of <m>f(x) = x^3 + 2</m> at the point <m>(a,f(a)).</m>
+      </p>
+    </statement>
+  </problem>
+</section>
+

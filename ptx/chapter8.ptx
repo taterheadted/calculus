@@ -1,0 +1,15 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Conic Sections, Parametric Equations, and Polar Coordinates</title>
+  <introduction>
+    <p>
+      <q>Learning is not compulsory... neither is survival.</q> - W. Edwards Deming
+    </p>
+  </introduction>
+  <xi:include  href="section8-1.ptx" />
+  <xi:include  href="section8-2.ptx" />
+  <xi:include  href="section8-3.ptx" />
+  <xi:include  href="chap7probs.ptx" />
+</chapter>
+

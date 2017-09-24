@@ -1,0 +1,97 @@
+
+
+<section>
+  <title>Partial Fractions</title>
+  <p>
+    This section focuses on integrating rational functions. The method of <em>partial fractions</em> may be used on rational functions to break one rational function into a sum of two or more rational functions, each of which has a lower degree denominator and is easier to anti-differentiate. When a rational function has a numerator with degree greater than the degree of the denominator, one can long divide to rewrite the integrand as the sum of a polynomial and another rational function with numerator of lower degree than the degree of the denominator. Sometimes the rational function displays features of our derivative theorems and thus is already in a form that is integrable.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Since the degree of the numerator is larger than the degree of the denominator, use long division to evaluate <m>\dsp {\int \frac{x^2-3}{x+1} \ dx}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        You will integrate this rational function by breaking it into two rational functions and integrating each of those functions separately (partial fractions).
+        <ol>
+          <li>
+            <p>
+              Find numbers <m>A</m> and <m>B</m> so that <m>\dsp{ \frac{1}{x^2-1} = \frac{A}{x-1}+\frac{B}{x+1} }.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp {\int \frac{1}{x^2-1} \ dx = \int \frac{A}{x-1} \ dx + \int \frac{B}{x+1} \ dx = \dots}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \frac{4x}{x^2 - 2x-3}\; dx</m> via partial fractions.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \frac{3x^2-2x+1}{x^2 -2x-3}\; dx.</m> This is called an improper fraction because the degree of the numerator is greater than or equal to the degree of the denominator. In such cases, long divide first.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \frac{x^2+x-2}{x(x+1)^2}\; dx</m> via partial fractions by first finding constants, <m>A, B</m>, and <m>C</m> so that <m>\dsp \frac{x^2+x-2}{x(x+1)^2} = \frac{A}{x} + \frac{B}{x+1}+\frac{C}{(x+1)^2}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \frac{5x^2+3}{x^3 + x}\; dx</m> via partial fractions by first finding constants <m>A</m>, <m>B</m>, and <m>C</m> so that <m>\dsp \frac{5x^2+3}{x^3 +x} = \frac{A}{x}+\frac{Bx+C}{x^2+1}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate these three indefinite integrals that look similar, but are not!
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \frac{5}{x^2-1} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{5x}{x^2-1} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{5}{x^2+1} \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

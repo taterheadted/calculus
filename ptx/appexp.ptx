@@ -1,0 +1,661 @@
+
+
+<section xml:id="appexp">
+  <title>Exponential and Logarithmic Functions</title>
+  <p>
+    The goal of this appendix is to review exponential and logarithmic functions. Even though you should definitely have seen these functions before you made it to Calculus, it is my experience that many students benefit from a review of the basics. Use this as a review and ask if you have any troubles.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Use a limit table to convince yourself that the <m>\lim_{n \rightarrow \infty} (1 + \frac{1}{n})^n</m> exists by
+        substituting in <m>n=10, n=100,</m> and <m>n=1000.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        We define the real number <term><m>e</m></term> by <m>e = \lim_{n \rightarrow \infty} (1 + \frac{1}{n})^n.</m>
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        Any function of the form <m>f(x) = b^x</m> where <m>b</m> is any positive real number other than <m>1</m> is called an <term>exponential</term> function.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Graph <m>r(x) = 2^x, s(x) = 3^x, u(t) = 2^{-t},</m> and <m>v(t) = 3^{-t}</m> all on the same pair of coordinate axes by either plotting points (preferable) or by using your favorite technological weapon. Pay special attention to the domain and range, x- and y-intercepts, and any vertical or horizontal asymptotes.
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        The function <m>f(x) = e^x</m> is called the <term>natural exponential</term> function.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Graph each of the following variants of the exponential function, listing domain, range, intercepts, and asymptotes.
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = e^x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>g(x) = e^{-x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>h(x) = e^{x-2}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>i(x) = e^x-3</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        We define the inverse of <m>f(x) = e^x</m> by <m>g(x) = \ln(x)</m> and refer to this as the <term>natural logarithm</term> function.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        We define the inverse of <m>f(x) = b^x</m> by <m>g(x) = \log_b(x)</m> and refer to this as the <term>logarithm to the base b</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    By definition of inverses, we have these Inverse Properties.
+    <ol>
+      <li>
+        <p>
+          <m>\ln(e^x) = x</m> for all <m>x \in \re</m> and
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e^{\ln(x)}=x</m> for all <m>x > 0.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    The following theorem relates the natural logarithm function to all other base logarithm functions which means that if you really understand the natural logarithm function then you can always convert the other logarithms to the natural logarithm function.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Change of Base Theorem.</em> For any <m>b \in {\nat}</m>, <m>\dsp \log_b(x) = \frac{\ln(x)}{\ln(b)}.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Algebra of Exponential Theorem.</em>
+        <ol>
+          <li>
+            <p>
+              <m>e^xe^y = e^{x+y}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>e^x/e^y = e^{x-y}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(e^x)^y = e^{xy}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Each of these laws leads to a corresponding statement about logarithms.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Algebra of Natural Log Theorem.</em>
+        <ol>
+          <li>
+            <p>
+              <m>\ln(xy) = \ln(x) + \ln(y)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(x/y) = \ln(x) - \ln(y)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(x^y) = y\ln(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Prove the Logarithmic Laws using the Exponential Laws and the Inverse Properties.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="e1">
+    <statement>
+      <p>
+        Evaluate each of the following without using a calculator.
+        <ol>
+          <li>
+            <p>
+              If <m>e^4 = 54.59815 . . .</m>,  then   <m>\ln(54.59815 . . .) =</m> \hrulefill<nbsp />.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>\ln(24) = 3 .1780538 . . .</m>,   then  <m>e^{3 .1780538}  =</m> \hrulefill<nbsp />.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>e^{\ln(4)} =</m> \hrulefill<nbsp />.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(e^{x}) =</m> \hrulefill<nbsp />.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="e2">
+    <statement>
+      <p>
+        Evaluate each of the following using a calculator.
+        <ol>
+          <li>
+            <p>
+              <m>\ln(3.41) =</m> \hrulefill<nbsp />.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>e^{4\ln(2)} =</m> \hrulefill<nbsp />.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="e3">
+    <statement>
+      <p>
+        Write each of the following as a single logarithm.
+      </p>
+      <ol>
+      <li>
+        <p>
+          <m>3\ln(2x) - 2\ln(x) + \ln(y) - \ln(z)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>2\ln(x+y) + \ln(\frac{1}{x-y})</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ln(x) + 3 \hspace{.25in}</m>. Remember that <m>3 = \ln(what)?</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Which of the following is correct?  Why?
+        </p>
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \ln(x) - \ln(y) + \ln(z) = \ln(\frac{x}{yz})</m> or
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \ln(x) - \ln(y) + \ln(z) = \ln(\frac{xz}{y})</m>
+            </p>
+          </li>
+        </ol>
+      </li>
+      </ol>
+    </statement>
+  </problem>
+
+  <problem xml:id="e4">
+    <statement>
+      <p>
+        Expand each of the following into a sum, difference, or multiple of the logarithms.
+        <ol>
+          <li>
+            <p>
+              <m>\ln(9x^2y)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(4x^{-1}y^2)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \ln(\frac{xy^2}{z^3})</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \ln\big( \frac{ (x+y)^2 }{ (x-y)^2 } \big)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="e5">
+    <statement>
+      <p>
+        Solve each of the following for x; give both exact and approximate answers.
+        <ol>
+          <li>
+            <p>
+              <m>\ln(3x) = 2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(6) + \ln(2x) = 3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(x^2-x-5)=0</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln(x+3) + \ln(x-2)=2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln ^2x-\ln x^5 + 4 = 0</m>  Notation: <m>\ln ^2x</m>  means <m>\ln(x) )^2</m> and <m>\ln x^5</m> means <m>\ln(x^5)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ln ^2x+\ln x^2-3=0</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="e6">
+    <statement>
+      <p>
+        Solve for x; give both exact and approximate answers.
+        <ol>
+          <li>
+            <p>
+              <m>e^x = 19</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>4^x = \frac{2}{3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>4^{x+1} = e</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(\frac{1}{2})^x = 3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x^2 e^x - 9 e^x = 0</m>  Factor, factor, factor!
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>e^x - 8e^{-x} = 2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>5^x = 4^{x+1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>3^{2x+1} = 2^{x-1}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Solutions to Exponential and Logarithmic Exercises</em>
+  </p>
+
+  <p>
+    \begin{sol}
+    These are the solutions to <xref ref="e1">Problem</xref>.
+    <ol>
+      <li>
+        <p>
+          <m>4</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>24</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>4</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>x</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    \end{sol}
+  </p>
+
+  <p>
+    \begin{sol}
+    These are the solutions to <xref ref="e2">Problem</xref>.
+    <ol>
+      <li>
+        <p>
+          <m>1.2267123</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>16</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    \end{sol}
+  </p>
+
+  <p>
+    \begin{sol}
+    These are the solutions to <xref ref="e3">Problem</xref>.
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \ln(\frac{8xy}{z})</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \ln(\frac{(x+y)^2}{(x-y)})</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ln(xe^3)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Only the second statement is true.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    \end{sol}
+  </p>
+
+  <p>
+    \begin{sol}
+    These are the solutions to <xref ref="e4">Problem</xref>.
+    <ol>
+      <li>
+        <p>
+          <m>\ln(9) + 2\ln(x) + \ln(y)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ln(4) + 2\ln(y) - \ln(x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\ln(x) + 2\ln(y) - 3\ln(z)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>2\ln(x+y) - 2\ln(x-y)</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    \end{sol}
+  </p>
+
+  <p>
+    \begin{sol}
+    These are the solutions to <xref ref="e5">Problem</xref>.
+    <ol>
+      <li>
+        <p>
+          <m>e^2/3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e^3/12</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-2,3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{-1+\sqrt{25+4e^2}}{2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e, e^4</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{1}{e^3},e</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    \end{sol}
+  </p>
+
+  <p>
+    \begin{sol}
+    These are the solutions to <xref ref="e6">Problem</xref>.
+    <ol>
+      <li>
+        <p>
+          <m>ln19</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{\ln(\frac{2}{3})}{\ln4}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{1}{\ln4}-1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{\ln3}{\ln\frac{1}{2}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-3,3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>ln4</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{\ln4}{\ln(\frac{5}{4})}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{\ln\frac{1}{6}}{\ln\frac{9}{2}}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    \end{sol}
+  </p>
+</section>
+

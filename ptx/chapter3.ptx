@@ -1,0 +1,69 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Derivatives</title>
+  <introduction>
+    <p>
+      <q>...the secret of education lies in respecting the pupil...</q> - Ralph Waldo Emerson
+    </p>
+
+    <p>
+      Up to this point, we have solved several different problems and discovered that the same concept has generated a solution each time. Limits were used to find:
+      <ul>
+        <li>
+          <p>
+            Robbie's velocity function given his position function,
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the instantaneous growth function for the robot population given the population function, and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            the function that tells us the slope of the line tangent to a function at any point.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The following definition is the result of all of our work to this point.
+      EXTRA<fn>By this point, a majority of the class sees the connection between average rates of change and instantaneous rates of change.   Whenever a key problem was worked, I emphasized the commonality between the three problems (slope, velocity, plant growth rate, population growth rate).   Now, I'll likely summarize this one final time to show that <xref ref="derivdfn">Definition</xref> encompasses all the work we have done on each of these problems by giving us a formulaic way to compute instantaneous rates of change. On a recent evaluation form, <q>You did a brilliant job explaining limits.  After 4 calculus teachers, you are the only one to adequately explain them.</q> An interesting comment given that my explanations are primarily in response to student questions or work that students have done!</fn></p>
+
+    <definition xml:id="derivdfn">
+      <statement>
+        <p>
+          Given a function <m>f</m>, the <term>derivative</term> of <m>f</m>, denoted by <m>f'</m>, is the function so that for every point <m>x</m> in the domain of <m>f</m> where <m>f</m> has a tangent line, <m>f'(x)</m> equals the slope of the tangent line to <m>f</m> at <m>(x,f(x)).</m> Either
+          <me>
+            f'(x) = \lim_{b \rightarrow x} \frac{f(b)-f(x)}{b-x} \; \; \; \;    \mbox{      or     }  \; \; \; \;    f'(x) = \lim_{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}
+          </me>
+          may be used to compute the derivative.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      While both limits above will always yield the same result, there are times when one may be preferable to the other in terms of the algebraic computations required to obtain the result. Given a function <m>f</m>, the derivative of <m>f</m> is usually denoted by <m>\dsp f', \;\;  \frac{df}{dx} \;\; \mbox{or}  \;\; \dot{f}.</m> Regardless of how it is written, the derivative of <m>f</m> at <m>x</m> represents the slope of the line tangent to <m>f</m> at the point <m>(x,f(x))</m> or the rate at which the quantity <m>f</m> is changing at <m>x</m>. The origins of calculus are generally credited to Leibnitz and Newton. The first notation, credited to Lagrange, is referred to as <em>prime</em> or <em>functional</em> notation. The second notation is due to Leibnitz. The third is due to Newton. Engineers sometimes use the dot to represent derivatives that are taken with respect to time.
+    </p>
+
+    <p>
+      If <m>f(x) = x^2,</m> then each of
+      <me>
+        f'(x) \mbox{ and }  ( x^2 )' \mbox{ and }  \frac{d}{dx} (x^2)
+      </me>
+      all mean <q>the derivative of <m>f</m> at <m>x</m>.</q>
+    </p>
+  </introduction>
+  <xi:include  href="section3-1.ptx" />
+  <xi:include  href="section3-2.ptx" />
+  <xi:include  href="section3-3.ptx" />
+  <xi:include  href="section3-4.ptx" />
+  <xi:include  href="section3-5.ptx" />
+  <xi:include  href="section3-6.ptx" />
+  <xi:include  href="chap2probs.ptx" />
+</chapter>
+

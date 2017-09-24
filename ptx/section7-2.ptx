@@ -1,0 +1,748 @@
+
+
+<section>
+  <title>Series with Positive Constant Terms</title>
+  <example>
+    <statement>
+      <p>
+        Bouncing balls.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Suppose we drop two balls at the same time from a height of one foot and the first one bounces to the height of one foot with each bounce. (Question for my Mechanical Engineers. Why is it that if you invent this ball, you can retire?) The second ball bounces to half the height that it fell from each time. What distance does each ball travel? Answer:
+    <me>
+      \mbox{Ball 1:  }  1 + 1 + 1 + 1 + 1 + \dots
+    </me>
+    and
+    <me>
+      \mbox{Ball 2:  }   1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} + \dots = 1 + 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \dots.
+    </me>
+  </p>
+
+  <p>
+    Such sums are called <em>series</em> or <em>infinite series</em> and the individual numbers that are added are called the <em>terms</em> of the series. The first sum does not <q>add up,</q> so we'll say it <em>diverges</em>. The second sum does <q>add up,</q> so we'll say it <em>converges</em>. To see that the second sum converges, let
+    <me>
+      S_1 = 1, \; S_2 = 1 + 1, \; S_3 = 1 + 1 + \frac{1}{2}, \; S_4 = 1 + 1 + \frac{1}{2} + \frac{1}{4}, \; \dots
+    </me>
+    and consider the limit of this new sequence that we have created. The new sequence we have generated, <m>S_1, S_2, S_3, \dots</m> is called the <em>sequence of partial sums</em> of the series and looks like this
+    <me>
+      S_1 = 1, \; S_2 = 2, \; S_3 = 2\frac{1}{2}, \; S_4 = 2\frac{3}{4},\dots
+    </me>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Write down the simplest expression you can find for the <m>N^{th}</m> partial sum, <m>S_N,</m> for the series <m>1+1+1+ \dots</m> and compute <m>\dsp
+        \lim_{N \to \infty} S_N.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Write down the simplest expression you can find for the <m>N^{th}</m> partial sum, <m>S_N,</m> for the series <m>\dsp 1 + 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \dots</m> and compute <m>\dsp \lim_{N \to \infty} S_N.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    This notion of adding up partial sums of the series is the motivation for the definition of a series. We say that an infinite series <em>converges</em> if the limit of the partial sums exists.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Given a sequence <m>\{ a_n \}_{n=k}^\infty</m>, where <m>k</m> is a positive integer or zero, we define the <term><m>N^{th}</m> partial sum</term> of this sequence to be the number <m>\displaystyle{S_N = \sum_{n=k}^{N} a_n}.</m> We denote the limit of the sequence of partial sums by the notation, <m>\displaystyle{\sum_{n=k}^{\infty} a_n} = \lim_{N \to \infty} S_N,</m> and call this the <term>infinite series</term> associated with the sequence.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        Given a sequence, <m>\dsp \{a_n\}_{n=k}^{\infty},</m> the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> is said to
+        {{converge}} if <m>\displaystyle \lim_{N \to \infty} S_N</m> exists and is said to <term>diverge</term> if <m>\displaystyle \lim_{N \to \infty} S_N</m> does not exist.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp a_0 = 1-\frac{1}{2}</m>, <m>\dsp a_1 = \frac{1}{2} - \frac{1}{3}</m>, <m>\dsp a_2 = \frac{1}{3} - \frac{1}{4}</m>, <m>\cdots</m>.
+        <ol>
+          <li>
+            <p>
+              Find a formula for the <m>n^{th}</m> term of the sequence, <m>a_n.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the terms of the sequence,  <m>a_n.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find a formula for the <m>N^{th}</m> partial sum of the sequence, <m>S_N.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the partial sums,
+              <m>\displaystyle{\lim_{N \to \infty} S_N = \sum_{n=1}^{\infty} a_n}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We are about to develop many theorems (called <q>tests</q>) to tell us if a series converges or diverges. Like the various techniques of integration, each test is easy to apply, but figuring out which test to use on a particular series may be challenging.
+  </p>
+
+  <p>
+    In our bouncing ball example, you found a formula for the <m>n^{th}</m> partial sum, <m>S_N</m> and showed that <m>\dsp \lim_{N \to \infty} S_N</m> was a real number. Since the sequence of partial sums converged, we say that our series converges. For this example, we were able to write down an exact expression for the <m>N^{th}</m> partial sum and we were able to compute the limit. In many cases, we will be able to determine whether a particular series converges, but not know from the test what it converges to. Knowing that the series converges is valuable, because as long as we <em>know</em> that the it converges then we can use our calculators or computer algebra systems to add enough terms to get as close to the answer as we want.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp a_0 = 3</m>, <m>\dsp a_1 = 3 (\frac{1}{2})</m>, <m>\dsp a_2 = 3(\frac{1}{2})^2</m>, <m>\cdots</m>.
+        <ol>
+          <li>
+            <p>
+              Find a formula for the <m>n^{th}</m> term, <m>a_n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the terms, <m>\displaystyle{\lim_{n \to \infty} a_n}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find a formula for the <m>N^{th}</m> partial sum, <m>S_N</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the partial sums, <m>\displaystyle{\lim_{N \to \infty} S_N}</m> or
+              <m>\displaystyle{\sum_{n=0}^{\infty} a_n}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp a_0 = 5</m>, <m>a_1 = \frac{5}{3}</m>, <m>a_2 = \frac{5}{9}</m>, <m>\cdots</m>.
+        <ol>
+          <li>
+            <p>
+              Find a formula for the <m>n^{th}</m> term, <m>a_n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the terms, <m>\displaystyle{\lim_{n \to \infty} a_n}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find a formula for the <m>N^{th}</m> partial sum, <m>S_N</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the partial sums, <m>\displaystyle{\lim_{N \to \infty} S_N}</m> or
+              <m>\displaystyle{\sum_{n=0}^{\infty} a_n}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp a_0 = a</m>, <m>a_1 = ar</m>, <m>a_2 = ar^2</m>, <m>\cdots</m>.
+        <ol>
+          <li>
+            <p>
+              Find a formula for the <m>n^{th}</m> term, <m>a_n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the terms, <m>\displaystyle{\lim_{n \to \infty} a_n}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find a formula for the <m>N^{th}</m> partial sum, <m>S_N</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the limit of the partial sums, <m>\displaystyle{\lim_{N \to \infty} S_N}</m> or
+              <m>\displaystyle{\sum_{n=0}^{\infty} a_n}</m> where <m>r\lt 1.</m> (What happens when <m>r = 1</m> or <m>r > 1</m>?).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    In many series problems, it is useful to write out a few terms to see if there is something common that you can factor out
+    of the sum. This is trick 49.2.b section 8 from the intergalactic <q>Math Book</q> that they give out when you get your Ph.D.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Determine whether these geometric series converge and if so to what number.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=3}^\infty  \frac{3}{4^n}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{
+              \sum_{n=3}^\infty  \frac{2^n}{3^{n+4}}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{
+              \sum_{n=2}^\infty  \frac{4^n}{3^n}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{
+              \sum_{n=3}^\infty  \frac{\pi}{e^{n-1}}  }</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    If you only do one problem in Calculus, do this one.
+    EXTRA<fn>Most of my students, and perhaps even a few of yours, have a definite interest in money.  In the book <q>How to Make Money in Wall Street,</q> Louis Rukeyser wrote something like <q>While it has been stated that money can't buy happiness, I'm confident that you can find other things to spend it on.</q>  Because of this interest, we spend some time talking about investing and how a deep understanding of series is a good start for a career in financial mathematics.  Students (and friends) are often shocked at the interest paid on a house or car note.   Today more than ever, the complex trading algorithms are based on non-trivial mathematics stemming from the fields of calculus, probability and statistics.  As investing is a personal hobby, I can speak with some knowledge about the average mathematical ability of the brokers I have worked with over the years and the need for mathematical literacy in the field.</fn></p>
+
+  <problem>
+    <statement>
+      <p>
+        If a banker tells you that you will earn 6<percent /> interest compounded monthly, then you will actually earn <m>\frac{6}{12}</m><percent /> each month, which is better than 6<percent /> annually since you get interest on your interest. Suppose you save <dollar />300 per month and earn <m>\frac{6}{12}</m><percent /> interest on the amount of money in the bank at the end of each month. How much money do you have in 30 years? How much was savings? How much was interest?
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>The <m>n^{th}</m> Term Test.</em> If <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> converges, then <m>\dsp{ \lim_{n \to \infty} a_n = 0}.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    This test is essentially useless as written, but it's contrapositive is quite useful. The <em>contrapositive</em> of the statement <q>if P then Q</q> is <q>if not Q then not P.</q> To make this simple, the converse of <q>if you are good, then I will take you for ice cream</q> is <q>if I did not take you for ice cream, then you were not good.</q> Great. Now I'm hungry. We will look at a proof of the <m>n^{th}</m> term test later.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Assume that <m>a_n > a_{n+1} > 0</m> for all <m>n=1,2,3,\dots.</m> Prove that if <m>\dsp{ \lim_{n \to \infty} a_n = L > 0},</m> then the series, <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> diverges. This is a special case of the <m>n^{th}</m> term test where the terms are positive.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        In your mechanical engineering lab, you create a ball with a coefficient of elasticity so that if you dropped the ball from a height of one foot then the ball would bounce exactly to height <m>\dsp \frac{1}{2n}</m> feet on the <m>n^{th}</m> bounce. How far does the ball travel?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The <m>n^{th}</m> term test told us that if the terms don't approach zero, then the series diverges. This does not imply that if the terms do approach zero, then the series converges. The following problem illustrates two important points. First it shows that a series can have terms that approach zero, but still not converge. Second it shows a way to help determine whether a series converges by making a comparison between the series and a closely related integral.
+  </p>
+
+  <problem xml:id="harmonicseries">
+    <statement>
+      <p>
+        <em>The Harmonic Series.</em>
+        EXTRA<fn>Depending on the strength of the class, I may simply work this one out because the problem illustrates so well the intuition that leads to the integral test.  If you would like your kids to read a nice play on harmonics, consider http://scholarship.claremont.edu/jhm/vol3/iss2/11/</fn></p>
+
+      <p>
+        Let <m>\dsp a_1 = 1, a_2 = \frac{1}{2}, a_3 = \frac{1}{3}, \dots</m>.
+        <ol>
+          <li>
+            <p>
+              Find <m>\displaystyle{\lim_{n \to \infty} a_n}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>\dsp f(x) = \frac{1}{x}</m> be defined on <m>[1, \infty)</m> and sketch a graph of both <m>f</m> and our sequence, <m>a_n = \frac{1}{n}</m> for <m>n=1,2,3,\dots</m> on the same coordinate axes.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Sketch rectangles (Riemann sums) whose areas approximate the area under the curve, <m>f</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use your picture to show that <m>\displaystyle{S_N = \sum_{n=1}^{N-1} a_n \ge \int_1^N \frac{1}{x} \; \; dx}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>\dsp \int_1^\infty \frac{1}{x} \; \; dx</m> diverges, so <m>\dsp \sum_{n=1}^{\infty} \frac{1}{n}</m> diverges.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp a_n = \frac{1}{n^2}</m> for <m>n=1,2,3,\dots</m>.
+        <ol>
+          <li>
+            <p>
+              Find <m>\displaystyle{\lim_{n \to \infty} a_n}</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use a graph to show that for each <m>N,</m>
+              <me>
+                \displaystyle{S_N = \sum_{n=1}^N \frac{1}{n^2} \le 1 + \int_1^N \frac{1}{x^2} \; \; dx \le 1 + \int_1^{\infty} \frac{1}{x^2} \; \; dx}
+              </me>
+              so that the sequence of partial sums <m>\{S_n \}_{n=1}^{\infty}</m> is bounded above.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Conclude that <m>\displaystyle{\sum_{n=1}^{\infty} a_n}</m> converges because <m>\{S_n \}_{n=1}^{\infty}</m> satisfies the hypothesis of <xref ref="monotonic">Theorem</xref>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Integral Test.</em>
+        Let <m>f</m> be a continuous function such that <m>f(x) \ge 0</m> and <m>f</m> is decreasing for all <m>x \ge 1</m> and <m>f(n) = a_n</m> for all <m>n=1,2,3,\dots</m>. Then
+        <me>
+          \sum_{n=1}^{\infty} a_n \mbox{ converges if and only if }  \int_1^\infty f(x) \;\; dx \mbox{ converges } .
+        </me>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Apply the integral test to each series to determine whether it converges or diverges.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=4}^\infty  \frac{1}{4n^3}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{\sum_{n=2}^\infty  \frac{3}{n^2}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=1}^\infty  \frac{5}{n^{1.001}}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=1}^\infty  \frac{4}{\sqrt{2n}}  }</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="inttest">
+    <statement>
+      <p>
+        Prove the integral test as follows. Let <m>f</m> be a continuous function such that <m>f(x) \ge 0</m> and is decreasing for all <m>x \ge 1</m>, and let <m>f(n)=a_n</m>. Suppose <m>\dsp{ \int_1^\infty f(x) \ dx}</m> converges.
+        EXTRA<fn>Again, depending on the strength of the class, I may simply work this one out.</fn>
+        <ol>
+          <li>
+            <p>
+              Partition the interval <m>[1, N]</m> into <m>N-1</m> equal intervals and sketch the rectangles as you did in <xref ref="harmonicseries">Problem</xref>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Express the total area of the rectangles in sigma notation; express the total area of the circumscribed rectangles in sigma notation.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Establish these two inequalities geometrically.
+              <me>
+                \displaystyle{\sum_{n=1}^N a_n \le a_1 + \int_1^N f(x) \; dx} \; \mbox{ and }  \displaystyle{\int_1^N f(x) \; \; dx \le \sum_{n=1}^N a_n}
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Prove that <m>\displaystyle{\sum_{n=1}^{\infty} a_n}</m> converges by showing that <m>S_n</m> is bounded above and increasing.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em><m>p</m>-Series<nbsp />Test.</em> The series <m>\displaystyle{\sum_{n=1}^{\infty} \frac{1}{n^p}}</m> converges if <m>p > 1</m> and diverges if <m>p \le 1</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the integral test to prove the p-series test for the case when <m>p>1</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Determine whether each series converges. If it does, use <xref ref="inttest">Problem</xref> to give an upper bound for the infinite sum.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=4}^\infty \frac{5}{n^4} }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{\sum_{n=1}^\infty \frac{1}{2n^3} + \frac{2}{n^2} }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{\sum_{n=1}^\infty \frac{1}{\sqrt{2n^3}} }</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We now have two types of series for which we can easily determine convergence or divergence: <em>geometric series</em> and <em>p-series</em>. We will use these to determine the convergence or divergence of many other series. If a series with positive terms is less than some convergent series, then it must converge. On the other hand, if a series is larger than a series with positive terms that diverges then it must diverge.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Consider the series <m>\displaystyle{\sum_{n=1}^{\infty} \frac{1}{n^3+2}}.</m>
+        <ol>
+          <li>
+            <p>
+              Show that for all <m>n \ge 1,</m> we have <m>\dsp \frac{1}{n^3+2} > 0.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that for all <m>n \ge 1,</m> we have <m>\dsp \frac{1}{n^3+2} \lt  \frac{1}{n^3}.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Why is this series monotonic and bounded and therefore convergent?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Direct Comparison Test.</em> Suppose that each of <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> and
+        <m>\displaystyle{\sum_{n=k}^{\infty} b_n}</m> are series such that <m>0 \leq a_n \le b_n</m> for all integers <m>n \ge k</m>.
+        <ol>
+          <li>
+            <p>
+              If <m>\displaystyle{\sum_{n=k}^{\infty} b_n}</m> converges, then <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> converges.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> diverges, then <m>\displaystyle{\sum_{n=k}^{\infty} b_n}</m> diverges.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Apply the direct comparison test to each of these series.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=2}^\infty  \frac{1}{3^n+5}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=2}^\infty  \frac{1}{3^n-5}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{\sum_{n=3}^\infty  \frac{3}{n^2 \ln(n)}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{\sum_{n=3}^\infty  \frac{e}{5(n^5 + 32)}  }</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Limit Comparison Test
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Consider the series, <m>\displaystyle{\sum_{n=1}^{\infty} \frac{n}{2^n (3n-2)}}.</m> The terms converge to zero, so the <m>n^{th}</m> term test tells us nothing. It is not a geometric series either. It's not obvious what other series we might use the direct comparison test with, although that is a possibility. Still, each term of this series is the product of <m>\dsp{ \frac{1}{2^n}}</m> and <m>\dsp{ \frac{n}{3n-2}}</m> and we know that <m>\dsp \lim_{n \to \infty} \frac{n}{3n-2} = \frac{1}{3},</m> so for large values of <m>n,</m> the <m>n^{th}</m> term is approximately equal to <m>\dsp{ \frac{1}{2^n} \cdot \frac{1}{3} }</m>. Hence, our series behaves (for large <m>n</m>) a lot like a geometric series and that's a good intuitive reason to believe it converges. When we have a series like this that <q>looks like</q> a series that we know converges, in this case <m>\dsp \sum_{n=1}^\infty \frac{1}{3}\frac{1}{2^n}</m>, then if the limit of the ratio of the terms of the two series equals a positive number, then the series either both converge or both diverge. The next theorem makes this precise.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Limit Comparison Test.</em> Let <m>\{a_n \}_{n=k}^{\infty}</m> and <m>\{b_n \}_{n=k}^{\infty}</m> be sequences of positive terms such that <m>\displaystyle{\lim_{n \to \infty}\frac{a_n}{b_n} = c}</m> where <m>c</m> is a positive real number (i.e. <m>c=\infty</m> is not allowed). Then the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> and <m>\displaystyle{\sum_{n=k}^{\infty} b_n}</m> either both converge or both diverge.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Apply the limit comparison test to each series to determine if it converges or diverges.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=2}^\infty  \frac{1}{3^n-5}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=3}^\infty  \frac{3}{n + \pi}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \sin \Big(\frac{1}{n}\Big)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \Big(\frac{n+1}{2n+3}\Big) \Big(\frac{3^n}{5^n + 1}\Big)}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        In the real world of computer science and operations research, the <q>average</q> of a series is an important notion. Suppose we have a sequence, <m>\{ a_n \}_{n=1}^\infty</m> where <m>0 \leq a_n \leq 1</m> for all positive integers, <m>n.</m>
+        EXTRA<fn>A friend of mine who works in the defense industry called me up because his team needed an answer to this question.  I'd tell you what is was related to, but then I would have to kill you.</fn></p>
+
+      <p>
+        Consider the sequence given by
+        <me>
+          A_N = \frac{1}{N} \sum_{n=1}^N a_n.
+        </me>
+        <ol>
+          <li>
+            <p>
+              Suppose <m>a_1=a_2=a_3=\dots = 1</m> Does the sequence <m>\{ A_N \}_{N=1}^\infty</m> converge?  To what?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Suppose <m>a_1=1, a_2 =0, a_3= 1, \dots</m> Does the sequence <m>\{ A_N \}_{N=1}^\infty</m> converge?  To what?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Do you think that  <m>\{ A_N \}_{N=1}^\infty</m> converges no matter what <m>a_1, a_2, \dots</m> is?
+              If so give an argument, if not, give an example for <m>a_1, a_2, \dots</m> and
+              show that for this sequence the <m>A_n</m>'s do not converge.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Determine the convergence or divergence of the following series by using any of the previously stated tests.
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \frac{2}{3^n + n}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \frac{n^2-n +1}{2n^2 -n - 3}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=4}^{\infty} \frac{-2}{n^2-4n+3}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=4}^{\infty} \frac{1}{n!}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \cos(n \pi)}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Determine the convergence or divergence of each of the following series. If any of them converge, compute the number to which it coverges.
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty}{ {{|\sin(\frac{n \pi}{2})}|} \over {2^n}}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} (2n+1)^\frac{1}{n}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=2}^{\infty} \frac{n^2+2n+1}{3n-4}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{e^n}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+
