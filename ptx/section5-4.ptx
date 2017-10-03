@@ -1,0 +1,733 @@
+
+
+<section>
+  <title>Applications</title>
+  <p>
+    Integration has many applications in all the sciences. Here are a few we will consider. Integration can be used to find the length of a curve. Integration can be used to find the area between two curves, which is useful for computing the area of an oil spill as photographed from a plane. It can be used to derive the formulas for the volumes of objects like cones and to determine the volumes of other less ordinary objects. It can be used to find the work done in stretching a spring or pumping water out of an oil well. The key to all these problems is to first approximate the solution using a Riemann sum and then to take the limit as the number of divisions tends to infinity in order to obtain an integral that solves the problem. Restated, the key is the definition of the definite integral,
+    <me>
+      \dsp \int_a^b f(x) \ \ dx = \lim_{N \to \infty} \sum_{i=1}^N f(x_i) (x_i - x_{i-1}).
+    </me>
+  </p>
+
+  <p>
+    <em>Area Between Curves</em>
+    EXTRA<fn>Being on the Gulf Coast, I motivate the area between curves by drawing an oil spill on the board and asking how we might find the volume of this spill in order to determine what supplies our emergency management team needs to send.   Students generate good ideas <mdash /> digitize a photo or place a grid of lines over it and count the squares.  I foreshadow the notion of using interpolation to approximate the <q>top</q> of the spill with a function <m>f</m> and the <q>bottom</q> of the spill with a function <m>g</m> and then point out that the area of the spill would be the <m>\int_a^b f(x) \ dx - \int_a^b g(x) \ dx</m>, and the volume would be the thickness of the spill times this area.   My goal in such applied discussions is that by foreshadowing numerical mathematics such as finding functions that approximate a set of points,  I will pique their interest in future classes.</fn></p>
+
+  <example>
+    <statement>
+      <p>
+        Discuss using area between curves to approximate the volume of an oil spill, followed by computing the area between <m>y=x^2+1</m> and <m>y=2x+1</m> by adding up the areas of rectangles to define an integral, thus illustrating the central theme of the section.
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        Consider the curves <m>y=x^3</m> and <m>y=x.</m>
+        <ol>
+          <li>
+            <p>
+              Graph these curves and shade the regions bounded by these curves.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Draw a few rectangles and write a sum that estimates the area between these curves.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Set up and evaluate the definite integrals that represent the area of each of the shaded regions.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use techniques in the previous problem to compute the areas of the regions bounded by these curves.
+        <ol>
+          <li>
+            <p>
+              <m>y = x^2+4</m> and <m>x+y=6</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x=y^2</m> and <m>y=x-2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x = \cos(y)</m> and <m>x=0</m> from <m>y=0</m> to <m>y=\pi</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch the area bounded by <m>y=x^2</m>, <m>y=0</m>, and <m>x=2.</m> Compute the area of this region by computing <m>\dsp \int_0^2 x^2 \ dx.</m> Now fill in the blanks to integrate this along the y-axis: <m>\dsp \int_0^2 x^2 \ dx = \int_0^4 \_\_\_\_ \ dy.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Arc Length</em>
+  </p>
+
+  <p>
+    Every one who rides a skateboard knows that you can scrub speed off by slaloming back and forth as you proceed down a hill. In doing so, you travel a greater distance than the speed freak who takes a straight line. If we have a road of length <m>2 \pi</m> and one person takes the straight line path while a second follows the sine curve, how much farther does the second person travel?
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = \sin(x)</m> from <m>x=0</m> to <m>x=2 \pi.</m>
+        <ol>
+          <li>
+            <p>
+              Consider the partition of <m>[0,2\pi],</m> defined by <m>x_0 = 0,\ x_1 = \pi/2,\ x_2 = \pi,\ x_3 = 3\pi/2 , \ x_4 = 2\pi.</m> Approximate the length of the curve by summing the lengths of the straight line segments from <m>\ (x_{i-1}, f(x_{i-1}))</m> to <m>\ (x_{i}, f(x_{i}))</m> for <m>i=1,2,3,4.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Generalize this so that the partition has <m>N</m> divisions and take the limit as <m>N \to \infty</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        A function <m>f</m> is said to be {{continuously differentiable}} on <m>[a, b]</m> if its derivative <m>f'</m> is continuous on <m>[a, b]</m>. If <m>f</m> is continuously differentiable on <m>[a,b]</m>, then its graph on the interval <m>[a, b]</m> is called a {{smooth curve}}.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose the function <m>f</m> and its derivative <m>f'</m> are continuous on <m>[a, b]</m>. Let <m>s</m> be the arc length of the curve <m>f</m> from the point <m>(a, f(a))</m> to <m>(b, f(b))</m>.
+        <ol>
+          <li>
+            <p>
+              Let <m>a = x_0 \lt  x_1 \lt  x_2 \lt  \cdots \lt  x_n = b</m> be a partition of <m>[a, b]</m>. 
+
+              Show that <m>\displaystyle{s \approx \sum_{i=1} ^n (x_i-x_{i-1}) \sqrt{1 + \Big(\frac{  f(x_i) - f(x_{i-1})}  {x_i - x_{i-1}}  \Big)^2 }   }</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>\dsp s = \int_a ^b \sqrt{1 + [f'(x)]^2}\; dx</m> by using the Mean Value Theorem for differentiation.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The result you just proved can be summarized in the following theorem.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Arc Length Theorem.</em> If <m>s</m> is the arc length of the smooth curve <m>f</m> on the interval <m>[a, b]</m>, then <m>\dsp s = \int_a ^b \sqrt{1 + [f'(x)]^2}\; dx</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        For each of the following curves, sketch its graph and find the length of the arc with the indicated endpoints.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp y=x^{\frac{3}{2}}</m> from the point <m>(0,0)</m> to the point <m>(4,8).</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp y=\frac{1}{4}x^3+\frac{1}{3}x^{-1}+2</m> from the point where <m>x = 2</m> to the point <m>x = 5.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x^2=(y+1)^3</m>from the point where <m>x = 0</m> to the point where <m>x=3 \sqrt{3}.</m> You may integrate with respect to <m>x</m> or <m>y.</m>  Which is easier?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Work and Force</em>
+  </p>
+
+  <p>
+    <em>Hooke's Law</em> states that if a spring with force constant <m>k</m> is stretched a distance of <m>x</m> units, then the spring will exert a force of <m>F(x) = -kx</m>. The constant <m>k</m> is measured in either Newtons/meter or pounds/foot depending on whether we are using the metric or English system. The <em>work</em> done by a force acting on an object is defined to be force times the distance traveled (displacement).
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Imagine a spring with natural length of 6 inches. A force of 18 pounds stretches the spring 0.5 inches.
+        <ol>
+          <li>
+            <p>
+              Use Hooke's Law to determine the spring's coefficient, k.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Let <m>2 = x_0 \lt  x_1 \lt  x_2 \lt  \dots \lt  x_{N-1} \lt  x_N = 4</m> and explain why <m>\sum_{i=1}^N -k x_i (x_i - x_{i-1})</m> approximates the work done in stretching the spring from 8 inches to 10 inches.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\int_2^4 -kx \ dx</m> and explain why your answer is exactly the work done in stretching the spring from 8 inches to 10 inches.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Newton's Second Law of Motion</em> states that force equals mass times acceleration, <m>F=ma</m>. In the SI system the density of water is 1000 kg/<m>{{m^3}}</m> and the acceleration due to gravity is 9.81 m/<m>{{sec^2}}</m>. Therefore the weight of 1 <m>{{m^3}}</m> of water =(1000)(9.81) N/<m>{{m^3}}</m> = 9810 N/<m>{{m^3}}</m>. In the British system, the density of water is 1.94 slugs/<m>{{ft^3}}</m> and the acceleration due to gravity is 32.2 ft/<m>{{sec^2}}</m>. Therefore the weight of water is approximately 62.5 lb/<m>{{ft^3}}</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        A cylindrical tank is 14 m across the top, 10 m deep and filled to a height of 8 m with water.
+        <ol>
+          <li>
+            <p>
+              Subdivide the water's depth so that <m>2 = x_0 \lt  x_1 \lt  x_2 \lt  \dots \lt  x_{N-1} \lt  x_N = 10</m> and explain why <m>\dsp 25 \pi (x_i - x_{i-1})</m> is the volume of the <m>i^{th}</m> cylindrical slab of water.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Explain why <m>\dsp 62.5 \cdot 49  \pi  (x_i - x_{i-1})</m> is the weight of this cylindrical slab of water.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Explain why <m>\dsp \sum_{i=1}^N 3062.5 \pi x_i  (x_i - x_{i-1})</m>  approximates the work done to pump the water to the top of the tank.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_2^{10} 3062.5   \pi  x \ dx</m> and explain why this is the work required to pump the water.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A tank in the form of an inverted right-circular cone (think ice-cream cone) is 12 m across the top, 10 m deep and filled to a height of 8 m with water.
+        <ol>
+          <li>
+            <p>
+              Subdivide the water's depth so that <m>2 = x_0 \lt  x_1 \lt  x_2 \lt  \dots \lt  x_{N-1} \lt  x_N = 10</m> and compute the volume of the <m>i^{th}</m> approximately cylindrical slab of water as if it were a perfect cylinder.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the weight of this approximately cylindrical slab of water.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Write down a Riemann sum that approximates the work done in pumping the water to the top of the tank.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Write down and compute an integral that represents the work required to pump the water out of the tank.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A cable 150 ft long and weighing 5 lb/ft is hanging vertically down into a well. If a metal bucket of 50 lb is suspended from the lower end, find the work done in pulling the cable and the empty bucket up to the top of the top of the well.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Using the data from the previous problem, if the bucket can hold 20 <m>{{ft^3}}</m> of water, find the work done in pulling the cable and the bucket full of water up to the top of the well.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Volumes of Solids</em>
+    EXTRA<fn>I confess to having skipped this section many semesters when time was tight, even though I really enjoyed and gained a lot from it as a student.</fn></p>
+
+  <p>
+    We now develop a technique that will allow us to compute volumes of various three dimensional objects. A <em>solid</em> is a three dimensional object along with its interior; think bowling ball, not balloon. When we computed areas, we began with Riemann sums to approximate the area and as the number of rectangles tended to infinity, the integral expression turned out to be nothing more than integrating over the height of the function at each point. That is,
+    <me>
+      \lim_{n \to \infty} \sum_{i=1}^n f(x_i) (x_i - x_{i-1}) = \int_a^b f(x) \ dx.
+    </me>
+  </p>
+
+  <p>
+    Thus what we integrated was simply the height of the line segment from <m>(x,0)</m> to <m>(x,f(x))</m>. Intuitively, we might think of this as adding up infinitely many line lengths to get the area. Of course, the only <em>mathematically valid</em> way to think of this is as the limit of sums of areas of rectangles. The same idea applies to solids. To be precise, we need to slice the volume into <m>n</m> pieces and sum the volumes of each of the <m>n</m> pieces. Then we would take the limit as <m>n \to \infty.</m> Intuitively, we might think of slicing the solid into infinitely many cross sections and adding up the area of all these cross sections. The volume of a solid is the integral of the function that tells us the area of each cross section. Let's call this the <em>method of slicing</em>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch the region bounded by the lines <m>\dsp y=\frac{1}{2}x</m>, <m>y=0</m>, and <m>x = 4</m> and the solid cone obtained by rotating this region about the x-axis.
+        <ol>
+          <li>
+            <p>
+              Draw a two dimensional slice of this solid parallel to the base with center at the point <m>(x,0)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find the function <m>A(x) = \dots</m> that gives the area of this two dimensional slice.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_0^4 A(x) \ dx</m> to determine the volume of your solid.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch a pyramid whose base is a square of length <m>4</m> and whose height is <m>10.</m>
+        <ol>
+          <li>
+            <p>
+              Write a function <m>A(h)= \dots</m> that gives the area of the slice that is parallel to the base and is  at height <m>h.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \int_0^{10} A(h) \ dh</m> to determine the volume of the pyramid.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the volume <m>(
+        <me>
+          \dsp V=\frac{1}{3}\pi r^2 h
+        </me>
+        )</m> of the cone with a circular base of radius <m>r</m> and a height of <m>h.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the volume <m>(
+        <me>
+          \dsp V=\frac{1}{3} b^2 h
+        </me>
+        )</m> of the pyramid with a square base of side length <m>b</m> and a height of <m>h.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the volume of the solid whose base is the disk <m>x^2 + y^2 \le 4</m> and whose cross sections are squares perpendicular to the diameter of the base through <m>(-2, 0)</m> and <m>(2, 0)</m>. Can you sketch this?
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The method of slicing can be used to find the volumes of <em>surfaces of revolution</em> which are solids created by taking a two dimensional region (an area) and rotating this region about a line to form a three dimensional solid. For example, take the unit circle and spin it about the <m>x</m>-axis and you get a sphere along with its interior. Or, take a circle of radius one centered at (2,0) and spin it around the <m>y</m>-axis and you get a donut.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Find the volume obtained by rotating the region bounded by <m>f(x) = x^3-x</m> and <m>y=0</m> about the x-axis.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Sketching this, we get two solids. Looking at the portion where <m>x>0</m>, we see something shaped like a lime with ends at <m>(0,0)</m> and <m>(1,0)</m>. Choose a value for <m>x</m> between <m>0</m> and <m>1</m>. If we think about slicing the lime parallel to the <m>y</m>-axis and through the point <m>(x,0)</m>, then the cross section (slice) will be a circle and the area of this circle is <m>A = \pi r^2 = \pi (f(x))^2</m> since the radius of the circle is <m>f(x).</m> Therefore by the method of slicing, the volume of the solid <m>S</m> is given by
+    <me>
+      V = \pi \int_a ^b [f(x)]^2 \; dx.
+    </me>
+  </p>
+
+  <p>
+    This method of finding the volume of revolution is called the <em>disk method</em> since intuitively we are adding up the area of an infinite number of disks.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the volume of the <q>lime</q> in the preceding example.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    There is nothing special about the x-axis.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Consider the region bounded by <m>y=x^3</m>, <m>x=0</m>, and <m>y=27.</m> Sketch the solid created by rotating this region about the <m>y-axis</m>. Compute the area function <m>A(y) = \dots</m> that tells the area of one horizontal slice at height <m>y</m> (this would be a circle with center the point <m>(0,y)</m>). Now compute the volume of this solid of revolution, <m>\dsp {V = \pi \int_0^{27} A(y) \ dy}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <ol>
+        <li>
+          <p>
+            Sketch the region bounded by the curves <m>y = x^2 +1</m>, <m>x = -1</m>, <m>x = 2</m>, and <m>y=-1.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Sketch the solid of revolution generated by revolving this region about the line <m>y = -1.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Let <m>-1 \lt  x \lt  2</m> and sketch the slice of the solid at <m>x</m> that is perpendicular to the line <m>y=-1.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Determine the area of this slice, <m>A(x).</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Integrate this area function from <m>x=-1</m> to <m>x=2</m> to determine the volume of the solid.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the volume of the solid generated by rotating the region bounded by <m>x = 0</m>, <m>y=6-x</m>, and <m>y=3</m> around the <m>x</m>-axis.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>a</m> and <m>b</m> are positive numbers with <m>a \lt  b.</m> Find the volume of the solid generated by rotating about the <m>x</m>-axis the region bounded by: <m>x = 0</m>, <m>y=x</m>, <m>y=a</m>, and <m>y = b.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the volume of the solid generated by revolving about the <m>y</m>-axis the region bounded by the line <m>y = 2x</m> and the curve <m>y = x^2.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Now that we know this method of slicing up the surfaces, one might ask <q>Is this the only way we can slice up the surface to find the volume?</q> The answer is that there are lots of ways to slice up the surfaces. Let's look at another way.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find the volume obtained by rotating the region bounded by <m>f(x) = x-x^4</m> and the x-axis about the x-axis.
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Find the volume obtained by rotating around the y-axis the region bounded by <m>f(x) = x-x^4</m> and the x-axis.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    To use the disk method, we would need to rewrite the function <m>f</m> which has as its independent variable, <m>x</m>, as a function <m>g</m> which has as its independent variable, <m>y.</m> Go ahead and try <mdash /> if you can, you can skip the rest of this section! If you can't, read on!
+  </p>
+
+  <p>
+    We will still be using the method of slicing, but we will use a <q>circular knife</q> like a cookie cutter so that instead of circular slices, we will have cylindrical slices. We will add up the surface area of each cylindrical slice, just as before we added up the areas of each circular slice.
+  </p>
+
+  <p>
+    Choose a value <m>x</m> between <m>0</m> and <m>1</m> and draw the line segment from <m>(x,0)</m> to <m>(x,f(x)).</m> Now rotate this line about the y-axis. Do you see that this is a <q>cylindrical slice</q> of your solid? If we consider all such slices with <m>x</m> ranging from <m>0</m> to <m>1</m>, then integrating the function that gives the surface area of each slice will (again) yield the volume of our solid. But what exactly is the surface area of our slice? The radius of the cylinder is <m>x</m> and the height is <m>f(x)</m> so the area must be <m>A(x) = 2 \pi x f(x).</m> And the volume will be the integral of this quantity,
+    <me>
+      V = 2 \pi \int_0 ^1 x f(x) \; dx = 2 \pi \int_0 ^1 x (x-x^4) \; dx = \frac{\pi}{3}.
+    </me>
+  </p>
+
+  <p>
+    This method is called the {{shell method}} or the <em>cylindrical shell method</em>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find the volume of the solid generated by revolving about the <m>x</m> axis the region bounded by the line <m>y = \sqrt{x}</m> the <m>x</m> axis, and the line <m>x = 4</m> using
+        <ol>
+          <li>
+            <p>
+              the shell method, and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the disk method.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Sometimes the best way to get a deep understanding of a concept is to take a simple problem and work it in every possible way. The next problem is just that sort of problem.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Consider the region in the first quadrant bounded by <m>y=x^2,</m> the y-axis, and <m>y=4.</m> Find the volume of the solid obtained by rotating this region about:
+        <ol>
+          <li>
+            <p>
+              the y-axis using the disk method,
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the y-axis using the shell method,
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the x-axis using the disk method, and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the x-axis using the shell method.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use any method to find the volume of the solid generated by revolving about the <m>y</m>-axis the region bounded by the curves <m>y = 8-x^2</m> and the curve <m>y = x^2</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Center of Mass</em>
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        <term>One-dimensional Moments (Discrete Case)</term> Place <m>n</m> weights with masses <m>m_1, m_2, \dots, m_n</m> at the points <m>(x_1,0), (x_2,0), \dots, (x_n,0)</m> on the x-axis.
+      </p>
+
+      <p>
+        The <term>mass</term> is
+        <me>
+          M = \displaystyle{\sum_{i=1}^n m_i} \;\;\;,
+        </me>
+        the <term>moment of mass</term> is
+        <me>
+          M_0 = \displaystyle{\sum_{i=1}^n x_im_i} \;\;\;,
+        </me>
+        and the <term>center of mass</term> is
+        <me>
+          \overline{x} = \frac{\sum_{i=1} ^n x_im_i}{\sum_{i=1}^n m_i}\;\;\;,
+        </me>
+        which is the point on the x-axis where everything would balance.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        <term>One-dimensional Moments (Continuous Case).</term> Let <m>L</m> be the length of a rod whose left hand endpoint is at the
+        origin of the <m>x</m> axis and let <m>\rho</m> be a continuous function on <m>[0, L]</m> such that <m>\rho(x)</m> is the density at <m>x \in [0, L]</m>.
+      </p>
+
+      <p>
+        The <term>mass</term> is
+        <me>
+          \dsp M = \int_0 ^L \rho(x) \;\ dx \;\;\;,
+        </me>
+        the <term>moment of mass</term> is
+        <me>
+          \dsp M_0 = \int_0 ^L x \rho(x) \; dx\;\;\;,
+        </me>
+        and the <term>center of mass</term> is
+        <me>
+          \overline{x}=\frac{\int_0 ^L x \rho(x) \; dx}{\int_0 ^L \rho(x) \; dx}\;\;\;.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Find the moment of mass and the center of mass of each of the following systems.
+        <ol>
+          <li>
+            <p>
+              <m>m_1=4</m> at <m>x_1=-3</m>; <m>m_2=1</m> at <m>x_2=-1</m>; <m>m_3=2</m> at <m>x_3 =3</m>; <m>m_4 =1</m> at <m>x_4=-5</m>; <m>m_5=5</m> at <m>x_5=-4</m>; <m>m_6=6</m> at <m>x_6=1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              A rod whose length is 5 meters with linear density <m>3x+2</m> kg/m where <m>x=0</m> is the left-hand endpoint of the rod.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        <term>Two-dimensional Moments (Discrete Case).</term> Assume that the thickness and the weight of a sheet of material are negligible and there are <m>n</m> particles with mass <m>m_1, m_2, \cdots m_n</m> located at <m>(x_1, y_1),</m> <m>(x_2, y_2), \cdots,</m> <m>(x_n, y_n)</m> on the <m>xy</m> plane. Then the <term>total mass</term> of the system (<m>M</m>), the <term>total moment with respect to the <m>x</m> axis</term> (<m>M_x,</m>), the <term>total moment with respect to the <m>y</m> axis</term> (<m>M_y</m>), and the <term>center of mass of the system</term> (<m>(\overline{x}, \overline{y})</m>), are defined by
+        <me>
+          \dsp M= \sum_{i=1} ^n m_i \;\;\;,
+        </me>
+        <me>
+          \dsp (M_x,M_y) = (\sum_{i=1}^n y_i m_i, \sum_{i=1}^n x_i m_i)\;\;\;, \mbox{ and }
+        </me>
+        <me>
+          \dsp (\overline{x},\overline{y}) = (\frac{M_y}{M}, \frac{M_x}{M})\;\;\;.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        <term>Two-dimensional Moments (Continuous Case).</term> A <term>lamina</term> is a two dimensional material of continuously
+        distributed mass. A <term>homogeneous lamina</term> is a lamina with constant area density. Assume that a lamina <m>L</m> is bounded by the curve <m>y=f(x)</m>, the <m>x</m> axis, and the lines <m>x = a</m> and <m>x = b</m> such that <m>f</m> is continuous on <m>[a, b]</m>, <m>f(x) \ge 0</m> for all <m>x</m> in <m>[a, b]</m>, and the <term>area density</term> function <m>\rho</m> is also continuous on <m>[a, b]</m>. Then the <term>total mass</term> of the system (<m>M</m>), the <term>total moment with respect to the <m>x</m> axis</term> (<m>M_x,</m>), the <term>total moment with respect to the <m>y</m> axis</term> (<m>M_y</m>), and the <term>center of mass of the system</term> (<m>(\overline{x}, \overline{y})</m>), are defined by
+        <me>
+          \dsp M= \int_a ^b \rho(x) f(x) \; dx\;\;\;,
+        </me>
+        <me>
+          \dsp (M_x,M_y) = \left( {1 \over 2} \int_a ^b \rho(x)[f(x)]^2 \; dx, \; \int_a ^b x \rho(x) f(x) \; dx \right)\;\;\;, \mbox{ and }
+        </me>
+        <me>
+          \dsp (\overline{x},\overline{y}) = (\frac{M_y}{M},\frac{M_x}{M})\;\;\;.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Find the total mass and center of mass of the collection of objects: <m>m_1=4</m> at <m>(-1, 3)</m>; <m>m_2=1</m> at <m>(0, 0)</m>; <m>m_3=2</m> at <m>(2,-4)</m>; <m>m_4 =1</m> at <m>(4, -3)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the total mass and center of mass for a lamina bounded by the curve <m>y=x^2-4</m> and the <m>y=3x+6</m> with the area density function <m>\rho(x)=x+1</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

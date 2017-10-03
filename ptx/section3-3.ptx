@@ -1,0 +1,225 @@
+
+
+<section>
+  <title>The Chain Rule</title>
+  <p>
+    We can take the derivative of <m>\dsp f(x) = \sqrt{x}</m> and <m>g(x) = 5x+1</m> easily, but to take the derivative of <m>\dsp h(x) = \sqrt{5x+1},</m> we would need to return to the limit definition for the derivative. We can take the derivative of <m>f(x) = \sin(x)</m> and g(x) = <m>x^2</m> easily, but to take the derivative of <m>h(x) = \sin(x^2)</m> we would again return to the limit definition. The <em>chain rule</em> remedies this problem by giving a rule for computing the derivatives of functions that are the composition of two functions.
+  </p>
+
+  <p>
+    <em>Algebra Reminder.</em> The function <m>h(x) = \sqrt{5x+1}</m> is the composition of two functions <m>f(x) = \sqrt{x}</m> and <m>g(x) = 5x + 1</m> since we may write <m>f(g(x)) = f(5x +1) =  \sqrt{5x+1} = h(x).</m> The function <m>h(x) = \sin(x^2)</m> is the composition of <m>f(x) = \sin(x)</m> and <m>g(x) = x^2.</m> If <m>h</m> equals <m>f</m> composed with <m>g</m>, we write <m>h = f \circ g</m> and <m>h(x) = f(g(x))</m> for all numbers <m>x</m> in the domain of <m>h.</m>
+  </p>
+
+  <theorem xml:id="chainrule">
+    <statement>
+      <p>
+        <em>The Chain Rule.</em> If <m>f</m> and <m>g</m> are differentiable functions and <m>h(x) = f(g(x))</m>, then <m>h'(x) = f'(g(x))\cdot g'(x)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <em>A sort-of proof.</em> Assume that each of <m>f</m> and <m>g</m> is a differentiable function and that <m>h(x) = f(g(x))</m>. From the limit definition of the derivative of <m>h</m>, we know that
+    <me>
+      h'(x) = \lim_{t \rightarrow x} \frac{h(t)-h(x)}{t-x}.
+    </me>
+  </p>
+
+  <p>
+    Since <m>h(x) = f(g(x))</m>,
+    <me>
+      h'(x) = \lim_{t \rightarrow x} \frac{f(g(t))-f(g(x))}{t-x}.
+    </me>
+  </p>
+
+  <p>
+    Since
+    <me>
+      \frac{g(t)-g(x)}{g(t)-g(x)} = 1 \mbox{ as long as g(t) }  \neq \mbox{ g(x) } ,
+    </me>
+    by using the <em>Product Rule for Limits</em> we may write,
+    <me>
+      h'(x) =
+      \lim_{t \rightarrow x} \frac{f(g(t))-f(g(x))}{g(t)-g(x)} \cdot
+      \frac{g(t)-g(x)}{t-x} = \lim_{t \rightarrow x}
+      \frac{f(g(t))-f(g(x))}{g(t)-g(x)}  \cdot \lim_{t \rightarrow x}
+      \frac{g(t)-g(x)}{t-x}.
+    </me>
+  </p>
+
+  <p>
+    Since <m>g</m> is differentiable, we know by <xref ref="diffcont">Theorem</xref> that <m>g</m> is continuous, so by the definition of continuity, we have <m>\dsp \lim_{t \rightarrow x} g(t)=g(x).</m> Thus, in the first limit, we can replace <m>t \rightarrow x</m> with <m>g(t) \rightarrow g(x).</m>
+    <me>
+      h'(x) = \lim_{g(t) \rightarrow g(x)} \frac{f(g(x))-f(g(t))}{g(x)-g(t)} \cdot \lim_{t \rightarrow x} \frac{g(x)-g(t)}{t-x}.
+    </me>
+  </p>
+
+  <p>
+    The right-hand side of this equation is the product of two limits. The second limit is the definition of <m>g'(x)</m>. Substituting <m>A = g(t)</m> and <m>B = g(x)</m> into the first limit, we may write this as,
+    <me>
+      \lim_{A \rightarrow B} \frac{f(B)-f(A)}{B-A}.
+    </me>
+  </p>
+
+  <p>
+    But this is just <m>f'(B)</m>, or <m>f'(g(x))</m>, so we have shown that
+    <me>
+      h'(x) = f'(g(x))\cdot g'(x).
+    </me>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>h(x) = \sqrt{7+\sin(x)}.</m>
+        <ol>
+          <li>
+            <p>
+              Find functions f and g such that <m>h = f \circ g.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>f'.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>f' \circ g.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>g'.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the Chain Rule to compute <m>h'.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l22">
+    <statement>
+      <p>
+        Let <m>h(x) = \cos(x^2)</m>.
+        <ol>
+          <li>
+            <p>
+              Find functions f and g such that <m>h = f \circ g.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>f'.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>f' \circ g.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>g'</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the Chain Rule to compute <m>h'</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Given that <m>f(x) = (x^{5/2} - 4x^{1/3}  + 365 )^{42}</m>, compute <m>f'.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        If <m>y = (\cos(x^2) )^2</m>, compute <m>y'</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\dsp y = \left( \frac{1-x^2}{1+x^2} \right)^{10}</m> and compute <m>y'</m> using the Chain Rule first and then the Quotient Rule. Check your answer by rewriting <m>\dsp y = \frac{(1-x^2)^{10}}{(1+x^2)^{10}}</m> and computing <m>y'</m> using the Quotient Rule first and then the Chain Rule.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="anti1">
+    <statement>
+      <p>
+        Find a function f with derivative <m>f'(x) = 5x + 3.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the equation of the tangent line to the curve <m>y = (x + 1/x)^3</m> at the point where <m>x = -1</m>. Graph the curve and the line.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Assume <m>a, b, c</m> and <m>d</m> are real numbers and <m>f(w) = a (\cos(wb) )^2 + c(\sin(wd) )^2.</m> Compute <m>f'</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the real number m such that <m>y = m \cos(2t)</m> satisfies the differential equation <m>y'' + 5y = 3\cos(2t).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Given that <m>f'(x) = \sqrt{2x+3},</m> <m>g(x) = x^2 + 2</m>, and <m>F(x) = f(g(x))</m>, compute <m>F'.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Given that <m>\dsp f'(x) = \frac{x}{x^2-1}</m> and <m>g(x) = \sqrt{2x-1}</m>, compute <m>F'</m> where <m>F(x) = f(g(x))</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

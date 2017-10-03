@@ -1,0 +1,264 @@
+
+
+<section>
+  <title>Average Speed and Velocity</title>
+  <p>
+    The <em>average speed</em> of an object that has traveled a distance <em>d</em> in time <em>t</em> is <em>v = d/t</em>. The terms velocity and speed are interchangeable except that velocity may be negative to indicate direction. For example, if a rock is thrown in the air, we would typically assign a positive velocity on the way up and a negative velocity on the way down.
+  </p>
+
+  <problem xml:id="l2">
+    <statement>
+      <p>
+        A car goes from Houston, Texas to Saint Louis, Missouri (a distance of 600 miles). The trip takes 9 hours and 28 minutes. What was the average speed of the trip? What is one true statement that can you make about the time(s) (if any) at which the car moved at this speed?
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l3">
+    <statement>
+      <p>
+        Robbie the robot is walking down a road in a straight line, away from a pothole. <xref ref="t1">Table</xref> gives the distance between Robbie and the pothole at different times, where the time is measured in seconds and distance is measured in feet. Write a formula that expresses Robbie's distance from the pothole as a function of time. Use <m>R</m> to represent distance and <m>t</m> to represent time in your formula. This function will be called Robbie's position function.
+      </p>
+    </statement>
+  </problem>
+
+  <table xml:id="t1" >
+    <caption>Position Table</caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>Time (sec)</cell>
+        <cell>Position (feet)</cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>0</m></cell>
+        <cell><m>2</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>1</m></cell>
+        <cell><m>3</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>2</m></cell>
+        <cell><m>10</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>3</m></cell>
+        <cell><m>29</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>4</m></cell>
+        <cell><m>66</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>5</m></cell>
+        <cell><m>127</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>relation</term> is a collection of points in the plane.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>function</term> is a collection of points in the plane with the property that no two points have the same first coordinates. The set of all first coordinates of these points is referred to as the <term>domain</term> of the function and the set of all second coordinates of these points is referred to as the <term>range</term> of the function.
+        EXTRA<fn>Almost always during the first ten problems, there will be questions or problems that provide natural opportunities to discuss just-in-time basic concepts including (1) the definition of a function including domain and range (2) the distinction between a function (a collection of points), the graph of the function, and an equation that defines a function (3) useful graphing techniques such as translations, reflections, and symmetry.</fn></p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Functions may be expressed in many different forms.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The function
+    <me>
+      f = \{ (x,y) : y = 6x + 2 \} =
+      \{ \dots , (-1,-4), (0, 2), (1,8), (\pi, 6\pi+2), \dots  \}
+    </me>
+    might be expressed via the short-hand,
+    <me>
+      y = 6x + 2  \; \; \mbox{  or  }   \; \; f(x) = 6x +2 \; \;  \mbox{   or   }   \; \;  f(z) = 6z + 2.
+    </me>
+  </p>
+
+  <p>
+    The function is not the written equation, rather it is the set of points in the plane that satisfy the equation. While every function is a relation, every relation is not necessarily a function. Examples of relations that are not functions would be the vertical line,
+    <me>
+      \{ (x,y) : x = 6 \}\; \; \mbox{written in short-hand as}  \; \; x=6,
+    </me>
+    and the circle,
+    <me>
+      \{ (x,y) : x^2 + y^2 = 9 \} \; \; \mbox{written in short-hand as}  \; \;x^2 + y^2 =9.
+    </me>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Express Robbie's position function in the three different forms just discussed. Graph Robbie's position function, labeling the axes and several points.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Interval and Set Notation.</em> We use <m>\re</m> to denote the set of all real numbers and <m>x \in S</m> to mean that <m>x</m> is a member of the set <m>S.</m> If <m>a \in \re</m> and <m>b \in \re</m> and <m>a \lt  b</m> then the <em>open interval</em> <m>(a,b)</m> denotes the set of all numbers between <m>a</m> and <m>b.</m>
+    For example,
+    <ol>
+      <li>
+        <p>
+          <m>(a,b) = \{ x \in \re : a \lt  x \lt  b \}</m> <mdash /> an open interval
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>[a,b] = \{ x \in \re : a \leq x \leq b \}</m> <mdash /> a closed interval
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(a,b] = \{ x \in \re : a \lt  x \leq b \}</m> <mdash /> a half-open interval
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    When convenient, we'll use the notation <m>(-\infty, b)</m> to mean all numbers less than <m>b,</m> even though <m>-\infty</m> is not a real number. We won't define <m>\infty</m> or <m>-\infty</m> in this class, although you can read a bit about them in <xref ref="appreal">Appendix</xref>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch the graph of each of the following and state the domain and range of each.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp f(x) = \frac{1}{x-1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>g(x) = \sqrt{4-x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x = y^2 + 1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>i(x) = -(x-2)^3 +4</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The next several problems deal with Robbie's motion where <m>R(t)</m> represents Robbie's distance from the pothole in feet at time <m>t</m> in seconds.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Assume c is a positive number and compute <m>R(3)</m> and <m>R(c).</m> Write a sentence that says what <m>R(3)</m> means. What does <m>R(c)</m> mean?
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l9">
+    <statement>
+      <p>
+        Compute the value of <m>R(5) - R(3).</m> What is the physical (real world, useful) meaning of this number? Assume u and v are positive numbers and compute <m>R(u) - R(v).</m> What is the physical meaning of
+        <m>R(u)-R(v)?</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following ratios and explain in detail their physical meaning. Assume that <m>u</m> and <m>v</m> are positive numbers and <m>u > v.</m>
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle{ \frac{R(5)-R(3)}{5-3}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{ \frac{R(u)-R(v)}{u-v}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Assuming that the function you found is valid for all times <m>t > 4,</m> where is Robbie when the time is <m>t=5</m> seconds? <m>t=6</m> seconds? <m>t=5.5</m> seconds? When is Robbie <m>106</m> feet from the pothole?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Recall from <xref ref="l2">Problem</xref> that the distance from Houston, Texas to Saint Louis, Missouri is 600 miles. A car goes from Houston to Saint Louis traveling at 65 mph for the first 22 minutes, accelerates to 95 mph, and remains at that speed for the rest of the trip. Estimate the average speed of the trip. Explain whether your answer is exact or an approximation. EXTRA<fn>This problem is intentionally ill-posed and provides a good opportunity for me to explain to you how I <q>lecture</q> reactively, in a way that may seem arbitrary to the students but is actually carefully orchestrated to foreshadow concepts and material.  Students typically work this problem under the assumption that the car accelerated from 65 to 95 in 0 seconds.  After presentation and questions, if this has not been noted by the presenter or the class I'll ask, <q>At what time did the car travel at that average speed?</q>  This foreshadows the Mean Value Theorem and allows me to use Socratic-style questioning to encourage discovery of the ill-posed nature of the problem.  After a string of questions, I'll praise the students who realize the impossibility of such a scenario.  To further illustrate the concept I will graph the velocity function and ask if we could add assumptions to make this a more realistic problem.  I'll leave the class with this open-ended challenge, labeling it as a starred problem and saying I'd be happy to see any progress.  One semester a student worked on this problem for months, first assuming constant acceleration over a one-second period and then realizing that this makes the acceleration discontinuous.  He then created a realistic acceleration curve and presented his work at the Sectional MAA conference.  Such open-ended problems are great for the inquiring minds and model the problems of industry where we take a rough cut at the problem first and then try to model a more realistic problem.</fn></p>
+    </statement>
+  </problem>
+</section>
+

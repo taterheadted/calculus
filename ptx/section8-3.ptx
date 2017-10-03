@@ -1,0 +1,366 @@
+
+
+<section>
+  <title>Polar Coordinates</title>
+  <p>
+    Like the Cartesian (rectangular) coordinate system that you are familiar with, the polar coordinate system is a way to specify the location of points in the plane. Some curves have simpler equations in polar coordinates, while others have simpler equations in the Cartesian coordinate system.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Convert a few points from polar coordinates to rectangular coordinates and vice-versa <mdash /> perhaps <m>(3,4)</m>, <m>(0,1)</m>, <m>(5\pi/6, 2)</m>, and <m>(3\pi/2,-3)</m>. Convert a few equations from polar to rectangular coordinates and vice-versa <mdash /> perhaps <m>5x-3y=9</m>, <m>3x^2=y</m>, <m>r = 2\sin(\theta)</m>, and <m>r=4</m>.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        Given a point <m>P</m> in the plane we may associate <m>P</m> with an ordered pair <m>(r, \theta)</m> where <m>r</m> is the distance from <m>(0,0)</m> to <m>P</m> and <m>\theta</m> is the angle between the <m>x-</m>axis and the ray <m>\overrightarrow{OP}</m> as measured in the counter-clockwise direction. The pair <m>(r, \theta)</m> is called a <term>polar coordinate representation</term> for the point <m>P</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <em>Warning.</em> There are many polar coordinate representations for a point. For example, if <m>(r, \theta)</m> is a polar coordinate representation for some point in the plane, then by adding <m>2\pi</m> to the angle, <m>(r, \theta + 2\pi)</m> is a second polar coordinate representation for the same point. We also allow <m>r \leq 0</m> so that by negating <m>r</m> and adding <m>\pi</m> to the angle, <m>(-r, \theta + \pi)</m> is a third polar coordinate representation for the same point.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Plot the following points in the polar coordinate system and find their coordinates in the Cartesian coordinate system.
+        <ol>
+          <li>
+            <p>
+              <m>(1, \pi)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \Big(3, \frac{5 \pi}{4}\Big)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \Big(-3, \frac{\pi}{4}\Big)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \Big(-2, \frac{- \pi}{6}\Big)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="polar1">
+    <statement>
+      <p>
+        Suppose <m>(r, \theta)</m> is a point in the plane in polar coordinates and <m>(x,y)</m> are the coordinates in the Cartesian coordinate system. Write formulas for <m>x</m> and <m>y</m> in terms of <m>r</m> and <m>\theta</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="polar2">
+    <statement>
+      <p>
+        Suppose <m>(x,y)</m> is a point in the plane in Cartesian coordinates. Write formulas (in terms of <m>x</m> and <m>y</m>) for
+        <ol>
+          <li>
+            <p>
+              the distance <m>r</m> from the origin to <m>(x,y)</m> and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the angle between the positive x-axis and the line containing the origin and <m>(x,y)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Graphing.
+        <ol>
+          <li>
+            <p>
+              Graph the curve <m>y = \sin(x)</m> for <m>x</m> in <m>[0, 2 \pi]</m> in the Cartesian coordinate system.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Graph the curve <m>r = \sin(\theta)</m> for <m>\theta</m> in <m>[0, 2\pi]</m> in the polar coordinate system.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Each of the following equations is written in the Cartesian coordinate system. Use the relationships you found in <xref ref="polar1">Problem</xref> to write each in polar coordinates.
+        <ol>
+          <li>
+            <p>
+              <m>2x-3y=6</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x^2+y^2=9</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>25x^2+4y^2=100</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>x = 4y^2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>xy=36</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Each of the following equations is written in the polar coordinate system. Use the relationships you found in <xref ref="polar2">Problem</xref> to write each in Cartesian coordinates.
+        <ol>
+          <li>
+            <p>
+              <m>r = 9 \cos (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r^2 = 2 \sin (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp r = \frac{1}{3 \cos (\theta) - 2 \sin (\theta)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 8</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \theta = \frac{\pi}{4}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Graph, in a polar coordinate system, the curve defined by each of the following equations.
+        <ol>
+          <li>
+            <p>
+              <m>r=1+2 \cos (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 2 + 2 \sin (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 3 \sin (2 \theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 2 \cos (3 \theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r^2 = 4 \sin (2 \theta)</m> (If you know how to use a graphing calculator to plot polar curves, try it.)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the points of intersection of the graphs of the given polar equations. (When I set them equal without graphing them, I always miss at least one point of intersection.)
+        <ol>
+          <li>
+            <p>
+              <m>r = 4 - 4 \cos (\theta)</m> and <m>r = 4 \cos (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 2 \cos (2 \theta)</m> and <m>r = \sqrt{3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = \sin (\theta)</m> and <m>r = \sqrt{3} \cos (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 4 + 2 \cos (\theta)</m> and <m>r = 5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>r = 1-2 \cos (\theta)</m> and <m>r = 1</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Derive the formula for the arc length of a function starting with the distance formula. Derive the formula for the arc length of a planar curve defined by a parametric equation.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Compute the arc length (using the equation they will derive next) for the spiral <m>r=\theta</m> from <m>\theta=0</m> to <m>\theta = 2\pi</m>.
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        If we display the independent variable <m>\theta</m>, then Cartesian and polar coordinates are related by <m>x(\theta) =  r(\theta) \cos (\theta)</m> and <m>y(\theta) = r(\theta) \sin (\theta)</m>. Use the formula for the arc length of a parametric curve
+        <me>
+          \dsp L = \int_a^b \sqrt{\big(x'(t)\big)^2 + \big(y'(t)\big)^2} \; dt
+        </me>
+        to derive the formula for the arc length of a curve in polar coordinates
+        <me>
+          \dsp L=\int_{\alpha}^{\beta} \sqrt{\big(r(\theta)\big)^2+\big(r'(\theta)\big)^2} \; d\theta.
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the arc length formula from the previous problem and the half-angle identity to find the length of the cardioid defined by <m>r = 3(1 + \cos (\theta))</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Recall that <m>\dsp {{dy} \over {\; dx}} = {{{dy} \over {d \theta}} \over {{dx} \over {d \theta}}}.</m> Use this to find the tangent line to the curve in a polar plane <m>r = 2 + 2 \sin (\theta)</m> at <m>\theta = \pi/4.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Compute the area of one of the four <q>petals</q> of <m>r=3\sin(2\theta).</m> Generalize to demonstrate a method for finding the area trapped inside polar functions.
+      </p>
+
+      <p>
+        Let <m>r=f(\theta)</m> be a continuous and non-negative function in the interval <m>[\alpha, \beta]</m> and <m>A</m> be the area of the region bounded by the graph of <m>f</m> and the radial lines <m>\theta = \alpha</m> and <m>\theta = \beta</m>. To find <m>A</m>, partition the interval <m>[\alpha, \beta]</m> into <m>n</m> subintervals <m>[\theta_0,\theta_1]</m>, <m>[\theta_1, \theta_2]</m>, <m>\cdots</m>, <m>[\theta_{n-1}, \theta_n]</m> of equal lengths where <m>\alpha = \theta_0 \lt  \theta_1 \lt  \cdots \lt  \theta_n = \beta</m>. Since the area of a circular sector of radius <m>r</m> and angle <m>\theta</m> is <m>\dsp {1 \over 2}r^2 \theta</m>, the area of each of our sectors is <m>\dsp{1 \over 2} (\theta_i - \theta_{i-1})^2</m> so the total area is approximately the sum of these sectors. Thus <m>A = \displaystyle{\lim_{n \to \infty} {1 \over 2} \sum_{i=1}^n \big[f(\theta_i)\big]^2 \big(\theta_{i}-\theta_{i-1}\big) ={1 \over 2} \int_{\alpha}^{\beta} [f(\theta)]^2 d \theta}</m>.
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        Find the area of each region in a polar plane.
+        <ol>
+          <li>
+            <p>
+              the region bounded by the graph of <m>r = -2 \cos (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the region bounded by one loop of the graph of the equation <m>r = 4 \cos (2 \theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the region bounded by the inner loop of the curve <m>r=2+3 \cos (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the region bounded by the intersection of the two graphs <m>r=4 \sin (2\theta)</m> and <m>r = 4 \cos (2 \theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the region that lies inside the cardioid <m>r = 2 - 2 \cos (\theta)</m> and outside the circle <m>r=1</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

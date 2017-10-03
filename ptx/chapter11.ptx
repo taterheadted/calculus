@@ -1,0 +1,1271 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Limits and Derivatives</title>
+  <introduction>
+    <p>
+      <q>Real knowledge is to know the extent of one's ignorance.</q> - Confucius
+    </p>
+
+    <p>
+      For the next two definitions, suppose that <m>x, y,</m> and <m>z : \re \to \re</m> are differentiable functions.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>limit of the vector valued function of one variable</term> <m>\oa f(t) = (x(t), y(t), z(t)),</m> as <m>t</m> approaches
+          <m>a</m> is defined by
+          <me>
+            \lim_{t\to a} \  \oa f(t)= \left( \lim_{t\to a}\ x(t), \lim_{t\to a}\ y(t),\lim_{t\to a}\ z(t) \right)
+          </me>
+          as long as each of these limits exists. If any one of the limits does not exist, then the limit of <m>\oa f</m> does not exist at <m>a</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>derivative of the vector valued function of one variable</term> <m>\oa f(t) = (x(t), y(t), z(t)),</m> is defined by
+          <me>
+            \oa f'(t)=(x'(t), y'(t), z'(t))
+          </me>
+          as long as each of the derivatives exists. If any one of the derivatives does not exist, then the derivative of <m>\oa f</m> does not exist.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\oa f(t)=\dsp{\left(t^2-4,\  \frac{\sin(t)}{t},\  \frac{4t^3}{e^t} \right) }</m>. Compute <m>\dsp{\lim_{t\to 0}\ \oa  f(t)}</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\oa f'</m> and <m>\oa f'(0)</m> for <m>\oa f</m> from the previous problem.
+          EXTRA<fn>Once this problem has been presented, we give the geometrical interpretation of <m>f'(0)</m> as the tangent to the parametric curve.  Parametric curves and polar coordinates were introduced in the second semester of calculus, so here we might remind them that if <m>c(t) = (x(t),y(t))</m> is a planar curve, then <m>c'(t)=(x'(t),y'(t))</m> is  tangent to <m>c</m> and each of <m>(-y'(t),x'(t))</m> and <m>(y'(t),-x'(t))</m> are normals.  I attempt Socratic, question-and-answer lectures.  <q>What do you suppose <m>f'(0)</m> means?</q>   (After listening and waiting for a long time, if there is no  response...) <q>What did <m>f'(0)</m> tell us about <m>f(x)= x^2+1</m>?</q>   If a series of questions won't generate success, then sketching the elliptical example <m>c(t) = (3\sin(t),4\cos(t))</m> and reminding them of the definition of the derivative <m>c'(t) = \lim_{h \to 0} \frac{c(t+h)-c(t)}{h}</m> can help motivate just why <m>c'</m> is tangent to <m>c</m>.</fn></p>
+      </statement>
+    </problem>
+
+    <p>
+      We now wish to develop the rules for limits and derivatives that parallel the rules from calculus in one dimension. Of course, we know you have not <em>forgotten</em> any of these rules, so the ones we develop should look familiar! The good news is that the really hard work in proving these was done in the first semester of calculus and thus the work here is more notational than mathematical!
+    </p>
+
+    <problem xml:id="limfg">
+      <statement>
+        <p>
+          Let <m>\oa f(t) = (t^2,t^3-1,\sqrt{t-1})</m> and <m>\oa g(t)= (2-t^2,t^3,\sqrt{t+1})</m>.
+          <ol>
+            <li>
+              <p>
+                Compute <m>\dsp \lim_{t\to 2}\ \oa f(t).</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute <m>\dsp \lim_{t\to 2}\ \oa g(t).</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute <m>\dsp \lim_{t\to 2}\ \oa f(t) + \lim_{t\to 2}\ \oa g(t).</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute <m>\dsp \lim_{t\to 2}\  [\oa f(t)+ \oa g(t)].</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                What can you conjecture about <m>\dsp \lim_{t\to a}\  [\oa f(t)+ \oa g(t)]</m> for arbitrary choices of <m>a, \oa f,</m> and <m>\oa g</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          State 5 rules for limits of the vector valued functions, <m>\oa f, \oa g: \re \to \re^3</m> that parallel the limit rules from Calculus I and prove one of these conjectures. You may grab a book or look on the web to remind you of the rules from Calculus I.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>\oa f'(2)</m> and <m>\oa g'(2)</m> where <m>\oa f</m> and <m>\oa g</m> are from <xref ref="limfg">Problem</xref>. Compute <m>\oa{(f+g)}'(2)</m>.
+          What can you conjecture about <m>\oa{(f+g)}'(t)</m> for arbitrary choices of <m>\oa f</m> and <m>\oa g</m>?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          State 5 rules for derivatives of vector valued functions that parallel the derivative rules from Calculus I. Prove one of these conjectures. You may grab a book or look on the net to remind you of the rules from Calculus I.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      You may assume that which ever one you do not prove will end up on the next test. Yes, it is a well known fact that all calculus teachers can read students' minds. How else would we always be able to schedule our tests on the same days as your physics tests?
+    </p>
+
+    <p>
+      <em>Limits of Functions of Several Variables</em>
+    </p>
+
+    <p>
+      Recall from Calculus I the various ways in which you computed limits. If possible, you substituted a value into the function. If not, perhaps you simplified the function via some algebra or computed a limit table or graphed the function. Or you might have applied L`H&#xf4;pital's Rule. Your instructor probably used the Squeeze Theorem to obtain the result that <m>\dsp \lim_{t \to 0} \frac{\sin(t)}{t} = 1.</m> Recall that if the left hand limit equaled the right hand limit then the limit existed.
+    </p>
+
+    <p>
+      In three dimensions, the difficulty is that there are more paths to consider than merely left and right. For the limit to exist at a point <m>(a,b)</m>, we need that the limit as <m>(x,y)</m> approaches <m>(a,b)</m> exists regardless of the path we take as we approach <m>(a,b)</m>. We could approach <m>(a,b)</m> along the x-axis for example, setting <m>y=0</m> and taking the limit as <m>x \to 0</m>. Or we could take the limit along the line, <m>y=x</m>. The limit exists if the limit as <m>(x,y) \to (a,b)</m> along every possible path exists. We will see an example where the limit toward <m>(a,b)</m> exists along every straight line, but does not exist along certain non-linear paths!
+      EXTRA<fn>To introduce limits, we start with <m>f(x) = |x|/x</m> from Calculus I and consider the left- and right-hand limits. Before talking about three dimensions, I'll ask them if anyone has seen a house where if you approach it from one direction you enter on one floor, but if you enter from another direction, you enter on a different floor.   Usually someone knows someone who lives in a house on a hill where such construction is standard.   If so, they can visualize different paths that lead to different heights at the origin.  Then we consider the problem in three-space
+      <me>
+        \dsp{\lim_{(x,y)\to (0,0)} \frac{x^2-y^2}{x^2+y^2}}
+      </me>
+      by computing the limits along the lines <m>x=0</m>, <m>y=0</m>, and <m>y=x.</m> We address how, just as in Calculus I, the limit exists only if the limit exists along every possible path and we foreshadow upcoming problems by warning them that there are problems where the limits exist and agree along every straight line path, but there is a non-linear path along which we get a limit that does not agree.  Because they don't have the tools to check every possible path, on tests I'll only ask them to compute limits along specific paths and make their best guess as to whether a limit exists or does not exist.</fn></p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>(a,b)\in {\re}^2</m> and <m>L\in \re</m> and <m>f: \re^2 \to \re</m> is a function, then we say that
+          <me>
+            \dsp{\lim_{(x,y)\to (a,b)} f(x,y) = L}
+          </me>
+          if <m>f(x,y)</m> approaches <m>L</m> as <m>(x,y)</m> approaches <m>(a,b)</m> along <term>every</term> possible path.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch <m>f(x,y) = x^2 + y^2,</m> indicate the point <m>\big( 2,3,f(2,3) \big)</m> and compute <m>\dsp{\lim_{(x,y)\to (2,3)}  x^2+y^2}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Use any free web-based software to graph the function from the previous example near <m>(0,0).</m> Print and use a high-lighter to mark the paths <m>x=0</m>, <m>y=0</m>, and <m>y=x</m>. (Google Chrome on a Windows box will graph functions like <m>z=x^2+y^2</m> just by typing it into the search bar!)
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Convert the previous problem to polar coordinates via the substitution <m>x=r\,\cos(\theta)</m> and <m>y=r\,\sin(\theta)</m> and then compute the limit as <m>r \to 0.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\dsp f(x,y) = \frac{x+y^2+2}{x-y+2}.</m>
+          <ol>
+            <li>
+              <p>
+                Graph <m>f</m> using any software and state the domain.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute <m>\dsp{\lim_{(x,y) \to (-1,2)} f(x,y)}.</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Recall your Calculus I definition of continuity for functions of one variable.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          A function <m>f: \re \to \re</m> is continuous at <m>a \in \re</m> if <m>\lim_{x \to a} f(x) = f(a).</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      This definition says that for <m>f</m> to be continuous at <m>a</m> three things must happen. First, the function must be defined at <m>a</m>. This means that <m>a</m> must be in the domain of the function so that <m>f(a)</m> is a number. Second, the limit of the function as we approach <m>a</m> must exist. And third, <m>f(a)</m> must equal the limit of <m>f</m> at <m>a</m>. The same statement defines continuity for all functions.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          A function <m>f: \re^n \to \re^m</m> is continuous at <m>a \in \re^n</m> if <m>\lim_{x \to a} f(x) = f(a).</m>
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Consider <m>\dsp{\lim_{(x,y)\to (0,0)} \frac{x^4-y^4}{x^2+y^2}}.</m>
+          <ol>
+            <li>
+              <p>
+                Compute this limit along the lines: <m>x=0</m>, <m>y=0</m>, <m>y=x</m>, and <m>y=-x</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Convert to polar coordinates and check the limit.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Graph using any software.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Why isn't this function continuous at <m>(0,0)</m>?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                How can you modify <m>f</m> in such a way as to make it continuous at <m>(0,0)</m>?
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Determine whether <m>\dsp{\lim_{(x,y)\to (0,0)} \frac{xy+y^3}{x^2+y^2}}</m> exists and if so, state the limit.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Determine whether the function <m>f</m> is continuous at <m>(x,y)=(0,0)</m> by considering the paths <m>y=kx^2</m> for several choices of k.
+          <m>f(x,y)=\left\{ \begin{array}{ll}
+          \dsp{\frac{x^2y}{x^4+y^2}} \amp  (x,y)\neq (0,0)\\
+          0 \amp  (x,y)=(0,0)
+          \end{array}  \right.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Directional Derivatives</em>
+    </p>
+
+    <p>
+      Suppose we have the function <m>f(x,y)=x^2+y^2</m> and we are sitting on that function at some point <m>(a,b,f(a,b))</m> other than <m>(0,0,0)</m>. Then there are many directions we can walk while remaining on the surface. Depending on the direction of our path, the rate of increase of our height, or slope of our path, may vary. Some paths will move us uphill and others downhill. Suppose while we sit at the point, <m>(a,b,f(a,b)),</m> we decide to walk in a direction that will not change the <m>y</m> coordinate, but only changes the <m>x</m> coordinate. Thus, we are walking on the surface and staying within the plane, <m>y=b.</m> Walking in this way, we could go in one of two directions. Either we could go in the direction that increases <m>x</m> or decreases <m>x.</m> Let's go in the direction that increases <m>x.</m> Now, consider the tangent line to the curve at this point that lies in the plane, <m>y=b.</m> As we take our first step along the curve our rate of increase in height, <m>z,</m> will be the same as the slope of that tangent line. This slope is the <em>directional derivative of the function at the point <m>(a,b)</m> in the <m>x</m> direction</em>. If we had decided to fix <m>x=a</m> and walk in the direction that increases <m>y</m>, then the slope of the line tangent to the function and in the plane <m>x=a</m> is the <em>directional derivative of <m>f</m> at <m>(a,b)</m> in the <m>y</m> direction.</em>
+      EXTRA<fn>This lecture ties together many concepts that have been developed (limits, the use of vectors as directions, composition of functions, and parametric curves) while refreshing concepts from Calculus I such as  the limit definition of the derivative.
+
+      Letting <m>g(x) = x^3</m> we use the limit definition of the derivative to compute the slope of the tangent line to <m>g</m> at <m>(2,8)</m>.  Letting <m>f(x,y) = x^3+y^2</m> we use the limit
+      <me>
+        \lim_{h \to 0} \frac{f(2+h,0) - f(2,0)}{h}
+      </me>
+      to compute the slope of the line tangent to <m>f</m> at the point <m>(2,0,8)</m> and in the plane <m>y=0</m>.  We illustrate this with a careful graph,  observing that it is the same as our previous result for <m>g</m>  because we are computing the slope of a line that is tangent to a slice of <m>f</m> that is precisely the graph of <m>g</m>. We then use limits to compute the directional derivative of <m>f</m> in the direction <m>(-1,0)</m> (the negative x-direction) observing that the result has the same absolute value, but the opposite sign of our previous results.   This is a departure from Calculus I where we did not talk about the derivative at <m>x</m> in the left or right directions. There was only <em>one</em> derivative at any point <m>x</m> at which it was differentiable. We then compute the slope of the tangent line in the direction <m>(0,1)</m> (the positive <m>y-</m>direction) at the same point.  We conclude with the general definition for the directional derivative of <m>f</m> at vector <m>u</m> in direction <m>v</m>, defining the various notations for functions of two variables:
+      <ol>
+        <li>
+          <p>
+            the directional derivative of <m>f</m> in the direction <m>v</m> at <m>u</m> is <m>\dsp D_v f(u) = \lim_{h \to 0} \frac{f(u+hv) - f(u)}{h}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            directional derivative in the x-direction is <m>\dsp D_{(1,0)} f(u) = df/dx = f_x = f_1</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            directional derivative in the y-direction is <m>\dsp D_{(0,1)} f(u) = df/dy = f_y = f_2</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            gradient of <m>f</m> at <m>u</m> is <m>\dsp \nabla f(u)  = ( f_1, f_2, f_3, ... , f_n)</m>
+          </p>
+        </li>
+      </ol>
+      To toss in a tad of history, we mention that this idea is generalizable to spaces other than <m>\re^n</m> and is called the Gateaux Derivative and that there are numerous notions of differentiability, including the Frechet derivative.  A function that is Frechet differentiable is also Gateaux differentiable since Frechet equates to having, in some sense, a <q>total</q>  derivative, while Gateaux only indicates that we have directional derivatives in every direction.  If I have honors  students, these can make good projects for study.</fn></p>
+
+    <p>
+      The next definition formalizes this discussion and the problem immediately following it is an example that will make these notions of directional derivative precise!
+    </p>
+
+    <definition xml:id="ddx">
+      <statement>
+        <p>
+          If f: <m>{\re}^2\to \re</m> is a function and <m>(a,b)</m> is in the domain of <m>f</m>, then the <term>derivative of <m>f</m> in the <m>(1,0)</m>
+          direction at <m>(a,b)</m></term> is the slope of the line tangent to <m>f</m> at the point <m>(a,b,f(a,b))</m> and in the plane, <m>y=b.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      When it exists, the <em>derivative of <m>f</m> with respect to <m>x</m> at <m>(a,b)</m></em> can be computed via the limit:
+      <me>
+        f_{x}(a,b)=\dsp{\lim_{h\to 0}
+        \frac{f(a+h,b)-f(a,b)}{h}}
+      </me>
+      or, since <m>y</m> is being held constant and <m>x</m> is changing, one may just compute the derivative of <m>f</m> as if <m>x</m> is the variable and <m>y</m> is a constant.
+    </p>
+
+    <p>
+      <em>Notation.</em> Suppose that <m>f: {\re}^2\to \re</m> is a function as in the previous definition. There are many phrases and notations used to denote the <em>derivative of <m>f</m> in the <m>(1,0)</m> direction at <m>(a,b)</m></em>. For example,
+      <ul>
+        <li>
+          <p>
+            <m>f_{1}</m> <mdash /> the <em>derivative of f with respect to the first variable</em>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f_{x}</m> <mdash /> the <em>the derivative of f with respect to x</em>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp{\frac{\partial f}{\partial x}}</m> <mdash /> the <em>partial derivative of f with respect to x</em>
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Similarly, <m>f_{2}</m>, <m>f_{y}</m>, and <m>\dsp{\frac{\partial f}{\partial y}}</m> would denote the same concepts where the derivative was taken in the <m>(0,1)</m> direction.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y) = x^2 + y^2</m> and <m>(a,b)=(2,-3).</m>
+          <ol>
+            <li>
+              <p>
+                Sketch <m>f</m> and sketch the line tangent to <m>f</m> at the point <m>(2,-3,f(2,-3))</m> that is in the plane, <m>y=-3.</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Let <m>g(x) = f(x,-3)</m> and compute <m>g'(2).</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                What part of the graph of <m>f</m> is the graph of <m>g?</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\dsp f(x,y) = \frac{y}{x}.</m> Compute <m>f_x(1,2)</m> using the limit described following <xref ref="ddx">Definition</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>f_{x}</m> and <m>f_{y}</m> for each function.
+          <ol>
+            <li>
+              <p>
+                <m>f(x,y)=x^3-4x^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y)=e^{xy^2}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y)=\dsp{\frac{x^2}{\sin(xy)}}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y)=e^{x^2y}\sin(x-y)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <definition>
+      <statement>
+        <p>
+          Just as in Calculus I, <q>second derivatives</q> are merely derivatives of the first derivatives. Thus <m>f_{xx}=(f_{x})_{x}</m>. I.e. <m>f_{xx}</m> is the derivative of <m>f_{x}</m> with respect to x. Similarly, <m>f_{yy}=(f_{y})_{y}</m>, <m>f_{xy}=(f_{x})_{y}</m> and <m>f_{yx}=(f_{y})_{x}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Other standard notations are:
+      <me>
+        f_x = \frac{\partial f}{\partial x}, \  \  \ f_y = \frac{\partial f}{\partial y}, \  \  \ f_{xx} = \frac{\partial^2  f}{\partial x^2}, \  \  \ f_{yy} = \frac{\partial^2 f}{\partial y^2}, \  \  \ \mbox{ and }  \  \  \ f_{xy} = \frac{\partial^2 f}{\partial x \partial y}
+      </me>
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Clairaut's Theorem.</em> For any function, f, whose second derivatives exist, we have <m>f_{xy}=f_{yx}</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Find <m>f_{xx}, f_{xy}, f_{yx}</m>, and <m>f_{yy}</m> for each function.
+          EXTRA<fn>While this problem seems trivial, it is a spring board that we use to discuss where all these derivatives show up in physical applications, Maxwell's equation, Laplace's equation, etc.</fn>
+          <ol>
+            <li>
+              <p>
+                <m>f(x,y)=e^{x^2+y^2}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y)=\sin(xy+y^3)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y)=\sqrt{3x^2-2y^3}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y)=\dsp{\cot\left( \frac{x}{y}\right) }</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The study of partial differential equations is the process of finding functions that satisfy some equation that has derivatives with respect to multiple variables. For example <em>Laplace's Equation</em> is the equation <m>u_{xx}+u_{yy} +u_{zz}=0</m> and solutions give us information about the steady state of heat flow in a three dimensional object.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Which of these functions satisfy <m>u_{xx}(x,y)+u_{yy}(x,y)=0</m> for all <m>(x,y) \in \re^2</m>?
+          <ol>
+            <li>
+              <p>
+                <m>u(x,y)=x^2+y^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>u(x,y)=x^2-y^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>u(x,y)=x^3+3xy^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>u(x,y)=\ln(\sqrt{x^2+y^2})</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>u(x,y)=\sin(x)\cosh(y)+\cos(x)\sinh(y)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>u(x,y)=e^{-x}\cos(y)-e^{-y}\cos(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find a solution to this equation other than the ones listed above.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      In the last two problems, we studied functions of two variables and we defined derivatives in each direction, the <m>x</m> direction and the <m>y</m> direction. If <m>f</m> were a function of three variables, then there would be partial derivatives with respect to each of <m>x, y</m>, and <m>z.</m> Let's extend the notion of the partial derivatives with respect to <m>x</m> and <m>y</m> to functions with domain <m>\re^n</m> where <m>n>2.</m> If <m>f : \re^n \to \re</m>, then the domain of <m>f</m> is <m>\re^n</m> so there is a partial derivative of <m>f</m> with respect to the first variable, the second variable, and so on, up to the partial derivative of <m>f</m> with respect to the <m>n^{th}</m> variable. We use the notation, <m>f_1, f_2, f_3, \dots, f_n</m> or <m>\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \frac{\partial f}{\partial x_3}, \dots , \frac{\partial f}{\partial x_n}</m> to denote the derivative of <m>f</m> with respect to each variable.
+      EXTRA<fn>While it may seem repetitive, we find that an occasional review of the various types of functions we have studied along with their derivatives is needed.  We know and emphasize that there is really only one definition of a function so we are  really only talking about functions with different domains and ranges.  If this leads to a discussion, we'll define the following. Given two sets, <m>A</m> and <m>B</m>, a relation on <m>A \times B</m> is a subset of <m>A \times B</m>. A function on <m>A \times B</m> is a relation on <m>A \times B</m> in which no two elements of the relation have the same first coordinates.  While accurate, this curt, systematic explanation does not make the language (real-valued, parametric, vector valued, space curve, planar curve, etc.) any easier so we consider these examples,
+      <ol>
+        <li>
+          <p>
+            <m>f(x) =\sin(x^3)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>g(t) = ( 4\cos(t), 3\sin(t))</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f(x,y) =\sin^2(xy) - \sqrt{\cos(x^2)}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f(x,y) = ( \cos(xy),\sin(xy) )</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>3x^2 + 5y^2 + 6z^2 = 1</m> (not a a function!)
+          </p>
+        </li>
+      </ol>
+      discussing the domain and range of each.</fn></p>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x_1,x_2,x_3,x_4,x_5) = x_3\sqrt{(x_1)^3+(x_2)^2} + x_4 e^{x_5 x_3}.</m> Compute the five partial derivatives, <m>f_1, f_2, \dots, f_5.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      This allows us to define the derivative for functions of <m>n</m> variables.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>f:{\re}^n \to \re</m> is a function and each partial of <m>f</m> exists, then the <term>gradient</term> of f is the function
+          <me>
+            \nabla f:{\re}^n \to {\re}^n
+          </me>
+          and is defined by
+          <me>
+            \nabla f= (f_{1}, f_{2}, f_{3}, \ldots , f_{n}) =(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2}, \frac{\partial f}{\partial x_3}, \dots , \frac{\partial f}{\partial x_n}).
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          For each function below, state the domain of the function, compute the gradient and state the domain of the gradient.
+          <ol>
+            <li>
+              <p>
+                <m>f(x,y)=x^3y^2-x^2y^3</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>g(x,y,z)=zx^3-3xyz+\ln(x^2yz^3)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      For any function of two variables, <m>f,</m> let's assume once again that we are at a point on the function, <m>(a,b,f(a,b)).</m> We know that the slope of the line tangent to <m>f</m> at <m>(a,b,f(a,b))</m> and above the line <m>y=b</m> is <m>f_x(a,b)</m>. And we know that the slope of the line tangent to <m>f</m> at <m>(a,b,f(a,b))</m> and above the line <m>x=a</m> is <m>f_y(a,b)</m>. Now consider a line in the <m>xy</m>-plane passing through <m>(a,b)</m> in some direction <m>\oa{(c,d)}</m> that is not parallel to either the <m>x</m> axis or the <m>y</m> axis. What would the slope of the line tangent to <m>f</m> at <m>(a,b,f(a,b))</m> and above this line be? From the point <m>(a,b)</m> there are infinitely many directions that we might travel, not just the directions parallel to the <m>x</m> and <m>y</m> axes. We can define such a direction from <m>(a,b)</m> by a vector, <m>\oa{(c,d)}.</m> The slopes of the lines tangent to <m>f</m> at <m>(a,b,f(a,b))</m> in the direction <m>\oa{(c,d)}</m> are called the <em>directional derivatives</em> of <m>f</m> at <m>(a,b)</m> in the direction <m>\oa{(c,d)}.</m> The partial derivatives of <m>f</m> with respect to <m>x</m> and <m>y</m> are your first examples of directional derivatives where the directions were <m>\oa i = (1,0)</m> and <m>\oa j = (0,1).</m> Here is the formal definition of the directional derivative.
+    </p>
+
+    <definition xml:id="dd">
+      <statement>
+        <p>
+          Let <m>f: \re^n \to \re</m> be a function. The <term>directional derivative</term> of <m>f</m> at <m>\oa{u}</m> in the direction <m>\oa{v}</m> is given by:
+          <me>
+            D_{\oa{v}}f(\oa{u})= \dsp{\lim_{h \to 0} \frac{f(\oa{u}+h\oa{v})-f(\oa{u})}{h}},
+          </me>
+          where <m>\oa{v}</m> must be a unit vector.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Of course, not every limit exists, so directional derivatives may exist in some directions but not others.
+    </p>
+
+    <problem xml:id="ddp">
+      <statement>
+        <p>
+          Using the definition just stated, compute the directional derivative of <m>f(x,y)=4x^2+y</m> at the point <m>\oa u = (1,2)</m> in the direction <m>\oa v</m> for each <m>\oa v</m> defined below.
+          EXTRA<fn>As soon as this problem goes on the board, we state and give an example of <xref ref="dot">Theorem</xref> below.  The point of the previous problem is to demonstrate that if we compute the directional derivatives without using unit vectors for the direction then we don't actually get the slope of the tangent line.  Even though <m>(1,1)</m> and <m>(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2})</m> represent the same direction, the directional derivative would depend on the magnitude of the direction vector, which is why the definition requires that we use a unit vector.</fn>
+          <ol>
+            <li>
+              <p>
+                <m>\oa{v}=(0,1)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{v}=(1,0)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{v}=(1,1)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa{v}=(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2})</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Important.</em> In the previous problem, you got different answers for the directional derivatives in parts 3 and 4 even though those represent the same direction. For this reason, it is a convention to always use a <em>unit</em> vector for the direction when computing directional derivatives.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Use <xref ref="dd">Definition</xref>, <xref ref="ddx">Definition</xref>, and the discussion immediately following <xref ref="ddx">Definition</xref> to show that if <m>\ f:{\re}^2\to \re</m> and <m>\oa{i}=(1,0)</m>, then <m>D_{\oa{i}}f(\oa{v})=f_{x}(\oa{v})</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Non-Definition.</em> An analytical definition of <em>f is differentiable</em> at <m>u</m> is beyond the scope of this course, but a geometrical definition is not. In two dimensions (Calculus I), f was differentiable at <m>a</m> if there was a <em>tangent line</em> to f at <m>(a,f(a))</m>. In three dimensions (Calculus III), f is differentiable at <m>\oa{u}</m> if there is a <em>tangent plane</em> to f at <m>(u,f(u)).</m>
+    </p>
+
+    <definition xml:id="nhood">
+      <statement>
+        <p>
+          An <m>\epsilon</m>-neighborhood of <m>u \in \re^n</m> is the set of all points with a distance from <m>u</m> of less than <m>\epsilon</m>. I.e. <m>N_{\epsilon}(u)=\{v \in \re^n:\ \mid u-v \mid \lt  \epsilon \}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      How will we be able to tell when a function is <q>nice,</q> that is, when a function has a derivative?
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>A Differentiability Theorem.</em> If <m>\nabla f</m> exists at <m>u</m> and at all points in some <m>\epsilon</m>-neighborhood of <m>u</m>, then f is differentiable at <m>u</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Is <m>\dsp f(x,y) = y^3(x-\frac{1}{2})^\frac{2}{3}</m> differentiable at <m>(1,2)?</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          For each of the following problems, either prove it or give a counterexample by finding functions and variables for
+          which it does not hold. Assume <m>f:{\re}^2\to \re</m> and <m>g:{\re}^2\to \re</m> are differentiable. Assume <m>x, y \in \re^2</m> and <m>c \in \re.</m> Assume <m>x, y, x + y</m> are in the domain of <m>f</m> and <m>g.</m>
+          <ol>
+            <li>
+              <p>
+                <m>\nabla f(x+y)= \nabla f(x)+\nabla f(y)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla (f+g)(x)=\nabla f(x)+\nabla g(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla (cf)(x)=c\nabla f(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla f(cx)=c\nabla f(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla f(cx)=\nabla f(c)\ \nabla f(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla (f\cdot g)(x)= \nabla f(x)g(x)+f(x) \nabla g(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\dsp \nabla (\frac{f}{g})(x) = \frac{  \nabla f(x)g(x)-f(x) \nabla g(x) }{ g^2 }</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      As in Calculus I, it is very nice to know when and where a function is continuous. The following theorem answers that question in both cases.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>A Continuity Theorem.</em> From Calculus I, if <m>f: \re \to \re</m> is differentiable at <m>x</m> then f is continuous at <m>x.</m> In Calculus III, if <m>f : \re^n \to \re</m> is differentiable at <m>x</m>, then f is continuous at <m>x</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      The next theorem is a very important one. In Calculus I, we first computed derivatives using the definition and then proved rules to help us differentiate more complex functions; we do the same here. We won't prove this theorem, but it gives a very easy way to compute directional derivatives by using the dot product and the gradient of the function.
+    </p>
+
+    <theorem xml:id="dot">
+      <statement>
+        <p>
+          <em>Directional Derivative Theorem.</em> <m>D_{\oa{v}}f(u)=\nabla f(u)\cdot \oa{v}</m> for any <m>u,\ \oa{v} \in {\re}^3</m> where <m>\mid \oa{v}\mid = 1</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Redo <xref ref="ddp">Problem</xref> using <xref ref="dot">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      To date we have studied the derivatives of functions from <m>\re</m> to <m>\re,</m> from <m>\re</m> to <m>\re^2,</m> and from <m>\re^2</m> to <m>\re.</m> Of course there is nothing special about <m>\re^2</m> here. We might as well have studied <m>\re^n</m> as all the derivatives would follow the same rules. Now let's consider the derivative of a function, <m>f : \re^2 \to \re^2.</m>
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>f : \re^2 \to \re^2</m> is any vector valued function of two variables defined by <m>f(x,y) = \big( u(x,y) \ , \
+          v(x,y) \big)</m>, then the derivative of <m>f</m> is given by
+          <me>
+            Df =
+            \begin{pmatrix}u_x(x,y) \amp  u_y(x,y)  \cr  v_x(x,y) \amp   v_y(x,y).
+            \end{pmatrix}
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Compute the derivative of <m>\dsp f(x,y) = \big( x^2\sin(xy) \ , \ \frac{e^y}{\tan(x)} \big).</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Because of the number of different domains and ranges of functions we are studying, we have several variations of the chain rule. Before we begin, I would like to take this opportunity to apologize for the number of notations used by mathematicians, physicists, and engineers for derivatives, partial derivatives, total derivatives, gradients, Laplacians, etc. There are a number of notations and all are convenient at one time or another. I attempt to adhere for the most part to the functional notation for derivatives (<m>f_1, f_x, f',</m> etc.), but Leibniz notation, <m>\frac{\partial f} {\partial x}</m>, is a convenient notation as well. <xref ref="derivnot">Table</xref> illustrates my preferred notations, where <m>L(\re^2, \re^2)</m> denotes the set of all 2x2 matrices.
+    </p>
+
+    <table xml:id="derivnot" >
+      <caption>Derivative Notation</caption>
+      \vskip 5pt
+      <tabular>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell>Function</cell>
+          <cell>Derivative</cell>
+        </row>
+        <row bottom="medium">
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell  ><m>f: \re \to \re</m></cell>
+          <cell><m>f' : \re \to \re</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>f: \re^2 \to \re</m></cell>
+          <cell><m>\nabla f : \re^2 \to \re^2</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+        <row>
+          <cell><m>f: \re^2 \to \re^2</m></cell>
+          <cell><m>Df : \re^2 \to L(\re^2, \re^2)</m></cell>
+        </row>
+        <row bottom="minor">
+          <cell></cell>
+          <cell></cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      The chain rule you learned in Calculus I, which is stated next, can be generalized to take the derivative of the composition of any of the functions we have been studying. That is, given any two functions with domains so that their composition actually makes sense and so that they are differentiable at the appropriate places, we can compute their derivative using the same chain rule that you learned in Calculus I with one minor change. When the domains and ranges of the functions change, the derivatives change. Thus, in the following statement, depending on the domain of <m>f</m>, sometimes <m>f'</m> means the derivative of a parametric curve, but sometimes it means the gradient of <m>f</m>, <m>\nabla f</m>, and sometimes it means the matrix, <m>Df</m>, of derivatives of <m>f</m>. The same holds for the derivative of <m>g</m>. And finally, the symbol <m>\cdot</m> might mean multiplication or the dot product or matrix multiplication. You'll know from context which one. The point is to realize that no matter how many different notational ways we have of writing the chain rule, it always boils down to this one.
+      EXTRA<fn>We spend a fair amount of time demonstrating the chain rule in various forms via examples, emphasizing that while it may be written differently due to the different notations that we use for the derivative of  functions with differing domains, there is really only one chain rule:  <m>(f \circ g)' = (f' \circ g) \cdot g'</m> where the  <m>'</m> and <m>\cdot</m> must be interpreted correctly depending on the domains of <m>f</m> and <m>g</m>. And each time the chain rule is used in class, we reiterate this theme. First we do a Calculus I example, letting <m>h(x) = \cos(\sqrt{x^3-3})</m> and breaking <m>h</m> into <m>f \circ g</m> to clearly demonstrate the chain rule. Second, we do a more complicated composition, letting <m>f(x,y) = e^{xy}</m> and <m>\oa g(t) = (t^2+1, 3t^3)</m> and computing <m>(f \circ \oa g)'</m> in two ways.  We compose the two functions and compute the derivative and then we use <xref ref="cr2">Theorem</xref>. In one final example, we demonstrate both ways, letting <m>f(x,y) = \sin(x^2+y)</m> and <m>\oa g(s,t) = (s^2t, s+t)</m> and computing <m>\nabla (f \circ \oa g )</m> by first composing and then taking the derivative and by applying <xref ref="cr3">Theorem</xref>.</fn></p>
+
+    <theorem xml:id="cr1">
+      <statement>
+        <p>
+          <em>Chain Rule.</em> If <m>f, g: \re \to \re</m> are differentiable functions, then
+          <me>
+            (f \circ g)' = (f' \circ g) \cdot g'
+          </me>
+          or with the independent variable displayed,
+          <me>
+            \big(f \circ g\big)'(x) =  f'\big(g(x)\big) \cdot g'(x).
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      Next we state the chain rule for differentiating functions that are the composition of a function of two variables with a planar curve. Notice that this theorem is <em>exactly</em> the same as the original theorem, but restated for functions with different domains. Because <m>f : \re^2 \to \re</m> we replace the <m>f'</m> from the previous theorem with <m>\nabla f</m> and because <m>\oa g : \re \to \re^2</m> we replace the <m>g'</m> in the previous theorem with <m>\oa g'.</m> Thus the theorem still says (in English) that <q>the derivative of (<m>f</m> composed with <m>g</m>) is the (derivative of <m>f</m>) evaluated at <m>g</m> times (the derivative of <m>g</m>).</q>
+    </p>
+
+    <theorem xml:id="cr2">
+      <statement>
+        <p>
+          <em>Chain Rule.</em> If <m>f:{\re}^2\to \re</m> and <m>\oa g:\re \to {\re}^2</m> are both differentiable, then
+          <me>
+            (f \circ \oa g)' = \big((\nabla f)\circ \oa g\big)\cdot \oa g'.
+          </me>
+        </p>
+
+        <p>
+          Writing this with the independent variable <m>t</m> in place we could write:
+          <me>
+            \big(f\circ \oa g\big)'(t)= \Big(\nabla f\Big) \big(\oa g(t)\big)\cdot \oa g'(t).
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <p>
+      On the right hand side of the last line of the Chain Rule, we have the composition of <m>\nabla f</m> with <m>g(t)</m>. Because we are multiplying vectors, <q><m>\cdot</m></q> represents dot product and not multiplication.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y) = x^2 - 3y^2</m> and <m>\oa g(t) = (2,3) + (4,5)t.</m> Compute <m>(f \circ \oa g)'</m> both by direct composition and by
+          using <xref ref="cr2">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute <m>(w \circ \oa g)'</m> where <m>\dsp w(x,y) = e^x\sin(y) - e^y\sin(x)</m> and <m>\oa g(t) = (3,2)t.</m> Write a complete sentence that says what line <m>\big(w \circ \oa g\big)'(-1)</m> is the slope of.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Redo the following problems using <xref ref="cr2">Theorem</xref> and paying special attention to the use of unit vectors.
+          <ol>
+            <li>
+              <p>
+                <xref ref="comp1">Problem</xref> and <xref ref="comp2">Problem</xref>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <xref ref="comp3">Problem</xref>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <xref ref="comp4">Problem</xref>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Next we state the chain rule for differentiating functions that are the composition of a function of several variables with a function from the plane into the plane. Notice that this theorem is <em>exactly</em> the same as the original theorem, but restated for functions with different domains. Because <m>f : \re^2 \to \re</m> we replace the <m>f'</m> from the original theorem with <m>\nabla f</m> and because <m>\oa g : \re^2 \to \re^2</m> we replace the <m>g'</m> in the previous theorem with <m>D\oa g.</m> Thus the theorem still says that <q>the derivative of (<m>f</m> composed with <m>g</m>) is the (derivative of <m>f</m>) evaluated at <m>g</m> times (the derivative of <m>g</m>).</q> Because <m>D \oa g</m> is a matrix, the right hand side of this is now a vector times a matrix.
+      EXTRA<fn>After we have seen several chain rule problems at the board, we attempt to take some of the mystery out of the notation. Suppose <m>L: \re^2 \to \re^2</m> and <m>f: \re^2 \to \re</m>.  Then the derivatives of <m>f</m> with respect to the first and second variables are:
+      <me>
+        \big(f(L(s,t))\big)_s =  \nabla f(L(s,t)) \cdot  L_s(s,t) \mbox{ and }  \big(f(L(s,t))\big)_t =  \nabla f (L(s,t)) \cdot L_t(s,t).
+      </me>
+      If you don't like subscripts representing the derivatives, we can eliminate these.
+      <me>
+        \frac{\partial}{\partial s} \big(f(L(s,t))\big) = \big( \nabla f(L(s,t))\big) \cdot \frac{\partial}{\partial s}L(s,t) \mbox{ and }  \frac{\partial}{\partial t} \big(f(L(s,t))\big) = \big( \nabla f(L(s,t))\big) \cdot \frac{\partial}{\partial t}L(s,t)
+      </me>
+      Eliminating the independent variables, and using the Leibniz notation, we have:
+      <me>
+        \frac{\partial f}{\partial s} = (\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}) \cdot (\frac{\partial x}{\partial s}, \frac{\partial y}{\partial s}) = \frac{\partial f}{\partial x} \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial s}
+      </me>
+      and
+      <me>
+        \frac{\partial f}{\partial t} = (\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}) \cdot (\frac{\partial x}{\partial t}, \frac{\partial y}{\partial t})  =  \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} +
+        \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}
+      </me></fn></p>
+
+    <theorem xml:id="cr3">
+      <statement>
+        <p>
+          <em>Chain Rule.</em> If <m>f:{\re}^2\to \re</m> and <m>\oa g:\re^2 \to {\re}^2</m> are both differentiable, then
+          <me>
+            \nabla (f \circ \oa g) = \Big( \big(\nabla f\big) \circ \oa g\Big) \cdot D\oa g.
+          </me>
+        </p>
+
+        <p>
+          Writing this with the independent variables displayed,
+          <me>
+            \nabla \Big(f\big(g(s,t)\big)\Big) = \Big( \nabla f\Big)\big(g(s,t)\big) \cdot \big(D \oa g\big)(s,t).
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f(x,y) = 2x^2 - y^2</m> and <m>\oa g(s,t) = (2s+5t,3st).</m> Compute <m>\nabla (f \circ \oa g)</m> in two ways. First, compute by composing and then taking the derivative. Second, apply <xref ref="cr3">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>w(x,y) = \ln(x+y) - \ln(x-y)</m> and <m>g(s,t) = (te^s, - e^{st}).</m> Compute <m>\nabla (w \circ \oa g)</m> in two ways. First, compute by composing and then taking the derivative. Second, apply <xref ref="cr3">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Prove or give a counterexample to the statement that <m>f'(\oa l(t)) = (f(\oa l(t)))'</m> for all differentiable functions <m>f: \re^2 \to \re</m> and <m>\oa l: \re \to \re^2.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The next problem tells us something important. If you are sitting on some function in three-space and you are trying to decide what direction you should travel to go uphill at the steepest possible rate, then the gradient tells us this direction.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Use <xref ref="uvcos">Problem</xref> and <xref ref="dot">Theorem</xref> to show that <m>D_{\oa{v}}f(\oa{u})</m> is largest when <m>\oa{v}=\nabla f(\oa{u})</m> and smallest when <m>\oa{v}=-\nabla f(\oa{u})</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Surfaces.</em> Earlier we gave a list of the types of functions we have studied so far. Of course, there is only one definition for a function, so we are really talking about functions with different domains and ranges as was illustrated by the need for different chain rules for functions with different domains. In linear algebra, we see functions with domain the set of matrices (the determinant function) and <m>\dsp T(f) = \int_0^1 f(x) \ dx</m> is a function from the set of all continuous functions into the real numbers.
+    </p>
+
+    <p>
+      In earlier courses, you studied not only functions, but <em>relations</em> such as <m>x^2 + y^2 = 1.</m> What was the difference?
+      Well, a function has a unique <m>y</m> for each <m>x</m> while a relation may have several <m>y</m> values for a given <m>x</m> value. In three dimensions a function will have a unique <m>z</m> for a given coordinate pair, <m>(x,y).</m> When one has multiple <m>z</m> values for a given <m>(x,y)</m> value, we call it a <em>surface.</em> We have thus far studied mostly functions from <m>\re^2</m> to <m>\re</m>
+      such as <m>f(x,y)=x^2+y^2</m> or <m>f(x,y)=ye^{x^2}</m>, but surfaces are equally important. Surfaces are to functions in three-space as relations were to functions in two-space.
+      EXTRA<fn>By now we have been foreshadowing relations and surfaces for some time. This is a central theme behind the way the course is run.  Rather than introducing a new concept, such as surfaces, just in time to introduce planes, we have foreshadowed the idea for some time.  When the concept becomes necessary, it is already understood at a conceptual, intuitive level. We first graph <m>y = x^2</m> and <m>x = y^2</m>.  Both are relations.  One is a function, the other is not.  We recall that every function is a relation, but not every relation is a function.  Then we move to three-space.  We rewrite <m>f(x,y) = x^2 + y^2</m> as <m>z = x^2 + y^2</m> and remind them that this short hand really means <m>\{ (x,y,z): x^2 + y^2 = z \}</m>. We ask, <q>What equation would result in the same shape, but rotated so  that it is symmetric about the x-axis?</q>  The class (sometimes prompted by a game of hangman if they are not forthcoming) suggests <m>x = y^2 + z^2</m>.  Then we graph a few simple surfaces in three-space and ask which are functions:  <m>z=2x</m>,  <m>y=x^2</m>, <m>z=\sin(x)</m>, <m>y=\sin(z)</m>.</fn></p>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch these <em>functions</em> in <m>{\re}^3</m>.
+          <ol>
+            <li>
+              <p>
+                <m>f(x,y)=\mid x \mid - \mid y \mid</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>h(x,y)=\sqrt{xy}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>g(x,y)=\sin(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>i(x,y)=2x^2-y^2</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Sketch these <em>surfaces</em> in <m>{\re}^3</m>.
+          <ol>
+            <li>
+              <p>
+                <m>x^2+y^2+z^2=1</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>y^2+z^2=4</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>x^2-y+z^2=0</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\mid y \mid =1</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Surfaces may be expressed as <m>F(x,y,z)=k</m>, where <m>F: \re^3 \to \re</m> is a function and <m>k</m> is a real number. The first example above represents the set of all points in <m>\re^3</m> that satisfy <m>F(x,y,z)=1</m> where <m>F</m> is the function defined by <m>F(x,y,z)= x^2+y^2+z^2.</m> The mathematical convention is to rewrite these as follows:
+      <ol>
+        <li>
+          <p>
+            <m>F(x,y,z)=1</m> where <m>F(x,y,z)= x^2+y^2+z^2.</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>F(x,y,z)=4</m> where <m>F(x,y,z)= y^2+z^2</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>F(x,y,z)=0</m> where <m>F(x,y,z)= x^2-y+z^2</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>F(x,y,z)=1</m> where <m>F(x,y,z)= \mid y \mid</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      <em>Tangent Planes to Functions</em>
+      EXTRA<fn>This mini-lecture gives away too much in my opinion, but there is simply too much material in the syllabus for them to discover everything so we show them how to compute tangent planes to functions and surfaces.
+
+      Suppose we want to find the tangent plane to a function such as <m>f(x,y) = x^2+y^2</m> at the point, <m>p=(2,3,13).</m> We know that to find the equation of a plane it is enough to have a vector that is orthogonal to the plane and a point on the plane.  We already have the point <m>p</m>, so all we need is an orthogonal vector.  Our strategy will be to find two vectors that are tangent to the surface at the point <m>p</m> and thus are in the plane.  Their cross product will yield the orthogonal vector.  We know that <m>f_x(x,y)=2x</m> tells us the rate of change of <m>x</m> with respect to <m>z</m> and thus a line tangent to the function and parallel to the x-axis at <m>(2,3,13)</m> would be <m>L_x(t) = (2,3,13) + (1,0,4)t.</m> Hence, <m>(1,0,4)</m> is a vector parallel to our plane and pointing in the x-direction.  Similarly, <m>(0,1,6)</m> is parallel to our plane and points in the y-direction.  Taking the cross product will yield our vector that is perpendicular to the function and the plane at <m>p.</m> This vector is <m>(-4,-6,1)</m> so our plane is <m>(x-2,y-3,z-13) \cdot (-4,-6,1) = 0.</m>
+
+      To demonstrate how to find tangent planes to surfaces, we'll first note that every function may be written as a surface, where surfaces will always be written as <m>F(x,y,z)=k</m> where <m>F: \re^3 \to \re</m> and <m>k \in \re</m>. Thus our function,  <m>f(x,y) = x^2+y^2</m> may be written as  <m>F(x,y,z) = 0</m> where <m>F(x,y,z) = x^2+y^2-z</m>.   Note that  our point  <m>p=(2,3,13)</m> is on this surface since <m>F(2,3,13)=0</m>.   Now suppose that  <m>c(t) = (x(t),y(t),z(t))</m> is a curve on this surface.  Then <m>F(c(t))=0</m> so <m>(x(t))^2 + (y(t))^2 - z(t) = 0</m>.  Taking the derivative of both sides  we have <m>2x(t)x'(t) + 2y(t)y'(t) - z'(t) = 0</m>.  Rewriting this as a dot product  we have <m>(2x(t),2y(t),-1) \cdot (x'(t),y'(t),z'(t)) = 0</m> or  <m>\nabla F(c(t))\cdot c'(t) = 0</m>.  Thus for any curve <m>c</m> on the surface, the  tangent to the curve is in the tangent plane and is orthogonal to the gradient of  <m>F</m> evaluated at <m>c(t)</m>.   The tangent plane may now be computed by simply using  the fact that  <m>\nabla F(2,3,13)</m> is an orthogonal vector to the plane and <m>(2,3,13)</m> is  a point on the plane.  Of course it is the same plane we found when we worked it the other  way, treating <m>f</m> as a function.    Once this is complete, we point out that there is nothing special about our surface or curve.  For any surface, <m>F(x,y,z)=k</m> and any curve <m>c</m> on the  surface, we have that <m>F(c(t))=k</m> so <m>\nabla F(c(t)) \cdot c'(t) = 0</m> so <m>\nabla F(c(t))</m> must  always be a vector orthogonal to the tangent plane to <m>F</m>.</fn></p>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equation of the plane tangent to the function <m>f(x,y) = 25 - x^2 - y^2</m> at the point <m>(3,1,15).</m> Sketch the graph of the function and the plane.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equation of the plane tangent to the function <m>f(x,y) = \sqrt{x^2 + y^2}</m> at the point <m>(3,4,5).</m> Sketch the graph of the function and the plane.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Tangent Planes to Surfaces</em>
+      EXTRA<fn>Here we spend the time to prove that the gradient of a surface is orthogonal to the surface. Let's look at an example of a tangent plane to a surface in three-space.    Suppose <m>F(x,y,z) = x^2 + y^2 + z^2</m> and consider the surface (a sphere), <m>F(x,y,z)=1.</m> Consider also the curve on the surface given by <m>\dsp \oa r(t) = (\frac{1}{2}\cos(t) , \frac{1}{2}\sin(t), \frac{ \sqrt{3}}{2}).</m>  First, let's verify that <m>\oa r</m> is actually a curve on the surface by computing the composition of <m>F</m> and <m>\oa r.</m> We obtain,
+      <me>
+        F(\oa r(t) ) = \left(\frac{1}{2}\cos(t)\right)^2 + \left(\frac{1}{2}\sin(t)\right)^2 + \left(\frac{ \sqrt{3}}{2}\right)^2 =  \frac{1}{4} + \frac{3}{4} = 1,
+      </me>
+      so <m>\oa r</m> is a curve on the surface. Now, consider the point on the surface and on the curve at time <m>t = \frac{\pi}{4},</m> or <m>\oa r(\frac{\pi}{4}).</m>  Can we find a vector that is orthogonal to this surface and this curve at this point?  For the sphere, the vector originating at the origin and passing through the point <m>\oa r(\frac{\pi}{4})</m> is orthogonal to the surface, so <m>\dsp ( \frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}, \frac{\sqrt{3}}{2})</m> is both a point on the surface and a vector that is orthogonal to the surface.
+
+      Next, let's do something that does not immediately appear related.  Let's compose the gradient of the surface, <m>\nabla F,</m> with the curve <m>\oa r.</m>
+      <me>
+        \nabla F(x,y,z)  = (2x, 2y, 2z)
+      </me>
+      thus
+      <me>
+        \nabla F(\oa r (t) )  = ( \cos(t), \sin(t), \sqrt{3}).
+      </me>
+      Now let's compute <m>\oa r'.</m>
+      <me>
+        \oa r'(t) = (-\frac{1}{2}\sin(t) , \frac{1}{2}\cos(t), 0).
+      </me>
+      Imagine these two graphically.  Since <m>\oa r</m> is a curve on the surface, <m>\oa r'</m> represents a direction tangential to the curve, <m>r.</m>  And  <m>\nabla F</m> represents the direction in which <m>F</m> increases the most rapidly.  Does it seem natural that these two directions would be orthogonal?  Let's check.
+      <me>
+        \nabla F(\oa r (t) ) \cdot \oa r'(t) = ( \cos(t), \sin(t), \sqrt{2}) \cdot (-\frac{1}{2}\sin(t) , \frac{1}{2}\cos(t), 0) = 0.
+      </me>
+      As you might expect, this is not a unique phenomena.  Any time you have a surface <m>F(x,y,z) = k</m> and a curve <m>\oa r</m> on that surface, you will have that <m>\nabla F(\oa r(t)) \cdot \oa r'(t) = 0.</m> This says that <m>\nabla F(\oa r(t))</m> is orthogonal to  <m>\oa r'(t)</m> for every curve <m>\oa r</m> on the surface, <m>F.</m>    In other words, <m>\nabla F</m> is an orthogonal vector to the surface.  This is how we will define the tangent plane.  But first, let's show that it works in general. Suppose <m>\oa r(t)=\big(x(t),y(t), z(t)\big)</m> is a parametric equation.  Suppose <m>F(x,y,z)=k</m> is a surface.  
+
+      Composing:
+      <me>
+        F(\oa r(t))=k
+      </me>
+      Differentiating:
+      <me>
+        \dsp{\frac{d}{dt} F(\oa r(t))=\frac{d}{dt} k}
+      </me>
+      <me>
+        \dsp{\frac{d}{dt} F(\oa r(t))=0}
+      </me>
+      <me>
+        \nabla F(\oa r(t)) \cdot \oa r'(t)=0
+      </me>
+      We conclude that: <m>F(\oa r(t)) \perp</m> to <m>\oa r'(t)</m> which is the tangent to <m>\oa r</m>.
+
+
+      Summarizing, if we are sitting on the point <m>p</m> on the surface <m>F(x,y,z)=k</m>, then every curve <m>\oa r</m> that passes through <m>p</m> is <m>\perp</m> to <m>\nabla F(p)</m>. The next definition uses this observation to <em>define</em> the tangent plane.
+      As an example, we compute the tangent plane to <m>f(x,y) = x^2 + y^2</m> at the point <m>(1,2,13).</m> To use our definition of the tangent plane to a surface, we first rewrite <m>f</m> as a surface.  Rewriting <m>f</m> as
+      <me>
+        z = x^2 + y^2
+      </me>
+      and yields
+      <me>
+        x^2 + y^2 - z = 0
+      </me>
+      so if we define <m>F(x,y,z) = x^2 + y^2 - z</m> then we have rewritten <m>f</m> as the surface, <m>F(x,y,z) = 0.</m>  The gradient of the surface is orthogonal to the surface, so <m>(2x, 2y, -1)</m> is orthogonal to the surface.  Evaluating at <m>(1,2,5)</m> gives us our orthogonal vector, <m>\oa {(1,4,-1)}.</m>  Now we know a vector orthogonal to the plane and a point on the plane and we are done!</fn></p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>F(x,y,z)=k</m> is a surface, then the <term>tangent plane</term> to F at <m>u=(x,y,z)</m> is the plane passing through <m>u</m> with normal vector, <m>\oa{\nabla F(u)}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equation of the tangent plane to the surface <m>x^2-2y^2-3z^2+xyz=4</m> at the point <m>(3,-2,-1)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equations of two lines perpendicular to the surface in the previous problem at the point <m>(3,-2,-1)</m> on the surface.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the equations of two lines perpendicular to the surface <m>z+1=ye^{y}\cos(z)</m> at the point <m>\oa{p}=(1,0,0).</m>
+        </p>
+      </statement>
+    </problem>
+  </introduction>
+  <xi:include  href="chap10probs.ptx" />
+</chapter>
+

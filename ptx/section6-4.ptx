@@ -1,0 +1,151 @@
+
+
+<section>
+  <title>Integrals of Trigonometric Functions</title>
+  <p>
+    When integrating trigonometric functions you will often use a combination of substitution, integration by parts, and trigonometric identities. <xref ref="apptrig">Appendix</xref> has the trigonometric identities that will be necessary for this section: the Pythagorean, double angle, half angle, and product identities.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \cos^3(x) \; dx</m> by using the fact that <m>\cos^{3} = \cos^2 \cdot \cos</m> and the Pythagorean identity for <m>\cos^2.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \cos^5 (x) \; dx</m> by using the fact that <m>\cos^5= \cos^4 \cdot
+        \cos</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \cos^{2n+1} (x) \; dx</m> and <m>\dsp \int \sin^{2n+1} (x) \; dx</m> where <m>n</m> is a positive integer.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \sin^4 (x) \; dx</m> using the half-angle identity for <m>\sin.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \sin^3 (x) \cos^2(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \sin^3 (x) \cos^5 (x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \sin^4(x) \cos^2 (x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \sin(3x) \cos(6x) \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp{ \int \csc(x) \; dx }</m> by first multiplying by <m>\dsp{ \frac{\csc(x) - \cot(x)} {\csc(x) - \cot(x)} }.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate <m>\dsp \int \tan^3(x) \sec^4(x) \; dx</m> in the two different ways indicated.
+        <ol>
+          <li>
+            <p>
+              Use <m>\tan^3 \cdot \sec^4 = \tan^2 \cdot \sec^3 \cdot \tan \cdot \sec</m> and the Pythagorean identity for <m>\tan^2.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use <m>\tan^3 \cdot \sec^4 = \tan^3 \cdot \sec^2 \cdot \sec^2</m> and the Pythagorean identity for <m>\sec^2.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \cot^5(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_{\frac{3\pi}{4}}^{\frac{5\pi}{4}} \sec^4(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \cot^3(x) \csc^5(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \tan^2(x) \sec^4(x) \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \tan^4(x) \sec^3(x) \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        <em>Not for presentation.</em> Integrate the first, second, third, and fourth power of each of the six trigonometric functions. It is a well-documented fact that one of these (24) problems has appeared on at least one test in every Calculus II course since the days of Newton and Leibnitz.
+      </p>
+    </statement>
+  </problem>
+</section>
+

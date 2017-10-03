@@ -1,0 +1,135 @@
+
+
+<section>
+  <title>Maxima and Minima</title>
+  <p>
+    Many problems from industry boil down to trying to find the maximum or minimum of a function. In the example that follows, if a mathematician can find a way to make a can cheaper than the competition, then the company will save money and the mathematician will get a raise. One way to save money would be to determine if the dimensions of the cans can be changed to hold the same amount of fluid, but use less material.
+    EXTRA<fn>Whether I introduce this section with a lecture and example depends on the class.   In some classes, progress is occurring at a good rate and no introduction is needed.  In others, progress is slower and I use a motivating example to speed things along.   Finally, some classes have a few exceptional students who can and will forge forward, but a lecture may be needed to level the playing field for the rest of the class.  When I do introduce optimization problems, I start by reminding them that they already know how to find the maxima and minima of functions over closed intervals, as guaranteed by the Extreme Value Theorem.   Then I point out, tongue-in-cheek, that the only reason one really wants a maximum or a minimum is to <em>make more money</em>.  I might discuss how we would like the maximum increase in our mutual fund, constrained by minimum volatility.  Or the maximum lifespan of an engine, constrained by minimum cost.  In other words, these are very real problems and if a mathematician can increase the efficiency of an airplane wing by a few thousandths of a percent, s/he can pay her/his salary many times over in fuel savings.   After the pep talk supporting the need for word problems, I launch into my own example of the TedCo Bottling Company.  This one is particularly interesting since this is no longer how they make beer cans.  The industry standard now is to press solid cylindrical slugs of aluminum into cylinders to form the base in one piece.  Still, the idea of minimizing surface area subject to a constant volume is a valid problem and there is actually a beverage company out there that worked this problem in the 80s and changed the dimensions of their cans accordingly, saving money on each can!</fn></p>
+
+  <example>
+    <statement>
+      <p>
+        TedCo Bottling Company wants to find a way to create a can of Big Ted that has 355cc of soda but uses less material than a standard can. This is called a max/min problem because we want to minimize the surface area while holding the volume constant.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The surface area of the can is given by
+    <me>
+      A = 2\pi r^2 + 2\pi r h
+    </me>
+    where <m>r</m> is the radius and <m>h</m> is the height in centimeters. The volume is given by
+    <me>
+      V = \pi r^2 h
+    </me>
+  </p>
+
+  <p>
+    Since the volume is 355 cc, we have
+    <me>
+      355 = \pi r^2 h
+    </me>
+    so we can eliminate <m>h</m> in the surface area equation by solving the volume
+    equation for <m>h</m> and plugging in.
+    <me>
+      h = \frac{355}{\pi r^2}
+    </me>
+  </p>
+
+  <p>
+    Therefore
+    <md>
+      <mrow>A(r) \amp  = \amp  2\pi r^2 + 2\pi r h</mrow>
+      <mrow>\amp  = \amp  2\pi r^2 + 2\pi r \frac{355}{\pi r^2}</mrow>
+      <mrow>\amp  = \amp   2 \left( \pi r^2 + 355/r \right)</mrow>
+    </md>
+  </p>
+
+  <p>
+    So, all we need is to find the radius that minimizes the function <m>A.</m> Taking the derivative of <m>A</m> and setting it equal to <m>0</m> we have:
+    <me>
+      r = \sqrt[3]{\frac{355}{2\pi}} \approx 3.837
+    </me>
+  </p>
+
+  <p>
+    We can solve for <m>h</m> by substituting this back into
+    <me>
+      h = \frac{355}{\pi r^2} \approx 7.67
+    </me>
+  </p>
+
+  <p>
+    Observing that <m>h</m> and <m>r</m> are in centimeters, how does this compare to a standard Coke can? If we note that
+    <me>
+      h = \frac{355}{\pi r^2} =  \frac 2{r^2} \cdot \frac{355}{2\pi} = \frac{2r^3}{r^2} = 2r,
+    </me>
+    then we see that this is an unusual sized can. Why don't the rest of the canning companies follow this material saving model?
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        A rock is thrown vertically. Its distance d in feet from the ground at time t seconds later is given by <m>d = -16t^2 + 640 t</m>. How high will the rock travel before falling back down to the ground? What will its impact velocity be?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A rectangular field is to be bounded by a fence on three sides and by a straight section of lake on the fourth side. Find the dimensions of the field with maximum area that can be enclosed with <m>M</m> feet of fence.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        The carp population in Table Rock Lake is growing according to the growth function <m>y = 2000/(1+49 e^{-.3t})</m>, where y is the number of carp present after t months. Graph this function. What is the maximum number of carp that the pond will hold? At what time is the population of carp increasing most rapidly?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A rectangular plot of land is to be fenced, using two kinds of fencing. Two opposite sides will use heavy-duty fencing selling for <dollar />4 a foot, while the remaining two sides will use standard fencing selling for <dollar />3 a foot. What are the dimensions of the plot of greatest area that can be fenced with M dollars?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        You are in your damaged dune buggy in a desert three miles due south of milepost 73 on Route 66, a highway running East and West. The nearest water is on this (presumably straight) highway and is located at milepost 79. Your dune buggy can travel 4 miles per hour on the highway but only 3 miles per hour in the sand. You figure that you have 2 hours and 10 minutes left before you die of thirst. Assuming that you can take any path from your present position to the water, how long will it take you to get to the water and what does your future look like?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A square sheet of cardboard with side length of <m>M</m> inches is used to make an open box by cutting squares of equal size from each of the four corners and folding up the sides. What size squares should be cut to obtain a box with largest possible volume (<m>\dsp V = length \times width \times height</m>)?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Geotech Industries owns an oil rig 12 miles off the shore of Galveston. This rig needs to be connected to the closest refinery which is 20 miles down the shore from the rig. If underwater pipe costs <dollar />500,000 per mile and above-ground pipe costs <dollar />300,000 per mile, the company would like to know which combination of the two will cost Geotech the least amount of money. Find a function that may be minimized to find this cost. (This problem also stolen shamelessly from Brian Loft.)
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find the dimensions of the rectangle with maximum area that can be inscribed in a circle of radius M.
+      </p>
+    </statement>
+  </problem>
+</section>
+

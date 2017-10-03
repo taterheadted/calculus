@@ -1,0 +1,147 @@
+
+
+<section>
+  <title>Related Rates</title>
+  <p>
+    Often two quantities are related and the rate at which each changes depends on the rate at which the other changes. Think of a turbo-charged car. You may push the accelerator to the floor at a constant rate. While the rate of acceleration of the car is related, it will not be constant because as the turbo kicks in the car will accelerate at a much faster rate even though you are still pushing the pedal down at a constant rate. EXTRA<fn>As with the optimization problems, I may introduce related rates with an example.  Regardless of whether I do so, at some point I tell the class how to maximize points in solving these problems.   Identify the variables, draw a picture, find the necessary relations between the variables, differentiate and finish off the problem.  As I grade every problem out of four points, I give a point for a picture, a point for correctly defined variables, a third point for the correct relationship between the variables, and a point for finishing off the problem.  Therefore, a student may earn three points merely by setting up the problem correctly.   This encourages them to try to start every problem by reading carefully to determine what the related variables are.  My experience is that the student who can correctly identify the variables and the relationship between them nearly always completes the problem. I particularly like the boat hook example because it illustrates so many things.  The way I set the problem up, the sign of the velocity of the top of the ladder is negative and sign of the velocity of the base is positive, which sparks a good conversation.  The fact that the ladder strikes the floor with infinite velocity explains the really, really loud sound such an event creates and is another example of a limiting process.  Hence, the discussion of this problem is not usually a five-minute run through, but a twenty-minute discussion.</fn></p>
+
+  <example>
+    <statement>
+      <p>
+        A 20 foot boat hook is leaning against a wall and the base is sliding away from the wall at the rate of 5 feet per minute. This moves the top of the hook down the wall. How fast is the top moving when the base is 8 feet from the wall? How fast is the top moving at the instant when it strikes the floor?
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Let
+    <ul>
+      <li>
+        <p>
+          <m>x(t)</m> = the distance from the base of the hook to the wall at time <m>t</m> and
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y(t)</m> = the distance from the top of the hook to the floor at time <m>t.</m>
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <p>
+    So
+    <ul>
+      <li>
+        <p>
+          <m>x'(t)</m> = the velocity at which the base of the hook is moving and
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y'(t)</m> = the velocity at which the top of the hook is moving.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <p>
+    Note that <m>x</m> and <m>y</m> are related by the Pythagorean theorem,
+    <me>
+      x^2(t) + y^2(t) = 20^2.
+    </me>
+  </p>
+
+  <p>
+    Using implicit differentiation yields,
+    <me>
+      2x(t) x'(t) + 2y(t)y'(t) = 0.
+    </me>
+  </p>
+
+  <p>
+    If we consider <m>t^*</m> to be the time when the base of the pole is 8 feet from the wall,
+    then <m>x(t^*) = 8</m> and <m>x'(t^*) = 5.</m> Therefore, we have
+    <me>
+      2x(t^*) x'(t^*) + 2y(t^*)y'(t^*) = 0.
+    </me>
+  </p>
+
+  <p>
+    And solving for <m>y'(t^*)</m> we have
+    <me>
+      y'(t^*) = \frac{-x(t^*)x'(t^*)}{y(t^*)} = \frac{-40}{\sqrt{400-64}} = - 10\sqrt{21} \approx -2.2.
+    </me>
+  </p>
+
+  <p>
+    Why is <m>y'(t^*)</m> negative?
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        A baseball diamond is a square with sides 90 feet long. A runner travels from first base to second base at 30 ft/sec. How fast is the runner's distance from home plate changing when the runner is 50 feet from first base?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Two planes leave an airport simultaneously. One travels north at 300 mph and the other travels west at 400 mph. How fast is the distance between them changing after 10 minutes?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        If the temperature of a gas is held constant, then Boyle's Law guarantees that the pressure P and the volume V of the gas satisfy the equation PV = c, where c is a constant. Suppose the volume is increasing at the rate of 15 cubic inches per second. How fast is the pressure decreasing when the pressure is 125 pounds per square inch and the volume is 25 cubic inches?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sand pouring from a chute at the rate of 10 cubic feet per minute forms a conical pile whose height is always one third of its radius. How fast is the height of the pile increasing at the instant when the pile is 5 feet high?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A balloon rises vertically from a point that is 150 feet from an observer at ground level. The observer notes that the angle of elevation is increasing at the rate of 15 degrees per second when the angle of elevation is 60 degrees. Find the speed of the balloon at this instant.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        A snowball (<m>\dsp V=\frac{4}{3}\pi r^3</m>) melts at a rate that, at each instant, is proportional to the snowball's surface area (<m>\dsp A=4\pi r^2</m>). Assuming that the snowball is always spherical, show that the radius decreases at a constant rate.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Herman is cleaning the exterior of a glass building with a squeegee. The base of the 10 foot long squeegee handle, which is resting on the ground, makes an angle of A with the horizontal. The top of the squeegee is x feet above the ground on the building. Herman pushes the bottom of the squeegee handle toward the wall. Find the rate at which x changes with respect to A when A = 60 degrees. Express the answer in feet per degree.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Do all the practice problems in <xref ref="chap3probs">Chapter</xref>. We will not present these, but I will happily answer questions about them.
+      </p>
+    </statement>
+  </problem>
+</section>
+

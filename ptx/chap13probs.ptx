@@ -1,0 +1,352 @@
+
+
+<section xml:id="chap13probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Note.</em> In this section, we write the functions and integrals using many different notations. If you are unsure about the meaning of a notation, please ask!
+  </p>
+
+  <p>
+    <em>Vector Fields, Curl, and Divergence</em>
+    <ol>
+      <li>
+        <p>
+          Sketch the vector field, <m>\oa{f}(x,y)=x^{2}{\vec{i}}+{\vec{j}}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the vector field, <m>\oa{g}(x,y)=(x,-y).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the vector field, <m>\oa{h}(x,y,z)=y{\vec{j}}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute the divergence and curl of the vector field,
+          <m>\oa f(x,y,z) = ( y^2 z, x^3 + z + y, \cos(xyz) ).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find <m>g</m> satisfying <m>\nabla  g=F</m> if it exists.
+          <m>\dsp F(x,\ y)=(ye^{xy}+2x) \oa i +  (xe^{xy}-2y)\oa j</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find <m>g</m> satisfying <m>\nabla  g=F</m> if it exists.
+          <m>\dsp{F(x,\ y)= (e^x\sin(y),\ e^x\cos(y))}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Is <m>{\oa{f}}(x,y)=(2xy,x^2)</m> a conservative vector field? If so, find a potential for it.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Is <m>{\oa{h}}(x,y)=(y \cos(x), \sin(x))</m> a conservative vector field? If so, find a potential for it.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Is <m>{\oa s}(x, y, z)=(e^x \sin z + yz) \vec i + (xz + y) \vec j + (e^x \cos z + xy + z^2) \vec k</m>
+          a conservative vector field? If so, find a potential for it.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Is <m>{\oa{g}}(x,y)=2x{\vec{i}}+y{\vec{j}}</m>
+          a conservative vector field? If so, find a potential for it.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Show that <m>{{F}}(x, y, z)= x{\vec{i}}+y{\vec{j}}+2z{\vec{k}}</m> is
+          conservative and find a function <m>f</m> such that <m>{{F}}=\nabla f</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Line Integrals over Scalar Fields</em>
+    <ol>
+      <li>
+        <p>
+          Let <m>f(x,y) = x+y</m> and <m>{\oa c}</m>  be the unit circle in <m>\re^{2}.</m> Evaluate <m>\int_{\oa c} f \ ds.</m>   Recall that <m>ds</m> means to evaluate with respect to the arc length.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\int_{\oa c} \sqrt{xy+2y+2}\ ds</m> with <m>{\oa c}</m> the line segment from <m>(0,1)</m> to <m>(0,-1).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\int_{\oa c} (x-y+z-2)\ ds</m> where <m>{\oa c}</m> is the line segment from <m>(0,1,1)</m> to <m>(1,0,1).</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Line Integrals over Vector Fields</em>
+    <ol>
+      <li>
+        <p>
+          Compute <m>\dsp \int_{\oa r} f \cdot \; dr</m> where <m>f(x,y) = (y,x^2)</m> and <m>\oa r(t) = (4-t, 4t-t^2)</m> for <m>0 \leq t \leq 3.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_{\oa r} f \cdot \; dr</m> where <m>f(x,y) = (y,x^2)</m> and <m>\oa r(t) = (t, 4t-t^2)</m> for <m>1 \leq t \leq 4.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_{\oa r} F \cdot \; dr</m> where <m>F(x,y) = (-\frac{1}{2}x, -\frac{1}{2}y, \frac{1}{4})</m> and <m>\oa r(t) = (\cos(t),\sin(t),t),</m> <m>1 \leq t \leq 4.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Divergence Theorem and Green's Theorem</em>
+    <ol>
+      <li>
+        <p>
+          Verify the divergence theorem for the flow <m>f(x,y) = (0,y)</m> over the circle, <m>x^2 + y^2 = 5.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>f(x,y) = (u(x,y),v(x,y))=(-x^2y,xy^2)</m> and <m>{\oa c} = \{(x,y): x^2 + y^2 = 9 \}</m> and <m>D</m> be the region bounded by <m>\oa c.</m> Verify Green's Theorem by evaluating both <m>\dsp \oint_{\oa c} f(\oa x) d\oa x</m> and <m>\dsp \int \int_D v_x(x,y) - u_y(x,y) dA.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Verify Green's Theorem where <m>f(x,y) = (4xy,y^2)</m> and <m>{\oa c}</m> is the curve <m>y=x^3</m> from the <m>(0,0)</m> to <m>(2,8)</m> and the line segment from <m>(2,8)</m> to <m>(0,0)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          If you want more practice on verifying Green's and Gauss' theorems, then note that each problem that asks you to verify Gauss' theorem could have asked you to verify Green's theorem and vice-versa.  You won't need solutions because you are computing both sides of the equation and they must be equal if all your integration is correct.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Divergence Theorem in Three Dimensions</em>
+    <ol>
+      <li>
+        <p>
+          Verify the divergence theorem for <m>f(x,y,z) = (xy,z,x+y)</m> over the region in the
+          first octant bounded by <m>y=4</m>, <m>z=4-x</m>, <m>z=0</m>, <m>y=0</m>, and <m>x=0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Verify the divergence theorem for <m>f(x,y,z) = (2x,-2y,z^2)</m> over the region
+          <m>[0,3] \times [0,3] \times [0,3]</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 13 Solutions</em>
+  </p>
+
+  <p>
+    <em>Vector Fields, Curl, and Divergence</em>
+    <ol>
+      <li>
+        <p>
+          no sketch
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no sketch
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no sketch
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no solution
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g(x,y) = e^{xy}+x^2-y^2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g(x,y) = e^{x}\sin(y)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          yes, <m>g(x,y) = x^2y</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          yes, <m>g(x,y) = y\sin(x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          yes, <m>g(x,y,z) = e^x\sin(z) + xyz + \frac{1}{2}y^2 + \frac{1}{3}
+          z^3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no solution
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no solution
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Line Integrals over Scalar Fields</em>
+    <ol>
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>8/3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-\sqrt{2}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Line Integrals over Vector Fields</em>
+    <ol>
+      <li>
+        <p>
+          <m>69/2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-69/2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>3\pi/4</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Divergence Theorem and Green's Theorem</em>
+    <ol>
+      <li>
+        <p>
+          If both sides are equal, you probably have the right answer!
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>81\pi/2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-256/15</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no solution
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Divergence Theorem in Three Dimensions</em>
+    <ol>
+      <li>
+        <p>
+          Hopefully you got the same answer both ways!
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Hopefully you got the same answer both ways!
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

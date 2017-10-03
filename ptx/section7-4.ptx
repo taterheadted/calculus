@@ -1,0 +1,368 @@
+
+
+<section>
+  <title>Power Series</title>
+  <p>
+    From the first semester of calculus, we know that the best linear (<m>1^{st}</m> degree polynomial) approximation to the function, <m>f(x) = e^x</m> at the point <m>P=(2,e^2)</m> is the tangent line to the function at this point. Let's call that approximation <m>L</m> and note that <m>L(2) = f(2)</m> and <m>L'(2) = f'(2)</m>. That is, <m>L</m> and <m>f</m> intersect at <m>P</m> and <m>L</m> and <m>f</m> share the same derivative at <m>P</m>. What is the best quadratic (<m>2^{nd}</m> degree polynomial) approximation? If the best first degree approximation to the curve agrees at the point and in the first derivative, then the best second degree approximation should agree with the function at the point, in the first derivative, and in the second derivative.
+  </p>
+
+  <example>
+    <statement>
+      <p>
+        Compute best linear and quadratic approximations to <m>f(x) = x^3-16x</m> at <m>x=1</m>.
+        EXTRA<fn>Depending on the class, I might work this example or I might not. If I do, it serves as an introductory lecture to the concept behind Power Series.   I typically compute the first degree approximation, <m>L,</m> to <m>f(x) = x^3 - 16x</m> at <m>x=2.</m>  Then I would ask what <m>f</m> and <m>L</m> have in common until we agreed that <m>f(2)=L(2)</m> and <m>f'(2)=L'(2)</m>.  Next I would ask what a second degree approximation, <m>Q,</m> would have in common until we agreed that <m>f(2) = Q(2)</m>, <m>f'(2) = Q'(2)</m>, and <m>f''(2) = Q''(2).</m>  We might even solve for <m>Q</m>.  If time allowed, I would point out that we already know that <m>f(x) = 1/(1-x)</m> has an expansion for <m>0\lt x\lt 1</m> with <m>f(x) = \sum x^n</m> (geometric series) and so <m>g(x) = 1/(1-x^2) = \sum (x^2)^n</m>, so some rational functions have infinite polynomial expansions.   I would conclude the discussion by pointing out that the key questions we ask are, <q>When can we approximate a function at a point by an infinite polynomial?</q> and <q>What is the largest set of numbers over which this infinite polynomial (series) converges?</q>.</fn></p>
+    </statement>
+  </example>
+
+  <problem xml:id="taylorex">
+    <statement>
+      <p>
+        Let <m>f(x) = e^x.</m> Find the best linear approximation, <m>L(x) = mx+ b,</m> to <m>f</m> at <m>(2,e^2).</m> Find the best quadratic approximation, <m>Q(x) = ax^2 + bx +c,</m> to <m>f</m> at <m>(2,e^2).</m> Graph all three functions on the same pair of coordinate axes.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = \cos(x).</m> Find the best linear (L, <m>1^{st}</m> degree), quadratic (Q, <m>2^{nd}</m> degree), and quartic (C, <m>4^{th}</m> degree) approximations to <m>f</m> at <m>(\pi, \cos(\pi)).</m> Sketch the graph of <m>f</m> and all three approximations on the same pair of coordinate axes. Compute and compare <m>\dsp f(\frac{3\pi}{2})</m>, <m>\dsp L(\frac{3\pi}{2})</m>, <m>\dsp Q(\frac{3\pi}{2})</m>, and <m>\dsp C(\frac{3\pi}{2}).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    From our work on geometric series, we know that
+    <me>
+      \displaystyle{\sum_{n=0}^{\infty} t^n = \frac{1}{1-t}}
+    </me>
+    for <m>|t| \lt  1</m>. Therefore the function <m>\dsp g(t) = \frac{1}{1-t} \mbox{ where }  |t| \lt  1</m> can be written as a series,
+    <me>
+      \displaystyle{g(t) = \frac{1}{1-t} = 1 + t + t^2 + t^3 + \cdots = \sum_{n=0}^{\infty} t^n}.
+    </me>
+  </p>
+
+  <p>
+    Replacing <m>t</m> by <m>-x^2</m>, we have
+    <me>
+      \dsp \frac{1}{1+x^2}=1-x^2+x^4- \cdots + (-1)^{n-1} x^{2n-2} + \cdots.
+    </me>
+  </p>
+
+  <p>
+    Based on these two observations, we see that we can write at least two rational functions as infinite series (or infinite polynomials). And we can write every polynomial as an infinite series, since
+    <me>
+      f(x) = a_0 + a_1x + a_2x^2 + \cdots + a_Nx^N = \sum_{i=0}^{\infty} a_ix^i
+    </me>
+    where <m>a_i = 0</m> for <m>i > N</m>. Our goal is a systematic way to write any differentiable function (like <m>sin</m> or <m>cos</m>
+    or <m>\ln</m>) as an infinite series.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        <m>0^0 = 1</m>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    <em>Notation.</em> To keep from confusing the powers of <m>f</m> with the derivatives of <m>f</m>, we use <m>f^{(n)}</m> to represent <m>f</m> if <m>n=0</m> and the <m>n^{th}</m> derivative of <m>f</m> if <m>n \ge 1.</m> Therefore when <m>n \geq 1</m>, <m>f^{(n)}(c)</m> means the <m>n^{th}</m> derivative of <m>f</m> evaluated at the number <m>c</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\displaystyle{f(x) = \sum_{i=0}^{\infty} a_ix^i}.</m> Write out <m>S_6</m>, the <m>6^{th}</m> partial sum of this series. Compute <m>S_6'</m> and <m>S_6''</m>. Compute <m>S_6'(0)</m> and <m>S_6''(0).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>\displaystyle{f(x) = \sum_{i=0}^{\infty} a_ix^i}.</m> Compute <m>f'</m> and <m>f''.</m> Compute <m>f(0), f'(0), f''(0), \dots</m>? If <m>n</m> is any positive integer, what is the <m>n^{th}</m> derivative at <m>0</m>, <m>f^{(n)}(0)</m>?
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>f</m> is a function with <m>N</m> derivatives, then the <term><m>N^{th}</m> degree Taylor polynomial of <m>f</m> expanded at <m>c</m></term> is defined by
+        <me>
+          T_N(x) = \sum_{n=0}^{N} \frac{f^{(n)}(c)}{n!}(x-c)^n.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        Compute the Taylor series polynomials of degree 1, 2, 3 and 4 for <m>f(x) = 1/x</m> expanded at 1. Compute the Taylor series polynomial for the same function expanded at 1.
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose that <m>\dsp T(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!}(x-c)^n.</m> Write out the first few terms of this series and compute <m>T'(c)</m>, <m>T''(c)</m>, <m>T'''(c)</m>, <ellipsis />.
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        The series in the last problem is called the <term>Taylor Series for <m>f</m> expanded at c</term>. When <m>c=0</m> this is called the <term>McLaurin Series for <m>f</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = e^x.</m> Compute the first, second, and third degree Taylor polynomials for <m>f</m> expanded at 2. Compare to the result of <xref ref="taylorex">problem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Compute the Taylor series for <m>f(x)=1/x</m> at <m>c=1</m> and use the Ratio Test to determine the interval of convergence. Also check convergence at both endpoints of the interval of convergence.
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        For each function, write the infinite degree Taylor polynomial as a series.
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = e^x</m> expanded at 0
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = \sin(x)</m> expanded at 0
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp f(x) = \frac{\cos(x)}{x}</m> expanded at 0 (Divide the series for <m>\cos(x)</m> by <m>x</m>.)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = \ln(x).</m> Compute the first, second, and third degree Taylor polynomial for <m>f</m> expanded at 1. Compute <m>|f(2.5) - T_N(2.5)|</m> for <m>N=1,2,3.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We now can write certain functions as infinite series, but we know that not every infinite series converges. Therefore, our expressions only make sense for the values of <m>x</m> for which the series converges. For this reason, every time we write down an infinite series to represent a function, we need to determine the values of <m>x</m> for which the series converges. This is called interval of convergence (or domain) of the series.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A <term>{ power series expanded at <m>c</m>} </term> is any series of the form <m>\displaystyle{\sum_{n=0}^{\infty} a_n(x-c)^n}</m>. Taylor and McLaurin series are special cases of power series. The largest interval for which a power series converges is called its <term>interval of convergence</term>. Half the length of this interval is called the <term>radius of convergence</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Use the ratio test to find the interval and radius of convergence for each power series.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \sum_{n=0}^{\infty} \frac{x^n}{n+1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \sum_{n=0}^{\infty} \frac{x^n}{n!}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \sum_{n=0}^{\infty} n!(x+2)^n</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The next theorem says that the interval of convergence of a power series expanded at the point <m>c</m> is either (i) only the one point, <m>c</m> (bad, since this means the series is useless), (ii) an interval of radius <m>R</m> centered at <m>c,</m> (good, and the endpoints might be contained in the domain), or (iii) all real numbers (very good).
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Power Series Theorem.</em> For the power series <m>\displaystyle{\sum_{n=0}^{\infty} a_n(x-c)^n}</m>, one and only one of the following is true.
+        <ol>
+          <li>
+            <p>
+              The series converges only at <m>c</m>.  (bad)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              There exists a positive number <m>R</m> called the <em>radius of convergence</em> such that <m>\displaystyle{\sum_{n=0}^{\infty} a_n(x-c)^n}</m> converges absolutely for <m>|x - c| \lt  R</m>. (good)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The series converges absolutely for all <m>x</m>. (great)
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    When we write the power series for a function (like <m>e^x</m>) and it converges for all values of <m>x</m> then we simply have a different way to write the function that turns out to be both computationally useful, because of convergence, and theoretically useful. Speaking loosely, <m>e^x</m> is just an infinite polynomial <mdash /> how cool is that?!
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find the interval of convergence for each of the following power series.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \sum_{n=0}^{\infty} \frac{(x-3)^n}{\ln(n+2)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \sum_{n=1}^{\infty} \frac{(-x)^n}{n}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \sum_{n=0}^{\infty} \frac{\log(n+1)}{(n+1)^4} (x+1)^n</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp  \sum_{n=0}^{\infty} \frac{n^3}{3^n} (x+2)^n</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The following theorem says that if you have a power series, then its derivative is exactly what you want it to be! Just take the derivative of the series term by term and the new infinite series you get is the derivative of the first and is defined on the same domain.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Power Series Derivative Theorem.</em> If <m>\displaystyle{f(x) = \sum_{n=0}^{\infty} a_n(x-c)^n}</m> for all <m>x</m> in the interval of convergence <m>(c-R, c+R)</m>, then
+        <ol>
+          <li>
+            <p>
+              <m>f</m> is differentiable in <m>(c-R, c+R)</m>,
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{f'(x) = \sum_{n=1}^{\infty} na_n(x-c)^{n-1}}</m> for all <m>x</m> in <m>(c-R, c+R)</m>, and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the interval of convergence of <m>f'</m> is also <m>(c-R, c+R)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose that <m>\displaystyle{f(x)=\sum_{n=0}^{\infty} a_n(x-c)^n}</m> with radius of convergence <m>r > 0</m>. Show that <m>\dsp a_n</m> must equal <m>\dsp \frac{f^{(n)}(c)}{n!}</m> for <m>n = 0, 1, 2,</m> and <m>3.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    How does the calculator on your phone approximate numbers like <m>\sqrt{5}</m> or <m>\sin(\pi/7)</m>? It uses Taylor series. For example, if we want to approximate <m>\sqrt{5}</m> accurate to 3 decimal places, we could compute the Taylor series for <m>f(x) = \sqrt{x}</m> expanded about <m>c=4</m> because 4 is the integer closest to 5 for which we actually know the value of <m>\sqrt{4}</m>. Then we can use this polynomial to approximate <m>\sqrt{5}.</m> But there's a problem. While the Taylor series approximates the function, it's pretty hard to store an infinite polynomial in a phone. So, how can we determine what degree Taylor polynomial we need to compute in order to assure a given accuracy? We look at the remainder of the series. For any positive integer, <m>N,</m> <m>f</m> can be rewritten as the sum of the Taylor polynomial of degree <m>N</m> plus the remainder of the series by writing,
+    <me>
+      f(x) = \sum_{n=0}^N \frac{f^{(n)}(c)}{n!} (x-c)^n + \sum_{n=N+1}^\infty \frac{f^{(n)}(c)}{n!} (x-c)^n
+    </me>
+    or
+    <me>
+      f(x) = T_N(x) + R_N(x),
+    </me>
+    where
+    <me>
+      T_N(x) = \sum_{n=0}^N \frac{f^{(n)}(c)}{n!} (x-c)^n \mbox{ is the }  N^{th} \mbox{ degree Taylor polynomial}
+    </me>
+    and
+    <me>
+      R_N(x)=\sum_{n=N+1}^\infty \frac{f^{(n)}(c)}{n!}(x-c)^n \mbox{ is called the }  N^{th} \mbox{ degree Taylor remainder} .
+    </me>
+  </p>
+
+  <p>
+    Since <m>f(x) = T_N(x) + R_N(x),</m> for all <m>x</m> in the interval of convergence, the error for any <m>x</m> in the interval of
+    convergence is just <m>| f(x) - T_N(x)| = |R_N(x)|.</m> If we could just approximate the size of the remainder term, we would know how accurate the <m>N^{th}</m> degree Taylor polynomial was. The next theorem says that the remainder, even though it is an infinite sum, can be written completely in terms of the <m>(N+1)^{st}</m> derivative, so if we can find a bound for the <m>(N+1)^{st}</m> derivative then we can get a bound on the error of the Taylor series.
+  </p>
+
+  <theorem xml:id="taylorerror">
+    <statement>
+      <p>
+        <em>Taylor Series Error Theorem.</em> Let <m>f</m> be a function such that <m>f^{(i)}</m> is continuous for each <m>i=0, 1, 2, \cdots, N</m> on <m>[a, b]</m> and <m>f^{(N+1)}(x)</m> exists for all <m>x</m> in <m>(a, b)</m>. Then <m>\dsp R_N(x)=\frac{f^{(N+1)}(k)}{(N+1)!}(x-c)^{N+1}</m> for some <m>k</m> between <m>x</m> and <m>c</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = \sqrt{x}</m> and compute <m>T_3(x)</m>, the third degree Taylor series for <m>f</m> expanded at 4. Estimate the error <m>|f(5)-T_3(5)|</m> by using <xref ref="taylorerror">Theorem</xref> to find the maximum of <m>|R_3(5)|</m>. Now use your calculator to compute <m>|f(5)-T_3(5)|</m> and see how this compares to your error estimate.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = \sin(x)</m> and compute <m>T_3(x)</m>, the third degree McLaurin series <m>f.</m> Estimate the error <m>|f(\frac{\pi}{7})-T_3(\frac{\pi}{7})|</m> by using <xref ref="taylorerror">Theorem</xref> to find the maximum of <m>|R_3(\frac{\pi}{7})|</m>. Now use your calculator to compute <m>|f(\frac{\pi}{7})-T_3(\frac{\pi}{7})|</m> and see how this compares to your error estimate.
+      </p>
+    </statement>
+  </problem>
+</section>
+

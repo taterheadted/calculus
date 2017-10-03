@@ -1,0 +1,672 @@
+
+
+<section>
+  <title>Limits and Continuity</title>
+  <definition>
+    <statement>
+      <p>
+        If f is a function and each of <m>a</m> and <m>L</m> are numbers, then we say that the <term>limit of <m>f</m> as <m>x</m> approaches <m>a</m> is <m>L</m></term> if the values for <m>f(x)</m> get close to the number <m>L</m> as the values for <m>x</m> get close to the number <m>a.</m> We write this as
+        <me>
+          \lim_{x \rightarrow a} f(x) = L \; \; \; \mbox{ or }  \; \; \; f(x) \rightarrow L \mbox{ as }  x \rightarrow a.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        What number is the function <m>\dsp f(x) = \frac{x^5-32}{x-2},</m> approaching as <m>x</m> approaches <m>2</m>?
+      </p>
+    </statement>
+  </example>
+
+  <table xml:id="t2" >
+    <caption>First Limit Table</caption>
+    <tabular>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell>x</cell>
+        <cell>f(x)</cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>1.9</m></cell>
+        <cell><m>72.39</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>1.99</m></cell>
+        <cell><m>79.20</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>1.999</m></cell>
+        <cell><m>79.92</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>1.9999</m></cell>
+        <cell><m>79.992</m></cell>
+      </row>
+      <row bottom="medium">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell  ><m>2.1</m></cell>
+        <cell><m>88.41</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>2.01</m></cell>
+        <cell><m>80.80</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>2.001</m></cell>
+        <cell><m>80.08</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+      <row>
+        <cell><m>2.0001</m></cell>
+        <cell><m>80.008</m></cell>
+      </row>
+      <row bottom="minor">
+        <cell></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </table>
+
+  <p>
+    <xref ref="t2">Table</xref> shows that as <m>x</m> approaches <m>2</m> from either the left or the right, <m>f(x)</m> approaches <m>80.</m> From this table, we assume that the limit as <m>x</m> approaches <m>2</m> of the function <m>\displaystyle{f(x) = \frac{x^5-32}{x-2}}</m> is <m>80.</m> Our notation for this will be:
+    <me>
+      \lim_{x\rightarrow 2} \frac{x^5-32}{x-2} = 80.
+    </me>
+  </p>
+
+  <p>
+    This is an intuitive approach to the notion of a limit because we did not give specific meaning to the phrases <q>x approaches 2</q> or <q>f(x) approaches 80.</q> To give a mathematically accurate definition for the word <q>limit</q> took mathematicians almost 200 years, yet our intuitive approach will serve us well for this course. If you are interested in a more precise definition of the limit, read <xref ref="applim">Appendix</xref> or take <em>Real Analysis</em>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Compute <m>\dsp \lim_{x\rightarrow 2} \frac{x^3-8}{x-2}</m> by constructing a limit table like <xref ref="t2">Table</xref>. What is <m>\dsp \lim_{x\rightarrow -2} \frac{x^3-8}{x-2}</m>?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Arguments for trigonometric functions in calculus are in radians unless stated otherwise, so be sure your calculator is in radian mode. Compute <m>\dsp \lim_{x\rightarrow 0} \frac{\sin(x)}{2x}</m> by constructing a limit table.
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Computing limits using algebra.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    A reasonable attempt to find the limit of the function <m>f</m> as <m>x</m> approaches <m>a</m> would be to simply plug <m>a</m> in for <m>x</m> in the function. As illustrated in the last two problems, <em>this does not always work.</em> There is an important distinction between the value <m>f(a)</m> and the limit of <m>f</m> as <m>x</m> approaches <m>a.</m> In addition to tables and graphing, we may also use algebra to evaluate some limits.
+    <me>
+      \lim_{x \rightarrow 3} \frac{x^2 - 9}{x - 3} = \lim_{x \rightarrow 3} \frac{(x-3)(x+3)}{x - 3} = \lim_{x \rightarrow 3} \left( x+3 \right) = 6
+    </me>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Graph the two functions <m>f(x) = x+3</m> and <m>\dsp g(x) =\frac{x^2-9}{x-3},</m> and list their domains. Are <m>f</m> and <m>g</m> the same function?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the following limit: <m>\dsp \lim_{x \rightarrow 2} \frac{x^2 -4}{x - 2}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute these limits and make a note that you will need them in a later problem.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{t\rightarrow 0}\frac{\sin(t)}{t}.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{t \rightarrow 0} \frac{1 - \cos(t)}{t}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>x</m> be a real number and compute <m>\dsp \lim_{h \rightarrow 0} \frac{hx^2 + h}{h}</m>. Your answer will be a number written in terms of the number <m>x.</m>
+        EXTRA<fn>This problem demonstrates how I gently try to introduce them to more abstract concepts, even ones as simple as <q><m>h</m> represents some number, but we don't know which number <m>h</m> is.</q>  When a student reading the problem indicates a lack of understanding, I simply say, <q>Pick a value for <m>h</m> and work it with that value; then pick another.</q> If the problem is presented by someone who uses a specific value, I'll choose another value and then show the general case.</fn></p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the following limits.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 3} \frac{x^3-27}{x-3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 1} \frac{\frac{1}{x} - 1}{x^2-1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow -2} \frac{x^3+3x^2+3x+2}{x^2+x-2}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    There are rules (theorems) that will facilitate the computation of limits. The next problem will help you find these basic rules.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Read <xref ref="l30">Problem</xref> and then compute the following limits.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 3} 5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 3} x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow \frac{\pi}{2}} 6\sin(x)</m> and <m>\dsp 6\lim_{x \rightarrow \frac{\pi}{2}} \sin(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp (\lim_{x \rightarrow 4} x^2 + \lim_{x \rightarrow 4} 4x^5)</m> and <m>\dsp \lim_{x \rightarrow 4} (x^2 + 4x^5)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \left( \lim_{x \rightarrow -3} x^2 \right) \cdot \left( \lim_{x \rightarrow -3} \frac{1}{x} \right)</m> and <m>\dsp \lim_{x \rightarrow -3} \left( x^2  \cdot \frac{1}{x} \right)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp\lim_{x \rightarrow 5} \frac{x^2}{x-4}</m> and <m>\dsp \frac{ \lim_{x\rightarrow 5} x^2 }{ \lim_{x \rightarrow 5} x-4 }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp\lim_{x \rightarrow 2} \sqrt{x^{2}+x+3}</m> and <m>\dsp \sqrt{\lim_{x \rightarrow 2} (x^{2}+x+3)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp\lim_{x \rightarrow -1} (4x+1)^{3}</m> and <m>\dsp [\lim_{x \rightarrow -1} (4x+1)]^{3}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l30">
+    <statement>
+      <p>
+        Write five theorems (facts) about limits from your observations in the previous problems.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Graph and state the domain for the following functions.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp p(x) = 3x^2 - 6x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp f(x) =  \left\{
+                       \begin{array}{ll}
+                       -2x-4 \amp  \mbox{if}  \; \; \; \; x \lt  1 \\
+                       x+1 \amp  \mbox{if}  \; \; \; \; x > 1
+              \end{array} 
+                  \right.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp g(x) =  \left\{
+                       \begin{array}{ll}
+                       x^2+2 \amp  \mbox{if}  \; \; \; \; x \lt  1 \\
+                       0 \amp  \mbox{if}  \; \; \; \; x = 1 \\
+                       2x+1 \amp  \mbox{if}  \; \; \; \; x > 1
+              \end{array} 
+                  \right.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Sometimes we are interested in the limit of a function <m>f</m> as <m>x</m> approaches <m>a</m> from the left or right side. To make clear which side we are discussing, we write <m>\dsp \lim_{x \rightarrow a^-} f(x)</m> (<em>left-hand limit</em>) or <m>\dsp \lim_{x \rightarrow a^+} f(x)</m> (<em>right-hand limit</em>). If both the left- and right-hand limits exist and are equal, then the limit exists. Otherwise, the limit does not exist. This can happen when either the left-hand limit or the right-limit does not exist, or when both exist but are not equal.
+    EXTRA<fn>At some point during our march (trudge) through limits, I always explain that, while limits may seem abstract and we may not yet see the need for them, they are the foundations of all the future topics we will study in the course <mdash /> continuity, differentiation, integration and many applications.  I also encourage them by saying that limits may be the most challenging portion of the course, so if they will just hang for a bit longer, it will all fit together!</fn></p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Limit Existence Theorem.</em>
+        If f is a function, then the <m>\lim_{x \rightarrow a} f(x)</m> exists if and only if <m>\lim_{x \rightarrow a-} f(x)</m> and <m>\lim_{x \rightarrow a+} f(x)</m> exist and are equal.
+      </p>
+    </statement>
+  </theorem>
+
+  <problem xml:id="l1">
+    <statement>
+      <p>
+        Using the functions from the previous problem, compute the following limits if they exist. If they do not exist, state why.
+        <ol>
+          <li>
+            <p>
+              <m>\lim_{x \rightarrow -3^+} p(x),
+              \lim_{x \rightarrow -3^-} p(x),  \mbox{ and } 
+              \lim_{x \rightarrow -3} p(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lim_{x \rightarrow 1^-} f(x),
+              \lim_{x \rightarrow 1^+} f(x),  \mbox{ and } 
+              \lim_{x \rightarrow 1} f(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\lim_{x \rightarrow 1^-} g(x),
+              \lim_{x \rightarrow 1^+} g(x),  \mbox{ and } 
+              \lim_{x \rightarrow 1} g(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>f</m> is a function and <m>a</m> is in the domain of <m>f</m> then we say that <term>f is continuous at a</term> if <m>\lim_{x \rightarrow a} f(x) = f(a)</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    There are three subtle points in this definition. The definition requires that for <m>f</m> to be continuous at <m>a,</m> each of the following conditions must be met.
+    <ol>
+      <li>
+        <p>
+          <m>a</m> must be in the domain of <m>f</m> (otherwise <m>f(a)</m> doesn't exist),
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \rightarrow a} f(x)</m> must exist, and
+        </p>
+      </li>
+
+      <li>
+        <p>
+          these two numbers must be equal.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    The <em>absolute value</em> function is an example of what we call a <em>piecewise defined</em> function.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The <term>absolute value function</term> is defined by:
+        <me>
+          |x| =  \left\{
+                   \begin{array}{ll}
+                   +x \amp  \mbox{if}  \;\;\;\; x \geq 0 \\
+                   -x \amp  \mbox{if}   \;\;\;\;x \lt  0
+          \end{array} 
+              \right.
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Determine whether the following functions are continuous at the indicated points.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp f(x) = \frac{1}{x+2} \;\;\;\;\; \mbox{at}  \;\;\; x=-2.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp g(x) =
+              \left\{
+                       \begin{array}{ll}
+                       -x-1 \amp  \mbox{if}  \;\;\;\; x \lt  1 \\
+                       x-3 \amp  \mbox{if}  \;\;\;\; x \geq 1
+              \end{array} 
+                  \right. \;\;\;\; \mbox{at}  \;\;\;\; x=1.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp k(x) =  \left\{
+                       \begin{array}{ll}
+                       \frac{x^2-4}{x-2} \amp  \mbox{if}   \;\;\;\;x \neq 2 \\ \\
+                       5 \amp  \mbox{if}  \;\;\;\; x = 2
+              \end{array} 
+                  \right. \;\;\;\;\;\; \mbox{at}  \;\;\;\;\; x=1.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x)=4x^{3}+x^{2}-6x-7</m>      at       <m>x=-2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp C(x)=\cos(x)</m>      at      <m>x=\frac{\pi }{3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp a(x) = \frac{|x-2|}{x-2} \;\;\;\;\; \mbox{at}  \;\;\;\; x=2.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a function is <term>continuous on a set</term> (such as an open interval) if it is continuous at every point in the set.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        For the following, list the open intervals on which the function is continuous.
+        <ol>
+          <li>
+            <p>
+              <m>f(x)=x^{2}+5x+3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp g(x)=\frac{3x-1}{2x+5}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>H(x)=\sin(x)+5x+\sqrt{1-x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T(z)=2+\tan(z)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem xml:id="continuous">
+    <statement>
+      <p>
+        <em>Continuous Functions Theorem.</em>
+        <ol>
+          <li>
+            <p>
+              Every polynomial is continuous on <m>(-\infty ,\infty )</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Every rational function is continuous on its domain.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Every trigonometric function is continuous on its domain.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The sum, product, and difference of continuous functions is continuous.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The quotient <m>\dsp \frac{f}{g}</m> of continuous functions <m>f</m> and <m>g</m> is
+                  continuous wherever <m>g</m> is non-zero.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>g</m> is continuous at <m>a</m> and <m>f</m> is continuous at <m>g(a)</m> then <m>f \circ g</m> is continuous at <m>a</m>.
+               EXTRA<fn>Once this theorem is stated, I must be careful on tests when I ask if a function is continuous and make clear if I want them to use the definition of continuity or if they may use the theorems.</fn></p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the following limits:
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{h \rightarrow 0} \frac{9 h^2 - 3h}{h}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{h \rightarrow 0} \frac{x^2h^2 - xh}{h},</m> where <m>x</m> is some real number.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 2} \left( 2xt + 3x^2t^2 \right),</m> where t is some real number.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = x^2 + x + 1.</m>
+        <ol>
+          <li>
+            <p>
+              Compute and simplify <m>\dsp \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h}.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute and simplify <m>\dsp \lim_{t \rightarrow x} \frac{f(t) - f(x)}{t-x}.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Graph <m>f(x) = x^2, g(x) = -x^2,</m> and <m>\dsp b(x) = x^2\sin \left( \frac{1}{x} \right).</m> Compute <m>\dsp \lim_{x \rightarrow 0} f(x)</m> and <m>\dsp \lim_{x \rightarrow 0} g(x).</m> What can you conclude about <m>\dsp \lim_{x \rightarrow 0} b(x)?</m>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        Show that <m>\dsp \lim_{h \rightarrow 0} \frac{\sin(h)}{h} =1</m> using the unit circle and starting with the fact that <m>\sin(h) \leq h \leq \tan(h)</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    The previous two examples illustrate the <em>Squeeze Theorem</em>. The importance of the second example will become clear later in the course when we take the derivative of the trigonometric function, sine. The notation <m>f \in C_{[a,b]}</m> translates as <q><m>f</m> is an element of the set of all continuous function on the interval <m>[a,b],</m></q> which means that <m>f</m> is continuous at every number <m>x</m> in the interval <m>[a,b].</m> When we write <m>g</m> is <em>between</em> <m>f</m> and <m>h,</m> on <m>[a,b]</m> we mean that for every number <m>x \in [a,b]</m> we have either <m>f(x) \leq g(x) \leq h(x)</m> or <m>h(x) \leq g(x) \leq f(x).</m>
+  </p>
+
+  <theorem xml:id="squeeze">
+    <statement>
+      <p>
+        <em>The Squeeze Theorem.</em> If <m>f,g, h \in C_{[a,b]}</m> and <m>c \in [a,b]</m> and <m>g</m> is between <m>f</m> and <m>h</m> on <m>[a,b],</m> and <m>\lim_{x \rightarrow c} f(x) = \lim_{x \rightarrow c} h(x) = L</m> for some number L, then <m>\lim_{x \rightarrow c} g(x) = L.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Use the <em>Squeeze Theorem</em> to solve each of these problems.
+        <ol>
+          <li>
+            <p>
+              Compute <m>\dsp \lim_{x\rightarrow 0} \left( x^2\cos(x) \right).</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \lim_{x \rightarrow 0} x\sin \left(\frac{1}{x} \right)</m>
+              using <m>\dsp f(x) = -x</m>, <m>\dsp g(x) = x\sin \left(\frac{1}{x} \right)</m>, and <m>\dsp h(x) = x.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>\dsp \lim_{x \rightarrow \infty} \frac{x}{x^2+x+1}</m>
+              using <m>\dsp f(x) = \frac{1}{x}</m>, <m>\dsp g(x) = \frac{x}{x^2+x+1}</m>, and <m>\dsp h(x) = 0.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+</section>
+

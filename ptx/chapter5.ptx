@@ -1,0 +1,20 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Integrals</title>
+  <introduction>
+    <p>
+      <q>We have to believe - before students can believe - that hard work pays off, that effort matters, that success depends not on your genes but on your sweat. We must convince students that they can do it when they have teachers who insist on quality work and give them extra remedial help when needed.</q> - Gene Bottoms
+    </p>
+
+    <p>
+      Integrals are used throughout engineering and industry to solve a wide variety of applied problems such as: the amount of work necessary to lift a 50 ton satellite, the total pressure on the Hoover dam, the probability that you will live to an age between 69 and 71, the volume formulae for various objects, the weight of objects that do not have uniform density, the work required to pump water out of a 55 gallon drum and the area of an oil spill.
+    </p>
+  </introduction>
+  <xi:include  href="section5-1.ptx" />
+  <xi:include  href="section5-2.ptx" />
+  <xi:include  href="section5-3.ptx" />
+  <xi:include  href="section5-4.ptx" />
+  <xi:include  href="chap4probs.ptx" />
+</chapter>
+

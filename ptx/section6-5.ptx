@@ -1,0 +1,125 @@
+
+
+<section>
+  <title>Integration by Trigonometric Substitution</title>
+  <p>
+    We have already used substitution (change of variables) to transform difficult integration problems into easier ones. Trigonometric substitutions are an extension of this same theme.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Derive the formula (<m>\dsp A=\pi r^2</m>) for the area of a circle of radius <m>r</m> using integration as follows.
+        <ol>
+          <li>
+            <p>
+              Compute the definite integral <m>\dsp \int_{-3}^3 \sqrt{9-x^2} \; dx</m> by making the substitution, <m>x(t) = 3\sin(t).</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that the area inside of a circle <m>x^2+y^2=r^2</m> is <m>\pi r^2</m> by setting up and evaluating an appropriate definite integral using the substitution <m>x(t) = r\sin(t)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following integrals.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \int \frac{x^2}{\sqrt{x^2+4}}\; dx \;</m> by using the substitution <m>x = 2 \tan (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_0^4 5x \sqrt{16-x^2} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int_2^3 \frac{1}{{4x^3 \sqrt{x^2 - 1}}} \; dx \;</m> by using the substitution
+              <m>x = \sec (\theta)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{1}{\sqrt{x^2-2x + 5}} \; dx \;</m> by completing square and letting <m>u=x-1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \int \frac{2x+5}{x^2+4x+1} \; dx \;</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>a</m> and <m>b</m> are non-zero numbers, then the set of points in the plane satisfying
+        <me>
+          \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1
+        </me>
+        is an ellipse centered at the origin.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Consider the ellipse, <m>\dsp \frac{x^2}{25} + \frac{y^2}{16} = 1</m>. Set up and evaluate a definite integral that represents the area (or half the area) inside this ellipse.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Solve each of the following problems. Assume that <m>a</m> is a real number.
+        <ol>
+          <li>
+            <p>
+              Evaluate <m>\dsp \int \frac{1}{\sqrt{a^2 - x^2}} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp \int \frac{1}{x^2 + a^2} \; dx</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\dsp \int \frac{1}{x\sqrt{x^2 - a^2}} \; dx</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Verify the formula <m>\dsp A=\pi ab</m> for the area of the ellipse <m>\dsp \frac{x^2}{a^2}+\frac{y^2}{b^2} = 1</m> where <m>a</m> and <m>b</m> are posiive numbers.
+      </p>
+    </statement>
+  </problem>
+</section>
+

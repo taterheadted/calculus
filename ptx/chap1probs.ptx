@@ -1,0 +1,490 @@
+
+
+<section xml:id="chap1probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Graphing</em>
+    <ol>
+      <li>
+        <p>
+          Graph <m>f(x) = x^2 - 4</m>, listing <m>x-</m> and <m>y-</m>intercepts.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>\dsp g(x) = \frac{x-1}{x+2}</m>, listing both vertical and horizontal asymptotes.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>h(x) = \sin(x)</m>, listing the domain and range.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>r(x) = \sqrt{3x-2}</m>, listing the domain and <m>x-</m>intercept.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>\dsp f(x) =  \left\{
+                   \begin{array}{ll}
+                    x-5 \amp  \mbox{if}  \; \; \; \; x>1 \\
+                    x^{2}+1 \amp  \mbox{if}  \; \; \; \; x\leq 1
+          \end{array} 
+              \right.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Evaluate the following limits or state why they do not exist.</em>
+    <ol>
+      <li>
+        <p>
+          <m>\lim_{x\to 2} (x^{3}+2x^{2}-5x+7)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to \frac{\pi}{2}}\cos(2x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to -2}\frac{x+2}{x^{2}-4}  \;\;\; \mbox{and}  \;\;\; \lim_{x\to -2}\frac{x^{2}-4}{x+2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\lim_{x\to 1} f(x)</m>, where <m>\dsp f(x) =  \left\{
+                   \begin{array}{ll}
+                    x-5 \amp  \mbox{if}  \; \; \; \; x>1 \\
+                    x^{2}+1 \amp  \mbox{if}  \; \; \; \; x\leq 1
+          \end{array} 
+              \right.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\lim_{x\to 3}\sqrt{x-3}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{h\to 0}\frac{3xh+h}{h}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to -3} \frac{x^{2}+5x+6}{x^{2}-x-12}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{t\to 1} \frac{t^{3}-1}{t^{2}-1}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to -1} \frac{1+2x}{1+x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to 0} \frac{\sqrt{3-x}-\sqrt{3}}{x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\lim_{x\to \frac{\pi}{8}^{+}}\cos(2x)</m>, <m>\lim_{x\to \frac{\pi}{8}^{-}}\cos(2x)</m>, and <m>\lim_{x\to \frac{\pi}{8}}\cos(2x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>lim_{x\to 1^{-}}f(x)</m>, <m>lim_{x\to 1^{+}}f(x)</m>, and <m>lim_{x\to 1}f(x)</m>  
+
+                   where <m>\dsp f(x) =  \left\{
+                   \begin{array}{ll}
+                   x+3 \amp  \mbox{if}  \; \; \; \; x>1 \\
+                   9x^{2}-5 \amp  \mbox{if}  \; \; \; \; x\leq 1
+          \end{array} 
+              \right.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>f(x)=1-2x^2</m>. Compute <m>\dsp \lim_{t \to x} \frac{f(t)-f(x)}{t-x}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Use the Squeeze Theorem to compute <m>\dsp \lim_{x \to \infty} \frac{\sin(x) + 2}{x}</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>List the interval(s) on which each of the following is continuous.</em>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp f(x)=\frac{3x+2}{6x^{2}-x-1}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>G(x)=\sqrt{x+5}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>f(x)=x^{4}+2x^{3}-6x+1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>h(x)=\sqrt{2-4x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp g(t)=\frac{t}{t-2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>f(\beta)=3\tan (\beta)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp f(x) =  \left\{
+                  \begin{array}{ll}
+                   x^{2}+2 \amp  \mbox{if}  \; \; \; \; x \geq 1 \\
+                   5x-2 \amp  \mbox{if}  \; \; \; \; x \lt  1
+          \end{array} 
+          \right.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>f(x) =  \left\{
+                   \begin{array}{ll}
+                   3-x^{2} \amp  \mbox{if}   \;\;\;\;x\geq \pi \\
+                   \cos(2x) \amp  \mbox{if}  \;\;\;\; x\lt \pi
+          \end{array} 
+              \right.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Velocity</em>
+    <ol>
+      <li>
+        <p>
+          Given position function <m>f(t)=3t^{2}+t-1</m>, where <m>t</m> is in seconds and <m>f(t)</m> is in feet,
+          find the average velocity between <m>1</m> and <m>4</m> seconds. Find the average velocity between
+          <m>p</m> and <m>q</m> seconds.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Suppose that <m>y(t)=-5t^{2}+100t+5</m> gives the height <m>t</m>
+          (in hundreds of feet) of a rocket fired straight up as a function
+          of time <m>t</m> (in seconds).  Determine the instantaneous velocity at times <m>t=2</m> and at <m>t=4</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Secant and Tangent Lines</em>
+    <ol>
+      <li>
+        <p>
+          Find the equation of the secant line of <m>g(x)=1+\sin(x)</m> containing the points <m>(0,1)</m> and <m>(\frac{\pi }{2},2)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the slope of the tangent line to <m>f(t)=5t-2t^{2}</m> at <m>t=-1</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the equation of the tangent line to <m>\dsp F(x) = \frac{x}{x+1}</m> at <m>x=-3.</m> Graph both <m>F</m> and the tangent line.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the equation of the tangent line to <m>H(x)=\sqrt{1+x}</m> at <m>x=8</m> and sketch the graph of both <m>H</m> and the tangent line.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 1 Solutions</em>
+  </p>
+
+  <p>
+    <em>Graphing</em>
+    <ol>
+      <li>
+        <p>
+          parabola with vertex at <m>(0,-4)</m>, y-intercept <m>(0,-4)</m>, x-intercepts at <m>(\pm 2,0)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          rational function with horizontal asymptote <m>y=1</m> and vertical asymptote <m>x=-2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          be sure you can graph all your trig functions and state their domains and ranges
+        </p>
+      </li>
+
+      <li>
+        <p>
+          root functions look like half a parabola sideways, x-intercept <m>(2/3,0)</m>, domain <m>[2/3, \infty)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          half parabola and half straight line, domain <m>(-\infty,\infty)</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Evaluate the following limits or state why they do not exist.</em>
+    <ol>
+      <li>
+        <p>
+          <m>13</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-\frac{1}{4} \;\; \mbox{and}  \;\; -4</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          DNE since LHL = 2 doesn't equal RHL = -4
+        </p>
+      </li>
+
+      <li>
+        <p>
+          DNE since LHL DNE (note that RHL = 0)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>3x+1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{1}{7}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{3}{2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          limit does not exist; <m>x=-1</m> is a horizontal asymptote, so neither left nor right limits exist
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{-1}{2\sqrt{3}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\sqrt{2}/2</m> for all three answers
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>4</m> for all three answers
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-4x</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>List the interval(s) on which each of the following is continuous.</em>
+    <ol>
+      <li>
+        <p>
+          <m>(-\infty,-\frac{1}{3}), (-\frac{1}{3},\frac{1}{2}), (\frac{1}{2},\infty)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>[-5,\infty)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(-\infty,\infty)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(-\infty, \frac{1}{2}]</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(-\infty,2), (2,\infty)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          continuous everywhere except <m>\beta = \frac{(2k-1)\pi}{2}</m> where k is an integer
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(-\infty,\infty)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          all <m>x</m> except <m>x=\pi</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Velocity</em>
+    <ol>
+      <li>
+        <p>
+          16 ft/sec, <m>3(p+q)+1</m> ft/sec
+        </p>
+      </li>
+
+      <li>
+        <p>
+          8000 and 6000 ft/sec
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Secant and Tangent Lines</em>
+    <ol>
+      <li>
+        <p>
+          <m>y = \frac{2}{\pi}x+1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y=9x+2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y= \frac{1}{4} x + \frac{9}{4}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>y = \frac{1}{6}x + \frac{5}{3}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

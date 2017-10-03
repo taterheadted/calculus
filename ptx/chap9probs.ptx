@@ -1,0 +1,136 @@
+
+
+<section xml:id="chap9probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Cross Products</em>
+    <ol>
+      <li>
+        <p>
+          Compute the cross product of <m>\oa u = (3,2,-1)</m> and <m>\oa v = (2,\pi,-3)</m> and state the significance of the resulting vector.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find two vectors of unit length orthogonal to both <m>\oa a = (4,-3,2)</m> and <m>\oa b = (2,5,-3).</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Planes</em>
+    <ol>
+      <li>
+        <p>
+          Find the equation of a plane parallel to <m>3x +2z = 4 - y</m> and containing <m>(2,4,-2).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the equation of the line that represents the intersection of <m>3z - 4x + 2y = 4</m> and <m>2z - x = 6 - y.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find an equation for the plane containing <m>(1,2,3), (2,3,4),</m> and <m>(-1,1,1).</m>  Find another equation for the same plane.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the distance between the two planes: <m>2x-3y+5z=5</m> and <m>2x-3y+5z=15</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Limits</em>
+    <ol>
+      <li>
+        <p>
+          Consider the function defined by
+          <m>f(x,y)=\left\{ \begin{array}{ll}
+          \dsp{\frac{x^2}{x^2+y}} \amp  x^2+y \neq 0\\
+          0 \amp  (x,y)=(0,0)
+          \end{array}  \right.</m>
+
+          Does the limit exist as <m>(x,y) \to (0,0)</m> along <m>y=kx</m> exist for every <m>k \in \re?</m>  Does the limit exist as <m>(x,y) \to (0,0)</m> along <m>y=kx^2</m> exist for every <m>k \in \re?</m> Is the function <m>f</m> continuous at <m>(x,y)=(0,0)</m>?
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 9 Solutions</em>
+  </p>
+
+  <p>
+    <em>Cross Products</em>
+    <ol>
+      <li>
+        <p>
+          <m>(\pi - 6, 7, 3\pi - 4)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \pm \frac{1}{\sqrt{933}}( -1, 16, 26)</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Planes</em>
+    <ol>
+      <li>
+        <p>
+          <m>3x+y + 2z = 6</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(4,10,0) + (-2, -10,4)t</m> (infinitely many other ways to write this one line; check yours by substituting it into each plane)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>z-x=2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{10}{\sqrt{38}}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Limits</em>
+    <ol>
+      <li>
+        <p>
+          No, for a chosen value of <m>k</m>, the limit along the path
+          <m>y=kx^2</m> would be <m>\frac{1}{1+k}.</m>  Therefore the limit along
+          different parabolic paths (different values of <m>k</m>) would
+          yield different results.
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

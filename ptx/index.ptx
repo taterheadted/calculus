@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<docinfo>
+<macros>
+\newcommand{\re}{\mathbb R}
+\renewcommand{\notesname}{}
+\newcommand{\nat}{\mathbb N}
+\renewcommand{\enotesize}{\normalsize}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+\newcommand{\cotanh}{\operatorname{cotanh}}
+\newcommand{\invsin}{\operatorname{invsin}}
+\newcommand{\invcos}{\operatorname{invcos}}
+\newcommand{\invtan}{\operatorname{invtan}}
+\newcommand{\invsec}{\operatorname{invsec}}
+\newcommand{\invcsc}{\operatorname{invcsc}}
+\newcommand{\invcot}{\operatorname{invcot}}
+\newcommand{\invsinh}{\operatorname{invsinh}}
+\newcommand{\invcosh}{\operatorname{invcosh}}
+\newcommand{\invtanh}{\operatorname{invtanh}}
+\newcommand{\invcoth}{\operatorname{invcoth}}
+\newcommand{\invsech}{\operatorname{invsech}}
+\newcommand{\invcsch}{\operatorname{invcsch}}
+\def\oa{\overrightarrow}
+\def\bm{\boldmath}
+\def\ubm{\unboldmath}
+\def\dsp{\displaystyle}
+</macros>
+
+<latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+
+\usepackage{pgfplots}
+
+</latex-image-preamble>
+
+</docinfo>
+
+
+<book>
+<title>Calculus I, II, and III\\A Problem-Based Approach\\with Early Transcendentals</title>
+<frontmatter>
+<titlepage>
+<author>
+<personname>Mahavier  Allen, Browning, Daniel,</personname>
+</author>
+<author>
+<personname>So</personname>
+</author>
+</titlepage>
+</frontmatter>
+
+
+<xi:include href="./chapter1.ptx" />
+
+<xi:include href="./chapter2.ptx" />
+
+<xi:include href="./chapter3.ptx" />
+
+<xi:include href="./chapter4.ptx" />
+
+<xi:include href="./chapter5.ptx" />
+
+<xi:include href="./chapter6.ptx" />
+
+<xi:include href="./chapter7.ptx" />
+
+<xi:include href="./chapter8.ptx" />
+
+<xi:include href="./chapter9.ptx" />
+
+<xi:include href="./chapter10.ptx" />
+
+<xi:include href="./chapter11.ptx" />
+
+<xi:include href="./chapter12.ptx" />
+
+<xi:include href="./chapter13.ptx" />
+
+<xi:include href="./chapter14.ptx" />
+
+<xi:include href="./chapter15.ptx" />
+
+<xi:include href="./chapter16.ptx" />
+
+<backmatter>
+
+<xi:include href="./bibliography.ptx" />
+
+</backmatter>
+</book>
+</mathbook>

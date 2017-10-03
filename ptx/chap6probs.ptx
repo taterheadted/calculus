@@ -1,0 +1,1317 @@
+
+
+<section xml:id="chap6probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Sequences</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      Write the first five terms of the sequence in simplest form.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \{5 - {{2n} \over 3} \}_{n=2}^{\infty}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \{\cos(\frac{n \pi}{4}) \}_{n=0}^{\infty}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \{{{3^n + 2} \over {2^n}} \}_{n=1}^{\infty}</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      Write a formula for each sequence.  I.e. <m>x_n = \_\_\_</m> for <m>n = 1,2,3,\dots</m>.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp {3 \over 5}, {6 \over {25}}, {9 \over {125}}, {{12} \over {625}},  \cdots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp -1, 1, -1, 1, -1, \cdots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp {1 \over 2}, -{2 \over 3}, {3 \over 4}, -{4 \over 5}, {5 \over 6}, \cdots</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      What is the least upper bound and the greatest lower bound of each given sequence?  Prove it.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \{ \frac{2n-2}{n} \}_{n=1}^\infty</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \{ \frac{2n+5}{3n+1} \}_{n=2}^\infty</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Is the sequence monotonic or not?  Prove it.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \{ \frac{n}{n^2+1} \}_{n=1}^\infty</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \{\sin(\frac{2n \pi}{3}) \}_{n=1}^{\infty}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \{\frac{n-2}{n} \}_{n=1}^{\infty}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use limits to find whether or not the sequence converges.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp x_n = {{n+2} \over {n^2+3n+2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp x_n = n \sin \Big({1 \over n} \Big)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp x_n = \Big({{1} \over {n}} \Big)^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp x_n = \Big(1 - {1 \over n} \Big)^n</m>  Remember, the natural log function <m>\ln</m> is your friend.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use the definition of limit to find the smallest <m>N</m> so that
+      <m>\dsp \Big|{3 \over n}-0 \Big| \lt  .001</m> for <m>n \ge N</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Assume <m>\epsilon</m> is a small positive number and use the definition of limit to
+      find the smallest <m>N</m> in terms of <m>\epsilon</m> so that <m>\dsp \Big|{{n+3} \over {2n}}- {1 \over 2}
+      \Big| \lt  \epsilon</m> for <m>n \ge N</m>.
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Series</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      List, in simplest form, the first three partial sums for the series and write a
+      formula for the <m>N^{th}</m>
+      partial sum.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp 1 + \frac{1}{3} + \frac{1}{9} + \frac{1}{27} + \frac{1}{81} + \dots</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp 3 + \frac{3}{5} + \frac{3}{25} + \frac{3}{125} + \dots</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      What does the geometric series converge to?
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {3 \over {4^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} \Big({9 \over {10}} \Big)^n</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use the fact that the Harmonic Series diverges to argue that <m>\dsp \sum_{n=3}^\infty \frac{5}{3n}</m> diverges.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Apply the integral test to determine if the series converges.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {{2n} \over {(n^2-3)^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {{\ln(n)} \over {n}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine if these series converge via one of the <m>n^{th}</m> term test, integral
+      test, p-series test, comparison test, or limit comparison test.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {2 \over {1-n^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {1 \over {4n^2+2n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} \Big({{n+1} \over {n+3}}\Big)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} \Big(\sin \Big({{\pi} \over 4} \Big) \Big)^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} {{n+2} \over {3n+4}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} {1 \over {3n}} + {1 \over {2^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {3 \over {2^n}} + {4 \over {3^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} 4+{1 \over {n^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {1 \over n}- {1  \over {n+2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} {e^{-5n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{3n} \over {n^4 + 16}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=3}^{\infty} \sqrt{{1} \over {3n+4}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {{2} \over {n^2-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {1 \over {n^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {2 \over {\sqrt{n^2+2n}}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{2} \over {n3^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {1 \over {n^2+5n+6}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {1 \over {3^n-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {{\ln(n)} \over {n^3}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {{\ln(n^2)} \over {n^2}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine whether the alternating series is convergent or divergent.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n{{2} \over {n^2-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} (-1)^n {{3n} \over {4^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} (-1)^n{{4^n} \over {n^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=3}^{\infty} {{(-5)^{n-2}} \over {3^{n+1}}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n \Big( {1 \over {\log(n)}} \Big)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} (-1)^n \Big({{3} \over {n+3}}\Big)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} \cos(n \pi)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} (-1)^n{{3^n} \over {3n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} (-1)^n \Big({1\over {\sqrt n}} \Big)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} (-1)^n{3 \over {n^{10}}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n\Big(4 + {{1} \over {n^2}} \Big)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp\sum_{n=1}^{\infty} {{\sec(n \pi)} \over {n}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine if it converges absolutely,converges conditionally, or diverges.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} {{(-4)^n} \over {3^{n+1}}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n{2 \over {n-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n{{1} \over {n(\log_4 n)^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} \Big({{-5} \over {8}}\Big)^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} (-1)^n {{n^n} \over{n!}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n {{n!} \over{n^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} \cos(n \pi)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=2}^{\infty} (-1)^n{{3n} \over {n^2-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{3n} \over {(-3)^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp\sum_{n=1}^{\infty} (-1)^n {{\sqrt{n}} \over {n+4}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{n^2} \over {(-2)^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{n^e} \over {(-e)^n}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following power series, determine its interval of convergence.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{x^n} \over {n+3}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} (-x)^n{1 \over {4^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} (-1)^n{{3^n} \over {n^2}}x^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} {{(x-5)^n} \over {3^{n+1}}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{x^n} \over {\sqrt{n^2+1}}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{x^n} \over {\log(n+1)}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} {{(x+3)^n}\over{n^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} {{\cos(n \pi)x^n}\over {n!}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{(x+4)^n} \over{(n+4)4^n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} \Big(1+ {1 \over n} \Big)^{2n} x^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^{\infty} n^{2n}x^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=1}^{\infty} {{(x-2)^n} \over {2n+2}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following functions, find its Taylor or MacLaurin series
+      and state the radius of convergence.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp f(x) = -{1 \over {x^2}}</m>; <m>c=1</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = \sin(2x)</m>; <m>c = 0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = 3^x</m>; <m>c = 1</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = e^x</m>; <m>c = 2</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = \cos(x)</m>; <m>c= {{\pi} \over 2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = \ln(1+x)</m>; <m>c = 0</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use multiplication, substitution, differentiation, and integration whenever possible to find a series representation of each of the following functions.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp f(x) =x^2 \cos(x)</m> Multiply <m>x^2</m> times the Taylor series for cosine.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) ={{\sin(x^2)} \over x}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = 5xe^{3x}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) = {2 \over {(1-x)^2}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Chapter 6 Solutions</em>
+  </p>
+
+  <p>
+    <em>Sequences</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      Write the first five terms of the sequence in simplest form.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \frac{11}{3}, \frac{9}{3}, \frac{7}{3}, \frac{5}{3}, \dots</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp 1, \frac{\sqrt{2}}{2}, 0, \frac{-\sqrt{2}}{2}, -1, \dots</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{5}{2}, \frac{11}{4}, \frac{29}{8}, \dots</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      Write a formula for each sequence.  I.e. <m>x_n = \_\_\_</m> for <m>n = 1,2,3,\dots</m>.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp x_n = \frac{3n}{5^n}  \cdots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp (-1)^n \cdots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp (-1)^{n+1} \frac{n}{n+1} \cdots</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      What is the least upper bound and the greatest lower bound?  Prove it.
+      <ol>
+        <li>
+          <p>
+            GLB = 0, LUB = 2
+          </p>
+        </li>
+
+        <li>
+          <p>
+            GLB = 2/3 , LUB = 9/7
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Is the sequence monotonic or not?  Prove it.
+      <ol>
+        <li>
+          <p>
+            decreasing
+          </p>
+        </li>
+
+        <li>
+          <p>
+            not monotonic
+          </p>
+        </li>
+
+        <li>
+          <p>
+            increasing
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use limits to find whether or not the sequence converges.
+      <ol>
+        <li>
+          <p>
+            converges to 0
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges to 1
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges to 0
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges to <m>e^{-1}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      N = 3001
+    </p>
+  </li>
+
+  <li>
+    <p>
+      N = the first positive integer larger than <m>\dsp \frac{3}{2\epsilon}</m>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Series</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      List, in simplest form, the first three partial sums for the series and write a
+      formula for the <m>N^{th}</m>
+      partial sum.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp 1 , \frac{4}{3} , \frac{13}{9} , \frac{40}{27} , \dots,  S_n= \frac{1-3^n}{1-3}\frac{1}{3^{n-1}} = \frac{1 - (\frac{1}{3})^n}{1-\frac{1}{3}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp 3 , 3\frac{6}{5} , 3\frac{31}{25} , \dots, S_n = 3 \frac{1-5^n}{(1-5)5^{n-1}}= 3\frac{1 - (\frac{1}{5})^n}{1-\frac{1}{5}}</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      What does the geometric series converge to?
+      <ol>
+        <li>
+          <p>
+            1
+          </p>
+        </li>
+
+        <li>
+          <p>
+            9
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>\dsp \sum_{n=3}^\infty \frac{5}{3n} = \frac{5}{3} \sum_{n=3}^\infty \frac{1}{n} > \sum_{n=3}^\infty \frac{1}{n}</m> which diverges
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Apply the integral test to determine if the series converges.
+      <ol>
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine if these series converge via one of the <m>n^{th}</m> term test, integral
+      test, p-series test, comparison test, or limit comparison test.
+      <ol>
+        <li>
+          <p>
+            converges by limit comparison with <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by limit comparison with <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges, <m>n^{th}</m> term test
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges, geometric series
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges, <m>n^{th}</m> term test
+          </p>
+        </li>
+
+        <li>
+          <p>
+            separate the two series, one harmonic (diverges), one geometric (converges)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            separate the two series, both geometric (converges)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            separate the two series, one constant (diverges by <m>n^th</m> term test), one converges by integral or p-series test
+          </p>
+        </li>
+
+        <li>
+          <p>
+            limit comparison with <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges, geometric series
+          </p>
+        </li>
+
+        <li>
+          <p>
+            limit comparison with <m>\dsp \frac{1}{n^3}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            limit comparison with <m>\dsp \frac{1}{\sqrt{n}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by limit comparison with <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by comparison to <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by limit comparison with <m>\dsp \frac{1}{n}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by comparison to <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by comparison to <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by limit comparison with <m>\dsp \frac{1}{3^n}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges by comparison to <m>\dsp \frac{1}{n^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges, integral test
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Determine whether the alternating series is convergent or divergent.
+      <ol>
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges, terms don't tend to zero
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges, rewrite it so that you can see that <m>a_n = (5/3)^n</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges
+          </p>
+        </li>
+
+        <li>
+          <p>
+            diverges, terms don't tend to zero
+          </p>
+        </li>
+
+        <li>
+          <p>
+            converges, rewrite it without a trig function
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Conditionally Convergent, Absolutely Convergent, or Divergent?
+      <ol>
+        <li>
+          <p>
+            D
+          </p>
+        </li>
+
+        <li>
+          <p>
+            CC
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AC, to get absolutely convergent, convert <m>\log_4</m> to <m>\ln</m> and use integral test
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AC
+          </p>
+        </li>
+
+        <li>
+          <p>
+            D
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AC, ratio test + that clever natural log trick for limits
+          </p>
+        </li>
+
+        <li>
+          <p>
+            D
+          </p>
+        </li>
+
+        <li>
+          <p>
+            CC
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AC
+          </p>
+        </li>
+
+        <li>
+          <p>
+            CC
+          </p>
+        </li>
+
+        <li>
+          <p>
+            this is a neat problem
+          </p>
+        </li>
+
+        <li>
+          <p>
+            this is a really neat problem
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Intervals of convergence.
+      <ol>
+        <li>
+          <p>
+            <m>(-1,1)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-4,4)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-1/3,1/3)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(2,8)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-1,1)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-1,1)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            no interval, diverges for all <m>x \neq -3</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            no interval, diverges for all <m>x \neq 0</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-8,0)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-1,1)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            this is a neat problem
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(1,3)</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Taylor Series (just the first few terms)
+      <ol>
+        <li>
+          <p>
+            <m>\dsp -1+2\, \left( x-1 \right) -3\, \left( x-1 \right) ^{2}+4\, \left( x-1 \right) ^{3}-5\, \left( x-1 \right) ^{4}+6\, \left( x-1 \right) ^{5}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp 2x -8x^3/3! +32 x^5/5! - 128 x^7/7! \dots</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp 3+3\,\ln  \left( 3 \right)  \left( x-1 \right) + \frac{3}{2} \left( \ln  \left( 3 \right)  \right) ^{2} \left( x-1 \right) ^{2}+ \frac{1}{2} \left( \ln  \left( 3 \right)  \right) ^{3} \left( x-1 \right) ^{3}+\frac{1}{8}  \left( \ln  \left( 3 \right)  \right) ^{4} \left( x-1 \right) ^{4}+</m>
+              <m>\dsp \frac{1}{40} \left( \ln  \left( 3 \right)  \right) ^{5} \left( x-1 \right) ^{5}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp {e^{2}}+{e^{2}} \left( x-2 \right) + \frac{1}{2}{e^{2}} \left( x-2 \right) ^ {2}+\frac{1}{6}{e^{2}} \left( x-2 \right) ^{3}+\frac{1}{24}{e^{2}} \left( x-2  \right) ^{4}+{\frac {1}{120}}\,{e^{2}} \left( x-2 \right) ^{5}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp -x+\frac{\pi}{2} +{\frac {1}{6}} \left( x-\frac{\pi}{2} \right) ^{3}-{\frac {1}{120}} \left( x-\frac{\pi}{2} \right) ^{5}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp x-{\frac {1}{2}}{x}^{2}+{\frac {1}{3}}{x}^{3}-{\frac {1}{4}}{x}^{4}+{ \frac {1}{5}}{x}^{5}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Use multiplication, substitution, differentiation, and integration whenever possible to find a series representation of each of the following functions.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^\infty (-1)^n \frac{x^{2(n+1)}}{(2n)!}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp \sum_{n=0}^\infty (-1)^n \frac{x^{4n+1}}{(2n+1)!}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp 5\sum_{n=0}^\infty  \frac{3^n}{n!}x^{n+1}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp 2 \sum_{n=0}^\infty (n-1)r^n</m>  You know the series for <m>\dsp \frac{1}{1-r}.</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+</section>
+

@@ -1,0 +1,671 @@
+
+
+<section xml:id="chap10probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Domains of Functions</em>
+    <ol>
+      <li>
+        <p>
+          Find the domain of <m>f(x,y)= \ln(x^2+y^2 - 1).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the domain of <m>\dsp g(x, y) = \invtan \Big({x \over y} \Big).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the domain of <m>\dsp h(x, y) = {4 \over {|x| - |y|}}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the domain of <m>\dsp k(x,y,z)= {{2xy} \over{z^2+z -1}}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the domain of <m>\dsp \ell(x, y, z)={{xz} \over {\sqrt{1-y^2}}}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Determine the domain over which
+          <m>f(x, y) = \ln(x^3y^4)</m>  is continuous.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Determine the domain over which
+          <m>\dsp g(x, y) = {{x} \over {|x||y|}}</m>  is continuous.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Determine the domain over which
+          <m>\dsp h(x, y, z) = {{x^2 - 1} \over {z \sqrt{y^2 - 1}}}</m>  is continuous.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Graphing Functions</em>
+    <ol>
+      <li>
+        <p>
+          Graph <m>f(x, y)= 1-x^2 +y^2.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>g(x,y)= x+ y.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>\dsp h(x,y)= {{x^2} \over 9} + {{y^2} \over 4}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>k(x, y)=|x|-|y|.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Graph <m>r(x,y)= \sin(x).</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Partial Derivatives and Gradients</em>
+    <ol>
+      <li>
+        <p>
+          Let <m>g(x,y)=x^3 - 4 \log _7 x^2 + \invsin(xy)</m> and compute <m>g_x.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>g(x,y)= \dsp {{x^2} \over {\sin(xy)}}</m> and compute <m>g_y.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>g(x,y)= e^{xy^2}</m> and compute <m>\nabla g.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>g(x,y)=x \ln(y)-4xy+x</m> and compute <m>g_x(1,1)</m> and <m>g_y(1,1).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>g(x,y)= 5^{x^2}y \sin(x - y)</m> and compute <m>g_y(\pi,2\pi).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>h(x,y,z)=\sqrt{2xz-5y}+\cos^{3}(z\sin(x))</m> and compute
+          <m>\nabla h.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Let <m>h(x, y,z) = z^{xy}</m> and compute <m>h_x(2,3,4)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find <m>f_{xx}</m>, <m>f_{zy}</m>, and <m>f_{zxzy}</m> for
+          <m>\dsp f(x,y,z)= \frac{y}{x^{3}}-\sin(zy)-3z^{3}</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Directional Derivatives</em>
+  </p>
+
+  <p>
+    Remember: Directions vectors should be unit vectors.
+    <ol>
+      <li>
+        <p>
+          Using the definition of directional derivative,
+          compute the derivative of <m>f(x,y) = x-y^2</m> at <m>(1,2)</m> in the
+          direction, <m>(1,1).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find <m>D_{\oa u}f(p)</m> for
+          <m>f(x,y)=e^{xy}+2x^{2}y^{3}</m>; <m>p=(3,1)</m>; <m>\oa u</m> is a unit
+          vector parallel to <m>\oa v= (-5, 12)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find <m>D_{\oa u}f(p)</m> for
+          <m>f(x,y)=e^{xy} + \ln(xy)</m>; <m>p=(1,2)</m>; <m>\oa u</m> is a unit
+          vector which makes an angle <m>\dsp {-{\pi} \over 3}</m> from the
+          positive <m>x</m> axis.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find <m>D_{\oa u}f(p)</m> for
+          <m>f(x,y,z)=x^2y-4y^2z+xyz^2</m>; <m>p=(-2,1, -1)</m>; <m>\oa u</m> is a
+          unit vector parallel to the vector <m>\overrightarrow{AB}</m> where
+          <m>A=(2,1,-5)</m> and <m>B=(-2,4,3)</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Derivatives</em>
+  </p>
+
+  <p>
+    For each of the following functions, compute the indicated
+    <q>derivative</q> of the function. Because of the differing domains of
+    the functions, the derivative could be a function
+    (a partial derivative), a vector of functions (a gradient), or
+    a matrix of functions (the `total' derivative)!
+    <ol>
+      <li>
+        <p>
+          <m>f(x,y) = x^2y^3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp g(x,y) = \big( \frac{x^2}{y} - 3xy , \sin(\frac{x}{y}) \big)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>h(x,y) = x^2- e^{xy\sqrt{z}} + \sinh(yz)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>r(s,t,u) = \big( st, s^2tu, \sqrt{stu}, \ln(st^2u) \big)</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chain Rule</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      Let <m>f(x,y)=2x^{2}-7y</m> and <m>\oa g(t) = (\sin(t), \cos(t)).</m>
+      Compute the derivative of <m>f \circ g</m> in two ways. First
+      compose  <m>f</m> and <m>g</m> and take the derivative.  Second,
+      apply the chain rule.  Verify that your solutions are the same.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Let <m>\dsp f(x,y)=4x^{3}y+e^{3y}+\frac{2}{x},</m> <m>x(t)=t^{2}</m>,
+      <m>y(t)=4t-3,</m> and <m>g(t)=(x(t),y(t)).</m> Compute <m>(f \circ g)'(-1).</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following problems, find <m>\dsp \frac{dg}{dt}</m>
+      and evaluate at the given value of <m>t</m>.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>g(x,y)=3xy+e^{x}y^{2}</m> where <m>x(t)=4t^{2}+t</m>, <m>y(t)=6+5t</m>,
+          and <m>t=0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp g(x,y,z)=x^{3}y+xz+\frac{x}{y-z}</m> where <m>x(t)=t^{2}+3</m>,
+          <m>y(t)=4t-t^2</m>, <m>z(t)= \cos(t-3 \pi)</m>, and <m>t=0</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      Let <m>f(x,y)=xy \ln(x)</m> and <m>\oa g(s,t)=(2st, t-s^{3}).</m>
+      State the domain <m>f,</m> <m>g,</m> and <m>f \circ g.</m>
+      Compute the gradient of <m>(f \circ g).</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following problems, find <m>f_s</m> and <m>f_t</m>
+      (i.e. <m>\dsp {{\partial f} \over {\partial s}}</m> and
+      <m>\dsp {{\partial f} \over {\partial t}}</m>).
+      <ol>
+        <li>
+          <p>
+            <m>f(x,y)=2x-y^2</m>, <m>x(s, t)=s \cos(t)</m>, and <m>y(s, t)=(s+t)e^t</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f(x, y, z) = (x + 2y + 3z)^4</m> and <m>x(s, t) = s + t</m>,
+            <m>y(s, t) = s-t</m>, <m>z(s, t)=st</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following problems, find
+      <m>\dsp {{\partial g} \over {\partial u}},</m>
+      <m>\dsp {{\partial g} \over {\partial v}},</m> and
+      <m>\dsp {{\partial g} \over {\partial w}}</m>
+      (i.e. <m>g_u</m>, <m>g_v</m>, and <m>g_w</m>).
+      <ol>
+        <li>
+          <p>
+            <m>g(x, y) = (x+y) \ln(xy)</m>, <m>x(u, v, w) = u+v-3w</m>, and
+            <m>y(u, v, w) = uv+3w</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>g(x, y, z) = yz+xz+xy</m>, <m>x(u, v, w)=u+v-3vw</m>,
+            <m>y(u, v, w)=v+w+4uw</m>, and <m>z(u, v, w)=u+w-5uv</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      For each of the following three problems, find
+      <m>\dsp {{\partial z} \over {\partial x}}</m> and
+      <m>\dsp {{\partial z} \over {\partial y}}</m> at the indicated point.
+      <ol>
+        <li>
+          <p>
+            <m>z^3 -xy+2yz+y^3-3=0</m>; <m>(1, 1,1)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp {1 \over {x^2}}+{1 \over {y^2}} + {1 \over {z^2}} = {{49}
+            \over {36}}</m>; <m>(-1, 2, 3)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>ye^{xyz} \cos(2xz) = 1</m>; <m>(\pi, 1, 4)</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Tangent Lines and Planes</em>
+    <ol>
+      <li>
+        <p>
+          Find the (shortest) distance from the point <m>(0, 1, 0)</m> to the plane <m>x + 2y+ 3z=4</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the equation of the tangent plane to the function <m>z=x^{2}-4y^{2}</m> at <m>(3,1,5).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the equation of the tangent plane to <m>z+1=xe^y \cos(z)</m> at the point <m>(1,0,0).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the equation of the line normal (perpendicular) to <m>x^2+2y^2 + 3z^2 = 6</m> and passing through <m>(1,-1,1).</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the tangent plane approximation of <m>h(x,y)=x+x \ln(xy)</m> when <m>x=e</m> and <m>y=1</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 10 Solutions</em>
+  </p>
+
+  <p>
+    <em>Domains of Functions</em>
+    <ol>
+      <li>
+        <p>
+          <m>\{ (x,y) \in \re^2 : x^2 + y^2 > 1\}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{ (x,y) \in \re^2 : y \neq 0 \}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{ (x,y) \in \re^2 : |x| \neq |y| \}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          all of <m>\re^3</m> except where <m>z</m> equals the Pisot numbers
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\{ (x,y) \in \re^2 : |y| \lt  1 \}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Graphing Functions</em>
+    <ol>
+      <li>
+        <p>
+          a saddle centered at <m>(0,0,1)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          a plane
+        </p>
+      </li>
+
+      <li>
+        <p>
+          squished paraboloid
+        </p>
+      </li>
+
+      <li>
+        <p>
+          planar saddle with a `point' at <m>(0,0,0)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          a three dimensional sine wave
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Partial Derivatives and Gradients</em>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp g_x(x,y) = 3x^2 - \frac{8}{x\ln(7)} + \frac{y}{\sqrt{1-(xy)^2}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp g_y(x,y) = \frac{-x^3\cos(xy)}{\sin^2(xy)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\nabla g(x,y) = ( y^2e^{xy^2}, 2xye^{xy^2} )</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g_x(1,1)=g_y(1,1) = -3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g_y(\pi,2\pi)= 2\pi 5^{\pi^2}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \nabla h(x,y,z) = \big( \frac{z}{\sqrt{2xz-5y}} - 3z\cos(x)\cos^2(z\sin(x))\sin(z\sin(x)), \frac{-5}{\sqrt{2xz-5y}},</m>
+
+          <m>\dsp \frac{x}{\sqrt{2xz-5y}} - 3\sin(x)\cos^2(z\sin(x))\sin(z\sin(x))  \big)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>h_x(2,3,4) \approx 17,035</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp f_{xx}=\frac{12y}{x^5}, f_{zy} = -\cos(zy)+zy\sin(zy), f_{zxzy}=0</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Directional Derivatives</em>
+  </p>
+
+  <p>
+    Remember: Directions vectors should be unit vectors.
+    <ol>
+      <li>
+        <p>
+          <m>\frac{-3}{\sqrt{2}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{1}{13}(588 + 31e^3)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(1-\frac{\sqrt{3}}{2})(e^2 + \frac{1}{2}))</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{42}{\sqrt{89}}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Derivatives</em>
+    <ol>
+      <li>
+        <p>
+          <m>\nabla f(x,y) = (2xy^3,3x^2y^2)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>Dg(x,y) =
+          \begin{pmatrix}\frac{2x}{y} - 3y \amp  - \frac{x^2}{y^2} - 3x \cr
+          \frac{1}{y}\cos(\frac{x}{y}) \amp  - \frac{x}{y^2}\cos(\frac{x}{y})
+          \end{pmatrix}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\nabla h(x,y) =
+          (2x - y\sqrt{z}e^{xy\sqrt{z}}, -x\sqrt{z}e^{xy\sqrt{z}} + z \cosh(yz) )</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp Dr(s,t,u) =
+          \begin{pmatrix}t \amp  s \amp  0 \cr
+          2stu \amp  s^2u \amp  s^2t \cr
+          \frac{tu}{2\sqrt{stu}} \amp  \frac{su}{2\sqrt{stu}} \amp  \frac{st}{2\sqrt{stu}} \cr
+          \frac{t^2u}{st^2u} \amp 
+          \frac{2stu}{st^2u} \amp 
+          \frac{st^2}{st^2u}
+          \end{pmatrix}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chain Rule</em>
+    <ol>
+      <li>
+        <p>
+          <m>(f \circ g)'(t)  = \sin(t)(4\cos(t)+7)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>(f \circ g)'(-1) \approx 188</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          (a) <m>84</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\nabla (f \circ g) =
+          ( (2t^2-8s^3t)\ln(2st)+(2st^2-2s^4t)\frac{1}{s},
+          (4st-2s^4)\ln(2st) + (2st^2-2s^4t)\frac{1}{t}
+          )</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          (a) <m>f_s(s,t)=2\cos(t)-2(s+t)e^{2t}</m> and
+          <m>f_t(s,t) = -2s \sin(t) - 2(s+t)e^{2t} -2(s+t)^2e^{2t}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Tangent Lines and Planes</em>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \frac{\sqrt{14}}{7}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>6x-8y-z=5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>x + y - z = 1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>L(t) = (2,-4,6)t + (1,-1,1)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>3x + ey - z = 2e</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

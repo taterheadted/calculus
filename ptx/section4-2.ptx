@@ -1,0 +1,255 @@
+
+
+<section>
+  <title>Limits involving Infinity and Asymptotes</title>
+  <p>
+    In our original discussion of <m>lim_{x\to a} f(x) = L</m> we required that both <m>a</m> and <m>L</m> be real numbers. We now wish to consider the possibilities where <m>a= \pm \infty</m>. To determine <m>lim_{x \to \infty} f(x)</m> is to ask what is happening to the values of <m>f(x)</m> as <m>x</m> becomes large and positive. One possibility is that <m>f(x)</m> tends toward a real number as <m>x</m> tends toward infinity. In this case we write <m>lim_{x\to \infty} f(x) = L</m> and <m>y=L</m> is a horizontal asymptote. Another possibility is that <m>f(x)</m> grows without bound as <m>x</m> tends to infinity. In this case we write <m>lim_{x \to \infty} f(x) = DNE(\infty)</m> to indicate that the limit does not exist but <m>f(x)</m> tends to infinity. <em>A limit does not exist unless it is a real number and infinity is not a number.</em>
+  </p>
+
+  <p>
+    Now let's return to the case where <m>a</m> is a real number. It is possible that <m>f(x)</m> grows without bound as <m>x</m> approaches <m>a.</m> In this case we write <m>lim_{x \to a} f(x) = DNE(\infty)</m>. Now we know that the limit does not exist and <m>x=a</m> is a vertical asymptote.
+  </p>
+
+  <p>
+    Our definition for asymptote will be intuitive, like our definition for limits, because we don't give a mathematically valid explanation of what the word <q>approaches</q> means. Still, it will serve our purposes. A more precise definition might appear in a course titled <q>Real Analysis.</q>
+    EXTRA<fn>In what follows, I try to make clear to the students the difference between the intuitive definitions (non-definitions) such as the one for <em>asymptote</em> and the truly mathematically valid definitions, such as the one for <m>lim_{x\to +\infty} f(x)=L</m>.  While I do not expect every student in the class to appreciate the distinction, I am capable of identifying those that strive for the deeper understanding and thus even if I do not test over the precise definitions, by including them I am able to use them as a litmus test for those future mathematicians in the room.   I am honest with the class and tell them, when they ask, which definitions I expect them to know and which ones are really beyond the scope of the course and added for those seeking a bit extra.  When students attempt to treat infinity as a number, I will discuss briefly the extended reals and then refer them to <xref ref="appreal">Appendix</xref></fn>.
+  </p>
+
+  <definition xml:id="asymptote">
+    <statement>
+      <p>
+        An <term>asymptote</term> of a function <m>f</m> is any curve (or line) that the graph of <m>f</m> approaches. A <term>horizontal asymptote</term> of <m>f</m> is a horizontal line that the graph of <m>f</m> approaches. A <term>vertical asymptote</term> of <m>f</m> is a vertical line that the graph of <m>f</m> approaches.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Graph <m>\dsp f(x)=\frac{3x}{x-2}</m>. What number does <m>f(x)</m> approach as <m>x</m> becomes large and positive? As <m>x</m> becomes large and negative? What happens to the values of <m>f(x)</m> as <m>x</m> approaches 2 from the left? From the right?
+      </p>
+    </statement>
+  </problem>
+
+  <definition xml:id="limhorizontal">
+    <statement>
+      <p>
+        <term>Intuitive Definition</term> We say that <m>lim_{x\to +\infty} f(x)=L</m> provided that as <m>x</m> becomes arbitrarily large and positive, the values of <m>f(x)</m> become arbitrarily closer to <m>L</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition xml:id="liminfinity">
+    <statement>
+      <p>
+        <term>Another Intuitive Definition</term> We say that <m>lim_{x\to \infty} f(x)=\infty</m> provided that as <m>x</m> becomes arbitrarily large and positive the values of <m>f(x)</m> become arbitrarily large and positive.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For the problems in this section, you may justify your answer using a graph or some algebra or limit tables or simply a sentence defending your answer, such as <q>the denominator gets larger and larger and the numerator is constant, so the limit must be zero.</q>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following limits.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to \infty} \frac{2x}{5x+3}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to \infty } x^{2}+5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{t\to \infty } \frac{4t+cos(t)}{t}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following limits or state why they do not exist.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{t\to -\infty } 2t^{3}+6</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{z\to \infty } \frac{\sin(z)+7z}{1-z^{2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{\alpha \to -\infty } 3\sin(\alpha )</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Here are precise restatements of our intuitive definitions.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        <term>Precise Restatement of <xref ref="limhorizontal">Definition</xref></term> Let <m>L</m> be a real number. We say that <m>lim_{x\to \infty} f(x)=L</m> provided for each positive real number <m>\epsilon</m> there is a positive real number <m>M</m> such that for every <m>x>M</m>, we have <m>|f(x)-L|\lt \epsilon</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        <term>Precise Restatement of <xref ref="liminfinity">Definition</xref></term> We say that <m>lim_{x\to \infty} f(x)=\infty</m> provided for each positive real number <m>N</m> there is a positive real number <m>M</m> such that for every <m>x>M</m>, we have <m>f(x)>N</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Based on the definitions above, write an intuitive definition and a precise definition for <m>lim_{x\to \infty} f(x)=-\infty</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>k</m> is some real number and <m>P</m> be the second-degree polynomial <m>P(x) = kx^2</m>. Does the <m>\lim_{x \to \infty} P(x)</m> depend on the value of <m>k</m>? What is <m>\lim_{x\to \infty } P(x)</m>? What is <m>\lim_{x\to -\infty } P(x)</m>? Suppose <m>C(x)=kx^3</m>. What is <m>\lim_{x\to \infty } C(x)</m>? What is <m>\lim_{x\to -\infty } C(x)</m>?
+      </p>
+    </statement>
+  </problem>
+
+  <definition xml:id="limvertical">
+    <statement>
+      <p>
+        <term>Yet Another Intuitive Definition</term> We say that <m>lim_{x\to a} f(x)=\infty</m> if when <m>x</m> approaches <m>a,</m> the values of <m>f(x)</m> become arbitrarily large.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The next definition makes this idea precise.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        <term>Precise Restatement of <xref ref="limvertical">Definition</xref></term> Let <m>a</m> be a real number. We say that <m>lim_{x\to a} f(x)=\infty</m> provided for each positive real number <m>N</m> there is positive number <m>\epsilon</m> so that for all <m>x</m> satisfying <m>|x-a|\lt \epsilon</m>, we have <m>f(x)>M</m>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following limits. Graph each function; include any vertical asymptotes.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{t\to -2} \frac{3}{(2+t)^{2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to 1^{+} } \frac{x^{2}-5x+6}{x^{3}-1}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Evaluate each of the following limits.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to 0^{-}} \frac{1}{x}</m> and <m>\dsp \lim_{x\to 0^{+}}
+              \frac{1}{x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to -4^{-} } \frac{x-1}{x+4}</m> and <m>\dsp \lim_{x\to -4^{+}
+              } \frac{x-1}{x+4}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x\to 0 }\sin(\frac{1}{x})</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="hor">
+    <statement>
+      <p>
+        Find the asymptotes of each function and use them to sketch a rough graph of each.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp G(x)=\frac{x-1}{x+4}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp F(x)=\frac{3x}{5x-1}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp g(x)=e^{-x}-2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp h(z)=-\frac{2z+\sin(z)}{z}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="vert">
+    <statement>
+      <p>
+        Write a statement that explains the relationship between limits and vertical asymptotes. Write a statement that explains the relationship between limits and horizontal asymptotes.
+      </p>
+    </statement>
+  </problem>
+</section>
+

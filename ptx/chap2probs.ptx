@@ -1,0 +1,553 @@
+
+
+<section xml:id="chap2probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+  <ol>
+  <li>
+    <p>
+      Graph these functions and their derivatives.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>F(x)=-x^{2}+5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>h(x) = x^3 - 9x</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>f(x)=\cos(2x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g(t)=|2+3t|</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      Compute the derivative of each function.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp g(t)=\sqrt{3t}+\frac{3}{t}-\frac{5}{t^{3}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>z(t) = (x^2+1)(x^3+2x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp y = \frac{2x^3+x}{2-x^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>g(t)=(2t^{2}-5t^{8}+4t)^{12}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>F(z)=\sqrt[3]{2z+7z^{3}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute and simplify the derivatives of these exponential and logarithmic functions.
+      <ol>
+        <li>
+          <p>
+            <m>a(x) = 12-e^{x^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>b(x) = \ln(x^2)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>c(x) = e^{\sqrt{x^2-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>d(x) = x\ln(x^3)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp g(t)=\frac{t+e^{t}}{3t^{2}-10t+5}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(t) = \frac{1+t}{e^{t}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>n(x) = \ln(xe^{x^2})</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute and simplify the derivatives of these trigonometric functions.
+      <ol>
+        <li>
+          <p>
+            <m>C(\beta )=3\beta \cos(5\beta)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H(x)=(5x^{2}+x)(4x^{4}+\tan(x))</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>o(x) = \csc(x)\cot(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>p(x) = \sin(\cos(x))</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>r(x) = \left(\sin(x)/x \right)^3</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>i(x) = \sin^3(x)/x^3</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute and simplify the derivatives of these mixed functions.
+      <ol>
+        <li>
+          <p>
+            <m>g(t) = t\sin(t)e^t</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>h(x) = \tan(x^3-3x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>k(t) = \invcos(x^2+3x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>m(x) = \invsin(5x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp q(t) = e^{\sec(t^2-2t)}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp s(x) = 3^x + x^3</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp t(y) = 2^{y^2-3y}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp u(x) = x3^{\sin(x)}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp G(x)=(x+1)^{\sin(x)}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Each hyperbolic trigonometric function is defined. Verify that each stated derivative is correct.
+      <ol>
+        <li>
+          <p>
+            Definition: <m>\dsp \sinh(x)=\frac{e^{x}-e^{-x}}{2} \;\;\;\;\;\;\;\;</m> Show: <m>(\sinh(x))'=\cosh(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Definition: <m>\dsp \cosh(x)=\frac{e^{x}+e^{-x}}{2}\;\;\;\;\;\;\;\;</m>  Show:  <m>(\cosh(x))'=\sinh(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Definition: <m>\dsp \tanh(x)=\frac{\sinh(x)}{\cosh(x)} \;\;\;\;</m>  Show: <m>(\tanh(x))'=\sech^{2}(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Definition: <m>\dsp \csch(x)=\frac{1}{\sinh(x)} \;\;\;\;</m> Show:  <m>(\csch(x))'=-\csch(x)\coth(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Definition: <m>\dsp \sech(x)=\frac{1}{\cosh(x)}  \;\;\;\;</m> Show:  <m>(\sech(x))'=-\sech(x)\tanh(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Definition: <m>\dsp \coth(x)=\frac{1}{\tanh(x)} \;\;\;\;</m>  Show:  <m>(\coth(x))'=-\csch ^{2}(x)</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Show that <m>\invsinh(x)=\ln(x+\sqrt{x^{2}+1}).</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Show that <m>\dsp (\invsinh(x))'=\frac{1}{\sqrt{x^{2}+1}}</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute the slope of the tangent line to <m>\dsp f(x)=\frac{2x}{2^{x}}</m> when <m>x=0</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute the equation of the tangent line to <m>g(x)=x\tan(x)</m> when <m>x=\frac{\pi}{3}</m>.
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Chapter 2 Solutions</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      Graph these functions and their derivatives.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>F'(x)=-2x</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>h'(x) = 3x^2-9</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>f'(x)=-2\sin(2x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>g'(t)=3(2+3t)/|2+3t|</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      Compute the derivative of each function.
+      <ol>
+        <li>
+          <p>
+            <m>\dsp g'(t)=\frac{\sqrt{3}}{2\sqrt{t}}-\frac{3}{t^2} + \frac{15}{t^4}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>z'(t) = 5x^4+9x^2+2</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp y' = -\frac{2x^4-13x^2-2}{(x^2-2)^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>g'(t)=48t^{11}(5t^7-2t-4)^{11}(10t^7-t-1)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp F'(z)=\frac{2+21z^2}{3\sqrt[3]{(2z+7z^3)^2}}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute and simplify the derivatives of these exponential and logarithmic functions.
+      <ol>
+        <li>
+          <p>
+            <m>a'(x) = -2xe^{x^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>b'(x) = 2/x</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp c'(x) = \frac{xe^{\sqrt{x^2-1}}}{\sqrt{x^2-1}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>d'(x) = 3 +\ln(x^3)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp g'(t)=\frac{(3t^2-16t+15)e^t - 3t^2+5}{(3t^2-10t+5)^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f'(t) = \frac{-t}{e^{t}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>n'(x) = 2x + 1/x</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute and simplify the derivatives of these trigonometric functions.
+      <ol>
+        <li>
+          <p>
+            <m>C'(\beta )=3( \cos(5\beta) -5\beta \sin(5\beta))</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>H'(x)=(10x+1)(4x^4+\tan(x))+(5x^2+x)(16x^3+\sec^2(x))</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp o'(x) = -\frac{\cos^2(x)+1}{\sin^3(x)}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>p'(x) = -\sin(x)\cos(\cos(x))</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp r'(x) = 3\sin^2(x)\frac{x \cos(x)-\sin(x)}{x^4}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>i'(x) = \;\;\; \mbox{ same answer as last one!}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Compute and simplify the derivatives of these mixed functions.
+      <ol>
+        <li>
+          <p>
+            <m>g'(t) = te^t\cos(t) + (t+1)e^t\sin(t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>h'(x) = (3x^2-3)\sec^2(x^3-3x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp k'(t) = \frac{2x+3}{\sqrt{1-(x^2+3x)^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp m'(x) = \frac{5}{\sqrt{1-25x^2}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>q'(t) = (2t-2)e^{\sec(t^2-2t)}\sec(t^2-2t)\tan(t^2-2t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>s'(x) = 3x^2 + 3^x\ln(3)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>t'(y) = \ln(2)(2y-3)2^{y^2-3y}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>u'(x) = 3^{\sin(x)} + \ln(3)x\cos(x)3^{\sin(x)}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G'(x)=(x+1)^{\sin(x)}\left( \cos(x)\ln(x+1) + \sin(x)/(x+1) \right)</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      No solution.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      No solution.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      No solution.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>f'(0) = 2.</m>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>g'(\pi/3) = \sqrt(3) + 4\pi/3</m>
+    </p>
+  </li>
+  </ol>
+</section>
+

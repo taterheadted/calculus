@@ -1,0 +1,367 @@
+
+
+<section>
+  <title>Parametric Equations</title>
+  <p>
+    Parametric equations represent a mathematical way to model the position of an object in space at a given time, for example, a satellite traveling through space or a fish swimming in the ocean. In this section, we restrict our study to objects traveling in the plane. In the next chapter we will extend this notion to three-space.
+    EXTRA<fn>I'll confess to getting carried away with the proofs in this section.  While I always <em>knew</em> the formulas in the calculus books relating the derivatives of the functions represented in parametric form to the derivatives of the functions represented in rectangular coordinates, I'd never tried to rigorously make an argument justifying them.  When I did so, and saw how beautiful it was, I couldn't help but write it up.  Therefore the proofs in this section are hardly necessary, but if there is time and a student expresses interest, they certainly give one an understanding of the importance of precisely defining your notation.</fn></p>
+
+  <example>
+    <statement>
+      <p>
+        Define <m>c(t) = (t-1, 2t+4)</m>, sketch it, eliminate the parameter, sketch that and discuss the information that is lost in this process. Define two functions <m>x</m> and <m>y</m> on the interval <m>[0,2\pi]</m> by <m>x(t)=r \cos (t)</m> and <m>y(t)=r \sin (t)</m>. Now define <m>C</m> on the same interval by <m>C(t) = \big(x(t), y(t)\big)</m>. If we assume that <m>t</m> represents time, then we may consider <m>C(t)</m> to represent the position of some object at that time. <m>C(t) = \big(x(t), y(t)\big)</m> is called a {{parametric equation}} with {{parameter}} <m>t</m> and defines a function from <m>[0,2\pi]</m> into <m>\re^2.</m> <m>C</m> is a way to represent the circle centered at <m>(0, 0)</m> with radius <m>r</m> since for any <m>t</m> we have <m>\big(x(t)\big)^2 + \big(y(t)\big)^2 = r^2 \cos^2 (t) + r^2 \sin^2(t) = r^2</m>. In this mathematical model, each point on the circle models the position of the object at a specific time.
+      </p>
+    </statement>
+  </example>
+
+  <definition>
+    <statement>
+      <p>
+        If each of <m>f</m> and <m>g</m> is a continuous function, then the curve in the plane defined by the range of <m>C,</m> where <m>C(t) = \big(f(t), g(t)\big),</m> is called a <term>parametric curve</term> or a <term>planar curve</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch each pair of planar curves by plotting points. Compare.
+        <ol>
+          <li>
+            <p>
+              <m>C(t) = \big(t, \sin(t)\big)</m> and <m>D(t) = \big(\sin(t),t\big)</m> with <m>0 \le t \le 2\pi</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>C(t) = \big(2\sin(t), 3\cos(t)\big)</m> and <m>D(t) = \big(2\cos(t), 3\sin(t)\big)</m> with   <m>0 \le t \le 2\pi</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch the planar curve <m>C(t) = (3t+2, 9t^2 + 1).</m> Sketch the tangent line to this curve when <m>t=1</m>. Write the equation of this tangent line as a function <m>y=mx + b</m> and as a planar curve, <m>D(t) = ( \_\_\_ \; , \_\_\_ ).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>C(t) = \big(f(t),g(t)\big)</m> is a parametric equation where both of <m>f</m> and <m>g</m> are differentiable at the point <m>t</m>, then the <term>derivative</term> of <m>C</m> is defined by <m>C'(t) = \big(f'(t),g'(t)\big).</m>
+      </p>
+    </statement>
+  </definition>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>C(t) = \big(2t+3, 4(2t+5)^2\big)</m>.
+        <ol>
+          <li>
+            <p>
+              Sketch a graph of <m>C</m> between the times <m>t=0</m> and <m>t=2.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>C'(t)</m> and <m>C'(1).</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>C(t) = (2t+3, 4(2t+5)^2).</m>
+        <ol>
+          <li>
+            <p>
+              Let <m>x = 2t+3</m> and <m>y= 4(2t+5)^2</m> and eliminate the parameter, <m>t,</m> to write this in terms of <m>x</m> and <m>y</m> only.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the derivative of <m>y</m> with respect to <m>x</m> and compute <m>y'</m> when <m>x=5.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the derivative of <m>y</m> with respect to <m>t</m> and compute <m>y'</m> when <m>t=1.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute the derivative of <m>x</m> with respect to <m>t</m> and compute <m>x'</m> when <m>t=1.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Observe that the derivative of <m>y</m> with respect to <m>x</m> at <m>x=5</m> equals the quotient of the derivative of <m>y</m> with respect to <m>t</m> at <m>t=1</m> and the derivative of <m>x</m> with respect to <m>t</m> when <m>t=1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The preceding problem illustrates an important theorem that relates the derivatives of two different, but related, functions:
+    <ol>
+      <li>
+        <p>
+          the derivative of the parametric curve <m>c=\big( f,g \big)</m> and
+        </p>
+      </li>
+
+      <li>
+        <p>
+          the derivative of the function <m>y</m> that we obtain when we eliminate the parameter.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <theorem xml:id="paradiff">
+    <statement>
+      <p>
+        <em>Parametric Derivative Theorem.</em> If <m>c = \big(f,g\big)</m> and <m>y</m> is the function obtained by eliminating the parameter, then <m>\dsp y'(f(t)) = \frac{g'(t)}{f'(t)}</m>. Since <m>f(t)</m> represents our <m>x</m> coordinate, many books would write this as <m>\dsp y'(x) =  \frac{g'(t)}{f'(t)}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    To justify this theorem, we offer three levels of <q>proof.</q> An intuitive argument, a slightly more precise argument, and an actual proof.
+  </p>
+
+  <p>
+    <em>Intuitively.</em> Suppose we have a parametric equation, <m>C(t) = \big(f(t),g(t)\big)</m> where <m>f</m> and <m>g</m> are differentiable functions. If we let <m>x = f(t)</m> and <m>y=g(t)</m> then <m>y'(x)</m> is the rate of change of <m>y</m> with respect to <m>x.</m> The rate of change of <m>y</m> with respect to time is <m>g'(t)</m> and the rate of change of <m>x</m> with respect to time is <m>f'(t).</m> The rate of change of y over the rate of change of x is <m>\dsp  y'(x)  = \frac{g'(t)}{f'(t)}.</m>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <p>
+    <em>More precisely.</em> Suppose we have a parametric equation,
+    <me>
+      C(t) = \big(f(t),g(t)\big)
+    </me>
+    where <m>f</m> and <m>g</m> are differentiable functions. If we can eliminate the parameter <m>t</m> (as we did in the last problem), then we can write a relationship that yields a differentiable function, <m>y</m> so that for every <m>t,</m>
+    <me>
+      y\big(f(t)\big) = g(t).
+    </me>
+  </p>
+
+  <p>
+    Then using implicit differentiation, we can see that
+    <me>
+      y'\big(f(t)\big) \cdot f'(t) = g'(t).
+    </me>
+  </p>
+
+  <p>
+    Dividing through by <m>f'(t)</m> we have the desired result,
+    <me>
+      y'\big(f(t)\big) = \frac{g'(t)}{f'(t)}.
+    </me>
+  </p>
+
+  <p>
+    If we put <m>x = f(t)</m>, then we have
+    <me>
+      y'(x) = \frac{g'(t)}{f'(t)}.
+    </me>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <p>
+    Before proceeding to give a true proof of this theorem, we need one more tool, which the next problem illustrates.
+  </p>
+
+  <p>
+    <em>Notation.</em> The expression <m>{}^{-1}</m> means <em>inverse</em> when applied to a function (see the left-hand side of the equation in part 2 of <xref ref="p336">Problem</xref>) and <em>reciprocal</em> when applied to a number (see the right-hand side of the equation in part 2 of <xref ref="p336">Problem</xref>). When a function has an inverse, we say it is invertible.
+  </p>
+
+  <problem xml:id="p336">
+    <statement>
+      <p>
+        Let <m>f(x) = x^3 - 1</m> and <m>(x,y) = (3, 26).</m>
+        <ol>
+          <li>
+            <p>
+              Compute <m>f'</m> and <m>f^{-1}.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Show that <m>\dsp{\big(f^{-1}\big)'(26) = \big( f'(3) \big)^{-1}}.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem xml:id="invdiff">
+    <statement>
+      <p>
+        <em>Inverse Derivative Theorem.</em> Let <m>f</m> be a function that is differentiable, and has an inverse that is differentiable. If <m>y = f(x)</m> then <m>\dsp{ (f^{-1})'(y) = \big(f'(x) \big)^{-1}}.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Prove <xref ref="invdiff">Theorem</xref> by computing the derivative of <m>\dsp{ f^{-1}\big(f(x)\big) = x.}</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Now that we have <xref ref="invdiff">Theorem</xref> we can give a full proof of <xref ref="paradiff">Theorem</xref>.
+  </p>
+
+  <p>
+    <em>A Proof.</em> Suppose we have a parametric equation,
+    <me>
+      C(t) = \big(f(t),g(t)\big)
+    </me>
+    where <m>f</m> and <m>g</m> are differentiable functions whose derivatives are continuous. Suppose further that there is a value <m>t^*</m> where <m>f'(t^*) \neq 0.</m> Now, since <m>f'(t^*) \neq 0</m> it is either positive or negative. Let's assume it's positive. (We also need to do the case where it is negative, but it turns out that the argument is almost identical, so we omit it.) Since <m>f'</m> is continuous and <m>f'(t^*)>0</m>, there must be some open interval <m>(a,b)</m> containing <m>t^*</m> where <m>f'(t) > 0</m> for all <m>t</m> in <m>(a,b).</m> Now, since <m>f'</m> is positive on this interval <m>f</m> must be increasing on this interval and therefore <m>f</m> must be invertible on this interval. Suppose <m>(t,x)</m> is a point of <m>f</m> with <m>t</m> in <m>(a,b).</m> Thus, <m>t = f^{-1}(x)</m> and <m>x</m> is in <m>\big(f(a),f(b)\big).</m> Now, let's define a new function, <m>y</m> by
+    <me>
+      y(x) = g\big(f^{-1}(x)\big).
+    </me>
+  </p>
+
+  <p>
+    Computing the derivative via the chain rule as we did in the last `proof' yields,
+    <me>
+      y'(x) = g'\big(f^{-1}(x)\big) \cdot (f^{-1})'(x).
+    </me>
+  </p>
+
+  <p>
+    Applying <xref ref="invdiff">Theorem</xref>, we know that
+    <me>
+      \dsp{ \big(f^{-1}\big)'(y) = \big( f'(x) \big)^{-1}}
+    </me>
+    so we have
+    <me>
+      y'(x) = g'\big(f^{-1}(x)\big) \cdot \big(f^{-1}\big)'(x) = g'(t) \cdot \frac{1}{f'(t)} = \frac{g'(t)}{f'(t)}.
+    </me>
+  </p>
+
+  <p>
+    <em>q.e.d.</em>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Assume that <m>C, f,</m> and <m>g</m> are as above and compute <m>y''(x)</m> to show that
+      </p>
+
+      <p>
+        <m>\dsp{ y''(x) = \frac{g''(t) f'(t) - g'(t) f''(t)}{\big(f'(t)\big)^3} }.</m> What we really want to compute is the derivative of the function <m>y'</m> and we know that <m>\dsp{ y'\big(f(t)\big) = \frac{g'(t)}{f'(t)}},</m> so compute the derivative of both sides of this equation with respect to <m>t</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The next theorem summarizes our results about derivatives of parametric equations.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Parametric Second Derivative Theorem.</em> Suppose we have a parametric equation, <m>C(t) = \big(f(t),g(t)\big)</m> where <m>f</m> and <m>g</m> are differentiable functions. Then, at any value of <m>t</m> where <m>f'(t) \ne 0</m> if we let <m>x=f(t)</m> and <m>y=g(t)</m> we have:
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ y'(x) = \frac{g'(t)}{f'(t)}}</m> and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ y''(x) = \frac{g''(t) f'(t) - g'(t) f''(t)}{\big(f'(t)\big)^3} }.</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    This theorem is often written in textbooks using Leibniz notation as:
+    <ol>
+      <li>
+        <p>
+          <m>\dsp{ \frac{dy}{\; dx} = \frac{ \frac{dy}{dt} }{ \frac{dx}{dt} } }</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{d^2y}{\; dx^2} = \frac{\frac{dy'}{dt}}{\frac{dx}{dt}}</m> where <m>\dsp y' = \frac{dy}{dx}</m> and <m>\dsp \frac{dx}{dt} \ne 0</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>C(t) = (t^2, t^3).</m> Eliminate the parameter to write this parametric equation as a function <m>y</m> in terms of <m>x.</m> Compute each of <m>y'</m> and <m>y''</m> at <m>t=2</m> both directly and by applying the theorem.
+      </p>
+    </statement>
+  </problem>
+
+  <theorem xml:id="arclength">
+    <statement>
+      <p>
+        <em>Arc Length Theorem.</em> Suppose we have a parametric equation, <m>C(t) = \big(f(t),g(t)\big)</m> where <m>f</m> and <m>g</m> are differentiable functions with continuous derivatives for all <m>a \leq t \leq b</m>. If the curve <m>C</m> is traversed exactly once as <m>t</m> increases from <m>a</m> to <m>b</m>, then the curve's <em>arc length</em> is given by <m>\dsp L = \int_a^b \sqrt{ \big(x'(t)\big)^2 + \big(y'(t)\big)^2 } \; dt</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    This is one of the theorems in calculus with a very nice straightforward proof. If I don't remember to show you the proof, ask!
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>C(t) = (2t, t^2)</m> from <m>t=0</m> to <m>t=2</m>. Use the arc length formula to determine the length of this curve. Now, eliminate the parameter to write this parametric equation as a function <m>f</m> in terms of <m>x.</m> Use the formula we had for the arc length of a function, <m>L = \int_a^b \sqrt{1 + \big(f'(x)\big)^2} \ dx,</m> to verify your answer.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>C(t) = \big(5\cos(t)-\cos(5t), 5\sin(t)-\sin(5t)\big).</m> Compute the arc length of the range of <m>C</m> over the interval <m>[0,2\pi]</m>.
+      </p>
+    </statement>
+  </problem>
+</section>
+

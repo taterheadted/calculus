@@ -1,0 +1,938 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Line Integrals, Flux, Divergence, Gauss' and Green's Theorem</title>
+  <introduction>
+    <p>
+      <q>The important thing is not to stop questioning.</q> - Albert Einstein
+    </p>
+
+    <p>
+      The phrases <em>scalar field</em> and <em>vector field</em> are new to us, but the concept is not. A scalar field is simply a function whose range consists of real numbers (<em>a real-valued function</em>) and a vector field is a function whose range consists of vectors (<em>a vector-valued function</em>).
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          <m>f(x,y) = x^2 -2xy</m> is a <em>scalar field</em>. <m>f(x,\ y)=(2x,\ 3y)</m> is a <em>vector field</em> on <m>{\re}^2</m> and <m>f(x,\ y,\ z)=(2x-y,\ y\cos(z^2),\ x-yz)</m> is a <em>vector field</em> on <m>{\re}^3</m>. For the point in the ocean at location <m>(x,y,z)</m>, the vector field <m>\oa f(x,y,z) = \big(p(x,y,z),q(x,y,z),r(x,y,z)\big)</m> might represent the direction of the current at this point where <m>p,q,r: \re^n \to \re.</m>
+        </p>
+      </statement>
+    </example>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>n</m> and <m>m</m> be integers greater than or equal to 2. A <term>scalar field</term> on <m>{\re}^n</m> is a function <m>f:{\re^n}\to{\re}</m>. A <term>vector field</term> on <m>{\re}^n</m> is a function <m>f:{\re}^n\to{\re}^n.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      We now modify our definition for <m>\nabla</m>. If <m>f: \re^2 \to \re</m>, then we previously defined <m>\dsp \nabla f = (f_x, f_y) = (\frac{ \partial f}{\partial x}, \frac{ \partial f}{\partial y}).</m> We now redefine <m>\nabla</m> as an <em>operator</em> that acts on the set of differentiable functions and write
+      <me>
+        \nabla = \left(\frac{ \partial }{\partial x}, \frac{ \partial }{\partial y}\right).
+      </me>
+    </p>
+
+    <p>
+      This encompasses our previous notation as we may now write
+      <me>
+        \dsp \nabla f = \big(\frac{ \partial }{\partial x}, \frac{ \partial }{\partial y}\big)(f)= \big(\frac{ \partial f}{\partial x}, \frac{ \partial f}{\partial y}\big)= (f_x, f_y).
+      </me>
+    </p>
+
+    <p>
+      We previously defined the dot product only between vectors (and points) in <m>\re^n</m> and now redefine that notation as well. If <m>\oa f: \re^2 \to  \re^2</m> and <m>\oa f(x,y) = \left(p(x,y),q(x,y)\right)</m>, then we will write
+      <me>
+        \nabla \cdot \oa f = \left(\frac{ \partial }{\partial x}, \frac{ \partial }{\partial y}\right) \cdot \big(p(x,y),q(x,y)\big) = \frac{ \partial p }{\partial x} + \frac{ \partial q }{\partial y} = p_x(x,y) + q_y(x,y).
+      </me>
+    </p>
+
+    <p>
+      The next definition formalizes what we just wrote, stating it for <m>\re^3</m>.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>\oa f(x,y,z)  = \Big(p(x,y,z) ,q(x,y,z) ,r(x,y,z) \Big): {\re}^3\to {\re}^3</m> is a differentiable vector field, then the <term>divergence of <m>\oa{f}</m></term> is the scalar field from <m>{\re}^3\to {\re}</m> defined by: <m>\nabla \cdot \oa{f}=p_x + q_y + r_z</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The divergence of a function at a point is the tendency for fluid to move away from or toward that point, where a positive divergence indicates fluid is moving away from the point and a negative divergence indicates that fluid is moving toward the point.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Sketch the vector fields, <m>F(x,y) = (x,y)</m> and <m>F(x,y) = (-x,y)</m> and compute the divergence of each.
+          EXTRA<fn>Discuss vector fields such as gravity and how the work done along any path will be equal.   Discuss another field such as river flow where if it is all flowing downstream it is conservative, but if there is an eddy in the middle, then two paths across the river may result in differing amounts of work.</fn></p>
+      </statement>
+    </example>
+
+    <p>
+      The next definition extends our definition of the cross product, <m>\times.</m>
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>\oa f(x,y,z)  = (p(x,y,z) ,q(x,y,z) ,r(x,y,z) ) : \re^3 \to \re^3</m>, then the <term>curl</term> of <m>\oa f</m> denoted by <m>\nabla \times f</m> is defined by the vector valued function
+          <me>
+            \nabla \times \oa f = \left(\frac{ \partial }{\partial x}, \frac{ \partial }{\partial y}, \frac{ \partial }{\partial z}\right) \times  (p,q,r) = \left( \frac{ \partial r}{\partial y} - \frac{ \partial q}{\partial z}, \frac{ \partial p}{\partial z} - \frac{ \partial r}{\partial x}, \frac{ \partial q}{\partial x} - \frac{ \partial p}{\partial y} \right).
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The divergence of <m>\oa f,</m> denoted by <m>\nabla \cdot \oa f</m>, is a scalar field while the curl of <m>\oa f,</m> denoted by <m>\nabla \times \oa f,</m> is a vector field. If our vector field represents a fluid flow, then the curl of a function at a point is a the direction from that point about which the fluid rotates most rapidly. The points on the ray with base at the point and pointing in the direction of the curl tend not to move, but to spin as the fluid rotates (curls) around that ray.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Compute the divergence and curl of <m>\oa f:{\re}^3\to{\re}^3</m> given by
+          <ol>
+            <li>
+              <p>
+                <m>\oa f(x,\ y,\ z)=(x^2yz,\ x^2+y+\sqrt{z},\ \pi x^2/yz)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa f(x,\ y,\ z)=(e^x,\ \ln(xyz),\ \sin(x^2y^z))</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>f:{\re}^3\to{\re},\ \oa g:{\re}^3\to{\re}^3,\ \oa h:{\re}^3\to{\re}^3</m>. Assume <m>f,\ \oa g,\ \oa h</m> are differentiable. Then
+          <ol>
+            <li>
+              <p>
+                <m>(f\oa g)(x,\ y,\ z)=f(x,\ y,\ z)\oa g(x,\ y,\ z)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(\oa g\cdot \oa h)(x,\ y,\ z)=\oa g(x,\ y,\ z)\cdot \oa h(x,\ y,\ z)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(\oa g\times \oa h)(x,\ y,\ z)=\oa g(x,\ y,\ z)\times \oa h(x,\ y,\ z)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f:{\re}^3\to{\re},\ \oa g:{\re}^3\to{\re}^3,\ \oa h:{\re}^3\to{\re}^3</m>. Prove or give a counter example:
+          <ol>
+            <li>
+              <p>
+                <m>\nabla\cdot(\oa{g}+\oa{h})=\nabla\cdot\oa{g}\ +\ \nabla\cdot\oa{h}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla\cdot(f\oa{g})=f \ \nabla \cdot \oa{g}</m>  \hskip .2in (Note: <m>f \ \nabla\cdot\oa{g}</m> means <m>f</m> times <m>\nabla\cdot\oa{g}</m>.)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla\times(\oa{g}+\oa{h})=\nabla\times\oa{g}\ +\ \nabla\times\oa{h}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla\cdot(f \oa{g})=f \ \nabla\cdot\oa{g} \ + \ \oa g\cdot\nabla f</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla\times(f \oa{g})=f \nabla\times\oa{g} \ + \ \oa g\times \nabla f</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\nabla\cdot(\nabla \times \oa{g})=0</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <em>Arc Length and Line Integrals over Scalar Fields</em>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Use <xref ref="arclengthdfn">Definition</xref> to write the integrals that would represent the arc length of <m>f(x)=x^2</m> from <m>(-1,\ 1)</m> to <m>(1,\ 1)</m> and the arc length of <m>\oa f(t)=(t,\ t^2)</m> for <m>-1 \leq t \leq 1</m>. Demonstrate your powers of integration from Calculus II by computing this integral <mdash /> don't use a formula <mdash /> use a trig substitution and then integration by parts.
+        </p>
+      </statement>
+    </problem>
+
+    <example>
+      <statement>
+        <p>
+          Compute the area of a wall that has as its base the curve <m>c(t) = (t,t^2), \ \ 0 \leq t \leq 1</m> and has a height of <m>t^3</m> at the point <m>(t,t^2).</m>
+          EXTRA<fn>This is our introduction to the concept behind the line integral.  Our goal is to compute the area of a wall that has as its base the curve <m>c(t) = (t,t^2), \ \ 0 \leq t \leq 1</m> and has a height  of <m>t^3</m> at the point <m>(t,t^2)</m>. For entertainment's sake, we imagine the scenario where a mathematician lives in a house and likes the neighbor across the street, but does not care for the side neighbor.  Thus she hires our class to build a wall with a parabolic base that has its vertex in her front lawn and curves around her side lawn. The wall is to have height zero in front of her house at the vertex of the parabola and to get cubically taller as it wraps around the side of her house.  We'll need to estimate materials, so we'll need to know the area of the fence. By using a simple, physically possible example, we will see the importance of the arc length in the process.  When we ask what the area of this wall will be, students often say the area trapped between <m>f(x)=x^3</m>, the x-axis, and <m>x=1</m>.  This, however, does not compensate for the curvature of the base of the wall.  Thus, we return to Riemann Sums and compute from first principles. We  partition the base of the wall into <m>N</m> pieces, <m>\{ c(t_0), c(t_1), \dots , c(t_N) \}.</m> Then the area of the wall will simply be the sum of the areas of the sections of the wall, where the <m>i^{th}</m> section of the wall has base the portion of the parabola between <m>c(t_{i-1})</m> and <m>c(t_i)</m> and has approximate height, <m>f(t_i)= t_i^3</m>.  If <m>d</m> represents the formula for the distance between two points in the plane and <m>g(x) = x^2</m>, then an approximation of the area based on this partition would be:
+          <md>
+            <mrow>area \amp  \approx \amp  \sum_{i=1}^N  d\big( c(t_{i-1}), c(t_i) \big) \ f(t_i)</mrow>
+            <mrow>\amp  = \amp  \sum_{i=1}^N  d\big( (t_{i-1}, t_{i-1}^2), (t_i, t_i^2) \big) \ f(t_i)</mrow>
+            <mrow>\amp  = \amp  \sum_{i=1}^N  \sqrt{ ( t_{i} - t_{i-1})^2 +  (t_i^2 - t_{i-1}^2 )^2 } \ f(t_i)</mrow>
+            <mrow>\amp  = \amp  \sum_{i=1}^N  \sqrt{ 1 +  \frac{(t_i^2 - t_{i-1}^2)^2}{(t_1  - t_{i-1})^2 } } \ f(t_i)  ( t_{i} - t_{i-1})</mrow>
+            <mrow>\amp  = \amp  \sum_{i=1}^N  \sqrt{ 1 +  \big(\frac{ g(t_i) - g(t_{i-1}) }{ t_1  - t_{i-1} } \big)^2 } \ f(t_i)  ( t_{i} - t_{i-1})</mrow>
+            <mrow>\amp  \rightarrow \amp  \int_0^1  \sqrt{ 1 +  g'(t)^2 } \ f(t) \ dt \ \ \ \ \mbox{ as }  n \to \infty</mrow>
+          </md>
+          Of course, after this derivation, we see that we have simply ended up integrating <m>f(x)=x^3</m> with respect to the arc length of <m>g</m>.  While we have previously shown in this semester and in Calculus II that the arc length of an function <m>g</m> from <m>a</m> to <m>b</m> is given by <m>\int_a^b \sqrt{ 1 + g'(x)^2 } \ dx</m>, I think the repetition in the different scenario is valuable.  After the derivation, or in a future class, we discuss other physically admissible examples of scalar integrals <mdash /> integrating the electrical charge of a piece of bent wire in three-space or integrating the density of a piece of wire to obtain the mass.</fn></p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          For the wall example worked in class, suppose we replace the base <m>c(t) = (t, t^2)</m> with the curve <m>c(t) = (u(t),v(t))</m> where <m>u</m> and <m>v</m> are some real-valued functions and we replace the height <m>f(t)=t^3</m> with some real valued function <m>h</m>. What would the area of the wall be now? Your answer will be an integral in terms of <m>u</m>, <m>v</m>, and <m>h</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Two scalar line integrals:
+          <ol>
+            <li>
+              <p>
+                A wall over <m>\oa{c}(t)=(3\ \sin(t),\ 3\ \cos(t))</m> from <m>t=0</m> to <m>\dsp{t=\frac{\pi}{2}}</m> has height <m>h(x,\ y)=x^2y</m>. Graph the wall and determine its area.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                A wall over <m>\oa{c}(t)=\dsp{(\sqrt{9-t^2},\ t)}</m> from <m>t=0</m> to <m>t=3</m> has height <m>h(x,\ y)=x^2y</m>.  Determine its area.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      What you have just been computing are called line integrals over scalar fields.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>line integral of a scalar field</term> <m>g:\ {\re}^2 \to{\re}</m> over the curve <m>\oa{c}(t)=(x(t),\ y(t))</m> is defined
+          by <m>L=\dsp{\int_c{g(\oa{c}(t)) |\oa{c}'(t) |\ dt}}.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      The line integral over a scalar field is computed with respect to <em>arc length</em> and we use the notation,
+      <me>
+        \int_c{ g \ ds} \; \; \mbox{ to mean }  \; \; \int_c{g(\oa{c}(t))\cdot |\oa{c}'(t) |\ dt}.
+      </me>
+    </p>
+
+    <p>
+      We may use line integrals to compute the mass of a curved piece of wire in a similar manner. Suppose we have a piece of wire
+      in the plane that is bent into the shape of a curve, <m>\oa c: \re \to \re^2.</m> If <m>\delta: \re^2 \to \re</m> and <m>\delta(x,y)</m> represents the density of the wire at <m>(x,y),</m> then the line integral of the density with respect to the arc length is the mass of the wire.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Mass is the integral of density. Find the mass of a wire in the plane with density at <m>(x,\ y)</m> of <m>\delta(x,\ y)=2xy</m> and shape <m>\oa{c}(t)=(3\ \cos(t),\ 4\ \sin(t))</m> from <m>t=0</m> to <m>t=2\pi</m>. Could such a wire exist?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the mass of the wire in three-space with density at <m>(x,\ y,\ z)</m> of <m>\delta(x,\ y,\ z)=3z</m> and in the shape <m>\oa{c}(t)=(2\ \cos(t),\ 2\ \sin(t),\ 5t),\  t\in[0,4\pi]</m>. Find its center of mass as well. Center of mass was defined at the end of the last chapter.
+        </p>
+      </statement>
+    </problem>
+
+    <definition>
+      <statement>
+        <p>
+          A vector field is said to be <term>conservative</term> if it is the gradient of some function. Conservative fields are also called <term>gradient</term> fields. If <m>f</m> is a conservative field, then any function <m>g</m> satisfying <m>\nabla g = f</m> is called a potential for <m>f.</m>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          <m>\dsp{\oa f(x,\ y)=(-2xy+2e^y,\ -x^2+2xe^y)}</m> is <em>conservative</em> since <m>\oa f=\nabla  g</m> where <m>g</m> is given by <m>\dsp{g(x,\ y)=-x^2y+2xe^y}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          Is <m>\oa f(x,\ y)=(xy,\ x-y)</m> conservative? If <m>\oa f</m> is conservative, then there must be a function <m>g</m> so that <m>\nabla  g=\oa f.</m> Is there a function <m>g</m> so that <m>g_x(x,y) =xy</m> and <m>g_y(x,y)=x-y</m>? Why or why not?
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Is <m>\oa f(x,\ y)=(x^2+y^2,\ 2xy)</m> conservative?
+        </p>
+      </statement>
+    </problem>
+
+    <problem xml:id="gradient">
+      <statement>
+        <p>
+          Show that if <m>\oa f(x,\ y)=(p(x,\ y),\ q(x,\ y))</m> and <m>p_y(x,\ y)=q_x(x,\ y)</m> then <m>\oa f</m> is a gradient field.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      This is part of a larger theory that we don't have time to cover, but is worth at least discussing. <xref ref="gradient">Problem</xref> and its converse are valid in three dimensions as well. Suppose <m>f: \re^3 \to \re^3</m> is a vector field. If <m>f</m> is conservative, then <m>\nabla \times f = 0.</m> Conversely, if <m>f</m> has continuous first partial derivatives and <m>\nabla \times f = 0</m> then <m>f</m> is conservative. If <m>f:\re^2 \to \re^2</m> and <m>f=(p,q)</m>, then <xref ref="gradient">Problem</xref> showed that if <m>p_y=q_x</m> then <m>f</m> was conservative. If <m>p_y=q_x</m>, then <m>q_x-p_y=0</m> which is the same statement as <m>\nabla \times f \cdot \oa{k} = 0.</m> In summary, understanding the notation <m>\nabla \times f</m> is enough to determine when a vector field is conservative.
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Is <m>\dsp{\oa f(x,\ y)=\left(\frac{y}{x^2+y^2},\ \frac{-x}{x^2+y^2}\right)}</m> a gradient field?
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The next two examples remind us that work may be computed by integrating force.
+      EXTRA<fn>We use the physics of work and force as the motivation for line integrals over vector fields.  To give an intuition for work, we work the two examples following this note: the work done in stretching a spring and the work done in pumping water out of a cone.  The recurring theme is first principles, the idea of adding up the force required to move one small slice over some distance. To introduce line integrals over vector fields, we sketch a vector field and a curve <m>c</m> passing through the field, considering <m>c(t)</m> as a boat's position at time <m>t</m> as it moves through a turbulent bay with current <m>f(x,y)=(p(x,y),q(x,y))</m> at <m>(x,y)</m>.  We point out that if the direction of the boat <m>c'(t)</m> is perpendicular to the motion of the water <m>f(c(t))</m>, then no work is being done as we are not traveling against a current.  We neglect the wetted surface area, the coefficient of drag and other hydrodynamic factors affecting how much force is required to move the boat through the water. To find the total work associated with the current, we recall the fact that if <m>x</m> and <m>y</m> are vectors and <m>y</m> is a unit vector then the length of the projection of <m>x</m> onto <m>\{ \lambda y : \lambda \in \re \}</m> is given by <m>x \cdot y</m>.  Therefore, if we make <m>c'(t)</m> a unit vector by dividing by it's magnitude and integrate <m>\dsp f(c(t)) \cdot \frac{c'(t)}{|c'(t)|}</m> with respect to arc length (to accommodate for the length of path), then we have <m>\dsp \int f(c(t)) \cdot \frac{c'(t)}{|c'(t)|} |c'(t)| \ dt</m> and <m>|c'(t)|</m> cancels leaving us with the total work as  <m>\int f(c(t)) \cdot c'(t) \ dt</m>.  We have thus illustrated that sometimes computing work requires writing out the sums and sometimes we may compute the work without resorting to Riemann sums.</fn></p>
+
+    <example>
+      <statement>
+        <p>
+          From physics we know that <m>Work=Force \cdot Distance</m>. So lifting a <m>5\ lb</m> book <m>2\ feet</m> requires <m>10\ ft \cdot lbs</m> of work. Suppose we have a spring that has force <m>f</m> proportional to the square of the distance it is stretched from equilibrium so that <m>f(x)=kx^2</m> (where <m>k>0</m> is the spring's coefficient). If <m>0=x_0 \leq x_1 \leq \dots \leq x_N=4</m>, then the work done to stretch it <m>4 \  units</m> would be
+          <md>
+            <mrow>W \amp  = \amp  \lim_{N\to\infty}\sum_{i=1}^Nk\hat x_i^2\ (x_{i+1}-x_i) \mbox{     where }  \hat x_i \in [x_i, x_{i+1}]</mrow>
+            <mrow>\amp  \amp  =\int_0^4kx^2\ dx \mbox{     by the definition of the integral} .</mrow>
+          </md>
+        </p>
+
+        <p>
+          Thus in one dimension, work is the integral of force: <m>\dsp{W=\int{f(x)\ dx}}</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Suppose we have a cone full of water with radius <m>10\ ft</m>, height <m>15\ ft</m>, its point on the ground, and standing so that it holds the water. How much work is done in pumping all the water out of the cone? Tools you will need are: Force = Mass <m>\cdot</m> Acceleration (due to gravity) and Mass of one slice = volume of slice <m>\cdot</m> Density of <m>H_2O</m>. Add (integrate) the amount or work done in moving each horizontal <em>slice</em> of water out of the tank. The density of water is <m>62.5\ lbs/ft^3</m> and acceleration due to gravity is <m>32\ ft/sec^2.</m>
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      We now move to the study of vector (force) fields because we would like to be able to compute the total work done by an object as it moves through some field that acts on the object by either aiding or hindering its motion. As examples, think of a metal ball passing through a magnetic field, an electron passing through an electric field, a submarine passing through a fluid field, or a person passing through a gravitational field. Suppose we have an object passing along a curve through a vector field. Let <m>\oa f: \re^2 \to \re^2</m> be our (differentiable) vector field and <m>c: \re \to \re^2</m> be our (differentiable) planar curve or path of the object. Therefore <m>\oa f</m> is of the form, <m>\oa f(x,\ y)=\left(p(x,\ y),\ q(x,\ y)\right)</m> for some <m>p,q: \re^2 \to \re</m> and <m>c</m> is of the form, <m>c(t)=(a(t),\ b(t))</m> for some <m>a, b : \re \to \re.</m> Thus we may compute the work done as the particle moves through the vector field by integrating over the field evaluated at the particle, dotted with the speed of the particle. This gives the component of the force that is acting in the direction of travel of the particle.
+      <md>
+        <mrow>W \amp  = \amp  \int \oa f \big(\oa c(t)\big) \cdot \oa c'(t)\ dt</mrow>
+        <mrow>\amp  \amp  =\int \big( \  p(a(t) \ ,\ b(t)),\ q(a(t),\ b(t)) \  \big) \  \cdot \  \big( a'(t) \ ,\ b'(t) \big) \ dt</mrow>
+        <mrow>\amp  \amp  = \int p\big( \  a(t),b(t) \  \big) \  a'(t) + q\big( \  a(t),b(t) \  \big) \  b'(t) \  dt</mrow>
+      </md>
+    </p>
+
+    <p>
+      There are two additional ways in which vector line integrals are often written. First, the independent variable <m>t</m> is often omitted:
+      <me>
+        W = \int_{\oa c} \oa f(\oa c(t)) \cdot \oa c'(t) \  dt = \int_{\oa c} \oa f(\oa c) \cdot d\oa c.
+      </me>
+    </p>
+
+    <p>
+      Second, if we <m>f(x,\ y)=(p(x,\ y),\ q(x,\ y))</m> and <m>\oa c(t)=(x(t),\ y(t))</m> then
+      <md>
+        <mrow>W \amp  = \amp  \int f(\oa{c})\cdot d\oa{c}</mrow>
+        <mrow>\amp  \amp  = \int \big(p(x,y),q(x,y)\big) \cdot \big(x'(t),y'(t)\big)\ dt</mrow>
+        <mrow>\amp  \amp  = \int p\big(x(t),y(t)\big) \ x'(t)+q\big(x(t),y(t)\big) \ y'(t)\ dt</mrow>
+        <mrow>\amp  \amp  = \int p \  dx + q \  dy</mrow>
+      </md>
+    </p>
+
+    <p>
+      We now have many different types of integrals to compute. Here is a table of notations to help you determine which integral we are computing. Some of these notations we have already seen, some are coming soon.
+      <ul>
+        <li>
+          <p>
+            <m>dx</m> or <m>dt</m> means the usual, for example:
+            <me>
+              \dsp \int_1^2 x^2 \ dx = \int_1^2 t^2 \ dt
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>ds</m> means we integrate with respect to arc length, for example:
+            <me>
+              \dsp \int_{\oa c}  f \ ds = \int_{\oa c} f(\oa c(t))  |\oa c'(t) | \ dt
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>d \oa c</m> means a line integral over a vector field along some curve, for example:
+            <me>
+              \dsp \int_{\oa c} \oa f \cdot  d \oa c =  \int_{\oa c} \oa f(\oa c(t)) \cdot \frac{\oa c'(t)}{|\oa c'(t)|} \ ds =  \int_{\oa c} \oa f(\oa c(t)) \cdot \frac{\oa c'(t)}{|\oa c'(t)|} |\oa c'(t)| \ dt   =  \int_{\oa c} \oa f(\oa c(t)) \cdot \oa c'(t) \ dt
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>dA</m> means we integrate over a two dimensional domain, for example the double integral:
+            <me>
+              \dsp \int_D f \ dA =  \int  \int f(x,y) \ dx \ dy
+            </me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>dV</m> means we integrate over a three dimensional domain, for example the triple integral:
+            <me>
+              \dsp \int_D f \ dV =
+              \int \int \int f(x,y,z) \ dx \ dy \ dz
+            </me>
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <problem>
+      <statement>
+        <p>
+          Suppose we have a particle traveling through the force field, <m>\oa f(x,\ y)=(xy,\ 2x-y)</m>.
+          <ol>
+            <li>
+              <p>
+                Compute the work done as the particle travels through the force field <m>f</m> along the curve <m>\oa c(t)=(t,\ t^2)</m> from <m>t=0</m> to <m>t=1</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute the work done as the particle travels through the force field <m>f</m> along the curve <m>\oa c(t)=(2t,\ 4t^2)</m> from <m>t=0</m> to <m>t=\frac{1}{2}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      What you have just computed is called a <em>line integral over a vector field</em>.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>line integral of the vector field</term> <m>\oa f: \re^2 \to \re^2</m> given by <m>\oa f(x,y) = (p(x,y), q(x,y))</m> over the curve <m>\oa c : \re \to \re^2</m> given by <m>\oa c(t) = (x(t),y(t))</m> is defined by
+          <me>
+            L = \int \oa f(\oa{c})\cdot d\oa{c}  = \int \Big(p\big(x(t),y(t)\big),q\big(x(t),y(t)\big)\Big) \cdot \big(x'(t),y'(t)\big)\ dt
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <problem xml:id="lineintegral">
+      <statement>
+        <p>
+          Compute the line integral of <m>\oa f(x,\ y)=(4x+y,\ x+2y)</m> over <m>\oa c</m> where <m>\oa c</m> is the curve bordering the rectangle with corners at <m>(0,\ 0),\ (1,\ 0),</m> <m>(1,\ 2),\ (0,\ 2).</m> Start your path at the origin and work counter-clockwise around the rectangle. You will need to compute and sum four integrals along four parameterized lines.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      You have been using the Fundamental Theorem of Calculus for three semesters now. This powerful result in one dimension is all that is needed to prove the version we need for three dimensions.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>The Fundamental Theorem of Calculus.</em> If <m>F</m> is any anti-derivative of <m>f</m>, then <m>\dsp{\int_a^b{f(x)\ dx=F(b)-F(a)}}</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <theorem xml:id="ftcIII">
+      <statement>
+        <p>
+          <em>The Fundamental Theorem of Calculus for Line Integrals.</em> If <m>\oa f</m> is a <em>gradient field</em> and <m>g</m> is any anti-derivative of <m>\oa f</m> (i.e. <m>\nabla g=\oa f</m>), then
+          <me>
+            \dsp{\int_{\oa c}{\oa f(\oa{c}) \cdot {d\oa{c}}= g\left(\oa c(b)\right)-g\left(\oa c(a)\right)}}.
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Prove <xref ref="ftcIII">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Compute the line integral from <xref ref="lineintegral">Problem</xref> using <xref ref="ftcIII">Theorem</xref>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      The next two theorems are important results associated with line integrals. We don't assert all the necessary hypothesis <mdash /> curves are smooth, functions are assumed to be integrable, etc.
+    </p>
+
+    <p>
+      <xref ref="reverse">Theorem</xref> states that if we reverse the path along which we compute a line integral, then we change the sign of the result. Thinking of the line integral as work, this makes sense, because the work done by traveling one direction along a path should be the opposite of the work done traveling the other way. When we have a curve <m>\oa{c}</m> and we write <m>\oa{-c}</m> we mean the same set of points in the plane, but we simply reverse the direction. If we have the curve <m>\oa{c}(t) = (x(t),y(t))</m> from <m>t=a</m> to <m>t=b</m>, then <m>\oa{-c}</m> is simply the same curve where <m>t</m> goes from <m>t=b</m> to <m>t=a</m>.
+    </p>
+
+    <theorem xml:id="reverse">
+      <statement>
+        <p>
+          <em>Path Reversal Theorem for Line Integrals.</em> If <m>\oa c:{\re}\to{\re}^2</m> is a parametric curve and <m>\oa f</m> is a vector field, then
+          <me>
+            \int_c  \oa{f}(\oa{c})\cdot{d\oa{c}}=-\int_{-c}{\oa{f}(\oa{c})\cdot{d\oa{c}}}.
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Show that <m>\dsp{\int_{\oa{c}}{\oa f(\oa{c})\cdot d{\oa{c}}}=-\int_{\oa{-c}}\oa f(\oa{c})\cdot{d{\oa{c}}}}</m> where <m>\oa f(x,\ y)=(xy,\ y-x),\ \oa c(t)=(t^2,\ t),\ \ t\in[0,\ 2]</m>. Since <m>c</m> is the path from <m>(0,\ 0)</m> to <m>(4,\ 2)</m>, then <m>-c</m> is the same path but from <m>(4,\ 2)</m> to <m>(0,\ 0)</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      <xref ref="independence">Theorem</xref> states that line integrals over conservative fields are independent of path. Suppose you and I start at the same point at the bottom of a mountain and we walk to the top following different paths. Did we do the same amount of work? Yes. Because gravity is a conservative (gradient) field it does not matter what path we follow as long as we both start at the same place and end at the same place. By the same logic, if we start at a point on the mountain, walk around, and return to the same spot, then the total work is zero.
+    </p>
+
+    <theorem xml:id="independence">
+      <statement>
+        <p>
+          <em>Independence of Path Theorem for Line Integrals.</em> If <m>\oa{c_1}</m> and <m>\oa{c_2}: \re \to \re^2</m> are two (distinct) paths beginning at the point <m>(x_1,\ y_1)</m> and ending at the point <m>(x_2,\ y_2)</m> in the plane and <m>\oa f</m> is a gradient field, then
+          <me>
+            \int_{c_1}{\oa{f}(\oa{c})\cdot{d\oa{c}}= \int_{c_2}{\oa{f}(\oa{c})\cdot{d\oa{c}}}}
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>f</m> be the vector field <m>\oa f(x,\ y)=(3x^2y+x,\ x^3)</m> and <m>c</m> be the planar curve <m>\oa c(t)=(\cos(t),\sin(t))</m> from <m>t=0</m> to <m>t=\pi</m>.
+          <ol>
+            <li>
+              <p>
+                Write out and simplify, but don't compute, the line integral of <m>f</m> over <m>\oa c</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute this line integral by choosing the simpler path <m>\oa p(t)= (-t,0)</m> from <m>t=-1</m> to <m>t=1</m> and applying <xref ref="independence">Theorem</xref>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Recompute this line integral by finding a function <m>g</m> so that <m>\nabla  g = (3x^2y+x,\ x^3)</m> and applying <xref ref="ftcIII">Theorem</xref>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>\oa f(x,\ y)=(x-y,\ x+y).</m>
+          <ol>
+            <li>
+              <p>
+                Compute <m>\dsp \int_{\oa c_1} \oa f(\oa{c})\ d\oa c</m> where  <m>\oa c_1 (t)=(t,\ t^2),\ \ t\in[0,\ 1].</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Compute <m>\dsp \int_{\oa c_2} \oa f(\oa{c})\ d\oa c</m> where <m>\dsp \oa c_2 (t)=\big(\sin(t),\ \sin^2(t)\big)\ \ t\in[2\pi,\ \frac{5\pi}{2}]</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Explain your answer.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      When we compute line integrals, we often integrate along a curve that is the boundary of some region. Here are a few of the buzz words about curves that we will use.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>\oa{c}:\ [a,b] \to{\re}^2</m>. We say that <m>\oa c</m> is a <term>simple closed curve</term> if <m>\oa c</m> starts and ends at the same point (i.e. <m>\oa{c}(a)=\oa{c}(b)</m>) and never crosses itself.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      When we are integrating around a simple closed curve <m>\oa{c}</m> with respect to the arc length of the curve, we will use the notation <m>\dsp \oint_{\oa c} \cdots \ ds.</m> The circle indicates that the curve is closed, starting and ending at the same point in the plane.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          Let <m>\oa{c}:\ [a,b] \to{\re}^2</m> be a simple closed curve on <m>[a,\ b]</m>. We say that <m>\oa c</m> is <term>positively oriented</term> if as <m>t</m> increases from <m>a</m> to <m>b</m> and we traverse the curve <m>\oa c</m> then the enclosed region is on our left.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      As we will show in a forthcoming lecture, Gauss' Divergence Theorem is equivalent to Green's Theorem. They are simply the same theorem stated in two different ways. Gauss' Divergence Theorem says that if we have a certain simple closed curve representing the boundary of a region over which we have a vector field (a flow), then the flow across boundary (the flux) must equal the integral of the divergence of the fluid (or the electricity or whatever) over the region enclosed by the boundary.
+      EXTRA<fn>Rather than proving Gauss' Divergence Theorem, we spend considerable time trying to motivate the physical interpretation, explaining that if we are discussing the movement of particles inside a region via the function <m>f</m> then Gauss' Theorem says that the integral of the divergence of the flow within the region equals the integral of the flow across the boundary of the region.  To put this in context, we give brief lectures on computing the flux (flow across a boundary), the divergence of elementary vector fields, and computing normals to curves.  Then we illustrate with a simple example.
+      <ol>
+      <li>
+        <p>
+          FLUX: Suppose we cover the plane with a one-foot deep pool of water that is flowing to the right at 3 ft/sec. How much water flows across the line segment from <m>(2,1)</m> to <m>(2,3)</m>?  We can compute this via common sense as
+          <me>
+            flow \cdot width \cdot height = 3 ft/sec \cdot 2 \cdot 1  = 6 ft^3/sec.
+          </me>
+          We can also compute this by considering the flow as a vector,
+          <me>
+            flow \cdot (unit \ normal \ to \ flow) \cdot width = (3,0) \cdot (1,0) \cdot 2 .
+          </me>
+          What would be the flow across the line segment from <m>(0,0)</m> to <m>(2,0)</m>. By logic, it is zero, which is also what we get when we consider the vector computation
+          <me>
+            (3,0) \cdot (0,-1) \cdot 2.
+          </me>
+          What if we consider the flow across the line segment from <m>(1,1)</m> to <m>(2,0)</m>?  Using our vector computation,
+          <me>
+            (3,0) \cdot (\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}) \cdot \sqrt{2} = 3.
+          </me>
+          This result makes sense because the flow across the line segment from <m>(0,0)</m> to <m>(0,1)</m> is also <m>3 ft^3/sec</m> and whatever flows across this line segment must also flow across the line segment from <m>(1,1)</m> to <m>(2,0)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          DIVERGENCE: Suppose that we have the vector field, <m>\oa f: \re^2 \to \re^2</m> given by <m>\oa f(x,y) = (p(x,y),q(x,y))</m>.  Recall that the divergence, <m>\nabla \cdot \oa f = p_x + q_y</m>, represents the sum of the velocity in the <m>x</m> direction of the first component of the flow and the velocity in the <m>y</m> direction of the second component of the flow.  Thus, divergence is a measure of the velocity of the flow.  We sketch vector fields for:
+          <ol>
+            <li>
+              <p>
+                <m>\oa f(x,y) = (1,0)</m> <mdash /> all flow to the right and <m>\nabla \cdot \oa f = 0</m> since at every point, the flow in = the flow out
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa f(x,y) = (x,0)</m> <mdash /> all flow outward and <m>\nabla \cdot \oa f = 1 > 0</m> since at every point not on the y-axis, there is more flow out than in
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa f(x,y) = (x,y)</m> <mdash /> all flow outward and <m>\nabla \cdot \oa f = 2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\oa f(x,y) = (-x,-y)</m> <mdash /> all flow inward and <m>\nabla \cdot \oa f = -2</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          NORMALS TO CURVES: Suppose <m>\oa c(t)=(x(t),y(t))</m> is a parametric curve.  We already know that the tangent to the curve is given by <m>\oa c'(t)= (x'(t),y'(t))</m>.  For any time <m>t</m>, the two vectors, <m>(-y'(t),x'(t))</m> and <m>(y'(t),-x'(t))</m> both perpendicular to <m>\oa c'(t)</m>.  By working a simple example, such as <m>\oa c(t) = (5\cos(t),2\sin(t))</m> we can determine that the second one is the outward normal.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          EXAMPLE: Verify Gauss' Divergence theorem, <m>\dsp{\oint_{\oa{c}}\oa{F}\cdot{n}\ ds=\int_D \nabla\cdot\oa{F}\ dA}</m>, for <m>\oa F(x,y) = (-2x,-2y)</m> over the circle of radius 1 centered at (0,0).
+        </p>
+      </li>
+      </ol>
+      </fn></p>
+
+    <p>
+      For both Green's and Gauss' Theorems, when integrating along the boundary of the region the simple closed curve must be positively oriented. That is, you must integrate in a counter-clockwise direction so that the region is on your left as you travel along the parametric curve.
+    </p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Gauss' Divergence Theorem for the Plane.</em> If <m>F</m> is a vector field and <m>\oa c</m> is a simple closed curve and <m>\oa n</m> is the unit normal to <m>\oa c</m>, then <m>\dsp{\oint_{\oa{c}}\oa{F}\cdot{n}\ ds=\int_D \nabla\cdot\oa{F}\ dA}</m>
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Verify Gauss' Divergence theorem for <m>\oa f(x,y) = (-2x,-2y)</m> over the triangular domain with vertices (0,0), (0,1) and (1,1).
+        </p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Gauss' Divergence Theorem by computing both integrals (the flux integral and the divergence integral) with <m>\oa f(x,\ y)=-4(x,\ y)</m> and <m>\oa c(t)=(\cos(t),\ \sin(t))</m> assuming <m>t \in [0, 2\pi].</m>
+          EXTRA<fn>As soon as this problem goes up, one can re-emphasize the understanding of Gauss' Theorem by computing the flow across the border at several points.  The flow across the border at (0,1) would be <m>\oa f(0,1) \cdot (0,-1) = (0,-4) \cdot (0,-1) = 4</m> while the flow at (<m>\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2})</m> would be <m>\oa f(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}) \cdot (-\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}) = (-2\sqrt{2},-2\sqrt{2}) \cdot (-\frac{\sqrt{2}}{2},-\frac{\sqrt{2}}{2}) = 4.</m>  Hence the flow across the border at every point on the circle is 4 and the circumference is <m>2\pi</m> so it makes sense that the solution is <m>-8\pi</m>.</fn></p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Gauss' Divergence Theorem for <m>\oa f(x,y) = (xy, 2x-y)</m> over the region <m>D</m> in the first quadrant bounded by <m>y=0</m>, <m>x=0</m> and the line <m>y=1-x</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Gauss' Divergence Theorem for the flow <m>f(x,y) = (0,y)</m> over the rectangular region, <m>\{(x,y) : 0 \le x \le 2, 0 \le y \le 3 \}.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Green's Theorem</em> EXTRA<fn>We sketch pictures for both Green's Theorem and Gauss' theorem to illustrate that they are close cousins. The line integral associated with Gauss' Theorem has us integrating the component of <m>f</m> that is <em>perpendicular</em> to the boundary, while the line integral associated with Green's Theorem has us integrating the component of <m>f</m> that is <em>parallel</em> to the boundary.  Then we verify Green's theorem for two problems.
+          <ol>
+            <li>
+              <p>
+                <m>f(x,y) = (x-y,x+y)</m> over the circle <m>c(t) = (2\sin(t),2\cos(t))</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = (4y, 3x+y)</m> over the region bounded by the x-axis and <m>y=\cos(x)</m>
+              </p>
+            </li>
+          </ol>
+          For the first example we get <m>8\pi</m> one way and <m>-8\pi</m> the other way.  Why?  Because our circle is not positively oriented. The second example reminds us how to integrate by parts!
+
+          While we don't prove either Gauss' or Green's Theorem, we do show that they are equivalent.  We may use the last few minutes of a class period to state the two theorems and reemphasize that they are very similar by reminding them that the line integral associated with Gauss' Theorem has us integrating the component of <m>f</m> that is <em>perpendicular</em> to the boundary, while the line integral associated with Green's Theorem has us integrating the component of <m>f</m> that is <em>parallel</em> to the boundary.  This and starting the theorem by writing the first two lines below may be enough that a student can give the proof the next day.  We conclude the class by saying that if a student has it, then s/he can present it and, if not, then after we present problems the next day, I will present it.  Even if I present it, then I assign as homework for the class to present the other direction, that Green's implies Gauss'. The proof we give follows.
+ 
+           Suppose we have proven Gauss' Theorem and wish to prove Green's where
+          <m>f(x,y) = (u(x,y),v(x,y))</m> and <m>c</m> is the simple, closed, positively oriented curve <m>c(t) = (x(t),y(t))</m>.
+          <md>
+            <mrow>\oint_{\oa c} f(\oa{c}) \ d\oa{c} \amp  = \amp  \oint_{\oa c} f(x(t),y(t)) \cdot (x'(t),y'(t)) \ dt</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} (p(x(t),y(t)),q(x(t),y(t))) \cdot (x'(t),y'(t)) \ dt</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} p(x(t),y(t)) x'(t) + q(x(t),y(t)) y'(t)) \ dt</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} p  x' + q y' \ dt</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} (q,-p) \cdot (y',-x') \ dt</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} g \cdot n \ ds \ \ \mbox{ where }  g(x,y) = (q(x,y),-p(x,y))</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} \nabla \cdot g \ dA \ \ \mbox{ by Gauss' Theorem }</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} ( \frac{\partial}{\partial x}, \frac{\partial}{\partial y}) \cdot (q(x,y),-p(x,y)) \ dA</mrow>
+            <mrow>\amp  = \amp    \oint_{\oa c} q_x - p_y \ dA</mrow>
+          </md></fn></p>
+
+        <p>
+          If <m>\oa f:\re^2\to\re^2,\ \oa f(x,\ y)=\big(p(x,\ y),\ q(x,\ y)\big)</m>, is a vector field and <m>\oa c: \re \to \re^2</m> is a positively oriented simple closed curve so that <m>\oa c(t) = (x(t),y(t))</m> and <m>D</m> is the region enclosed by <m>\oa c</m>, then
+          <me>
+            \oint_{\oa c}{\oa{f}(\oa{c})\cdot{d\oa{c}}}=  \int_D q_x(x,y) - p_y(x,y) \ dA
+          </me>
+        </p>
+      </statement>
+    </theorem>
+
+    <example>
+      <statement>
+        <p>
+          Verify Green's theorem for <m>\oa f(x,y) = (4y, 3x+y)</m> over the region bounded by the x-axis and <m>y=\cos(x)</m>. Compute both sides of Green's theorem for <m>\oa f(x,y) = (x-y,x+y)</m> over the circle <m>\oa c(t) = (2\sin(t),2\cos(t))</m> and explain why they are not equal.
+        </p>
+      </statement>
+    </example>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Green's Theorem for the flow <m>\oa f(x,y) = (-y^2, xy)</m> over the region bounded by <m>x=0, y=0, x=3, \mbox{ and }  y=3.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Green's Theorem for the vector field <m>\oa f(x,y) = (-y,x)</m> over the region bounded by the curve <m>\dsp \frac{x^2}{4} + \frac{y^2}{9} = 1.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Green's Theorem for the vector field <m>\oa f(x,y) = (xy,3x)</m> over the region formed by the three points, <m>(-1,0), (1,0),</m> and
+          <m>(0,4).</m>
+        </p>
+      </statement>
+    </problem>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>An Area Theorem.</em>
+          EXTRA<fn>This is one I actually prove for them.  Proof.  We have intentionally written this formula as an engineer or physicist might.   To prove it, the first step we will take is to rewrite it as a mathematician.
+          <md>
+            <mrow>\frac{1}{2} \int x \ dy - y \ dx  \amp  = \amp  \frac{1}{2} \int x(t)y'(t) -  y(t)x'(t) \ dt</mrow>
+            <mrow>\amp  = \amp  \frac{1}{2}  \int (-y(t),x(t)) \cdot (x'(t),y'(t)) \ dt</mrow>
+            <mrow>\amp  = \amp  \frac{1}{2}  \int f(x(t),y(t)) \cdot (x'(t),y'(t)) \ dt \mbox{ where }  f(x,y) = (-y,x)</mrow>
+            <mrow>\amp  = \amp  \frac{1}{2}  \int f(c(t)) \cdot c'(t) \ dt  \mbox{ where }  c(t)=(x(t),y(t))</mrow>
+            <mrow>\amp  = \amp  \frac{1}{2}  \int f(c) \ dc</mrow>
+            <mrow>\amp  = \amp   \frac{1}{2} \int v_x - u_y \ dA \ \mbox{ by Green's Theorem}</mrow>
+            <mrow>\amp  = \amp   \frac{1}{2} \int 1 - (-1) \ dA</mrow>
+            <mrow>\amp  = \amp   \int 1 \ dA  = \mbox{ area! }</mrow>
+          </md>
+          <em>q.e.d.</em></fn></p>
+
+        <p>
+          If we have a simple, closed, positively oriented parametric curve <m>\oa c(t) = (x(t),y(t))</m>, then the area enclosed by the curve may be computed by: <m>\dsp A = \frac{1}{2} \int_a^b x \ dy - y \ dx</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Find the area of the ellipse <m>\dsp \frac{x^2}{a^2}+\frac{y^2}{b^2}=1</m> via the formula <m>\dsp{A=\frac{1}{2}\int{x\ dy-y\ dx}}</m> and the parametrization <m>\oa c(t)=(a\ \cos(t),\  b\ \sin(t)),\ t\in[0,\ 2\pi]</m>.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Gauss' Divergence Theorem is valid in higher dimensions as well, although it is often the case that integrating over certain parts of the boundary is challenging.
+      EXTRA<fn>Before introducing Gauss' Theorem in higher dimensions, there should probably be some problems on surface integrals. At the very least, one needs to define and explain that if we have a simple parameterized surface, <m>h(s,t) = (s,t,g(s,t))</m> then <m>dS = \sqrt{1 + g_s^2 + g_t^2}</m>.  We typically mention this while working through two examples.
+ 
+
+      Example 1. Verify Gauss' Theorem for <m>F(x,y,z) = ( x, y, z)</m> over the sphere of radius 1.
+      <md>
+        <mrow>\int_{\delta S} F \cdot n \ dS \amp   = \amp  \int_{\delta S} (x,y,z) \cdot \frac{(x,y,z)}{\sqrt{x^2+y^2+z^2}} \ dS</mrow>
+        <mrow>\amp  = \amp  \int_{\delta S} \frac{x^2+y^2+z^2}{\sqrt{x^2+y^2+z^2}} \ dS</mrow>
+        <mrow>\amp  = \amp  \int_{\delta S} 1 \ dS</mrow>
+        <mrow>\amp  = \amp  \mbox{ surface area of the sphere }</mrow>
+        <mrow>\amp  = \amp  4\pi 1^2 = 4 \pi</mrow>
+      </md>
+      and
+      <md>
+        <mrow>\int_S \nabla \cdot F \ dV \amp  = \amp  \int_S 3 \ dV</mrow>
+        <mrow>\amp  = \amp  3 \frac{4}{3}\pi 1^3</mrow>
+        <mrow>\amp  = \amp  3 \mbox{ volume of a sphere}</mrow>
+        <mrow>\amp  = \amp  \frac{4}{3}\pi 1^3</mrow>
+        <mrow>\amp  = \amp  4\pi</mrow>
+      </md>
+      Example 2. Let <m>S</m> be the solid bounded by <m>x^2+y^2=4</m>, <m>z=0</m>, and <m>x+z=6</m>. Let <m>F(x,y,z) = (x^2, xy,e^y)</m>. We can compute one side easily,
+      <me>
+        \int_S \nabla F \cdot n \ dV = \int_S 3x \ dV = \int_0^{2\pi} \int_0^2 \int_0^{6-r\cos(\theta)} 3r\cos(\theta) r \ dz \ dr \ d \theta = \dots = -12\pi.
+      </me>
+      We can set up the other side, although the integrals are sufficiently difficult that both Maple and a TI Voyage 200 numerically approximate the solutions.</fn></p>
+
+    <theorem>
+      <statement>
+        <p>
+          <em>Gauss' Divergence Theorem for Three Dimensions.</em> If <m>S</m> is a solid in three dimensional space, we write
+          <me>
+            \int_{\delta{S}}f\cdot{n}\ dS\ =\ \int_S \nabla\cdot{f}\ dV
+          </me>
+          where <m>\delta S</m> denotes the boundary of <m>S</m>, <m>n</m> denotes the unit outward normal and <m>dV</m> indicates that we are integrating over the entire volume of the solid.
+        </p>
+      </statement>
+    </theorem>
+
+    <problem>
+      <statement>
+        <p>
+          Verify Gauss' Divergence Theorem for the vector field <m>\oa f(x,y,z) = (x^2y, 2xz, yz^3)</m> over the three dimensional box, <m>0 \le x \le 1, 0 \le y \le 2, \mbox{ and }  0 \le z \le 3.</m>
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>S</m> be the cylinder of radius 2 with base centered at the origin and height 3. Let <m>\oa f(x,y,z) = (x^3 + \tan(yz),  y^3 - e^{xz}, 3z + x^3)</m>. Use the divergence theorem to compute the flux across the side of the cylinder.
+        </p>
+      </statement>
+    </problem>
+
+    <problem>
+      <statement>
+        <p>
+          Let <m>S</m> be the solid bounded by <m>2x+2y+z=6</m> in the first octant. Let <m>\oa f(x,y,z) = (x, y^2, z)</m>. Sketch the solid and verify Gauss' Divergence Theorem.
+        </p>
+      </statement>
+    </problem>
+
+    <p>
+      Congratulations, for some of you this note constitutes having independently worked through three semesters of Calculus, which is quite an accomplishment.
+    </p>
+  </introduction>
+  <xi:include  href="chap13probs.ptx" />
+</chapter>
+

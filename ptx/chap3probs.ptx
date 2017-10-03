@@ -1,0 +1,730 @@
+
+
+<section xml:id="chap3probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Linear Approximations</em>
+    <ol>
+      <li>
+        <p>
+          Sketch <m>f(x)  = 1 + \sin(2x).</m>  Compute and sketch the linear approximation to <m>f</m> at <m>x=\pi/2.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Ted's hot air balloon has an outer diameter 24 feet and the material is .25 inches thick.  Assuming it
+          is spherical approximate the volume using linear approximates and compare it to the exact volume.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Limits and Infinity</em>
+    <ol>
+      <li>
+        <p>
+          Compute <m>\dsp \lim_{x \to \infty} \frac{2x-4}{3x-2}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \lim_{x \to 3+} \frac{2x-4}{x-3}</m> and <m>\dsp \lim_{x \to 3-} \frac{2x-4}{x-3}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \lim_{x \to \infty} \frac{2x-4}{3x^2-2}.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \lim_{x \to \infty} \frac{\sqrt{x^2-3}}{x-1}</m> and
+          <m>\dsp \lim_{x \to -\infty} \frac{\sqrt{x^2-3}}{x-1}.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Graphing</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      For each of the following, find the greatest lower bound and the least
+      upper bound for the function on the given interval.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>f(x)=x^{3}-3x+10</m> on <m>[0,2]</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp H(x)=x+\frac{1}{x}</m> on <m>[-2, -0.5]</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp g(t)=\frac{5}{4-t^{2}}</m> on <m>[-6,4]</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>T(x)=\tan(x)</m> on <m>[0,\frac{\pi }{2}]</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      For each of the following graph <m>f,</m> <m>f',</m> and <m>f''</m> on the same set of axes.
+      <ol>
+        <li>
+          <p>
+            <m>f(x)=6x^{2}+x-1</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f(x)=1-x^{3}</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Sketch an accurate graph of the following functions. List as much of the following information as you can: intercepts, critical points, asymptotes, intervals where <m>f</m> is increasing or decreasing, intervals where <m>f</m> is concave up or concave down, local maxima and minima, inflection points, and least upper bound and greatest lower bound.
+      <ol>
+        <li>
+          <p>
+            <m>F(t)=4-t^{2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>f(x)=x^{3}-4x+2</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>G(t)=t^{3}+6t^{2}+9t+3</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp E(x) = e^{x^2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp F(z)=\frac{1}{1+z^{4}}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp y = 3x^4 + 4x^3 - 12x^2</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp f(x) =\frac{4}{5} x^5 - \frac{13}{3}x^3 + 3x + 4</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp k(x) = x^{1/3}</m>  Watch for where <m>k'</m> is undefined.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp g(x)= x(x-2)^{2/3}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp h(x) = \frac{e^x + e^{-x}}{2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp p(x) = x^3-3x^2+3</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp T(x) = \sin(x) + \cos(x)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp h(x) = \frac{2x^2}{x^2+x-2}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp r(t) = \frac{\sqrt{3}}{2}t - \sin(t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp z =\frac{x^2-x}{x+1}</m>  Find 1 vertical and 1 slant asymptote.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp y = x^{1/3}(4-x)</m>  Watch for where <m>y'</m> is undefined.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp y = \frac{x}{1-x^2}</m>  Find 2 vertical and 1 horizontal asymptotes.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp y =\frac{\sqrt{x^2-3}}{x-1}</m>  Watch for 2 horizontal and 1 vertical asymptotes.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp z = \frac{x^2+1}{x}</m>  What function does this graph approximate for large values of x?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\dsp z = \frac{x^4-1}{x^2}</m>  What function does this graph approximate for large values of x?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Rolle's Theorem, Mean Value Theorem, and L'H&#xf4;pital's Rule</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      Verify that <m>f(x) = \sin(2\pi x)</m> satisfies the hypothesis of the Rolle's Theorem on [-1,4]
+      and find all values <m>c</m> satisfying the conclusion to the Rolle's Theorem.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Verify that <m>f(x) = x^3 - x^2 -x +1</m> satisfies the hypothesis of the Mean Value Theorem on [-1,2]
+      and find all values <m>c</m> satisfying the conclusion to the MVT.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Evaluate each of the following limits using L'H&#xf4;pital's Rule, if L'H&#xf4;pital's rule applies.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to \infty} \frac{4x+3}{10x+5}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to \infty} \frac{2x^{2}-x+3}{3x^{2}+5x-1}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{t\to 0} \frac{1-\cos(t)}{t^{2}+3}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to \infty} \frac{(\ln(x))^{2}}{x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x\to 0^{+}} 3x\ln(x)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to 0^+} {{4^{3x} - \cos(2x)} \over{\tan(x)}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to 2^+} {{\log(x-2)} \over{\csc(x^2 - 4)}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to 0^+}x^{\tan(x)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to 0^-} (x+1)^{\csc(x)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to \infty} \Big({x \over {x+3}} \Big)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to \infty} (3x)^{1 \over x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to 0^+} (\sec(x))^{1 \over {x^2}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \lim_{x \to 0^+} (e^x+3x)^{1 \over x}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp{\lim_{x \to {{\pi} \over 2}^+}({1 \over {\cos(x)}} - \tan x)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\lim_{x\to 0^{+}} x^{\tan(x)}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp{\lim_{x \to 0^-} (1-x)^{1\over x}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp{\lim_{x \to {{\pi}\over 2}^+} (x - {{\pi} \over 2})^{1- \sin x}}</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+  </ol>
+  <p>
+    <em>Max/Min Problems</em>
+    <ol>
+      <li>
+        <p>
+          What is the minimum perimeter possible for a rectangle with area 16 square inches?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A right triangle with (constant) hypotenuse <m>h</m> is rotated about one of its legs to sweep out a right circular cone. Find the radius that will create the cone of maximum volume.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the point <m>(x,y)</m> on the graph of <m>\dsp x=\frac{1}{y^{2}}</m> that is nearest the origin <m>(0,0)</m> and is in Quadrant IV.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          The cost per hour in dollars for fuel to operate a certain airplane is <m>\dollar0.021v^{2}</m>, where <m>v</m> is the speed in miles per hour. Additional costs are <m>\dollar4,000</m> per hour.  What is the speed for a <m>1,500</m> mile trip that will minimize the total cost?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          A rice silo is to be constructed in the rice fields of southeast Texas so that the silo is in the form of a cylinder topped by a hemisphere. The cost of construction per square foot of the surface area of the hemisphere is exactly twice that of the cylinder. Determine the radius and height of the silo if the volume of the silo must be 2000 cubic feet and the cost is to minimized.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Related Rate Problems</em>
+    <ol>
+      <li>
+        <p>
+          A man 6 feet tall walks at a rate of 5 feet per second toward a streetlight that is 16 feet above the ground.  At what rate is the tip of his shadow moving?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          An airplane is flying at a constant altitude of 6 miles and will fly directly over your house, where you have radar equipment.  Using radar, you note that the distance between the plane is decreasing at 400 miles/hour.  What is the speed of the plane when the distance from your house to the plane is 10 miles?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Suppose that a spherical balloon is inflated at a rate of 10 cubic feet per second. At the instant that the balloon's volume is <m>972\pi</m> cubic feet, at what rate is the surface area increasing?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Your snow cone has height 6 inches and radius 2 inches and is draining out through a hole in the bottom at a rate of one half cubic inch per second.  You naturally wonder, what will the rate of change of the depth be when the liquid is 3 inches deep?
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 3 Solutions</em>
+  </p>
+
+  <p>
+    <em>Linear Approximations</em>
+    <ol>
+      <li>
+        <p>
+          Linear approximation is <m>y = -2x + 1 + \pi.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Exact volume = 6795.2, approximate volume = 6785.83.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Limits and Infinity</em>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \frac{2}{3}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\infty, -\infty</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          0
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1, -1</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Graphing</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      For each of the following, find the greatest lower bound and the least upper bound for the function on the given interval.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>8, 12</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-2.5, -2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          no greatest lower bound or least upper bound, although there is a local min at <m>(0,5/4)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          greatest lower bound is 0, no least upper bound
+        </p>
+      </li>
+    </ol>
+  </li>
+
+  <li>
+    <p>
+      For each of the following graph <m>f,</m> <m>f',</m> and <m>f''</m> on the same set of axes.
+      <ol>
+        <li>
+          <p>
+            no graphs, but think about the relationships between the three functions
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Sketch an accurate graph of the following functions...
+      <ol>
+        <li>
+          <p>
+            Type them into Google search or your favorite software to see graphs.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </li>
+  </ol>
+  <p>
+    <em>Rolle's Theorem, Mean Value Theorem, and L'H&#xf4;pital's Rule</em>
+  </p>
+  <ol>
+  <li>
+    <p>
+      Since all trig functions are differentiable everywhere and <m>f(-1)=0=f(4),</m> <m>f</m> satisfies the hypothesis.  <m>\dsp c = -\frac{3}{4}, -\frac{1}{4}, \frac{1}{4}, \frac{3}{4}, \frac{5}{4}, \frac{7}{4}, \frac{9}{4}, \frac{11}{4}, \frac{13}{4}, \frac{15}{4}</m> satisfy the conclusion.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Since all polys are differentiable everywhere, <m>f</m> satisfies the hypothesis. <m>\dsp c = \frac{1 \pm \sqrt{7}}{3}</m> both satisfy the conclusion.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Evaluate each of the following limits using L'H&#xf4;pital's Rule if L'H&#xf4;pital's Rule applies.
+    </p>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp 2/5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>2/3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>3 \ln(4)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e^4</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>0</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e^{-1}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>1</m>
+        </p>
+      </li>
+    </ol>
+  </li>
+  </ol>
+  <p>
+    <em>Max/Min Problems</em>
+    <ol>
+      <li>
+        <p>
+          A 4 x 4 square
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Radius = <m>\sqrt{2/3} \ h</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp (\sqrt[6]{2},-\frac{1}{\sqrt[3]{2}})</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          approximately 523 miles/hour
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Radius = <m>\sqrt[3]{750/\pi}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Related Rate Problems</em>
+    <ol>
+      <li>
+        <p>
+          8 ft/sec
+        </p>
+      </li>
+
+      <li>
+        <p>
+          500 mi/hr
+        </p>
+      </li>
+
+      <li>
+        <p>
+          20/9 square feet/sec
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{3}{8\pi}</m> inches per second
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

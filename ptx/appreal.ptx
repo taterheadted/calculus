@@ -1,0 +1,151 @@
+
+
+<section xml:id="appreal">
+  <title>The Extended Reals</title>
+  <p>
+    Have you ever wondered exactly what <em>infinity</em> really <em>is</em>? Is it a number? Can you multiply by it? Can you divide by it? Does <m>\dsp \frac{\infty}{\infty} = 1</m>? Well if you have wondered, then this appendix is for you!
+  </p>
+
+  <p>
+    In this text, we try to define precisely most of the words and symbols that we use. Yet we did not define the real numbers, and to develop them from scratch is a non-trivial task. Thus, the real numbers are an <q>undefined</q> term in this text. One philosophy that separates mathematics from other less scientific fields is our constant attempt to make clear the distinction between that which we are assuming (axioms or undefined terms) and that which we have proved (theorems, lemmas, or corollaries). We will see examples in this course of each. We will not define what a <q>real number</q> is, but we will now define the <q>extended reals</q> assuming that the reals exist. We will give only an intuitive notion of the definition of a <q>limit</q> but we will define <q>derivatives</q> precisely based on our intuitive understanding of limits.
+  </p>
+
+  <p>
+    Where does this leave us, if we build the subject on undefined terms and intuitive definitions? It leaves us in better shape than most subjects! While we have not defined everything, we know what we have defined and what we have proved based on those definitions. Should you find mathematics worthy of further exploration, you can take courses where the real numbers are developed (based on even more elementary axioms and assumptions) and where limits are studied in rigorous detail. Can we go all the way back to the beginning? I will if you will define the word <q>beginning</q>. Enough mathematical philosophy, let's get back to the extended reals.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        Assuming the existence of the real numbers, we define the <term>extended reals</term> to be the set of all real numbers along with two new numbers which we will call <m>\textbf{+\infty}</m> and <m>\textbf{-\infty}.</m>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    We already know many properties of the real numbers. We know how to add, subtract, multiply, and divide. But which of these properties follow for the real numbers? Here are a few:
+  </p>
+
+  <axiom>
+    <statement>
+      <p>
+        <m>\infty + a = \infty</m> for all real numbers, a.
+      </p>
+    </statement>
+  </axiom>
+
+  <axiom>
+    <statement>
+      <p>
+        <m>\infty + \infty = \infty.</m>
+      </p>
+    </statement>
+  </axiom>
+
+  <axiom xml:id="ax">
+    <statement>
+      <p>
+        <m>\infty \cdot \pm a = \pm \infty</m> for all positive real numbers,
+        a.
+      </p>
+    </statement>
+  </axiom>
+
+  <axiom>
+    <statement>
+      <p>
+        <m>\infty \cdot  \infty = \infty.</m>
+      </p>
+    </statement>
+  </axiom>
+
+  <axiom>
+    <statement>
+      <p>
+        <m>\infty / \pm a = \pm \infty</m> for all positive real numbers, a.
+      </p>
+    </statement>
+  </axiom>
+
+  <axiom>
+    <statement>
+      <p>
+        <m>a / \infty  = 0</m> for all real numbers, a.
+      </p>
+    </statement>
+  </axiom>
+
+  <p>
+    Our interest with the numbers <m>\pm \infty</m> stems from limits. For example, what is
+    <me>
+      \dsp \lim_{x \rightarrow \infty} 3x?
+    </me>
+  </p>
+
+  <p>
+    Some would say that the limit does not exist since there is no <em>real</em> number that <m>f(x) = 3x</m> approaches as <m>x</m> approaches <m>\infty.</m> Others would say that the function <m>f</m> increases without bound as <m>x</m> increases without bound. The latter is our personal favorite, but in the interest of notational efficiency, and having defined the extended reals, we will write,
+    <me>
+      \lim_{x \rightarrow \infty} 3x = \infty.
+    </me>
+  </p>
+
+  <p>
+    Note that this follows from <xref ref="ax">Axiom</xref> above.
+  </p>
+
+  <p>
+    Knowing what is <em>not</em> true is at least as important as knowing what <em>is</em> true. Here are some cases called <em>indeterminate</em> forms where the rules you might expect to be true do not necessarily hold. Consider <m>f(x) = x-5</m> and <m>g(x) = x.</m> Clearly,
+    <me>
+      \dsp \lim_{x \rightarrow \infty} f(x) = \infty \;\;\; \mbox{     and     }  \;\;\; \lim_{x \rightarrow \infty} g(x) = \infty.
+    </me>
+  </p>
+
+  <p>
+    But what about <m>\dsp \lim_{x \rightarrow \infty} \left( f(x) - g(x) \right) ?</m>
+    <me>
+      \lim_{x \rightarrow \infty} \left( f(x) - g(x) \right)  = \lim_{x \rightarrow \infty} \left( x-5 - x \right) = \lim_{x \rightarrow \infty} -5 = -5.
+    </me>
+  </p>
+
+  <p>
+    Yet, if we consider <m>h(x) = x-5</m> and <m>k(x) = x^2</m> then
+    <me>
+      \dsp \lim_{x \rightarrow \infty} h(x) = \infty \;\;\; \mbox{     and     }  \;\;\; \lim_{x \rightarrow \infty} k(x) = \infty.
+    </me>
+  </p>
+
+  <p>
+    But what about <m>\dsp \lim_{x \rightarrow \infty} \left( h(x) - k(x) \right)?</m>
+    <me>
+      \lim_{x \rightarrow \infty} \left( h(x) - k(x) \right) = \lim_{x \rightarrow \infty} \left( x-5 - x^2 \right) = \lim_{x \rightarrow \infty} \left( -x^2 + x - 5 \right) = -\infty.
+    </me>
+  </p>
+
+  <p>
+    Thus we say that <m>\infty - \infty</m> is an <em>indeterminate</em> form because when we consider two functions both of whose limits tend to <m>\infty</m>, the limit of their differences is not determined.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Show that <m>\dsp \frac{\infty}{\infty}</m> is an indeterminate form by finding functions <m>f, g, h</m> and <m>k</m> so that
+        <me>
+          \dsp \lim_{x \rightarrow \infty} f(x) = \lim_{x \rightarrow \infty} g(x) =\lim_{x \rightarrow \infty} h(x) =\lim_{x \rightarrow \infty} k(x)=\infty,
+        </me>
+        but
+        <me>
+          \dsp \lim_{x \rightarrow \infty} \frac{f(x)}{g(x)} \neq  \lim_{x \rightarrow \infty} \frac{h(x)}{k(x)}.
+        </me>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Show that each of <m>\dsp \infty^0</m>, <m>\dsp 0^\infty</m>, and <m>\dsp 0 \cdot \infty</m> is an indeterminate form.
+      </p>
+    </statement>
+  </problem>
+</section>
+

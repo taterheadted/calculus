@@ -1,0 +1,567 @@
+
+
+<section xml:id="chap12probs">
+  <title>Practice</title>
+  <p>
+    We will not present the problems from this section, although you are welcome to ask about them in class.
+  </p>
+
+  <p>
+    <em>Basics</em>
+    <ol>
+      <li>
+        <p>
+          Evaluate <m>\dsp \int x^3y-3x \  dx</m> and <m>\dsp \int_1^3 x^3y-3x \   dy</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\dsp \int xye^{xy} \  dx</m> and <m>\dsp \int_{-1}^1 xye^{xy} \  dy</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute the area of the region bounded by the parabola <m>y=x^{2}-2</m> and the line <m>y=x</m> by first computing a single integral with respect to <m>x</m> and then computing a single integral with respect to <m>y.</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute the area bounded by <m>y=x^3</m> and <m>y=5x</m> in four ways.
+          (a) Single integral with respect to <m>x,</m> (b) single integral w.r.t. <m>y,</m>
+          (c) double integral, <m>dx \ dy,</m> and (d) double integral, <m>dy \ dx.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Regions</em>
+    <ol>
+      <li>
+        <p>
+          Sketch the region <m>\phi= \pi/6</m> in spherical coordinates.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the region bounded by <m>r=1</m> and <m>r=2\sin(\theta)</m> in
+          polar coordinates.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the region bounded by <m>x^{2}+y^{2}\leq 9</m> and
+          write in polar coordinates.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the region between
+          <m>x^{2}+y^{2}=25</m>, <m>x^{2}+y^{2}=4</m>, and <m>x\geq 0</m> and write in polar
+          coordinates.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the area of the region <m>D</m> bounded by <m>y= \cos(x)</m> and
+          <m>y= \sin(x)</m> on the interval <m>\dsp \Big[0,\frac{\pi }{4} \Big]</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Integration</em>
+    <ol>
+      <li>
+        <p>
+          Compute <m>\dsp \int_0^2 \int_0^3  x^2y^2-3xy^5\  dy \ dx</m> and
+          <m>\dsp \int_0^3 \int_0^2 x^2y^2-3xy^5\  dx \ dy.</m> Are they equal?
+          What theorem is this an example of?
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\dsp \int_{0}^{1}\int_{0}^{y} e^{y^{2}} \ dx \ dy</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_{R}x^{2}e^{xy}dA</m> where
+          <m>R = \{(x, y): 0\leq x\leq 3, 0\leq y\leq 2 \}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_{0}^{3} \int_{0}^{2} \sqrt{2x+y} \   dy  \  dx</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_{R}\frac{\ln\sqrt{y}}{xy}dA</m> where
+          <m>R = \{(x, y): 1\leq x\leq 4, 1\leq y\leq e \}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\dsp \int_{D} 160xy^{3} \  dA</m> where <m>D</m> is the region
+          bounded by <m>y=x^{2}</m> and <m>y=\sqrt{x}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch and find the volume of the solid bounded above by the plane
+          <m>z=y</m> and below in the <m>xy</m>-plane by the part of the disk
+          <m>x^{2}+y^{2}\leq 1</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Sketch the region, <m>D</m>, that is bounded by <m>x=y^{2}</m> and <m>x=3-2y^{2}</m>
+          and evaluate <m>\int_{D} (y^{2}-x)dA</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_{0}^{2}\int_{0}^{\sin(x)} y \cos(x) \ dy \ dx</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Determine the endpoints of integration for
+          <m>\dsp \int \int_S e^{xy} dA</m> where <m>S</m> is the region bounded
+          by <m>y= \sqrt x</m> and <m>\dsp y={x \over 9}</m>.  Don't integrate.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Determine the endpoints of integration for
+          <m>\dsp \int\int_S dA</m> where <m>S</m> is bounded by a the
+          <m>x=y^{2}+4y</m> and <m>x=3y+2</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Determine the endpoints of integration for
+          <m>\dsp \int \int_{S} 2x \  dA</m> where <m>S</m> is the region bounded
+          by <m>yx^{2}=1</m>, <m>y=x</m>, <m>x=2</m>, and <m>y=0</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\dsp \int \int _D dA</m> where <m>D</m> is the region bounded by the
+          ellipse <m>\dsp \frac{x^{2}}{4}+\frac{y^{2}}{9}=1</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Polar and Spherical Coordinate Integration</em>
+    <ol>
+      <li>
+        <p>
+          Sketch the region <m>D</m> between <m>r= \dsp \cos \Big(\frac{\theta }{2} \Big)</m> and <m>x^{2}+y^{2}=1</m> with <m>0\leq \theta \leq \pi</m>. Evaluate <m>\dsp \int_{D} 1 dA</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Consider <m>\dsp \int_{R} x^{2}+y^{2}+1 \  dA</m> where <m>R = \{(x, y): x \ge 0, 9 \le x^{2}+y^{2} \le 16 \}</m>. Write the integral in both rectangular and polar coordinates. Compute each to verify your answer.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the volume of the solid bounded by the cone <m>\dsp \phi = {{\pi} \over 6}</m> and the sphere <m>\rho=4.</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Coordinate Transformations</em>
+    <ol>
+      <li>
+        <p>
+          Find the Jacobian for the transformation: <m>x=u^{2}+v^{2}+w</m>, <m>y=uw-v</m>, and <m>\dsp z=\ln(w)-\frac{v}{u}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\dsp \int_{0}^{4} \int_{y/2}^{(y/2)+1} \frac{2x-y}{2} \ dx \ dy</m> using <m>u= \dsp \frac{2x-y}{2}</m> and <m>v= \dsp \frac{y}{2}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Use the transformation <m>x= \dsp \frac{u}{v}</m> and <m>y=v</m> to rewrite (but not evaluate) the double integral <m>\int \int \sqrt{xy^{3}} \ dx \ dy</m> over the region in the plane bounded by the <m>x</m>-axis, the <m>y</m>-axis, and the lines <m>y=-2x+2</m> and <m>x+y=7</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Compute <m>\dsp \int_0^1 \int_{0}^{y^2} (1-y) \sin \Big({x \over y} \Big) \ dx \ dy</m> using <m>\dsp u = {x \over y}</m> and <m>v = 1-y</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Write an integral in rectangular coordinates that represents the area enclosed by the ellipse <m>\dsp \frac{x^{2}}{16}+\frac{y^{2}}{49}=1.</m> Now, compute this integral by using the transformation <m>x=4u</m> and <m>y=7v</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the volume of the ellipsoid <m>\dsp {{x^2} \over {a^2}} + {{y^2} \over {b^2}} + {{z^2} \over {c^2}} = 1</m> using the transformation <m>x=au</m>, <m>y=bv</m>, <m>z=cw</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate the triple integral <m>\dsp \int_0^6 \int_0^8 \int_{y \over 2}^{{y \over 2}+4} {{2x-y} \over 2} + {y \over 6} + {z \over 3} dx\ dy\ dz</m> using the transformation <m>\dsp u={{2x-y} \over 2}</m>, <m>\dsp v={y \over 2}</m>, and <m>\dsp w = {z \over 3}</m>.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Triple Integrals, Cylindrical, and Spherical Coordinates</em>
+    <ol>
+      <li>
+        <p>
+          Sketch and find the volume of the solid formed by <m>f(x,y)=4x+2y</m> above the region in the <m>xy</m>-plane bounded by <m>x=2</m>, <m>x=4</m>, <m>y=-x</m>, <m>y=x^2</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Fill in the blanks:
+          <m>\dsp{\int_0^1{\int_0^\frac{1-x}{2}
+          \int_0^{1-x-2y}{f(x,y,z)\ dz\ dy\ dx}}}\\
+          =\int_\_^\_{\int_\_^\_{\int_\_^\_   f(x,y,z) \ {dy\ dz\ dx}}}\\
+          =\int_\_^\_{\int_\_^\_{\int_\_^\_   f(x,y,z) \ {dy\ dx\ dz}}}\\
+          =\int_\_^\_{\int_\_^\_{\int_\_^\_   f(x,y,z) \ {dx\ dy\ dz}}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int_0^6 \int_0^{{12-2x} \over 3} \int_0^{{12-2x-3y} \over 4} f \ dz\ dy\ dx = \int_{\underline{\ }}^{\underline{\ }} \int_{\underline{\ }}^{\underline{\ }} \int_{\underline{\ }}^{\underline{\ }} f \ dy\ dx\ dz = \int_{\underline{\ }}^{\underline{\ }} \int_{\underline{\ }}^{\underline{\ }} \int_{\underline{\ }}^{\underline{\ }} f \ dx\ dz\ dy</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int_0^\frac{1}{6} \int_0^{{\sqrt{1-36x^2}} \over 3} \int_0^{{\sqrt{1-36x^2-9y^2}} \over 2} f \ dz\ dy\ dx = \int_{\underline{\ }}^{\underline{\ }} \int_{\underline{\ }}^{\underline{\ }} \int_{\underline{\ }}^{\underline{\ }} f \ dx\ dz\ dy</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Find the volume of the solid bounded by <m>x^2+y^2+z=8</m> and <m>z=4</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Evaluate <m>\dsp \int_0^2 \int_0^{\sqrt{4-x^2}} \int_0^{\sqrt{4-x^2-y^2}} z \sqrt{4-x^2 - y^2} \ dz\ dy\ dx</m> by converting to (a) cylindrical coordinates; (b) spherical coordinates.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Application - Center of Mass</em>
+    <ol>
+      <li>
+        <p>
+          Suppose <m>\delta(x,y)=x+y</m> is the density function of a thin sheet of material bounded by the curve <m>x^2=4y</m> and <m>x+y=8</m>. Find its total mass.  Find its first moments.  Find its center of mass. Find its second moments.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Chapter 12 Solutions</em>
+  </p>
+
+  <p>
+    <em>Basics</em>
+    <ol>
+      <li>
+        <p>
+          <m>\frac{1}{4}x^4y - \frac{3}{2}x^2</m> and <m>4x^3-6x</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>e^{xy}(x-\frac{1}{y})</m> and <m>e^x(1-\frac{1}{x})+e^{-x}(1+\frac{1}{x})</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>9/2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>25/4</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Regions</em>
+    <ol>
+      <li>
+        <p>
+          it's a cone
+        </p>
+      </li>
+
+      <li>
+        <p>
+          it's the intersection of two circles
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>r \leq 3</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>2 \le r \le 5</m> and <m>\theta \in [-\pi/2,\pi/2]</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\sqrt{2}-1</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Integration</em>
+    <ol>
+      <li>
+        <p>
+          <m>-705</m>, Fubini's Theorem
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{1}{2} (e-1)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>-\frac{1}{4}(17-5e^6)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\approx 11.62</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\approx .346</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>6</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{2}{3}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{24}{5}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{1}{6}\sin^3(2)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int_0^{81} \int_{\frac{x}{9}}^{\sqrt{x}} e^{xy} dA</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>4.5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\frac{2}{3} + 2\ln(2)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>6\pi</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Polar and Spherical Coordinate Integration</em>
+    <ol>
+      <li>
+        <p>
+          <m>\dsp \frac{\pi}{4}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{189\pi}{4}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \frac{-64(\sqrt{3}-2)\pi}{3}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Coordinate Transformations</em>
+    <ol>
+      <li>
+        <p>
+          <m>-2u(\frac{1}{w}-1)-2v+\frac{1}{u}(2v^2-w)+v/u^2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>r</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\rho^2\sin(\phi)</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>2</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int_{0}^7 \int_{7v-v^2}^{v-v^2/2} \sqrt{u} du dv</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          area of ellipse is <m>\pi a b</m> in this case <m>28\pi</m> (just like
+          circle)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          volume of ellipsoid is <m>4/3 \pi abc</m> (just like sphere!)
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    <em>Triple Integrals, Cylindrical, and Spherical Coordinates</em>
+    <ol>
+      <li>
+        <p>
+          <m>2472/5</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp
+          \int_0^1{\int_0^{1-x}{\int_0^{\frac{1-x-z}{2}} \  f(x,y,z) \ {dy\ dz\ dx}}} \\
+          \int_0^1{\int_0^{1-z}{\int_0^{\frac{1-x-z}{2}} \  f(x,y,z) \ {dy\ dx\ dz}}} \\
+          \int_0^{1}{\int_0^{\frac{1-z}{2}}{\int_0^{1-z-2y} \  f(x,y,z)\  {dx\ dy\ dz}}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp
+          \int_0^3{\int_0^{-2x+6}{\int_0^{\frac{-4x-2x+12}{3}} \  f(x,y,z) \ {dy\ dx\ dz}}} \\
+          \int_0^4{\int_0^{-\frac{3}{4}y+3}{\int_0^{\frac{-4z-3y+12}{2}} \  f(x,y,z) \ {dx\ dz\ dy}}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>\dsp \int_0^\frac{1}{3}{\int_0^{\sqrt{\frac{1-9y^2}{2}}}{\int_0^{\frac{\sqrt{1-9y^2-4z^2}}{6}} \  f(x,y,z) \ {dy\ dx\ dz}}}</m>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>8\pi</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</section>
+

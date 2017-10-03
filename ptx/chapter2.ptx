@@ -1,0 +1,16 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Functions, Limits, Velocity, and Tangents</title>
+  <introduction>
+    <p>
+      <q>The harder I work, the luckier I get.</q> - Samuel Goldwyn
+    </p>
+  </introduction>
+  <xi:include  href="section2-1.ptx" />
+  <xi:include  href="section2-2.ptx" />
+  <xi:include  href="section2-3.ptx" />
+  <xi:include  href="section2-4.ptx" />
+  <xi:include  href="chap1probs.ptx" />
+</chapter>
+

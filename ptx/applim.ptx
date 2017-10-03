@@ -1,0 +1,77 @@
+
+
+<section xml:id="applim">
+  <title>Additional Materials on Limits</title>
+  <p>
+    Our definition of limits in this book is an intuitive one. The statement that <q><m>f(x)</m> gets close to <m>f(a)</m> as <m>x</m> gets close to <m>a</m></q> is not mathematically precise because of the word `close.' What does `close' mean? Is <m>.5</m> close to zero? Is <m>.001</m> close to zero? Mathematicians spent hundreds of years defining what `close' meant and the following definition was the result of the work of Newton and Leibniz, among others. This definition gave rise to precise definitions for continuity, derivatives, and integrals, which had theretofore been defined only intuitively. This definition made precise the entire field of analysis which is one of the most applied fields in all of mathematics. If the notion seems non-trivial or the definition challenging, then you are in the company of great men. If you find success in understanding the next few problems, then you are in the company of a very few and should exploit your understanding of such deep concepts with a major or minor in the subject.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>L</m> and <m>a</m> are numbers, then we say that <term>the limit of <m>f</m> at <m>a</m> is <m>L</m></term> if for any two horizontal lines <m>y=H</m> and y=K with the line <m>y=L</m> between them, there are two vertical lines, <m>x=h</m> and <m>x=k</m> with <m>x=a</m> between them, so that if <m>t</m> is any number between <m>h</m> and <m>k</m> (other than <m>a</m>), then <m>f(t)</m> is between <m>H</m> and <m>K</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Here is a sketch of how we might use this definition to <em>prove</em> the statement: <m>\lim_{x \rightarrow 2} x^2 + 3 = 7.</m> First, we do some preliminary analysis. That is, even though to prove this statement, we must show that the definition holds for <em>any</em> choice of <m>H</m> and <m>K</m>, we will start out with a specific choice of <m>H</m> and <m>K</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = x^2 + 3,</m> <m>H=6</m>, and <m>K=8</m>. Find values <m>h</m> and <m>k</m> so that for all numbers <m>t</m> between <m>h</m> and <m>k</m> we have <m>f(t)</m> between <m>H</m> and <m>K</m>. Be sure to <em>prove</em> that if <m>h \lt  t \lt  k</m> then <m>H \lt  f(t) \lt  K</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Does this <em>prove</em> the theorem? No. We must show that we can solve the previous problem for <em>any</em> choice of <m>H</m> and <m>K</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Let <m>f(x) = x^2 + 3.</m> Let <m>y=H</m> and <m>y=K</m> be two horizontal lines with <m>y=7</m> between them. Find vertical lines <m>x=h</m> and <m>x=k</m> satisfying the definition of the limit.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Prove: <m>\lim_{x \rightarrow 2} x^2 + 3 = 7</m> by showing that if <m>t</m> satisfies <m>h \lt  t \lt  k</m> then <m>H \lt  f(t) \lt  K.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    This definition can be used to prove some of the theorems about limits that we used. Here are a few that you might enjoy working on.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Prove that if <m>a \in \re</m> then <m>\lim_{x \rightarrow a} x = a.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Prove that if <m>a \in \re</m> then <m>\lim_{x \rightarrow a} x^2 + 3 = a^2 + 3.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Prove that if f and g are functions and <m>\lim_{x \rightarrow a} f(x) = f(a)</m> and <m>\lim_{x \rightarrow a} g(x) = g(a)</m> then and <m>\lim_{x \rightarrow a} \left( f(x) + g(x) \right)  = f(a) + g(a).</m>
+      </p>
+    </statement>
+  </problem>
+</section>
+

@@ -1,0 +1,628 @@
+
+
+<section>
+  <title>Derivatives of Polynomial, Root, and Rational Functions</title>
+  <problem>
+    <statement>
+      <p>
+        Compute the derivative of each function using <xref ref="derivdfn">Definition</xref>.
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = x^2 - 3x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>g(x) = 3x-7</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>h(t) = 4t^3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp u(t) = \frac{1}{t}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp v(x) = \frac{x-5}{x+2}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Compute the following using the derivatives you computed in the previous problem. Graph both the original function and the tangent line at the point of interest.
+        <ol>
+          <li>
+            <p>
+              <m>f'(x)</m> at <m>x=5</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>h'(t)</m> at <m>t=e</m> (Recall that Euler's constant, <m>e</m>, is approximately <m>2.71828...</m>)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>v'(x)</m> at <m>x=-2</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Algebra Reminder.</em> An expression such as <m>\dsp \frac{\sqrt{a}-\sqrt{b}}{a-b},</m> can be simplified by multiplying the numerator and the denominator of the fraction by <m>\dsp \sqrt{a}+\sqrt{b}.</m> This is called <em>rationalizing the numerator</em> and <m>\dsp \sqrt{a}+\sqrt{b}</m> is called the <em>conjugate</em> of <m>\dsp \sqrt{a}-\sqrt{b}.</m>
+  </p>
+
+  <problem xml:id="l15">
+    <statement>
+      <p>
+        If <m>f(x) = \sqrt{x+1}</m>, compute <m>f'</m>. Graph <m>f</m> and the tangent line to <m>f</m> at <m>(1,f(1))</m> and state the slope of the tangent line.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l16">
+    <statement>
+      <p>
+        If <m>f(x) = 2x^3 + 3x^2 - 7</m>, compute <m>f'</m>. Graph <m>f</m> and compute the equation of the tangent line to <m>f</m> at <m>(1,f(1)).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l17">
+    <statement>
+      <p>
+        If <m>\dsp f(x) = \frac{1}{x+1}</m>, compute <m>f'.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        If <m>f(x) = \sqrt{x+1}</m>, find the equation of the tangent line at <m>x = a.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        For each of the following, check the left- and right-hand limits to determine if the limit exists:
+        <ol>
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 0}\frac{0}{x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp \lim_{x \rightarrow 0}\frac{|x|}{x}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a function, f, is <term>differentiable at a</term> if <m>f'(a)</m> exists.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a function, f, is <term>differentiable</term> if <m>f</m> is differentiable at every point in its domain.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        We say that a function, f, is <term>left differentiable at a</term> if <m>\dsp \lim_{t \rightarrow a^-} \frac{f(t) - f(a)}{t-a}</m> exists. If
+        <m>f</m> is left differentiable at <m>a</m>, we denote the <term>left derivative</term> of <m>f</m> at <m>a</m> by <m>f'(a-).</m> Right differentiability is defined similarly.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        We say that <m>f</m> is <term>differentiable on (a,b)</term> if <m>f</m> is differentiable at <m>t</m> for all <m>t</m> in <m>(a,b)</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <definition>
+    <statement>
+      <p>
+        We say that f is <term>differentiable on [a,b]</term> if f is differentiable on (a,b) and <m>f'(a+)</m> and <m>f'(b-)</m> both exist.
+      </p>
+    </statement>
+  </definition>
+
+  <problem xml:id="absolutederiv">
+    <statement>
+      <p>
+        Let <m>f(x) = |x - 2|.</m>
+        <ol>
+          <li>
+            <p>
+              Graph <m>f.</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Determine the equation of the line tangent to <m>f</m> at <m>(-1,3).</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Determine the equation of the line tangent to <m>f</m> at <m>(5,3).</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Compute <m>f'(2+)</m> and <m>f'(2-).</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Does <m>f'(2)</m> exist? Why?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is the derivative of <m>f?</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <example>
+    <statement>
+      <p>
+        Illustrate ways in which a function might fail to be differentiable at a point <m>c</m> such as:
+        <ul>
+          <li>
+            <p>
+              the point <m>c</m> might not be in the domain of the function,
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the function might have a <em>vertical tangent line</em> at <m>c</m>, or
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the left and right-hand derivatives might not agree at <m>c</m> (i.e. <m>f'(c+) \neq f'(c-)</m>).
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <problem>
+    <statement>
+      <p>
+        For each of the following, use a sketch of the graph to determine the set of those points at which the function is not differentiable.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp f(x) = \frac{3}{1-x^{2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>g(x) =\sqrt{5+x}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>i(x) = \sec(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Differentiable Functions Theorem.</em>
+        EXTRA<fn>After this theorem is stated, I must be careful on a test to indicate clearly what I want when I ask whether a function is differentiable.   And I simply warn them in advance that I will be clear and ask something like, <q>Compute the left- and right-hand derivatives to determine if <m>f</m> is differentiable at a point</q> or, <q>Just list the points where <m>f</m> is differentiable.</q></fn>
+        <ol>
+          <li>
+            <p>
+              Every polynomial is differentiable on <m>(-\infty ,\infty )</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Every rational function is differentiable on its domain.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Every trigonometric function is differentiable on its domain.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The sum, product, and difference of differentiable functions is differentiable.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The quotient <m>\frac{f}{g}</m> of differentiable functions <m>f</m> and <m>g</m> is differentiable wherever <m>g</m> is not zero.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>g</m> is differentiable at <m>x=a</m> and <m>f</m> is differentiable at <m>x=g(a)</m> then <m>f \circ g</m> is differentiable at <m>x=a</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We know how to compute derivatives of functions using limits. By proving theorems
+    we will increase the ease with which we compute derivatives of more challenging functions.
+  </p>
+
+  <problem xml:id="l18">
+    <statement>
+      <p>
+        Compute <m>f'</m> for each function listed, using the
+        definition of the derivative.
+        <ol>
+          <li>
+            <p>
+              <m>f(x) = a,</m> where <m>a</m> is a constant
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = x</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = x^2</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = x^3</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>f(x) = x^4</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    At this point we have used the definition of the derivative (limits) to compute the derivatives
+    of many different functions, including: <m>a</m> (constant function), <m>x</m> (the identity function), <m>x^2</m>, <m>x^3</m>, <m>4x^3</m>, <m>x^4</m>, <m>\dsp \sqrt{x+1}</m>, <m>2x^3 + 3x^2 - 7</m>, <m>\dsp \frac{1}{x}</m>, <m>\dsp \frac{1}{x+1}</m>, <m>\dsp \frac{x-5}{x+2}</m>, <m>|x-2|</m>, and <m>x^3 + 2</m>. Based on the derivatives we have computed thus far, you can likely guess the answer to the next question.
+  </p>
+
+  <p>
+    <em>Question.</em> What is the derivative of <m>f(x) = x^{200}</m>?  <em>Guess.</em> <m>f'(x)=200x^{199}</m>.
+  </p>
+
+  <p>
+    How do we <em>know</em> if our guess is correct? We don't. We must show that it is true using the
+    definition of the derivative. Rather than work this one problem and still not know what the derivative
+    of <m>g(x) = x^{201}</m> is, we'll let <m>n</m> represent some unknown natural number and compute the derivative of
+    <m>f(x) = x^n.</m> Because we will not choose a specific value for <m>n,</m> we will now <em>know</em> the derivative
+    of an entire class of functions.
+  </p>
+
+  <problem xml:id="powerrule">
+    <statement>
+      <p>
+        <em>Power Rule.</em>
+        EXTRA<fn>When I first taught this way, I thought that no one would solve this problem because, like so many students, I had been shown a proof using the binomial theorem.  But when one sets it up with <xref ref="l18">Problem</xref>, several students will invariably see a pattern depending on which definition they are using.  Having introduced both definitions doubles the odds that a student has success, since if they don't see how to simplify one expression, they might still see how to simplify the other.  I have seen students discover the pattern for the long division <m>\dsp \frac{x^n - t^n}{x-t}</m> and I have seen students recognize that even though they couldn't figure out the coefficients for what you and I know as the binomial theorem, they did not need the coefficients because the terms for which they did not know the coefficients tended to zero anyway! In either case, the students really learned a tremendous amount working on the problem and I shared the binomial theorem with the class after the presentation.</fn></p>
+
+      <p>
+        Let <m>n</m> be a natural number and use <xref ref="derivdfn">Definition</xref> to show that the derivative of <m>f(x) = x^n</m> is <m>f'(x)=nx^{n-1}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="constantrule">
+    <statement>
+      <p>
+        <em>Constant Rule.</em> Show that if <m>k</m> is a constant (i.e. any real number) and <m>h(x) = kf(x)</m>, then <m>h'(x) = kf'(x)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Note.</em> The previous problem is not stated accurately. Here is a precise statement. Show that if <m>k</m> is a constant (i.e. any real number) and <m>f</m> is differentiable on <m>(a,b)</m> and <m>h(x) = kf(x)</m> for all <m>x</m> in the interval <m>(a,b)</m>, then <m>h'(x) = kf'(x)</m> for all <m>x</m> in <m>(a,b)</m>.
+  </p>
+
+  <problem xml:id="sumrule">
+    <statement>
+      <p>
+        <em>Sum Rule.</em> Show that if each of <m>f</m> and <m>g</m> is a function and <m>S(x) = f(x) + g(x)</m>, then <m>S'(x) = f'(x) + g'(x)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="differencerule">
+    <statement>
+      <p>
+        <em>Difference Rule.</em>
+        EXTRA<fn>If they do <xref ref="differencerule">Problem</xref> using the definition, then I show them that this can be done using the sum and constant rules.  If they use the rules, then I show that it can be done with the definition.</fn></p>
+
+      <p>
+        Show that if each of <m>f</m> and <m>g</m> is a function and <m>D(x) = f(x) - g(x)</m>, then <m>D'(x) = f'(x) - g'(x)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Use <xref ref="powerrule">Problems</xref>, <xref ref="constantrule"></xref>, <xref ref="sumrule"></xref>, and <xref ref="differencerule"></xref> to compute <m>f'</m> when <m>f(x) = 6x^5 - 4x^4 + 7x^3</m>. Apply one rule per equal sign and be sure to explain which rules you are using.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The next theorem allows us to avoid using limits to determine if a function is continuous, since it states that all differentiable functions are also continuous functions.
+  </p>
+
+  <theorem xml:id="diffcont">
+    <statement>
+      <p>
+        <em>A Continuity Theorem.</em> If <m>x</m> is a number and <m>f</m> is differentiable at <m>x</m>, then <m>f</m> is continuous at <m>x.</m>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem xml:id="productrule">
+    <statement>
+      <p>
+        <em>Product Rule.</em> Show that if <m>P(x) = f(x)g(x)</m>, then <m>P'(x) = f'(x)g(x) + f(x)g'(x)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="quotientrule">
+    <statement>
+      <p>
+        <em>Quotient Rule.</em>
+        EXTRA<fn>At some point, I always discuss what is missing from this statement <mdash /> the full hypothesis regarding that each of <m>f</m> and <m>g</m> are differentiable at the point and that <m>g</m> is non-zero.</fn></p>
+
+      <p>
+        Show that if <m>\dsp Q(x) = \frac{f(x)}{g(x)}</m>, then <m>\dsp Q'(x) = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <xref ref="powerrule">Problem</xref> only proved the power rule for exponents that were positive integers. With the new tools, the next problem extends the power rule to include negative and zero exponents. A natural question would then be, <q>Is this true for exponents that are real numbers but not integers?</q> The answer is <q>yes</q> but we'll simply assume this and not prove it in this course.
+  </p>
+
+  <problem xml:id="powerrule2">
+    <statement>
+      <p>
+        <em>Power Rule Revisited.</em> Show that if <m>n</m> is any integer and <m>f(x) =x^n</m>, then <m>f'(x) = nx^{n-1}</m>. Before you start, ask yourself how this is different from <xref ref="powerrule">Problem</xref>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Suppose <m>a,b,c,</m> and <m>d</m> are constants such that <m>d \neq 0</m>, and find <m>f'</m> where <m>\dsp f(x) = \frac{ax^2 + bx + c}{d}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find <m>f'</m> when <m>f</m> is the function defined by <m>\displaystyle{f(x) = (x - \frac{1}{x})(2x^2+3x+4)}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l20">
+    <statement>
+      <p>
+        Find <m>f'</m> when <m>f</m> is the function defined by <m>\displaystyle{f(x) = \frac{x-1}{x+1} \cdot \frac{x-2}{x+2}}.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l21">
+    <statement>
+      <p>
+        Find <m>f'</m> when <m>f</m> is the function defined by <m>\displaystyle{f(r) = \frac{r^2s^2-r^4}{s-m}}</m> and <m>s</m> and <m>m</m> are real numbers and <m>s \neq m</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Since the derivative of a function is itself a function, there is no reason not to take the derivative of the derivative. When this is done, the new function is called the <em>second derivative</em> and is denoted by <m>f''</m>. Similarly the <em>third derivative</em> is denoted by <m>f'''</m>.
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Find <m>f''</m> when <m>\displaystyle{f(x) = \frac{2}{x} - \frac{x^4}{2}}</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    You have solved <em>algebraic</em> equations such as
+    <me>
+      5x + 2 = 3x + 4 \;\;\; \mbox{or}  \;\;\; 3x^2 - 2x + 1 = 0
+    </me>
+    where the goal is to find each value of <m>x</m> that solves the equations. Engineering applications often need to solve <em> differential</em> equations such as
+    <me>
+      f'(x) = x f(x) \;\;\; \mbox{or}  \;\;\; f''(x) = x^3 \;\;\; \mbox{or}  \;\;\; f''(x) + f(x) = 0
+    </me>
+    where the goal is to find each function <m>f</m> that satisfies the equation. In the real world, solutions to differential equations might represent the shape of an airplane wing or the temperature distribution of an engine block.
+    EXTRA<fn>I am regularly discussing the link between the mathematics we are doing, which may seem abstract, and the engineering applications that they will see in future courses. At the same time, I am encouraging them to take the upper-division courses in differential equations, numerical methods, foundations and analysis to strengthen their mathematics.  I give specific examples of engineers who graduated with a second degree in mathematics and had starting salaries averaging <dollar />20,000 more than the average starting salary of the engineers without the degree.  Mathematics pays because so few are good at it and if they are good at it, they should develop and exploit that skill.  Of course, some simply decide that they like the math more than the engineering and come over from the dark side.</fn></p>
+
+  <problem>
+    <statement>
+      <p>
+        Show that if <m>x</m> is not 0, then the function <m>\displaystyle{f(x) = \frac{2}{x}}</m> is a solution to the equation <m>x^3f''(x) + x^2f'(x) - xf(x) = 0</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find one function <m>f</m> that satisfies <m>f'(x) = 4x^2 - 2x.</m>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    We have been very careful up to this point in the book to write the equations in <em>functional</em> notation. That is, we never wrote, <m>y=x^2,</m> but rather wrote <m>f(x) = x^2</m> to <em>emphasize</em> that <m>f</m> is the function and it depends on the <em>independent</em> variable, <m>x.</m> As you will see in other courses, it is very common to write, <m>y=x^2</m> and then follow this with <m>y'=2x.</m> Differential equations are almost always written in this short-hand, omitting the independent variable where possible, and from this point forward, we too will use this short-hand on occasion.
+  </p>
+
+  <problem xml:id="l26">
+    <statement>
+      <p>
+        Sketch the graph of <m>y = 2x^3 - 3x^2 - 12x + 2</m> and locate (by using the derivative) the points on the graph that have a horizontal tangent line.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Find an equation for the line that is tangent to <m>\displaystyle{y = \frac{2-x}{2+x}}</m> at <m>(1,\frac{1}{3})</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    <em>Algebra Reminder.</em> Any point where a function crosses the x-axis is called an <em>x-intercept</em> of the function, and any point where a function crosses the y-axis is called a <em>y-intercept</em> of the function. To find an <em>x-intercept</em> we set <m>y</m> equal to zero and solve for <m>x.</m> To find a <em>y-intercept</em> we set <m>x</m> equal to zero and solve for <m>y.</m>
+  </p>
+
+  <problem xml:id="l23">
+    <statement>
+      <p>
+        Find numbers a, b, and c so that the function <m>f(x) = ax^2 + bx + c</m> has an x-intercept of 2, a y- intercept of 2, and a tangent line with slope of 2 at <m>(2,4a+2b+c).</m>
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l24">
+    <statement>
+      <p>
+        Sketch the function <m>f(x) = ax^2</m>, where <m>a > 0</m>. Let c and d be two (distinct) real numbers. Let x be the x-coordinate of the point where the tangent line to f at <m>(c,f(c))</m> intersects the tangent line to f at <m>(d,f(d))</m>. Show that the distance between x and c equals the distance between x and d.
+      </p>
+    </statement>
+  </problem>
+
+  <problem xml:id="l25">
+    <statement>
+      <p>
+        Let <m>\dsp f(x) = \frac{2}{x}</m> and <m>c</m> be any real number. Find the area of the triangle (<m>\dsp A=\frac{1}{2}bh</m>) formed by the tangent line to the graph at <m>(c,f(c))</m> and the coordinate axes.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Prove that if the graph of <m>h(x) = f(x) - g(x)</m> has a horizontal tangent line at <m>(c,h(c))</m>, then the tangent line to f at <m>(c,f(c))</m> is parallel to the tangent line to g at <m>(c,g(c))</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Show that if the function f is differentiable at x and <m>g(x) = (f(x))^2</m>, then <m>g'(x) = 2f(x)f'(x)</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Sketch a graph of
+        <me>
+          f(x) =  \left\{
+                   \begin{array}{ll}
+                    x^2 \amp  \mbox{if   } x \leq 1 \\
+                   \sqrt{x} \amp  \mbox{if   } x  > 1.
+          \end{array} 
+              \right.
+        </me>
+      </p>
+
+      <p>
+        Use left and right hand derivatives at <m>x=1</m> to determine if <m>f</m> is differentiable at <m>x=1.</m>
+      </p>
+    </statement>
+  </problem>
+</section>
+

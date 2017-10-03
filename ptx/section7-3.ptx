@@ -1,0 +1,316 @@
+
+
+<section>
+  <title>Alternating Series</title>
+  <p>
+    We now consider series where every other term of the series is positive and every other term of the series is negative. To keep things simple, we will write each term of an alternating series as the product of two parts: the positive part, <m>a_n, n=1,2,3,\dots</m> and the alternating part, <m>(-1)^n</m> or <m>(-1)^{n+1}</m>.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>a_n > 0</m> for all positive integers <m>n</m>, then the series <m>\displaystyle{\sum_{n+1}^{\infty} (-1)^n a_n}</m> and the series
+        <m>\displaystyle{\sum_{n=1}^{\infty} (-1)^{n+1} a_n}</m> are called <term>alternating series</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <statement>
+      <p>
+        The alternating Harmonic Series.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Recall the Harmonic Series, <m>\dsp{\sum_{n=1}^\infty \frac{1}{n} },</m> where the terms approached zero, but the series still diverged. We can modify this series to create the alternating series
+    <me>
+      S=\dsp{ \sum_{n=1}^\infty (-1)^{n+1} \frac{1}{n} } = 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \cdots.
+    </me>
+  </p>
+
+  <p>
+    By grouping the terms,
+    <me>
+      0 \leq (1 - \frac{1}{2}) + (\frac{1}{3} - \frac{1}{4}) + \cdots
+      = S = 1 - (\frac{1}{2} - \frac{1}{3}) - (\frac{1}{4} - \frac{1}{5}) - \cdots \leq 1
+    </me>
+    so this series is between <m>0</m> and <m>1</m>. The even partial sums can be written as:
+    <me>
+      S_2 = 1 - \frac{1}{2}, \; \; S_4 = (1 - \frac{1}{2}) + (\frac{1}{3} - \frac{1}{4}), \; \; S_6 = \dots
+    </me>
+    so
+    <me>
+      S_{2N} = (1 - \frac{1}{2}) + (\frac{1}{3} - \frac{1}{4}) + \cdots + (\frac{1}{2N-1} - \frac{1}{2N}).
+    </me>
+  </p>
+
+  <p>
+    This implies that the sequence <m>\{S_{2n} \}_{n=1}^{\infty}</m> is increasing and bounded above by 1, so the sequence of even terms converges to some number, let's call it <m>L.</m> A similar argument shows that the odd terms form a decreasing sequence that is bounded below, so the odd terms converge to some number, call it <m>G.</m> Draw these terms on a number line and you will see that
+    <me>
+      S_2 \lt  S_4 \lt  \dots \lt  L \leq G \lt  \dots \lt  S_5 \lt  S_3 \lt  S_1.
+    </me>
+  </p>
+
+  <p>
+    This means that
+    <me>
+      |L-G| \leq |S_{N} - S_{N+1}| = 1/N.
+    </me>
+  </p>
+
+  <p>
+    Since <m>\lim_{N\to \infty} 1/N = 0</m> we have that <m>L=G</m> so this alternating series converges.
+  </p>
+
+  <p>
+    <em>Conclusion.</em> This alternating series has the property that if we take the absolute value of the terms then the resulting series is the Harmonic Series which diverges. But the alternating series itself converges. We call this <em>conditionally convergent</em> and we classify all alternating series as either <em>divergent</em> (series and absolute value of series diverge), <em>conditionally convergent</em> (series converges, but absolute value of series diverges), or <em>absolutely convergent</em> (series converges and absolute value of series converges).
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        The series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> is said to be {{absolutely convergent}} if the series
+        <m>\displaystyle{\sum_{n=k}^{\infty} |a_n|}</m> converges and the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> is said to be
+        {{conditionally convergent}} if it converges but the series <m>\displaystyle{\sum_{n=k}^{\infty} |a_n|}</m> diverges.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Here are two tests for checking the convergence of an alternating sequence. The first says that if the sum of the absolute value of the terms converge, then the alternating series also converges. The second test gives us another test for when an alternating series converges <em>and</em> gives us a powerful tool for saying how accurate the <m>N^{th}</m> partial sum is. This can tell us how many terms we need to add up in order to get an accurate approximation to the infinite sum.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Absolute Convergence Test.</em> Let <m>\{a_n \}_{n=k}^{\infty}</m> be a sequence of positive terms. If <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> converges, then the alternating series <m>\displaystyle{\sum_{n=k}^{\infty} (-1)^n a_n}</m> and <m>\displaystyle{\sum_{n=k}^{\infty} (-1)^{n-1} a_n}</m> both converge.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Alternating Series Test.</em> Let <m>\{a_n \}_{n=k}^{\infty}</m> be a non-increasing sequence of positive terms such that <m>\displaystyle{\lim_{n \to \infty} a_n = 0}</m>. Then
+        <ol>
+          <li>
+            <p>
+              the alternating series <m>\displaystyle{\sum_{n=k}^{\infty}
+              (-1)^n a_n}</m> and <m>\displaystyle{\sum_{n=k}^{\infty} (-1)^{n-1}
+              a_n}</m> both converge and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              if <m>S</m> is the sum of the series and <m>S_N</m> is a partial sum, then  <m>|S_N - S| \le a_{N+1}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </theorem>
+
+  <problem>
+    <statement>
+      <p>
+        Determine the convergence or divergence of each of the following alternating series. If the series converges, then find a positive integer <m>N</m> so that <m>S_N</m> will be within .01 of the series.
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \frac{(-1)^n n}{n^2+1}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \sin \Big(\frac{(2n-1) \pi}{2} \Big)}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt[3] n}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} (-1)^n \frac{2^n}{n^2}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \Big(\frac{-1}{n}\Big)^{n+1}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Recall that it is possible for a series to have positive terms that approach zero, but the series still diverges <mdash /> for example, the Harmonic Series. It turns out that you can have an alternating series where the limit of the terms is zero, but the alternating series still diverges. The next problem asks for you to find one!
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Construct a sequence of non-negative terms, <m>\{ a_n \}_{n=1}^\infty,</m> so that the <m>\lim_{n \to \infty} a_n = 0</m> and <m>\dsp \sum_{n=1}^\infty (-1)^{n} a_n</m> diverges.
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Write out the first few terms for <m>\sum_{n=1}^\infty (-1)^n</m>. Does it converge or diverge? Why?
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Consider the sequence of non-negative terms where <m>a_{2n-1} = n</m> and <m>a_{2n} = n + \frac{1}{(n+1)^2}</m>. Determine whether <m>\sum_{n=1}^\infty (-1)^n a_n</m> converges or diverges by writing out both the first 6 terms <m>a_1, a_2, a_3, a_4, a_5, a_6</m> and then the first six partial sums <m>S_1, S_2, S_3, S_4, S_5, S_6</m>.
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    The integral, direct comparison and the limit comparison tests can only be used for series with positive terms. The next few theorems provide us with tests that we can use regardless of whether the terms are positive or not. First, let's recall the <em><m>n^{th}</m> Term Test</em> which said that if <m>\displaystyle{\sum_{n=1}^{\infty} a_n}</m> converges, then <m>\dsp{ \lim_{n \to \infty} a_n = 0}.</m> Let's prove that this works for any series regardless of whether the terms are positive or not. If the series converges, let's call it <m>S=\displaystyle{\sum_{n=1}^{\infty} a_n}</m>. Since it converges, <m>S = \lim_{n \to \infty} S_n</m>. But if this is the case, then isn't it true that <m>S = \lim_{n \to \infty} S_{n-1}</m>? From this we have
+    <me>
+      0=S - S =  \lim_{n \to \infty} S_{n} - \lim_{n \to \infty} S_{n-1} = \lim_{n \to \infty} \big( S_n - S_{n-1} \big) = \lim_{n \to \infty} a_n.
+    </me>
+  </p>
+
+  <p>
+    Since we didn't use anywhere that the terms were positive, the <m>n^{th}</m> term test may be applied to any series whether the terms are positive or not. <em>q.e.d.</em>
+  </p>
+
+  <p>
+    The next two tests, the <em>Ratio Test</em> and the <em>Root Test</em> also work on series regardless of whether the terms are positive or not.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Ratio Test.</em> Let <m>\{a_n \}_{n=k}^{\infty}</m> be a sequence such that <m>\displaystyle{\lim_{n \to \infty} |\frac{a_{n+1}}{a_n}| = r}</m>
+        (where we allow the case <m>r=\infty</m>). Then
+        <ul>
+          <li>
+            <p>
+              the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> converges absolutely if <m>r \lt  1,</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> diverges if <m>r > 1</m> or <m>r = \infty,</m>  and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the test fails if <m>r=1.</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    <em>Sketch of Proof of Ratio Test.</em> This is a quite advanced proof, worthy of a course in Analysis. If you read it and are curious, I'll happily discuss it or fill in the missing details. Let's consider the case where <m>\displaystyle{\lim_{n \to \infty} |\frac{a_{n+1}}{a_n}| = r}</m> and <m>r \lt  1</m>. Since <m>\dsp |\frac{a_{n+1}}{a_n}|</m> is getting closer and closer to <m>r</m> then we can choose a positive integer <m>N</m> large enough to assure that <m>\dsp |\frac{a_{N+1}}{a_N}| \lt  1</m>. Therefore we can find a positive real number <m>R</m> so that <m>|a_{N+1}| \lt  R|a_N|</m>. A little bit of algebra shows that for all positive integers <m>k</m> we have <m>|a_{N+k}|\lt R^k|a_N|</m>. This implies that <m>\dsp{\sum_{k=1}^{\infty} |a_{N+k}|}</m> converges and we can conclude that <m>\dsp{\sum_{n=1}^{\infty} a_n}</m> converges absolutely. <em>q.e.d.</em>
+  </p>
+
+  <problem>
+    <statement>
+      <p>
+        Apply the ratio test to each series in an attempt to determine the convergence or divergence of each series. If the ratio test fails, apply another test to determine convergence or divergence.
+        <ol>
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=2}^\infty  \frac{n^2}{n!}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=3}^\infty  \frac{2^n}{n^3}  }</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\dsp{ \sum_{n=3}^\infty  \frac{\ln(n)}{n}  }</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <problem>
+    <statement>
+      <p>
+        Using any test you like, determine whether the series is absolutely convergent, conditionally convergent, or divergent.
+        <ol>
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} \frac{{(-1)}^n}{\ln(n+1)}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} (-1)^n \frac{n!}{3^{n+1}}}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\displaystyle{\sum_{n=1}^{\infty} (-1)^n \frac{n^2+3}{4n^3}}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </problem>
+
+  <p>
+    Here is one last test that the pundits believe you should be aware of.
+  </p>
+
+  <theorem>
+    <statement>
+      <p>
+        <em>Root<nbsp />Test.</em> Let <m>\{a_n \}_{n=k}^{\infty}</m> be a sequence such that <m>\displaystyle{\lim_{n \to \infty} \sqrt[n] {|a_n|}=r}</m> (where we
+        allow the case <m>r=\infty</m>). Then
+        <ul>
+          <li>
+            <p>
+              the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> converges absolutely if <m>r \lt  1</m>,
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the series <m>\displaystyle{\sum_{n=k}^{\infty} a_n}</m> diverges if <m>r > 1</m> or <m>r = \infty,</m> and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              the test fails if <m>r=1.</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </theorem>
+</section>
+

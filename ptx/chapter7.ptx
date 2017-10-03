@@ -1,0 +1,26 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Sequences <ampersand /> Series</title>
+  <introduction>
+    <p>
+      <q>All the instruments have been tried save one, the only one precisely that can succeed: well-regulated freedom.</q> - Jean-Jacques Rousseau
+    </p>
+
+    <p>
+      Intuitively speaking, a <em>sequence</em> may be thought of as a list of numbers and a <em>series</em> may be thought of as the sum of a sequence of numbers. The sequence below is approaching <m>0.</m> Does the series below add up to a number, or as we keep adding terms, do the sums tend to infinity?
+      <me>
+        \mbox{Sequence: }  1, 1/2, 1/3, 1/4, \dots
+      </me>
+      <me>
+        \mbox{Series: }  1 + 1/2 + 1/4 + 1/8 + \dots
+      </me>
+    </p>
+  </introduction>
+  <xi:include  href="section7-1.ptx" />
+  <xi:include  href="section7-2.ptx" />
+  <xi:include  href="section7-3.ptx" />
+  <xi:include  href="section7-4.ptx" />
+  <xi:include  href="chap6probs.ptx" />
+</chapter>
+
